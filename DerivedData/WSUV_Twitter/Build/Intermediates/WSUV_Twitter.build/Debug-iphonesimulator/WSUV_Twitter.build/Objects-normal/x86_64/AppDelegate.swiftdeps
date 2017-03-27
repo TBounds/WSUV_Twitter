@@ -6,22 +6,22 @@ provides-nominal:
 provides-member:
 - ["C12WSUV_Twitter11AppDelegate", ""]
 provides-dynamic-lookup:
-- "application"
 - "applicationWillEnterForeground"
-- "window"
+- "application"
+- "applicationDidEnterBackground"
 - "applicationWillTerminate"
 - "applicationDidBecomeActive"
+- "window"
 - "applicationWillResignActive"
-- "applicationDidEnterBackground"
 depends-top-level:
+- "UIApplicationLaunchOptionsKey"
+- "UIWindow"
 - "Bool"
 - "UIApplication"
-- !private "BooleanLiteralType"
-- "UIWindow"
 - "UIApplicationDelegate"
-- "AppDelegate"
-- "UIApplicationLaunchOptionsKey"
+- !private "BooleanLiteralType"
 - "UIResponder"
+- "AppDelegate"
 depends-member:
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
