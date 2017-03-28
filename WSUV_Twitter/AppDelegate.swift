@@ -10,12 +10,33 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    struct Tweet {
+        var tweet_id : Int
+        var username : String
+        var isdeleted : Bool
+        var tweet : NSString
+        var date : NSDate
+        
+        init(_ tweet_id: Int, _ username : String, _ isdeleted : Bool, _ tweet : NSString, _ date : NSDate){
+            self.tweet_id = tweet_id
+            self.username = username
+            self.isdeleted = isdeleted
+            self.tweet = tweet
+            self.date = date
+        }
+    }
 
     var window: UIWindow?
+    var tweets : [Tweet] = []
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        tweets.append(Tweet(1, "Tommy Boi", false, "This is just a test. Do not be alarmed.", Date() as NSDate))
+        
         return true
     }
 
