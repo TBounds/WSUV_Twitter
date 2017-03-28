@@ -9,15 +9,66 @@
 import UIKit
 
 class TweetTableViewController: UITableViewController {
+    
+    
+    lazy var tweetDateFormatter : DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .short
+        dateFormatter.timeStyle = .short
+        return dateFormatter
+    }()
+    
+    let tweetTitleAttributes = [
+        NSFontAttributeName : UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline),
+        NSForegroundColorAttributeName : UIColor.purple
+    ]
+    
+    lazy var tweetBodyAttributes : [String : AnyObject] = {
+        let textStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
+        textStyle.lineBreakMode = .byWordWrapping
+        textStyle.alignment = .left
+        let bodyAttributes = [
+            NSFontAttributeName : UIFont.preferredFont(forTextStyle: UIFontTextStyle.body),
+            NSForegroundColorAttributeName : UIColor.black,
+            NSParagraphStyleAttributeName : textStyle
+        ]
+        return bodyAttributes
+    }()
+    
+    
+    var tweetAttributedStringMap : [Tweet : NSAttributedString] = [:]
+    
+    func attributedStringForTweet(_ tweet : Tweet) -> NSAttributedString {
+        let attributedString = tweetAttributedStringMap[tweet]
+        if let string = attributedString { // already stored?
+            return string
+        }
+        let dateString = tweetDateFormatter.string(from: tweet.date as Date)
+        let title = String(format: "%@ - %@\n", tweet.username, dateString)
+        let tweetAttributedString = NSMutableAttributedString(string: title, attributes: tweetTitleAttributes)
+        let bodyAttributedString = NSAttributedString(string: tweet.tweet as String, attributes: tweetBodyAttributes)
+        tweetAttributedString.append(bodyAttributedString)
+        tweetAttributedStringMap[tweet] = tweetAttributedString
+        return tweetAttributedString
+    }
+    
+    //-----------------------//
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        NotificationCenter.default.addObserver(forName: kAddTweetNotification,
+                                               object: nil,
+                                               queue: nil) { (note : Notification) -> Void in
+                                                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                                                let n = appDelegate.tweets.count
+                                                let indexPath = IndexPath(row: n-1, section: 0)
+                                                self.tableView.insertRows(at: [indexPath],
+                                                                          with: .fade)
+                                                
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +80,16 @@ class TweetTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    override func tableView(_ tableView: UITableView,
+                            estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,6 +97,59 @@ class TweetTableViewController: UITableViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.tweets.count
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+   
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath)
+        
+        // Configure the cell...
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let tweets = appDelegate.tweets[indexPath.row]
+        
+        cell.textLabel?.numberOfLines = 0 // multi-line label
+        cell.textLabel?.attributedText = attributedStringForTweet(tweets)
+      
+        
+        return cell
+    }
 
+    // Override to support conditional editing of the table view.
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    
+    // Override to support conditional editing of the table view.
+//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        // Return false if you do not want the specified item to be editable.
+//        return true
+//    }
+    
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.tweets.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        //        else if editingStyle == .insert {
+        //            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        //        }
+    }
+    
+//    // Override to support rearranging the table view.
+//    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let phoneNumber = appDelegate.tweets[fromIndexPath.row]
+//        appDelegate.tweets.remove(at: fromIndexPath.row)
+//        appDelegate.tweets.insert(phoneNumber, at: to.row)
+//    }
+    
+    // Override to support conditional rearranging of the table view.
+    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        // Return false if you do not want the item to be re-orderable.
+        return true
+    }
    
 }

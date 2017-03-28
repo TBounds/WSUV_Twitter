@@ -8,24 +8,38 @@
 
 import UIKit
 
+struct Tweet : Hashable {
+    var tweet_id : Int
+    var username : String
+    var isdeleted : Bool
+    var tweet : NSString
+    var date : NSDate
+    
+    var hashValue: Int {
+        return self.tweet_id
+    }
+    
+    init(_ tweet_id: Int, _ username : String, _ isdeleted : Bool, _ tweet : NSString, _ date : NSDate){
+        self.tweet_id = tweet_id
+        self.username = username
+        self.isdeleted = isdeleted
+        self.tweet = tweet
+        self.date = date
+    }
+
+}
+
+// http://samuelmullen.com/2014/10/implementing_swifts_hashable_protocol/
+func == (lhs: Tweet, rhs: Tweet) -> Bool {
+    return lhs.tweet_id == rhs.tweet_id
+}
+
+let kAddTweetNotification = Notification.Name("AddTweetNotification")
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    struct Tweet {
-        var tweet_id : Int
-        var username : String
-        var isdeleted : Bool
-        var tweet : NSString
-        var date : NSDate
-        
-        init(_ tweet_id: Int, _ username : String, _ isdeleted : Bool, _ tweet : NSString, _ date : NSDate){
-            self.tweet_id = tweet_id
-            self.username = username
-            self.isdeleted = isdeleted
-            self.tweet = tweet
-            self.date = date
-        }
-    }
+    
 
     var window: UIWindow?
     var tweets : [Tweet] = []
