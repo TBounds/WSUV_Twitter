@@ -11,35 +11,36 @@ provides-member:
 - ["V12WSUV_Twitter5Tweet", ""]
 - ["C12WSUV_Twitter11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationWillEnterForeground"
-- "applicationWillTerminate"
 - "applicationDidBecomeActive"
-- "window"
 - "applicationWillResignActive"
+- "lastTweetDate"
+- "window"
+- "applicationWillTerminate"
 - "application"
 - "applicationDidEnterBackground"
+- "applicationWillEnterForeground"
 depends-top-level:
-- "Int"
-- "kAddTweetNotification"
-- "NSDate"
-- "UIApplication"
-- "UIWindow"
-- "StringLiteralType"
-- "NSString"
-- "Bool"
-- !private "BooleanLiteralType"
-- "Notification"
-- "Tweet"
-- "UIApplicationLaunchOptionsKey"
-- "String"
-- !private "Date"
-- "CastingPrecedence"
 - "UIApplicationDelegate"
+- "Int"
 - "AppDelegate"
-- "UIResponder"
+- "Tweet"
+- "UIWindow"
 - "Hashable"
 - "=="
 - "AssignmentPrecedence"
+- "CastingPrecedence"
+- "UIApplication"
+- "UIResponder"
+- "UIApplicationLaunchOptionsKey"
+- "NSDate"
+- "String"
+- "Bool"
+- "Date"
+- "Notification"
+- "StringLiteralType"
+- "NSString"
+- !private "BooleanLiteralType"
+- "kAddTweetNotification"
 depends-member:
 - !private ["Ps9AnyObject", "Date"]
 - !private ["Ps9AnyObject", "Tweet"]
@@ -56,11 +57,12 @@ depends-member:
 - ["Ps9AnyObject", "applicationWillResignActive"]
 - ["Ps9AnyObject", "applicationWillTerminate"]
 - ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "lastTweetDate"]
 - ["Ps9AnyObject", "tweets"]
 - ["Ps9AnyObject", "window"]
 - ["Ps9AnyObject", ""]
 - ["C12WSUV_Twitter11AppDelegate", "Bool"]
-- !private ["C12WSUV_Twitter11AppDelegate", "Date"]
+- ["C12WSUV_Twitter11AppDelegate", "Date"]
 - !private ["C12WSUV_Twitter11AppDelegate", "NSDate"]
 - ["C12WSUV_Twitter11AppDelegate", "Tweet"]
 - ["C12WSUV_Twitter11AppDelegate", "UIApplication"]
@@ -80,6 +82,7 @@ depends-member:
 - ["C12WSUV_Twitter11AppDelegate", "applicationWillTerminate"]
 - ["C12WSUV_Twitter11AppDelegate", "deinit"]
 - ["C12WSUV_Twitter11AppDelegate", "init"]
+- ["C12WSUV_Twitter11AppDelegate", "lastTweetDate"]
 - ["C12WSUV_Twitter11AppDelegate", "tweets"]
 - ["C12WSUV_Twitter11AppDelegate", "window"]
 - !private ["Sa", "Iterator"]
@@ -111,6 +114,7 @@ depends-member:
 - ["Ps7CVarArg", "applicationWillResignActive"]
 - ["Ps7CVarArg", "applicationWillTerminate"]
 - ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "lastTweetDate"]
 - ["Ps7CVarArg", "tweets"]
 - ["Ps7CVarArg", "window"]
 - ["Ps7CVarArg", ""]
@@ -137,6 +141,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "applicationWillResignActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillTerminate"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "lastTweetDate"]
 - ["Ps28CustomDebugStringConvertible", "tweets"]
 - ["Ps28CustomDebugStringConvertible", "window"]
 - ["Ps28CustomDebugStringConvertible", ""]
@@ -165,6 +170,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "applicationWillResignActive"]
 - ["Ps23CustomStringConvertible", "applicationWillTerminate"]
 - ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "lastTweetDate"]
 - ["Ps23CustomStringConvertible", "tweets"]
 - ["Ps23CustomStringConvertible", "window"]
 - ["Ps23CustomStringConvertible", ""]
@@ -190,6 +196,7 @@ depends-member:
 - ["Ps9Equatable", "hashValue"]
 - ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "isdeleted"]
+- ["Ps9Equatable", "lastTweetDate"]
 - !private ["Ps9Equatable", "tweet"]
 - !private ["Ps9Equatable", "tweet_id"]
 - ["Ps9Equatable", "tweets"]
@@ -223,6 +230,7 @@ depends-member:
 - ["Ps8Hashable", "hashValue"]
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "isdeleted"]
+- ["Ps8Hashable", "lastTweetDate"]
 - !private ["Ps8Hashable", "tweet"]
 - !private ["Ps8Hashable", "tweet_id"]
 - ["Ps8Hashable", "tweets"]
@@ -251,7 +259,7 @@ depends-member:
 - ["CSo6NSDate", "deinit"]
 - ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "Bool"]
-- !private ["CSo8NSObject", "Date"]
+- ["CSo8NSObject", "Date"]
 - !private ["CSo8NSObject", "NSDate"]
 - ["CSo8NSObject", "Tweet"]
 - ["CSo8NSObject", "UIApplication"]
@@ -270,6 +278,7 @@ depends-member:
 - ["CSo8NSObject", "applicationWillResignActive"]
 - ["CSo8NSObject", "applicationWillTerminate"]
 - ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "lastTweetDate"]
 - ["CSo8NSObject", "tweets"]
 - ["CSo8NSObject", "window"]
 - !private ["PSo16NSObjectProtocol", "Date"]
@@ -287,6 +296,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "applicationWillResignActive"]
 - ["PSo16NSObjectProtocol", "applicationWillTerminate"]
 - ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "lastTweetDate"]
 - ["PSo16NSObjectProtocol", "tweets"]
 - ["PSo16NSObjectProtocol", "window"]
 - ["PSo16NSObjectProtocol", ""]
@@ -353,7 +363,7 @@ depends-member:
 - ["PSo21UIApplicationDelegate", "window"]
 - ["PSo21UIApplicationDelegate", ""]
 - ["CSo11UIResponder", "Bool"]
-- !private ["CSo11UIResponder", "Date"]
+- ["CSo11UIResponder", "Date"]
 - !private ["CSo11UIResponder", "NSDate"]
 - ["CSo11UIResponder", "Tweet"]
 - ["CSo11UIResponder", "UIApplication"]
@@ -373,6 +383,7 @@ depends-member:
 - ["CSo11UIResponder", "applicationWillTerminate"]
 - ["CSo11UIResponder", "deinit"]
 - ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "lastTweetDate"]
 - ["CSo11UIResponder", "tweets"]
 - ["CSo11UIResponder", "window"]
 - ["CSo11UIResponder", ""]
@@ -391,6 +402,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "applicationWillResignActive"]
 - ["PSo30UIResponderStandardEditActions", "applicationWillTerminate"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
+- ["PSo30UIResponderStandardEditActions", "lastTweetDate"]
 - ["PSo30UIResponderStandardEditActions", "tweets"]
 - ["PSo30UIResponderStandardEditActions", "window"]
 - ["PSo30UIResponderStandardEditActions", ""]
@@ -425,6 +437,7 @@ depends-member:
 - ["Ps9_Hashable", "hashValue"]
 - ["Ps9_Hashable", "init"]
 - !private ["Ps9_Hashable", "isdeleted"]
+- ["Ps9_Hashable", "lastTweetDate"]
 - !private ["Ps9_Hashable", "tweet"]
 - !private ["Ps9_Hashable", "tweet_id"]
 - ["Ps9_Hashable", "tweets"]
@@ -516,4 +529,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "48029e3b343fa92469cec60b3d397574"
+interface-hash: "9dc5b3f39bc016a5ec6b24a7e6236adb"

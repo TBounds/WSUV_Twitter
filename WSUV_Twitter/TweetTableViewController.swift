@@ -8,8 +8,11 @@
 
 import UIKit
 
+
 class TweetTableViewController: UITableViewController {
     
+    
+    let kBaseURLString = "https://ezekiel.encs.vancouver.wsu.edu/~cs458/cgi-bin"
     
     lazy var tweetDateFormatter : DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -51,24 +54,21 @@ class TweetTableViewController: UITableViewController {
         tweetAttributedStringMap[tweet] = tweetAttributedString
         return tweetAttributedString
     }
-    
-    //-----------------------//
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        NotificationCenter.default.addObserver(forName: kAddTweetNotification,
-                                               object: nil,
-                                               queue: nil) { (note : Notification) -> Void in
-                                                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                                                let n = appDelegate.tweets.count
-                                                let indexPath = IndexPath(row: n-1, section: 0)
-                                                self.tableView.insertRows(at: [indexPath],
-                                                                          with: .fade)
-                                                
-        }
+        NotificationCenter.default.addObserver(
+            forName: kAddTweetNotification,
+            object: nil,
+            queue: nil) { (note : Notification) -> Void in
+                if !self.refreshControl!.isRefreshing {
+                    self.refreshControl!.beginRefreshing()
+                    self.refreshTweets(self)
+                }
+            }
     }
 
     override func didReceiveMemoryWarning() {
@@ -119,11 +119,6 @@ class TweetTableViewController: UITableViewController {
         return true
     }
     
-    // Override to support conditional editing of the table view.
-//    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        // Return false if you do not want the specified item to be editable.
-//        return true
-//    }
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
@@ -138,18 +133,61 @@ class TweetTableViewController: UITableViewController {
         //        }
     }
     
-//    // Override to support rearranging the table view.
-//    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        let phoneNumber = appDelegate.tweets[fromIndexPath.row]
-//        appDelegate.tweets.remove(at: fromIndexPath.row)
-//        appDelegate.tweets.insert(phoneNumber, at: to.row)
-//    }
     
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
+    
+    // ----- Refresh Tweets -----//
+    @IBAction func refreshTweets(_ sender: AnyObject) {
+        
+        // ----- Get Tweets -----//
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        dateFormatter.timeZone = TimeZone(abbreviation: "PST")
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let lastTweetDate = appDelegate.lastTweetDate()
+        let dateStr = dateFormatter.string(from: lastTweetDate as Date)
+        
+        // format date string from latest stored tweet...
+        Alamofire.request(kBaseURLString + "/get-tweets.cgi", method: .get, parameters: ["date" : dateStr])
+            .responseJSON {response in
+                switch(response.result) {
+                case .success(let JSON):
+                    let dict = JSON as! [String : AnyObject]
+                    let tweets = dict["tweets"] as! [[String : AnyObject]]
+                    // ... create a new Tweet object for each returned tweet dictionary
+                    // ... add new (sorted) tweets to appDelegate.tweets...
+                    self.tableView.reloadData() // force table-view to be updated
+                    self.refreshControl?.endRefreshing()
+                case .failure(let error):
+                    let message : String
+                    if let httpStatusCode = response.response?.statusCode {
+                        switch(httpStatusCode) {
+                        case 500:
+                            message = "Server error (my bad)"
+                            // ...
+                        }
+                    } else { // probably network or server timeout
+                        message = error.localizedDescription
+                    }
+                    // ... display alert with message ..
+                    self.refreshControl?.endRefreshing()
+                }
+        }
+        
+        // If successfully fetched new tweets
+        //    self.tableView.reloadData(); self.refreshControl?.endRefreshing();
+        // If error
+        //    display alert with message; self.refreshControl?.endRefreshing();
+    }
+    
+    
+    
+    
    
 }
