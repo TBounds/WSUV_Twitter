@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Intermediates/Alamofire.build/Debug-iphonesimulator/Alamofire iOS.build/unextended-module.modulemap',
+    }]
+  }]
+}
