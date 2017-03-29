@@ -13,6 +13,7 @@ class TweetTableViewController: UITableViewController {
     
     let kBaseURLString = "https://ezekiel.encs.vancouver.wsu.edu/~cs458/cgi-bin"
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     
     @IBAction func login(_ sender: Any) {
@@ -41,12 +42,12 @@ class TweetTableViewController: UITableViewController {
                     let passwordTextField = alertController.textFields![1]
                     let rePasswordtextField = alertController.textFields![2]
                     
-                    // XXX check for empty textfields, unique username, and passwords match
+                    // Make sure passwords match. Server checks for other errors.
                     if passwordTextField.text == rePasswordtextField.text {
                         self.registerUser(username: usernameTextField.text!, password: passwordTextField.text!)
                     }
                     else {
-                        // XXX ERROR WITH REGISTRATION
+                        // Passwords don't match, report to user.
                         let registerErrorAlertContoller = UIAlertController(title: "Registration Error", message: nil, preferredStyle: .alert)
                         
                         registerErrorAlertContoller.message = "Passwords do not match."
@@ -55,9 +56,7 @@ class TweetTableViewController: UITableViewController {
                         
                         self.present(registerErrorAlertContoller, animated: true, completion: nil)
                     }
-                    
-                    
-                    
+    
                 }))
                 
                 alertController.addAction(UIKit.UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -93,7 +92,7 @@ class TweetTableViewController: UITableViewController {
                     let usernameTextField = alertController.textFields![0]
                     let passwordTextField = alertController.textFields![1]
                     
-                    // XXX check for empty textfields
+                    //----- ATTEMPT TO LOGIN -----//
                     if usernameTextField.text != "" && passwordTextField.text != "" {
                         self.loginUser(username: usernameTextField.text!, password: passwordTextField.text!)
                     }
@@ -125,11 +124,14 @@ class TweetTableViewController: UITableViewController {
             }
         ))
         
-        manageAccountController.addAction(UIAlertAction(
-            title: "Logout",
-            style: .default,
-            handler: nil
-        ))
+        if appDelegate.username != "" {
+            manageAccountController.addAction(UIAlertAction(
+                title: "Logout",
+                style: .default,
+                handler: nil
+            ))
+        }
+        
         
         manageAccountController.addAction(UIAlertAction(
             title: "Reset Passwords",
@@ -137,15 +139,139 @@ class TweetTableViewController: UITableViewController {
             handler: nil
         ))
         
-        
-        
         self.present(manageAccountController, animated: true, completion: nil)
     }
     
     func loginUser(username: String, password: String) {
-        NSLog("\(username)  \(password)")
-        SSKeychain.setPassword(password, forService: kWazzuTwitterPassword, account: username)
+        
+        let urlString = kBaseURLString + "/login.cgi"
+        
+        let parameters = [
+            "username" : username,  // username and password
+            "password" : password,  // obtained from user
+            "action" : "login"
+        ]
+        
+        Alamofire.request(urlString, method: .post, parameters: parameters)
+            .responseJSON(completionHandler: {response in
+                switch(response.result) {
+                case .success(let JSON):
+                    
+                    let dict = JSON as! [String : AnyObject]
+                    
+                    // save username
+                    self.appDelegate.username = username
+                    
+                    // save session_token in keychain
+                    SSKeychain.setPassword(dict["session_token"] as! String, forService: kWazzuTwitterSessionToken, account: username)
+                    
+                    // enable "add tweet" button
+                    self.appDelegate.canTweet = true
+                    
+                    // change title of controller to show username, etc...
+                    self.title = username
+                    
+                case .failure(let error):
+                    var errMessage = "Unknown Error"
+                    switch(response.response!.statusCode) {
+                    case 500:
+                        errMessage = "Internal server error."
+                        break
+                    case 400:
+                        errMessage = "Make sure to provide both a username and a password."
+                        break
+                    case 409:
+                        errMessage = "Username already exists."
+                        break
+                    case 404:
+                        errMessage = "Username does not exist."
+                        break
+                    case 401:
+                        errMessage = "Password is incorrect"
+                        break
+                    default:
+                        errMessage = "Error code: \(response.response!.statusCode)"
+                        break
+                    }
+                    
+                    let loginErrorAlertContoller = UIAlertController(title: "Login Error", message: nil, preferredStyle: .alert)
+                    
+                    loginErrorAlertContoller.message = errMessage
+                    
+                    loginErrorAlertContoller.addAction(UIKit.UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+                    
+                    self.present(loginErrorAlertContoller, animated: true, completion: nil)
+                    
+                } } )
+        
     }
+    
+    func logout(username: String, password: String) {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let urlString = kBaseURLString + "/login.cgi"
+        
+        let parameters = [
+            "username" : username,  // username and password
+            "password" : password,  // obtained from user
+            "action" : "login"
+        ]
+        
+        Alamofire.request(urlString, method: .post, parameters: parameters)
+            .responseJSON(completionHandler: {response in
+                switch(response.result) {
+                case .success(let JSON):
+                    
+                    let dict = JSON as! [String : AnyObject]
+                    
+                    // save username
+                    appDelegate.username = username
+                    
+                    // save session_token in keychain
+                    SSKeychain.setPassword(dict["session_token"] as! String, forService: kWazzuTwitterSessionToken, account: username)
+                    
+                    // enable "add tweet" button
+                    appDelegate.canTweet = true
+                    
+                    // change title of controller to show username, etc...
+                    self.title = username
+                    
+                case .failure(let error):
+                    var errMessage = "Unknown Error"
+                    switch(response.response!.statusCode) {
+                    case 500:
+                        errMessage = "Internal server error."
+                        break
+                    case 400:
+                        errMessage = "Make sure to provide both a username and a password."
+                        break
+                    case 409:
+                        errMessage = "Username already exists."
+                        break
+                    case 404:
+                        errMessage = "Username does not exist."
+                        break
+                    case 401:
+                        errMessage = "Password is incorrect"
+                        break
+                    default:
+                        errMessage = "Error code: \(response.response!.statusCode)"
+                        break
+                    }
+                    
+                    let loginErrorAlertContoller = UIAlertController(title: "Login Error", message: nil, preferredStyle: .alert)
+                    
+                    loginErrorAlertContoller.message = errMessage
+                    
+                    loginErrorAlertContoller.addAction(UIKit.UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+                    
+                    self.present(loginErrorAlertContoller, animated: true, completion: nil)
+                    
+                } } )
+        
+    }
+   
     
     func registerUser (username: String, password: String) {
         
@@ -160,11 +286,22 @@ class TweetTableViewController: UITableViewController {
             .responseJSON(completionHandler: {response in
                 switch(response.result) {
                 case .success(let JSON):
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    let dict = JSON as! [String : AnyObject]
+                    
                     // save username
+                    appDelegate.username = username
+                    
                     // save password and session_token in keychain
+                    SSKeychain.setPassword(password, forService: kWazzuTwitterPassword, account: username)
+                    SSKeychain.setPassword(dict["session_token"] as! String, forService: kWazzuTwitterSessionToken, account: username)
+                    
                     // enable "add tweet" button
-                // change title of controller to show username, etc...
-                    NSLog("Success")
+                    appDelegate.canTweet = true
+                    
+                    // change title of controller to show username, etc...
+                    self.title = username
+                    
                 case .failure(let error):
                     var errMessage = "Unknown Error"
                     switch(response.response!.statusCode) {

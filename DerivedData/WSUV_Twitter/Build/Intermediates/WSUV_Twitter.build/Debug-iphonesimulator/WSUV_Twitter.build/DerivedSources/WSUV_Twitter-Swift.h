@@ -144,6 +144,8 @@ SWIFT_CLASS("_TtC12WSUV_Twitter27AddTweetTableViewController")
 SWIFT_CLASS("_TtC12WSUV_Twitter11AppDelegate")
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (nonatomic, strong) UIWindow * _Nullable window;
+@property (nonatomic, copy) NSString * _Nonnull username;
+@property (nonatomic) BOOL canTweet;
 - (NSDate * _Nonnull)lastTweetDate;
 - (BOOL)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
 - (void)applicationWillResignActive:(UIApplication * _Nonnull)application;
@@ -162,8 +164,10 @@ SWIFT_CLASS("_TtC12WSUV_Twitter11AppDelegate")
 SWIFT_CLASS("_TtC12WSUV_Twitter24TweetTableViewController")
 @interface TweetTableViewController : UITableViewController
 @property (nonatomic, readonly, copy) NSString * _Nonnull kBaseURLString;
+@property (nonatomic, readonly, strong) AppDelegate * _Nonnull appDelegate;
 - (IBAction)login:(id _Nonnull)sender;
 - (void)loginUserWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password;
+- (void)logoutWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password;
 - (void)registerUserWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password;
 @property (nonatomic, strong) NSDateFormatter * _Nonnull tweetDateFormatter;
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSObject *> * _Nonnull tweetTitleAttributes;
