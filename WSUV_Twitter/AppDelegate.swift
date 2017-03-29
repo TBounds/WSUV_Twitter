@@ -45,7 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var tweets : [Tweet] = []
     var username : String = ""
-    var canTweet : Bool = false
     
     func lastTweetDate() -> Date {
         // http://www.globalnerdy.com/2016/08/18/how-to-work-with-dates-and-times-in-swift-3-part-1-dates-calendars-and-datecomponents/

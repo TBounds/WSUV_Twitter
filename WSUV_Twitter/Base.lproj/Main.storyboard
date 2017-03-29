@@ -47,7 +47,7 @@
                                 <action selector="manageAccount:" destination="dhV-sV-xPc" id="vIp-xQ-h8d"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="If9-mP-c1C">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="If9-mP-c1C">
                             <connections>
                                 <segue destination="kjr-JV-3bd" kind="presentation" id="coZ-cL-WGW"/>
                             </connections>
@@ -69,6 +69,9 @@
                             <action selector="refreshTweets:" destination="dhV-sV-xPc" eventType="valueChanged" id="2Wr-fN-f7H"/>
                         </connections>
                     </refreshControl>
+                    <connections>
+                        <outlet property="addTweetButton" destination="If9-mP-c1C" id="tvv-DD-U6k"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLS-tE-62k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

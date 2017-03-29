@@ -12,8 +12,10 @@ import Alamofire
 class TweetTableViewController: UITableViewController {
     
     let kBaseURLString = "https://ezekiel.encs.vancouver.wsu.edu/~cs458/cgi-bin"
-
+    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    @IBOutlet weak var addTweetButton: UIBarButtonItem!
     
     @IBAction func manageAccount(_ sender: Any) {
     
@@ -78,7 +80,6 @@ class TweetTableViewController: UITableViewController {
                 
         }
         ))
-        
         
         //---------------------------- LOGIN ------------------------------//
         manageAccountController.addAction(UIAlertAction(
@@ -169,7 +170,7 @@ class TweetTableViewController: UITableViewController {
                     SSKeychain.setPassword(dict["session_token"] as! String, forService: kWazzuTwitterSessionToken, account: username)
                     
                     // enable "add tweet" button
-                    self.appDelegate.canTweet = true
+                    self.addTweetButton.isEnabled = true
                     
                     // change title of controller to show username, etc...
                     self.title = username
@@ -236,7 +237,7 @@ class TweetTableViewController: UITableViewController {
                     SSKeychain.setPassword(dict["session_token"] as! String, forService: kWazzuTwitterSessionToken, account: username)
                     
                     // disable "add tweet" button
-                    appDelegate.canTweet = false
+                    self.addTweetButton.isEnabled = false
                     
                     // change title of controller to show username, etc...
                     self.title = "Recent Tweets"
@@ -304,7 +305,7 @@ class TweetTableViewController: UITableViewController {
                     SSKeychain.setPassword(dict["session_token"] as! String, forService: kWazzuTwitterSessionToken, account: username)
                     
                     // enable "add tweet" button
-                    appDelegate.canTweet = true
+                    self.addTweetButton.isEnabled = true
                     
                     // change title of controller to show username, etc...
                     self.title = username
