@@ -32,98 +32,103 @@ class TweetTableViewController: UITableViewController {
         ))
         
         //---------------------------- REGISTER ------------------------------//
-        manageAccountController.addAction(UIAlertAction(
-            title: "Register",
-            style: .default,
-            handler: { (UIAlertAction) -> Void in
-                
-                let alertController = UIAlertController(title: "Register", message: "Register a WSUV Twitter Account", preferredStyle: .alert)
-                
-                alertController.addAction(UIKit.UIAlertAction(title: "Register", style: .default, handler: { _ in
-                    let usernameTextField = alertController.textFields![0]
-                    let passwordTextField = alertController.textFields![1]
-                    let rePasswordtextField = alertController.textFields![2]
+        if self.appDelegate.username == "" {
+            manageAccountController.addAction(UIAlertAction(
+                title: "Register",
+                style: .default,
+                handler: { (UIAlertAction) -> Void in
                     
-                    // Make sure passwords match. Server checks for other errors.
-                    if passwordTextField.text == rePasswordtextField.text {
-                        self.registerUser(username: usernameTextField.text!, password: passwordTextField.text!)
+                    let alertController = UIAlertController(title: "Register", message: "Register a WSUV Twitter Account", preferredStyle: .alert)
+                    
+                    alertController.addAction(UIKit.UIAlertAction(title: "Register", style: .default, handler: { _ in
+                        let usernameTextField = alertController.textFields![0]
+                        let passwordTextField = alertController.textFields![1]
+                        let rePasswordtextField = alertController.textFields![2]
+                        
+                        // Make sure passwords match. Server checks for other errors.
+                        if passwordTextField.text == rePasswordtextField.text {
+                            self.registerUser(username: usernameTextField.text!, password: passwordTextField.text!)
+                        }
+                        else {
+                            // Passwords don't match, report to user.
+                            let registerErrorAlertContoller = UIAlertController(title: "Registration Error", message: nil, preferredStyle: .alert)
+                            
+                            registerErrorAlertContoller.message = "Passwords do not match."
+                            
+                            registerErrorAlertContoller.addAction(UIKit.UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+                            
+                            self.present(registerErrorAlertContoller, animated: true, completion: nil)
+                        }
+                        
+                    }))
+                    
+                    alertController.addAction(UIKit.UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                    alertController.addTextField { (textField : UITextField) -> Void in
+                        textField.placeholder = "Username"
                     }
-                    else {
-                        // Passwords don't match, report to user.
-                        let registerErrorAlertContoller = UIAlertController(title: "Registration Error", message: nil, preferredStyle: .alert)
-                        
-                        registerErrorAlertContoller.message = "Passwords do not match."
-                        
-                        registerErrorAlertContoller.addAction(UIKit.UIAlertAction(title: "Okay", style: .cancel, handler: nil))
-                        
-                        self.present(registerErrorAlertContoller, animated: true, completion: nil)
+                    
+                    alertController.addTextField { (textField : UITextField) -> Void in
+                        textField.isSecureTextEntry = true
+                        textField.placeholder = "Password"
                     }
-    
-                }))
-                
-                alertController.addAction(UIKit.UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-                alertController.addTextField { (textField : UITextField) -> Void in
-                    textField.placeholder = "Username"
-                }
-                
-                alertController.addTextField { (textField : UITextField) -> Void in
-                    textField.isSecureTextEntry = true
-                    textField.placeholder = "Password"
-                }
-                
-                alertController.addTextField { (textField : UITextField) -> Void in
-                    textField.isSecureTextEntry = true
-                    textField.placeholder = "Re-enter Password"
-                }
-                
-                self.present(alertController, animated: true, completion: nil)
-                
+                    
+                    alertController.addTextField { (textField : UITextField) -> Void in
+                        textField.isSecureTextEntry = true
+                        textField.placeholder = "Re-enter Password"
+                    }
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                    
+            }
+            ))
         }
-        ))
         
         //---------------------------- LOGIN ------------------------------//
-        manageAccountController.addAction(UIAlertAction(
-            title: "Login",
-            style: .default,
-            handler: { (UIAlertAction) -> Void in
-                
-                let alertController = UIAlertController(title: "Login", message: "Please Log in", preferredStyle: .alert)
-                
-                alertController.addAction(UIKit.UIAlertAction(title: "Login", style: .default, handler: { _ in
-                    let usernameTextField = alertController.textFields![0]
-                    let passwordTextField = alertController.textFields![1]
+        if self.appDelegate.username == "" {
+            manageAccountController.addAction(UIAlertAction(
+                title: "Login",
+                style: .default,
+                handler: { (UIAlertAction) -> Void in
                     
-                    //----- ATTEMPT TO LOGIN -----//
-                    if usernameTextField.text != "" && passwordTextField.text != "" {
-                        self.loginUser(username: usernameTextField.text!, password: passwordTextField.text!)
-                    }
-                    //----- ERROR LOGGING IN -----//
-                    else{
-                        let loginErrorAlertContoller = UIAlertController(title: "Login Error", message: nil, preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "Login", message: "Please Log in", preferredStyle: .alert)
+                    
+                    alertController.addAction(UIKit.UIAlertAction(title: "Login", style: .default, handler: { _ in
+                        let usernameTextField = alertController.textFields![0]
+                        let passwordTextField = alertController.textFields![1]
                         
-                        loginErrorAlertContoller.message = "Make sure the username and password fields are filled in."
+                        //----- ATTEMPT TO LOGIN -----//
+                        if usernameTextField.text != "" && passwordTextField.text != "" {
+                            self.loginUser(username: usernameTextField.text!, password: passwordTextField.text!)
+                        }
+                            //----- ERROR LOGGING IN -----//
+                        else{
+                            let loginErrorAlertContoller = UIAlertController(title: "Login Error", message: nil, preferredStyle: .alert)
+                            
+                            loginErrorAlertContoller.message = "Make sure the username and password fields are filled in."
+                            
+                            loginErrorAlertContoller.addAction(UIKit.UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+                            
+                            self.present(loginErrorAlertContoller, animated: true, completion: nil)
+                        }
                         
-                        loginErrorAlertContoller.addAction(UIKit.UIAlertAction(title: "Okay", style: .cancel, handler: nil))
-                        
-                        self.present(loginErrorAlertContoller, animated: true, completion: nil)
+                    }))
+                    
+                    alertController.addAction(UIKit.UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                    alertController.addTextField { (textField : UITextField) -> Void in
+                        textField.placeholder = "Username"
                     }
                     
-                }))
-                
-                alertController.addAction(UIKit.UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-                alertController.addTextField { (textField : UITextField) -> Void in
-                    textField.placeholder = "Username"
-                }
-                
-                alertController.addTextField { (textField : UITextField) -> Void in
-                    textField.isSecureTextEntry = true
-                    textField.placeholder = "Password"
-                }
-                
-                self.present(alertController, animated: true, completion: nil)
-
+                    alertController.addTextField { (textField : UITextField) -> Void in
+                        textField.isSecureTextEntry = true
+                        textField.placeholder = "Password"
+                    }
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                    
             }
-        ))
+            ))
+        }
+        
         
         //---------------------------- LOGOUT ------------------------------//
         if appDelegate.username != "" {
