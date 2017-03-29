@@ -125,6 +125,7 @@ class TweetTableViewController: UITableViewController {
             }
         ))
         
+        //---------------------------- LOGOUT ------------------------------//
         if appDelegate.username != "" {
             manageAccountController.addAction(UIAlertAction(
                 title: "Logout",
@@ -135,14 +136,50 @@ class TweetTableViewController: UITableViewController {
             ))
         }
         
-        
-        manageAccountController.addAction(UIAlertAction(
-            title: "Reset Passwords",
-            style: .default,
-            handler: nil
-        ))
+        //---------------------------- RESET PASSWORD ------------------------------//
+        if appDelegate.username != "" {
+            manageAccountController.addAction(UIAlertAction(
+                title: "Reset Password",
+                style: .default,
+                handler: { (UIAlertAction) -> Void in
+                    
+                    let alertController = UIAlertController(title: "Reset Password", message: nil, preferredStyle: .alert)
+                    
+                    alertController.addAction(UIKit.UIAlertAction(title: "Reset Password", style: .default, handler: { _ in
+                        let usernameTextField = alertController.textFields![0]
+                        let passwordTextField = alertController.textFields![1]
+                        let newPasswordtextField = alertController.textFields![2]
+                        
+                        
+                        self.resetPassword(username: usernameTextField.text!, password: passwordTextField.text!, newPassword: newPasswordtextField.text!)
+                        
+                        
+                    }))
+                    
+                    alertController.addAction(UIKit.UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                    alertController.addTextField { (textField : UITextField) -> Void in
+                        textField.placeholder = "Username"
+                    }
+                    
+                    alertController.addTextField { (textField : UITextField) -> Void in
+                        textField.isSecureTextEntry = true
+                        textField.placeholder = "Password"
+                    }
+                    
+                    alertController.addTextField { (textField : UITextField) -> Void in
+                        textField.isSecureTextEntry = true
+                        textField.placeholder = "New Password"
+                    }
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                    
+            }
+            ))
+            
+        }
         
         self.present(manageAccountController, animated: true, completion: nil)
+        
     }
     
     //----- LOGIN FUNCTION -----//
@@ -280,6 +317,9 @@ class TweetTableViewController: UITableViewController {
         
     }
    
+    func resetPassword(username: String, password: String, newPassword: String) {
+        
+    }
     
     func registerUser (username: String, password: String) {
         

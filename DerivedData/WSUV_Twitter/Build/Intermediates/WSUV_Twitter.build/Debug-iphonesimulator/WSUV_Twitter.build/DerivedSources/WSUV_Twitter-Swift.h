@@ -169,6 +169,7 @@ SWIFT_CLASS("_TtC12WSUV_Twitter24TweetTableViewController")
 - (IBAction)manageAccount:(id _Nonnull)sender;
 - (void)loginUserWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password;
 - (void)logoutWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password;
+- (void)resetPasswordWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password newPassword:(NSString * _Nonnull)newPassword;
 - (void)registerUserWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password;
 @property (nonatomic, strong) NSDateFormatter * _Nonnull tweetDateFormatter;
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSObject *> * _Nonnull tweetTitleAttributes;
