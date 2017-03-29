@@ -1,8 +1,8 @@
 version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
 options: "343ef3d92ec39abe59c01a4cbed3d10b"
-build_time: [544128808, 188166000]
+build_time: [544134738, 303586000]
 inputs:
-  "/home-local/t.bounds/WSUV_Twitter/WSUV_Twitter/TweetTableViewController.swift": [544128807, 0]
-  "/home-local/t.bounds/WSUV_Twitter/WSUV_Twitter/ViewController.swift": [544125277, 0]
-  "/home-local/t.bounds/WSUV_Twitter/WSUV_Twitter/AppDelegate.swift": [544127404, 0]
-  "/home-local/t.bounds/WSUV_Twitter/WSUV_Twitter/AddTweetTableViewController.swift": [544126752, 0]
+  "/home-local/t.bounds/WSUV_Twitter/WSUV_Twitter/TweetTableViewController.swift": [544134507, 0]
+  "/home-local/t.bounds/WSUV_Twitter/WSUV_Twitter/ViewController.swift": [544134507, 0]
+  "/home-local/t.bounds/WSUV_Twitter/WSUV_Twitter/AppDelegate.swift": [544134507, 0]
+  "/home-local/t.bounds/WSUV_Twitter/WSUV_Twitter/AddTweetTableViewController.swift": [544134507, 0]

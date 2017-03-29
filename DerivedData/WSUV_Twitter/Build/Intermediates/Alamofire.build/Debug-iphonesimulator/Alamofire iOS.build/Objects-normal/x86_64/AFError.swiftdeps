@@ -45,18 +45,18 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - !private "BooleanLiteralType"
-- "URLConvertible"
 - "AFError"
 - "Error"
-- !private "UnicodeScalarType"
 - "Int"
 - !private "StringLiteralType"
 - "String"
+- "LocalizedError"
 - "AdaptError"
 - !private "+"
-- "LocalizedError"
 - "CastingPrecedence"
+- !private "UnicodeScalarType"
 - "Bool"
+- "URLConvertible"
 - "URL"
 depends-member:
 - ["O9Alamofire7AFError", "Bool"]
