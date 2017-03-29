@@ -6,21 +6,25 @@ provides-nominal:
 provides-member:
 - ["C12WSUV_Twitter27AddTweetTableViewController", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
 - "tweetTextField"
-- "viewDidLoad"
 - "viewDidAppear"
+- "cancel"
+- "didReceiveMemoryWarning"
+- "viewDidLoad"
 depends-top-level:
-- "UITableViewController"
 - "UITextFieldDelegate"
 - "Bool"
 - "UITextView"
 - "AddTweetTableViewController"
+- "UITableViewController"
+- !private "BooleanLiteralType"
 depends-member:
 - ["C12WSUV_Twitter27AddTweetTableViewController", "Bool"]
 - ["C12WSUV_Twitter27AddTweetTableViewController", "UITextView"]
+- ["C12WSUV_Twitter27AddTweetTableViewController", "cancel"]
 - ["C12WSUV_Twitter27AddTweetTableViewController", "deinit"]
 - ["C12WSUV_Twitter27AddTweetTableViewController", "didReceiveMemoryWarning"]
+- !private ["C12WSUV_Twitter27AddTweetTableViewController", "dismiss"]
 - ["C12WSUV_Twitter27AddTweetTableViewController", "init"]
 - ["C12WSUV_Twitter27AddTweetTableViewController", "textField"]
 - ["C12WSUV_Twitter27AddTweetTableViewController", "textFieldDidBeginEditing"]
@@ -32,7 +36,9 @@ depends-member:
 - ["C12WSUV_Twitter27AddTweetTableViewController", "tweetTextField"]
 - ["C12WSUV_Twitter27AddTweetTableViewController", "viewDidAppear"]
 - ["C12WSUV_Twitter27AddTweetTableViewController", "viewDidLoad"]
+- ["Ps9AnyObject", "cancel"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
+- !private ["Ps9AnyObject", "dismiss"]
 - !private ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "textField"]
 - ["Ps9AnyObject", "textFieldDidBeginEditing"]
@@ -46,7 +52,9 @@ depends-member:
 - ["Ps9AnyObject", "viewDidLoad"]
 - ["Ps9AnyObject", ""]
 - ["Sb", "deinit"]
+- ["Ps7CVarArg", "cancel"]
 - ["Ps7CVarArg", "didReceiveMemoryWarning"]
+- !private ["Ps7CVarArg", "dismiss"]
 - !private ["Ps7CVarArg", "init"]
 - ["Ps7CVarArg", "textField"]
 - ["Ps7CVarArg", "textFieldDidBeginEditing"]
@@ -59,7 +67,9 @@ depends-member:
 - ["Ps7CVarArg", "viewDidAppear"]
 - ["Ps7CVarArg", "viewDidLoad"]
 - ["Ps7CVarArg", ""]
+- ["Ps28CustomDebugStringConvertible", "cancel"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps28CustomDebugStringConvertible", "dismiss"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "textField"]
 - ["Ps28CustomDebugStringConvertible", "textFieldDidBeginEditing"]
@@ -72,7 +82,9 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "viewDidAppear"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "cancel"]
 - ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
+- !private ["Ps23CustomStringConvertible", "dismiss"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "textField"]
 - ["Ps23CustomStringConvertible", "textFieldDidBeginEditing"]
@@ -85,7 +97,9 @@ depends-member:
 - ["Ps23CustomStringConvertible", "viewDidAppear"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "cancel"]
 - ["Ps9Equatable", "didReceiveMemoryWarning"]
+- !private ["Ps9Equatable", "dismiss"]
 - !private ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "textField"]
 - ["Ps9Equatable", "textFieldDidBeginEditing"]
@@ -98,7 +112,9 @@ depends-member:
 - ["Ps9Equatable", "viewDidAppear"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
+- ["Ps8Hashable", "cancel"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps8Hashable", "dismiss"]
 - !private ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "textField"]
 - ["Ps8Hashable", "textFieldDidBeginEditing"]
@@ -113,7 +129,9 @@ depends-member:
 - ["Ps8Hashable", ""]
 - ["SQ", "deinit"]
 - ["CSo7NSCoder", "deinit"]
+- ["PSo8NSCoding", "cancel"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
+- !private ["PSo8NSCoding", "dismiss"]
 - !private ["PSo8NSCoding", "init"]
 - ["PSo8NSCoding", "textField"]
 - ["PSo8NSCoding", "textFieldDidBeginEditing"]
@@ -126,7 +144,9 @@ depends-member:
 - ["PSo8NSCoding", "viewDidAppear"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
+- ["PSo26NSExtensionRequestHandling", "cancel"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
+- !private ["PSo26NSExtensionRequestHandling", "dismiss"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "textField"]
 - ["PSo26NSExtensionRequestHandling", "textFieldDidBeginEditing"]
@@ -141,7 +161,9 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", ""]
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "UITextView"]
+- ["CSo8NSObject", "cancel"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
+- !private ["CSo8NSObject", "dismiss"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "textField"]
 - ["CSo8NSObject", "textFieldDidBeginEditing"]
@@ -153,7 +175,9 @@ depends-member:
 - ["CSo8NSObject", "tweetTextField"]
 - ["CSo8NSObject", "viewDidAppear"]
 - ["CSo8NSObject", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", "cancel"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
+- !private ["PSo16NSObjectProtocol", "dismiss"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "textField"]
 - ["PSo16NSObjectProtocol", "textFieldDidBeginEditing"]
@@ -167,7 +191,9 @@ depends-member:
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
 - ["Sq", "deinit"]
+- ["PSo21UIAppearanceContainer", "cancel"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
+- !private ["PSo21UIAppearanceContainer", "dismiss"]
 - !private ["PSo21UIAppearanceContainer", "init"]
 - ["PSo21UIAppearanceContainer", "textField"]
 - ["PSo21UIAppearanceContainer", "textFieldDidBeginEditing"]
@@ -180,7 +206,9 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "viewDidAppear"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
+- ["PSo18UIContentContainer", "cancel"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
+- !private ["PSo18UIContentContainer", "dismiss"]
 - !private ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "textField"]
 - ["PSo18UIContentContainer", "textFieldDidBeginEditing"]
@@ -193,7 +221,9 @@ depends-member:
 - ["PSo18UIContentContainer", "viewDidAppear"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
+- ["PSo18UIFocusEnvironment", "cancel"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UIFocusEnvironment", "dismiss"]
 - !private ["PSo18UIFocusEnvironment", "init"]
 - ["PSo18UIFocusEnvironment", "textField"]
 - ["PSo18UIFocusEnvironment", "textFieldDidBeginEditing"]
@@ -208,7 +238,9 @@ depends-member:
 - ["PSo18UIFocusEnvironment", ""]
 - ["CSo11UIResponder", "Bool"]
 - ["CSo11UIResponder", "UITextView"]
+- ["CSo11UIResponder", "cancel"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
+- !private ["CSo11UIResponder", "dismiss"]
 - ["CSo11UIResponder", "init"]
 - ["CSo11UIResponder", "textField"]
 - ["CSo11UIResponder", "textFieldDidBeginEditing"]
@@ -220,7 +252,9 @@ depends-member:
 - ["CSo11UIResponder", "tweetTextField"]
 - ["CSo11UIResponder", "viewDidAppear"]
 - ["CSo11UIResponder", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", "cancel"]
 - ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
+- !private ["PSo30UIResponderStandardEditActions", "dismiss"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
 - ["PSo30UIResponderStandardEditActions", "textField"]
 - ["PSo30UIResponderStandardEditActions", "textFieldDidBeginEditing"]
@@ -233,7 +267,9 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "viewDidAppear"]
 - ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", ""]
+- ["PSo20UIScrollViewDelegate", "cancel"]
 - ["PSo20UIScrollViewDelegate", "didReceiveMemoryWarning"]
+- !private ["PSo20UIScrollViewDelegate", "dismiss"]
 - !private ["PSo20UIScrollViewDelegate", "init"]
 - ["PSo20UIScrollViewDelegate", "textField"]
 - ["PSo20UIScrollViewDelegate", "textFieldDidBeginEditing"]
@@ -246,7 +282,9 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "viewDidAppear"]
 - ["PSo20UIScrollViewDelegate", "viewDidLoad"]
 - ["PSo20UIScrollViewDelegate", ""]
+- ["PSo16UIStateRestoring", "cancel"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
+- !private ["PSo16UIStateRestoring", "dismiss"]
 - !private ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "textField"]
 - ["PSo16UIStateRestoring", "textFieldDidBeginEditing"]
@@ -261,8 +299,10 @@ depends-member:
 - ["PSo16UIStateRestoring", ""]
 - ["CSo21UITableViewController", "Bool"]
 - ["CSo21UITableViewController", "UITextView"]
+- ["CSo21UITableViewController", "cancel"]
 - ["CSo21UITableViewController", "deinit"]
 - ["CSo21UITableViewController", "didReceiveMemoryWarning"]
+- !private ["CSo21UITableViewController", "dismiss"]
 - ["CSo21UITableViewController", "init"]
 - ["CSo21UITableViewController", "textField"]
 - ["CSo21UITableViewController", "textFieldDidBeginEditing"]
@@ -275,7 +315,9 @@ depends-member:
 - ["CSo21UITableViewController", "viewDidAppear"]
 - ["CSo21UITableViewController", "viewDidLoad"]
 - ["CSo21UITableViewController", ""]
+- ["PSo21UITableViewDataSource", "cancel"]
 - ["PSo21UITableViewDataSource", "didReceiveMemoryWarning"]
+- !private ["PSo21UITableViewDataSource", "dismiss"]
 - !private ["PSo21UITableViewDataSource", "init"]
 - ["PSo21UITableViewDataSource", "textField"]
 - ["PSo21UITableViewDataSource", "textFieldDidBeginEditing"]
@@ -288,7 +330,9 @@ depends-member:
 - ["PSo21UITableViewDataSource", "viewDidAppear"]
 - ["PSo21UITableViewDataSource", "viewDidLoad"]
 - ["PSo21UITableViewDataSource", ""]
+- ["PSo19UITableViewDelegate", "cancel"]
 - ["PSo19UITableViewDelegate", "didReceiveMemoryWarning"]
+- !private ["PSo19UITableViewDelegate", "dismiss"]
 - !private ["PSo19UITableViewDelegate", "init"]
 - ["PSo19UITableViewDelegate", "textField"]
 - ["PSo19UITableViewDelegate", "textFieldDidBeginEditing"]
@@ -302,6 +346,7 @@ depends-member:
 - ["PSo19UITableViewDelegate", "viewDidLoad"]
 - ["PSo19UITableViewDelegate", ""]
 - ["OSC16UITableViewStyle", "deinit"]
+- !private ["PSo19UITextFieldDelegate", "dismiss"]
 - ["PSo19UITextFieldDelegate", "textField"]
 - ["PSo19UITextFieldDelegate", "textFieldDidBeginEditing"]
 - ["PSo19UITextFieldDelegate", "textFieldDidEndEditing"]
@@ -310,7 +355,9 @@ depends-member:
 - ["PSo19UITextFieldDelegate", "textFieldShouldEndEditing"]
 - ["PSo19UITextFieldDelegate", "textFieldShouldReturn"]
 - ["PSo19UITextFieldDelegate", ""]
+- ["PSo18UITraitEnvironment", "cancel"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
+- !private ["PSo18UITraitEnvironment", "dismiss"]
 - !private ["PSo18UITraitEnvironment", "init"]
 - ["PSo18UITraitEnvironment", "textField"]
 - ["PSo18UITraitEnvironment", "textFieldDidBeginEditing"]
@@ -325,7 +372,9 @@ depends-member:
 - ["PSo18UITraitEnvironment", ""]
 - ["CSo16UIViewController", "Bool"]
 - ["CSo16UIViewController", "UITextView"]
+- ["CSo16UIViewController", "cancel"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
+- !private ["CSo16UIViewController", "dismiss"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "textField"]
 - ["CSo16UIViewController", "textFieldDidBeginEditing"]
@@ -337,7 +386,9 @@ depends-member:
 - ["CSo16UIViewController", "tweetTextField"]
 - ["CSo16UIViewController", "viewDidAppear"]
 - ["CSo16UIViewController", "viewDidLoad"]
+- ["Ps9_Hashable", "cancel"]
 - ["Ps9_Hashable", "didReceiveMemoryWarning"]
+- !private ["Ps9_Hashable", "dismiss"]
 - !private ["Ps9_Hashable", "init"]
 - ["Ps9_Hashable", "textField"]
 - ["Ps9_Hashable", "textFieldDidBeginEditing"]
@@ -384,6 +435,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/home-local/t.bounds/WSUV_Twitter/WSUV_Twitter/WSUV_Twitter-Bridging-Header.h"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
@@ -397,4 +449,4 @@ depends-external:
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire.h"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "efb1887b798d1109b1c76fba65e9e24a"
+interface-hash: "fbac3fd1aceb221836c148fef56a1a5c"

@@ -51,8 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        tweets.append(Tweet(1, "Tommy Boi", false, "This is just a test. Do not be alarmed.", Date() as NSDate))
-        tweets.append(Tweet(2, "Pamala Handerson", false, "Someone love me...pls.", Date() as NSDate))
+        // tweets.append(Tweet(1, "Tommy Boi", false, "This is just a test. Do not be alarmed.", Date() as NSDate))
+        // tweets.append(Tweet(2, "Pamala Handerson", false, "Someone love me...pls.", Date() as NSDate))
         
         return true
     }

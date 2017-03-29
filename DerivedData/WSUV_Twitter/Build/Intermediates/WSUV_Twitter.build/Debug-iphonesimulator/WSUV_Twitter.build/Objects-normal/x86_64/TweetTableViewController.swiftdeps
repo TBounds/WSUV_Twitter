@@ -6,69 +6,65 @@ provides-nominal:
 provides-member:
 - ["C12WSUV_Twitter24TweetTableViewController", ""]
 provides-dynamic-lookup:
-- "refreshTweets"
 - "tweetTitleAttributes"
-- "tweetBodyAttributes"
-- "viewDidLoad"
 - "kBaseURLString"
-- "numberOfSections"
+- "tweetBodyAttributes"
+- "refreshTweets"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
 - "didReceiveMemoryWarning"
+- "numberOfSections"
+- "viewDidLoad"
 - "tweetDateFormatter"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
 depends-top-level:
-- !private "Notification"
-- !private "Array"
-- "String"
-- "CGFloat"
-- "UITableViewController"
-- "Int"
-- !private "AppDelegate"
-- !private "Void"
-- !private "NSLog"
-- !private "ComparisonResult"
+- !private "NSMutableAttributedString"
 - !private "NotificationCenter"
-- !private "BooleanLiteralType"
-- !private "NSDate"
-- !private "TimeZone"
-- !private "!"
-- "AssignmentPrecedence"
-- !private "=="
-- "CastingPrecedence"
-- !private "UIApplication"
-- !private "~="
-- !private "+"
 - !private "NSMutableParagraphStyle"
-- !private "NSParagraphStyleAttributeName"
-- !private "UITableViewAutomaticDimension"
-- "DateFormatter"
-- "StringLiteralType"
-- "NSForegroundColorAttributeName"
+- "NSFontAttributeName"
+- "Dictionary"
+- "Tweet"
+- "Int"
+- !private "!"
+- "UIFont"
+- "NSAttributedString"
 - "Bool"
-- !private "kAddTweetNotification"
+- "CastingPrecedence"
+- !private "Date"
+- "AssignmentPrecedence"
+- !private "Void"
+- "UITableViewController"
+- !private "+"
+- !private "UITableViewAutomaticDimension"
+- "String"
 - "UIFontTextStyle"
+- "UITableViewCell"
+- "UITableView"
+- !private "NSString"
+- !private "=="
+- "TweetTableViewController"
+- !private "NSDate"
+- "IndexPath"
+- !private "ComparisonResult"
+- !private "TimeZone"
+- !private "BooleanLiteralType"
+- !private "~="
+- !private "Alamofire"
+- "DateFormatter"
+- !private "UIApplication"
+- "CGFloat"
+- !private "Notification"
+- "NSForegroundColorAttributeName"
 - !private "NSParagraphStyle"
 - "UIColor"
-- "Dictionary"
-- !private "Date"
-- !private "NSMutableAttributedString"
-- "IndexPath"
-- !private "NSString"
-- "UITableViewCellEditingStyle"
-- "TweetTableViewController"
-- "Tweet"
-- "UIFont"
-- "UITableViewCell"
+- !private "kAddTweetNotification"
+- !private "NSParagraphStyleAttributeName"
+- !private "AppDelegate"
+- "StringLiteralType"
 - "AnyObject"
-- "NSFontAttributeName"
-- "UITableView"
-- "NSAttributedString"
-- !private "Alamofire"
 depends-member:
 - !private ["Ps9AnyObject", "Alamofire"]
 - !private ["Ps9AnyObject", "ComparisonResult"]
@@ -76,7 +72,6 @@ depends-member:
 - !private ["Ps9AnyObject", "NSAttributedString"]
 - ["Ps9AnyObject", "NSFontAttributeName"]
 - ["Ps9AnyObject", "NSForegroundColorAttributeName"]
-- !private ["Ps9AnyObject", "NSLog"]
 - !private ["Ps9AnyObject", "NSMutableAttributedString"]
 - !private ["Ps9AnyObject", "NSParagraphStyle"]
 - !private ["Ps9AnyObject", "NSParagraphStyleAttributeName"]
@@ -102,10 +97,8 @@ depends-member:
 - !private ["Ps9AnyObject", "dateStyle"]
 - !private ["Ps9AnyObject", "default"]
 - !private ["Ps9AnyObject", "delegate"]
-- !private ["Ps9AnyObject", "deleteRows"]
 - !private ["Ps9AnyObject", "dequeueReusableCell"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
-- !private ["Ps9AnyObject", "editButtonItem"]
 - !private ["Ps9AnyObject", "endRefreshing"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "isRefreshing"]
@@ -114,7 +107,6 @@ depends-member:
 - !private ["Ps9AnyObject", "lastTweetDate"]
 - !private ["Ps9AnyObject", "lineBreakMode"]
 - !private ["Ps9AnyObject", "mutableCopy"]
-- !private ["Ps9AnyObject", "navigationItem"]
 - !private ["Ps9AnyObject", "numberOfLines"]
 - ["Ps9AnyObject", "numberOfSections"]
 - ["Ps9AnyObject", "preferredFont"]
@@ -123,7 +115,6 @@ depends-member:
 - ["Ps9AnyObject", "refreshTweets"]
 - !private ["Ps9AnyObject", "reloadData"]
 - !private ["Ps9AnyObject", "responseJSON"]
-- !private ["Ps9AnyObject", "rightBarButtonItem"]
 - !private ["Ps9AnyObject", "shared"]
 - !private ["Ps9AnyObject", "statusCode"]
 - !private ["Ps9AnyObject", "string"]
@@ -143,7 +134,6 @@ depends-member:
 - ["C12WSUV_Twitter11AppDelegate", "deinit"]
 - !private ["C12WSUV_Twitter11AppDelegate", "lastTweetDate"]
 - !private ["C12WSUV_Twitter11AppDelegate", "tweets"]
-- !private ["Sa", "Element"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "IndexDistance"]
 - !private ["Sa", "Iterator"]
@@ -151,11 +141,9 @@ depends-member:
 - !private ["Sa", "_Element"]
 - !private ["Sa", "append"]
 - !private ["Sa", "count"]
-- ["Sa", "deinit"]
-- !private ["Sa", "remove"]
+- !private ["Sa", "deinit"]
 - !private ["Sa", "sorted"]
 - !private ["Sa", "subscript"]
-- !private ["Ps23BidirectionalCollection", "Element"]
 - !private ["Ps23BidirectionalCollection", "Index"]
 - !private ["Ps23BidirectionalCollection", "IndexDistance"]
 - !private ["Ps23BidirectionalCollection", "Indices"]
@@ -164,11 +152,9 @@ depends-member:
 - !private ["Ps23BidirectionalCollection", "_Element"]
 - !private ["Ps23BidirectionalCollection", "append"]
 - !private ["Ps23BidirectionalCollection", "count"]
-- !private ["Ps23BidirectionalCollection", "remove"]
 - !private ["Ps23BidirectionalCollection", "row"]
 - !private ["Ps23BidirectionalCollection", "sorted"]
 - !private ["Ps23BidirectionalCollection", "subscript"]
-- !private ["Ps22BidirectionalIndexable", "Element"]
 - !private ["Ps22BidirectionalIndexable", "Index"]
 - !private ["Ps22BidirectionalIndexable", "IndexDistance"]
 - !private ["Ps22BidirectionalIndexable", "Indices"]
@@ -177,7 +163,6 @@ depends-member:
 - !private ["Ps22BidirectionalIndexable", "_Element"]
 - !private ["Ps22BidirectionalIndexable", "append"]
 - !private ["Ps22BidirectionalIndexable", "count"]
-- !private ["Ps22BidirectionalIndexable", "remove"]
 - !private ["Ps22BidirectionalIndexable", "row"]
 - !private ["Ps22BidirectionalIndexable", "sorted"]
 - !private ["Ps22BidirectionalIndexable", "subscript"]
@@ -194,7 +179,6 @@ depends-member:
 - ["Sb", "deinit"]
 - !private ["PSo15CALayerDelegate", "attributedText"]
 - !private ["PSo15CALayerDelegate", "beginRefreshing"]
-- !private ["PSo15CALayerDelegate", "deleteRows"]
 - !private ["PSo15CALayerDelegate", "dequeueReusableCell"]
 - !private ["PSo15CALayerDelegate", "endRefreshing"]
 - !private ["PSo15CALayerDelegate", "isRefreshing"]
@@ -205,7 +189,6 @@ depends-member:
 - !private ["Ps7CVarArg", "Alamofire"]
 - !private ["Ps7CVarArg", "ComparisonResult"]
 - !private ["Ps7CVarArg", "DateFormatter"]
-- !private ["Ps7CVarArg", "Element"]
 - !private ["Ps7CVarArg", "Index"]
 - !private ["Ps7CVarArg", "IndexDistance"]
 - !private ["Ps7CVarArg", "IntegerLiteralType"]
@@ -214,7 +197,6 @@ depends-member:
 - !private ["Ps7CVarArg", "NSAttributedString"]
 - ["Ps7CVarArg", "NSFontAttributeName"]
 - ["Ps7CVarArg", "NSForegroundColorAttributeName"]
-- !private ["Ps7CVarArg", "NSLog"]
 - !private ["Ps7CVarArg", "NSMutableAttributedString"]
 - !private ["Ps7CVarArg", "NSParagraphStyle"]
 - !private ["Ps7CVarArg", "NSParagraphStyleAttributeName"]
@@ -246,10 +228,8 @@ depends-member:
 - !private ["Ps7CVarArg", "dateStyle"]
 - !private ["Ps7CVarArg", "default"]
 - !private ["Ps7CVarArg", "delegate"]
-- !private ["Ps7CVarArg", "deleteRows"]
 - !private ["Ps7CVarArg", "dequeueReusableCell"]
 - ["Ps7CVarArg", "didReceiveMemoryWarning"]
-- !private ["Ps7CVarArg", "editButtonItem"]
 - !private ["Ps7CVarArg", "endRefreshing"]
 - ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "isRefreshing"]
@@ -258,7 +238,6 @@ depends-member:
 - !private ["Ps7CVarArg", "lastTweetDate"]
 - !private ["Ps7CVarArg", "lineBreakMode"]
 - !private ["Ps7CVarArg", "mutableCopy"]
-- !private ["Ps7CVarArg", "navigationItem"]
 - !private ["Ps7CVarArg", "numberOfLines"]
 - ["Ps7CVarArg", "numberOfSections"]
 - ["Ps7CVarArg", "preferredFont"]
@@ -266,8 +245,6 @@ depends-member:
 - !private ["Ps7CVarArg", "refreshControl"]
 - ["Ps7CVarArg", "refreshTweets"]
 - !private ["Ps7CVarArg", "reloadData"]
-- !private ["Ps7CVarArg", "remove"]
-- !private ["Ps7CVarArg", "rightBarButtonItem"]
 - !private ["Ps7CVarArg", "shared"]
 - !private ["Ps7CVarArg", "sorted"]
 - !private ["Ps7CVarArg", "statusCode"]
@@ -286,9 +263,7 @@ depends-member:
 - !private ["Ps7CVarArg", "tweets"]
 - ["Ps7CVarArg", "viewDidLoad"]
 - ["Ps7CVarArg", ""]
-- !private ["Vs9Character", "deinit"]
 - !private ["Vs11ClosedRange", "deinit"]
-- !private ["Ps10Collection", "Element"]
 - !private ["Ps10Collection", "Index"]
 - !private ["Ps10Collection", "IndexDistance"]
 - !private ["Ps10Collection", "Indices"]
@@ -299,7 +274,6 @@ depends-member:
 - !private ["Ps10Collection", "_Element"]
 - !private ["Ps10Collection", "append"]
 - !private ["Ps10Collection", "count"]
-- !private ["Ps10Collection", "remove"]
 - !private ["Ps10Collection", "row"]
 - !private ["Ps10Collection", "sorted"]
 - !private ["Ps10Collection", "subscript"]
@@ -318,7 +292,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Alamofire"]
 - !private ["Ps28CustomDebugStringConvertible", "ComparisonResult"]
 - !private ["Ps28CustomDebugStringConvertible", "DateFormatter"]
-- !private ["Ps28CustomDebugStringConvertible", "Element"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
 - !private ["Ps28CustomDebugStringConvertible", "Iterator"]
@@ -326,7 +299,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "NSAttributedString"]
 - ["Ps28CustomDebugStringConvertible", "NSFontAttributeName"]
 - ["Ps28CustomDebugStringConvertible", "NSForegroundColorAttributeName"]
-- !private ["Ps28CustomDebugStringConvertible", "NSLog"]
 - !private ["Ps28CustomDebugStringConvertible", "NSMutableAttributedString"]
 - !private ["Ps28CustomDebugStringConvertible", "NSParagraphStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "NSParagraphStyleAttributeName"]
@@ -356,10 +328,8 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "dateStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "default"]
 - !private ["Ps28CustomDebugStringConvertible", "delegate"]
-- !private ["Ps28CustomDebugStringConvertible", "deleteRows"]
 - !private ["Ps28CustomDebugStringConvertible", "dequeueReusableCell"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
-- !private ["Ps28CustomDebugStringConvertible", "editButtonItem"]
 - !private ["Ps28CustomDebugStringConvertible", "endRefreshing"]
 - !private ["Ps28CustomDebugStringConvertible", "failure"]
 - ["Ps28CustomDebugStringConvertible", "init"]
@@ -369,7 +339,6 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "lastTweetDate"]
 - !private ["Ps28CustomDebugStringConvertible", "lineBreakMode"]
 - !private ["Ps28CustomDebugStringConvertible", "mutableCopy"]
-- !private ["Ps28CustomDebugStringConvertible", "navigationItem"]
 - !private ["Ps28CustomDebugStringConvertible", "numberOfLines"]
 - ["Ps28CustomDebugStringConvertible", "numberOfSections"]
 - ["Ps28CustomDebugStringConvertible", "preferredFont"]
@@ -377,11 +346,9 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "refreshControl"]
 - ["Ps28CustomDebugStringConvertible", "refreshTweets"]
 - !private ["Ps28CustomDebugStringConvertible", "reloadData"]
-- !private ["Ps28CustomDebugStringConvertible", "remove"]
 - !private ["Ps28CustomDebugStringConvertible", "response"]
 - !private ["Ps28CustomDebugStringConvertible", "responseJSON"]
 - !private ["Ps28CustomDebugStringConvertible", "result"]
-- !private ["Ps28CustomDebugStringConvertible", "rightBarButtonItem"]
 - !private ["Ps28CustomDebugStringConvertible", "row"]
 - !private ["Ps28CustomDebugStringConvertible", "shared"]
 - !private ["Ps28CustomDebugStringConvertible", "sorted"]
@@ -408,7 +375,6 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "compare"]
 - ["Ps29CustomPlaygroundQuickLookable", "init"]
-- !private ["Ps17CustomReflectable", "Element"]
 - !private ["Ps17CustomReflectable", "Index"]
 - !private ["Ps17CustomReflectable", "IndexDistance"]
 - !private ["Ps17CustomReflectable", "IntegerLiteralType"]
@@ -423,14 +389,12 @@ depends-member:
 - !private ["Ps17CustomReflectable", "append"]
 - !private ["Ps17CustomReflectable", "count"]
 - ["Ps17CustomReflectable", "init"]
-- !private ["Ps17CustomReflectable", "remove"]
 - !private ["Ps17CustomReflectable", "row"]
 - !private ["Ps17CustomReflectable", "sorted"]
 - !private ["Ps17CustomReflectable", "subscript"]
 - !private ["Ps23CustomStringConvertible", "Alamofire"]
 - !private ["Ps23CustomStringConvertible", "ComparisonResult"]
 - !private ["Ps23CustomStringConvertible", "DateFormatter"]
-- !private ["Ps23CustomStringConvertible", "Element"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IndexDistance"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
@@ -439,7 +403,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "NSAttributedString"]
 - ["Ps23CustomStringConvertible", "NSFontAttributeName"]
 - ["Ps23CustomStringConvertible", "NSForegroundColorAttributeName"]
-- !private ["Ps23CustomStringConvertible", "NSLog"]
 - !private ["Ps23CustomStringConvertible", "NSMutableAttributedString"]
 - !private ["Ps23CustomStringConvertible", "NSParagraphStyle"]
 - !private ["Ps23CustomStringConvertible", "NSParagraphStyleAttributeName"]
@@ -472,10 +435,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "dateStyle"]
 - !private ["Ps23CustomStringConvertible", "default"]
 - !private ["Ps23CustomStringConvertible", "delegate"]
-- !private ["Ps23CustomStringConvertible", "deleteRows"]
 - !private ["Ps23CustomStringConvertible", "dequeueReusableCell"]
 - ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
-- !private ["Ps23CustomStringConvertible", "editButtonItem"]
 - !private ["Ps23CustomStringConvertible", "endRefreshing"]
 - !private ["Ps23CustomStringConvertible", "failure"]
 - ["Ps23CustomStringConvertible", "init"]
@@ -485,7 +446,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "lastTweetDate"]
 - !private ["Ps23CustomStringConvertible", "lineBreakMode"]
 - !private ["Ps23CustomStringConvertible", "mutableCopy"]
-- !private ["Ps23CustomStringConvertible", "navigationItem"]
 - !private ["Ps23CustomStringConvertible", "numberOfLines"]
 - ["Ps23CustomStringConvertible", "numberOfSections"]
 - ["Ps23CustomStringConvertible", "preferredFont"]
@@ -493,11 +453,9 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "refreshControl"]
 - ["Ps23CustomStringConvertible", "refreshTweets"]
 - !private ["Ps23CustomStringConvertible", "reloadData"]
-- !private ["Ps23CustomStringConvertible", "remove"]
 - !private ["Ps23CustomStringConvertible", "response"]
 - !private ["Ps23CustomStringConvertible", "responseJSON"]
 - !private ["Ps23CustomStringConvertible", "result"]
-- !private ["Ps23CustomStringConvertible", "rightBarButtonItem"]
 - !private ["Ps23CustomStringConvertible", "row"]
 - !private ["Ps23CustomStringConvertible", "shared"]
 - !private ["Ps23CustomStringConvertible", "sorted"]
@@ -548,7 +506,6 @@ depends-member:
 - ["Vs10Dictionary", "Value"]
 - ["Vs10Dictionary", "deinit"]
 - !private ["Vs10Dictionary", "subscript"]
-- !private ["Sd", "deinit"]
 - !private ["Ps9Equatable", "Alamofire"]
 - !private ["Ps9Equatable", "ComparisonResult"]
 - !private ["Ps9Equatable", "DateFormatter"]
@@ -556,7 +513,6 @@ depends-member:
 - !private ["Ps9Equatable", "NSAttributedString"]
 - ["Ps9Equatable", "NSFontAttributeName"]
 - ["Ps9Equatable", "NSForegroundColorAttributeName"]
-- !private ["Ps9Equatable", "NSLog"]
 - !private ["Ps9Equatable", "NSMutableAttributedString"]
 - !private ["Ps9Equatable", "NSParagraphStyle"]
 - !private ["Ps9Equatable", "NSParagraphStyleAttributeName"]
@@ -588,13 +544,9 @@ depends-member:
 - !private ["Ps9Equatable", "dateStyle"]
 - !private ["Ps9Equatable", "default"]
 - !private ["Ps9Equatable", "delegate"]
-- !private ["Ps9Equatable", "delete"]
-- !private ["Ps9Equatable", "deleteRows"]
 - !private ["Ps9Equatable", "dequeueReusableCell"]
 - ["Ps9Equatable", "didReceiveMemoryWarning"]
-- !private ["Ps9Equatable", "editButtonItem"]
 - !private ["Ps9Equatable", "endRefreshing"]
-- !private ["Ps9Equatable", "fade"]
 - !private ["Ps9Equatable", "get"]
 - ["Ps9Equatable", "headline"]
 - ["Ps9Equatable", "init"]
@@ -605,7 +557,6 @@ depends-member:
 - !private ["Ps9Equatable", "left"]
 - !private ["Ps9Equatable", "lineBreakMode"]
 - !private ["Ps9Equatable", "mutableCopy"]
-- !private ["Ps9Equatable", "navigationItem"]
 - !private ["Ps9Equatable", "numberOfLines"]
 - ["Ps9Equatable", "numberOfSections"]
 - !private ["Ps9Equatable", "orderedDescending"]
@@ -614,7 +565,6 @@ depends-member:
 - !private ["Ps9Equatable", "refreshControl"]
 - ["Ps9Equatable", "refreshTweets"]
 - !private ["Ps9Equatable", "reloadData"]
-- !private ["Ps9Equatable", "rightBarButtonItem"]
 - !private ["Ps9Equatable", "row"]
 - !private ["Ps9Equatable", "shared"]
 - !private ["Ps9Equatable", "short"]
@@ -637,7 +587,6 @@ depends-member:
 - ["Ps9Equatable", ""]
 - !private ["Ps5Error", "deinit"]
 - !private ["Ps5Error", "localizedDescription"]
-- !private ["Ps25ExpressibleByArrayLiteral", "Element"]
 - !private ["Ps25ExpressibleByArrayLiteral", "Index"]
 - !private ["Ps25ExpressibleByArrayLiteral", "IndexDistance"]
 - !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
@@ -645,7 +594,6 @@ depends-member:
 - !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
 - !private ["Ps25ExpressibleByArrayLiteral", "append"]
 - !private ["Ps25ExpressibleByArrayLiteral", "count"]
-- !private ["Ps25ExpressibleByArrayLiteral", "remove"]
 - !private ["Ps25ExpressibleByArrayLiteral", "row"]
 - !private ["Ps25ExpressibleByArrayLiteral", "sorted"]
 - !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
@@ -662,7 +610,6 @@ depends-member:
 - ["Ps32ExpressibleByStringInterpolation", "init"]
 - ["Ps26ExpressibleByStringLiteral", "init"]
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
-- !private ["Sf", "deinit"]
 - !private ["CSo9Formatter", "date"]
 - !private ["CSo9Formatter", "dateFormat"]
 - !private ["CSo9Formatter", "dateStyle"]
@@ -681,7 +628,6 @@ depends-member:
 - !private ["Ps8Hashable", "NSAttributedString"]
 - ["Ps8Hashable", "NSFontAttributeName"]
 - ["Ps8Hashable", "NSForegroundColorAttributeName"]
-- !private ["Ps8Hashable", "NSLog"]
 - !private ["Ps8Hashable", "NSMutableAttributedString"]
 - !private ["Ps8Hashable", "NSParagraphStyle"]
 - !private ["Ps8Hashable", "NSParagraphStyleAttributeName"]
@@ -713,13 +659,9 @@ depends-member:
 - !private ["Ps8Hashable", "dateStyle"]
 - !private ["Ps8Hashable", "default"]
 - !private ["Ps8Hashable", "delegate"]
-- !private ["Ps8Hashable", "delete"]
-- !private ["Ps8Hashable", "deleteRows"]
 - !private ["Ps8Hashable", "dequeueReusableCell"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
-- !private ["Ps8Hashable", "editButtonItem"]
 - !private ["Ps8Hashable", "endRefreshing"]
-- !private ["Ps8Hashable", "fade"]
 - !private ["Ps8Hashable", "get"]
 - ["Ps8Hashable", "headline"]
 - ["Ps8Hashable", "init"]
@@ -730,7 +672,6 @@ depends-member:
 - !private ["Ps8Hashable", "left"]
 - !private ["Ps8Hashable", "lineBreakMode"]
 - !private ["Ps8Hashable", "mutableCopy"]
-- !private ["Ps8Hashable", "navigationItem"]
 - !private ["Ps8Hashable", "numberOfLines"]
 - ["Ps8Hashable", "numberOfSections"]
 - !private ["Ps8Hashable", "orderedDescending"]
@@ -739,7 +680,6 @@ depends-member:
 - !private ["Ps8Hashable", "refreshControl"]
 - ["Ps8Hashable", "refreshTweets"]
 - !private ["Ps8Hashable", "reloadData"]
-- !private ["Ps8Hashable", "rightBarButtonItem"]
 - !private ["Ps8Hashable", "row"]
 - !private ["Ps8Hashable", "shared"]
 - !private ["Ps8Hashable", "short"]
@@ -763,7 +703,6 @@ depends-member:
 - !private ["SQ", "deinit"]
 - ["V10Foundation9IndexPath", "deinit"]
 - !private ["V10Foundation9IndexPath", "row"]
-- !private ["Ps9Indexable", "Element"]
 - !private ["Ps9Indexable", "Index"]
 - !private ["Ps9Indexable", "IndexDistance"]
 - !private ["Ps9Indexable", "Indices"]
@@ -774,11 +713,9 @@ depends-member:
 - !private ["Ps9Indexable", "_Element"]
 - !private ["Ps9Indexable", "append"]
 - !private ["Ps9Indexable", "count"]
-- !private ["Ps9Indexable", "remove"]
 - !private ["Ps9Indexable", "row"]
 - !private ["Ps9Indexable", "sorted"]
 - !private ["Ps9Indexable", "subscript"]
-- !private ["Ps13IndexableBase", "Element"]
 - !private ["Ps13IndexableBase", "Index"]
 - !private ["Ps13IndexableBase", "IndexDistance"]
 - !private ["Ps13IndexableBase", "Indices"]
@@ -789,7 +726,6 @@ depends-member:
 - !private ["Ps13IndexableBase", "_Element"]
 - !private ["Ps13IndexableBase", "append"]
 - !private ["Ps13IndexableBase", "count"]
-- !private ["Ps13IndexableBase", "remove"]
 - !private ["Ps13IndexableBase", "row"]
 - !private ["Ps13IndexableBase", "sorted"]
 - !private ["Ps13IndexableBase", "subscript"]
@@ -798,10 +734,6 @@ depends-member:
 - !private ["Si", "Stride"]
 - !private ["Si", "_DisabledRangeIndex"]
 - ["Si", "deinit"]
-- !private ["Vs5Int16", "deinit"]
-- !private ["Vs5Int32", "deinit"]
-- !private ["Vs5Int64", "deinit"]
-- !private ["Vs4Int8", "deinit"]
 - !private ["Ps7Integer", "IntegerLiteralType"]
 - !private ["Ps7Integer", "Stride"]
 - !private ["Ps7Integer", "_DisabledRangeIndex"]
@@ -815,7 +747,6 @@ depends-member:
 - !private ["Ps10MirrorPath", "Stride"]
 - !private ["Ps10MirrorPath", "_DisabledRangeIndex"]
 - ["Ps10MirrorPath", "init"]
-- !private ["Ps17MutableCollection", "Element"]
 - !private ["Ps17MutableCollection", "Index"]
 - !private ["Ps17MutableCollection", "IndexDistance"]
 - !private ["Ps17MutableCollection", "Iterator"]
@@ -823,11 +754,9 @@ depends-member:
 - !private ["Ps17MutableCollection", "_Element"]
 - !private ["Ps17MutableCollection", "append"]
 - !private ["Ps17MutableCollection", "count"]
-- !private ["Ps17MutableCollection", "remove"]
 - !private ["Ps17MutableCollection", "row"]
 - !private ["Ps17MutableCollection", "sorted"]
 - !private ["Ps17MutableCollection", "subscript"]
-- !private ["Ps16MutableIndexable", "Element"]
 - !private ["Ps16MutableIndexable", "Index"]
 - !private ["Ps16MutableIndexable", "IndexDistance"]
 - !private ["Ps16MutableIndexable", "Iterator"]
@@ -835,7 +764,6 @@ depends-member:
 - !private ["Ps16MutableIndexable", "_Element"]
 - !private ["Ps16MutableIndexable", "append"]
 - !private ["Ps16MutableIndexable", "count"]
-- !private ["Ps16MutableIndexable", "remove"]
 - !private ["Ps16MutableIndexable", "row"]
 - !private ["Ps16MutableIndexable", "sorted"]
 - !private ["Ps16MutableIndexable", "subscript"]
@@ -849,7 +777,6 @@ depends-member:
 - !private ["PSo8NSCoding", "NSAttributedString"]
 - ["PSo8NSCoding", "NSFontAttributeName"]
 - ["PSo8NSCoding", "NSForegroundColorAttributeName"]
-- !private ["PSo8NSCoding", "NSLog"]
 - !private ["PSo8NSCoding", "NSMutableAttributedString"]
 - !private ["PSo8NSCoding", "NSParagraphStyle"]
 - !private ["PSo8NSCoding", "NSParagraphStyleAttributeName"]
@@ -873,10 +800,8 @@ depends-member:
 - !private ["PSo8NSCoding", "dateFormat"]
 - !private ["PSo8NSCoding", "dateStyle"]
 - !private ["PSo8NSCoding", "default"]
-- !private ["PSo8NSCoding", "deleteRows"]
 - !private ["PSo8NSCoding", "dequeueReusableCell"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
-- !private ["PSo8NSCoding", "editButtonItem"]
 - !private ["PSo8NSCoding", "endRefreshing"]
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "isRefreshing"]
@@ -884,14 +809,12 @@ depends-member:
 - ["PSo8NSCoding", "kBaseURLString"]
 - !private ["PSo8NSCoding", "lineBreakMode"]
 - !private ["PSo8NSCoding", "mutableCopy"]
-- !private ["PSo8NSCoding", "navigationItem"]
 - !private ["PSo8NSCoding", "numberOfLines"]
 - ["PSo8NSCoding", "numberOfSections"]
 - ["PSo8NSCoding", "purple"]
 - !private ["PSo8NSCoding", "refreshControl"]
 - ["PSo8NSCoding", "refreshTweets"]
 - !private ["PSo8NSCoding", "reloadData"]
-- !private ["PSo8NSCoding", "rightBarButtonItem"]
 - !private ["PSo8NSCoding", "statusCode"]
 - !private ["PSo8NSCoding", "string"]
 - ["PSo8NSCoding", "tableView"]
@@ -931,7 +854,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "NSAttributedString"]
 - ["PSo26NSExtensionRequestHandling", "NSFontAttributeName"]
 - ["PSo26NSExtensionRequestHandling", "NSForegroundColorAttributeName"]
-- !private ["PSo26NSExtensionRequestHandling", "NSLog"]
 - !private ["PSo26NSExtensionRequestHandling", "NSMutableAttributedString"]
 - !private ["PSo26NSExtensionRequestHandling", "NSParagraphStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "NSParagraphStyleAttributeName"]
@@ -946,11 +868,9 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "UITableViewAutomaticDimension"]
 - ["PSo26NSExtensionRequestHandling", "attributedStringForTweet"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
-- !private ["PSo26NSExtensionRequestHandling", "editButtonItem"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "kAddTweetNotification"]
 - ["PSo26NSExtensionRequestHandling", "kBaseURLString"]
-- !private ["PSo26NSExtensionRequestHandling", "navigationItem"]
 - ["PSo26NSExtensionRequestHandling", "numberOfSections"]
 - !private ["PSo26NSExtensionRequestHandling", "refreshControl"]
 - ["PSo26NSExtensionRequestHandling", "refreshTweets"]
@@ -991,7 +911,6 @@ depends-member:
 - !private ["CSo8NSObject", "NSDate"]
 - ["CSo8NSObject", "NSFontAttributeName"]
 - ["CSo8NSObject", "NSForegroundColorAttributeName"]
-- !private ["CSo8NSObject", "NSLog"]
 - !private ["CSo8NSObject", "NSMutableAttributedString"]
 - !private ["CSo8NSObject", "NSMutableParagraphStyle"]
 - !private ["CSo8NSObject", "NSParagraphStyle"]
@@ -1009,7 +928,6 @@ depends-member:
 - ["CSo8NSObject", "UITableView"]
 - !private ["CSo8NSObject", "UITableViewAutomaticDimension"]
 - ["CSo8NSObject", "UITableViewCell"]
-- ["CSo8NSObject", "UITableViewCellEditingStyle"]
 - !private ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "addObserver"]
 - !private ["CSo8NSObject", "alignment"]
@@ -1024,10 +942,8 @@ depends-member:
 - !private ["CSo8NSObject", "dateStyle"]
 - !private ["CSo8NSObject", "default"]
 - !private ["CSo8NSObject", "delegate"]
-- !private ["CSo8NSObject", "deleteRows"]
 - !private ["CSo8NSObject", "dequeueReusableCell"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
-- !private ["CSo8NSObject", "editButtonItem"]
 - !private ["CSo8NSObject", "endRefreshing"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "isRefreshing"]
@@ -1036,7 +952,6 @@ depends-member:
 - !private ["CSo8NSObject", "lastTweetDate"]
 - !private ["CSo8NSObject", "lineBreakMode"]
 - !private ["CSo8NSObject", "mutableCopy"]
-- !private ["CSo8NSObject", "navigationItem"]
 - !private ["CSo8NSObject", "numberOfLines"]
 - ["CSo8NSObject", "numberOfSections"]
 - ["CSo8NSObject", "preferredFont"]
@@ -1044,7 +959,6 @@ depends-member:
 - !private ["CSo8NSObject", "refreshControl"]
 - ["CSo8NSObject", "refreshTweets"]
 - !private ["CSo8NSObject", "reloadData"]
-- !private ["CSo8NSObject", "rightBarButtonItem"]
 - !private ["CSo8NSObject", "shared"]
 - !private ["CSo8NSObject", "statusCode"]
 - !private ["CSo8NSObject", "string"]
@@ -1066,7 +980,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "NSAttributedString"]
 - ["PSo16NSObjectProtocol", "NSFontAttributeName"]
 - ["PSo16NSObjectProtocol", "NSForegroundColorAttributeName"]
-- !private ["PSo16NSObjectProtocol", "NSLog"]
 - !private ["PSo16NSObjectProtocol", "NSMutableAttributedString"]
 - !private ["PSo16NSObjectProtocol", "NSParagraphStyle"]
 - !private ["PSo16NSObjectProtocol", "NSParagraphStyleAttributeName"]
@@ -1093,10 +1006,8 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "default"]
 - ["PSo16NSObjectProtocol", "deinit"]
 - !private ["PSo16NSObjectProtocol", "delegate"]
-- !private ["PSo16NSObjectProtocol", "deleteRows"]
 - !private ["PSo16NSObjectProtocol", "dequeueReusableCell"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
-- !private ["PSo16NSObjectProtocol", "editButtonItem"]
 - !private ["PSo16NSObjectProtocol", "endRefreshing"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "isRefreshing"]
@@ -1105,7 +1016,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "lastTweetDate"]
 - !private ["PSo16NSObjectProtocol", "lineBreakMode"]
 - !private ["PSo16NSObjectProtocol", "mutableCopy"]
-- !private ["PSo16NSObjectProtocol", "navigationItem"]
 - !private ["PSo16NSObjectProtocol", "numberOfLines"]
 - ["PSo16NSObjectProtocol", "numberOfSections"]
 - ["PSo16NSObjectProtocol", "preferredFont"]
@@ -1113,7 +1023,6 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "refreshControl"]
 - ["PSo16NSObjectProtocol", "refreshTweets"]
 - !private ["PSo16NSObjectProtocol", "reloadData"]
-- !private ["PSo16NSObjectProtocol", "rightBarButtonItem"]
 - !private ["PSo16NSObjectProtocol", "shared"]
 - !private ["PSo16NSObjectProtocol", "statusCode"]
 - !private ["PSo16NSObjectProtocol", "string"]
@@ -1154,7 +1063,6 @@ depends-member:
 - !private ["CSo18NotificationCenter", "default"]
 - ["CSo18NotificationCenter", "deinit"]
 - ["Sq", "deinit"]
-- !private ["Ps22RandomAccessCollection", "Element"]
 - !private ["Ps22RandomAccessCollection", "Index"]
 - !private ["Ps22RandomAccessCollection", "IndexDistance"]
 - !private ["Ps22RandomAccessCollection", "Indices"]
@@ -1163,11 +1071,9 @@ depends-member:
 - !private ["Ps22RandomAccessCollection", "_Element"]
 - !private ["Ps22RandomAccessCollection", "append"]
 - !private ["Ps22RandomAccessCollection", "count"]
-- !private ["Ps22RandomAccessCollection", "remove"]
 - !private ["Ps22RandomAccessCollection", "row"]
 - !private ["Ps22RandomAccessCollection", "sorted"]
 - !private ["Ps22RandomAccessCollection", "subscript"]
-- !private ["Ps21RandomAccessIndexable", "Element"]
 - !private ["Ps21RandomAccessIndexable", "Index"]
 - !private ["Ps21RandomAccessIndexable", "IndexDistance"]
 - !private ["Ps21RandomAccessIndexable", "Indices"]
@@ -1176,7 +1082,6 @@ depends-member:
 - !private ["Ps21RandomAccessIndexable", "_Element"]
 - !private ["Ps21RandomAccessIndexable", "append"]
 - !private ["Ps21RandomAccessIndexable", "count"]
-- !private ["Ps21RandomAccessIndexable", "remove"]
 - !private ["Ps21RandomAccessIndexable", "row"]
 - !private ["Ps21RandomAccessIndexable", "sorted"]
 - !private ["Ps21RandomAccessIndexable", "subscript"]
@@ -1187,7 +1092,6 @@ depends-member:
 - !private ["Vs17RandomAccessSlice", "SubSequence"]
 - !private ["Vs17RandomAccessSlice", "_Element"]
 - !private ["Vs5Range", "deinit"]
-- !private ["Ps26RangeReplaceableCollection", "Element"]
 - !private ["Ps26RangeReplaceableCollection", "Index"]
 - !private ["Ps26RangeReplaceableCollection", "IndexDistance"]
 - !private ["Ps26RangeReplaceableCollection", "Iterator"]
@@ -1195,10 +1099,8 @@ depends-member:
 - !private ["Ps26RangeReplaceableCollection", "_Element"]
 - !private ["Ps26RangeReplaceableCollection", "append"]
 - !private ["Ps26RangeReplaceableCollection", "count"]
-- !private ["Ps26RangeReplaceableCollection", "remove"]
 - !private ["Ps26RangeReplaceableCollection", "sorted"]
 - !private ["Ps26RangeReplaceableCollection", "subscript"]
-- !private ["Ps25RangeReplaceableIndexable", "Element"]
 - !private ["Ps25RangeReplaceableIndexable", "Index"]
 - !private ["Ps25RangeReplaceableIndexable", "IndexDistance"]
 - !private ["Ps25RangeReplaceableIndexable", "Iterator"]
@@ -1206,14 +1108,11 @@ depends-member:
 - !private ["Ps25RangeReplaceableIndexable", "_Element"]
 - !private ["Ps25RangeReplaceableIndexable", "append"]
 - !private ["Ps25RangeReplaceableIndexable", "count"]
-- !private ["Ps25RangeReplaceableIndexable", "remove"]
 - !private ["Ps25RangeReplaceableIndexable", "sorted"]
 - !private ["Ps25RangeReplaceableIndexable", "subscript"]
 - !private ["Ps16RawRepresentable", "RawValue"]
 - !private ["Ps16RawRepresentable", "body"]
 - !private ["Ps16RawRepresentable", "byWordWrapping"]
-- !private ["Ps16RawRepresentable", "delete"]
-- !private ["Ps16RawRepresentable", "fade"]
 - !private ["Ps16RawRepresentable", "get"]
 - ["Ps16RawRepresentable", "headline"]
 - !private ["Ps16RawRepresentable", "left"]
@@ -1238,7 +1137,6 @@ depends-member:
 - !private ["Ps8Sequence", "_Element"]
 - !private ["Ps8Sequence", "append"]
 - !private ["Ps8Sequence", "count"]
-- !private ["Ps8Sequence", "remove"]
 - !private ["Ps8Sequence", "row"]
 - !private ["Ps8Sequence", "sorted"]
 - !private ["Ps8Sequence", "subscript"]
@@ -1281,7 +1179,6 @@ depends-member:
 - !private ["C12WSUV_Twitter24TweetTableViewController", "NSDate"]
 - ["C12WSUV_Twitter24TweetTableViewController", "NSFontAttributeName"]
 - ["C12WSUV_Twitter24TweetTableViewController", "NSForegroundColorAttributeName"]
-- !private ["C12WSUV_Twitter24TweetTableViewController", "NSLog"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "NSMutableAttributedString"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "NSMutableParagraphStyle"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "NSParagraphStyle"]
@@ -1299,16 +1196,13 @@ depends-member:
 - ["C12WSUV_Twitter24TweetTableViewController", "UITableView"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "UITableViewAutomaticDimension"]
 - ["C12WSUV_Twitter24TweetTableViewController", "UITableViewCell"]
-- ["C12WSUV_Twitter24TweetTableViewController", "UITableViewCellEditingStyle"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "Void"]
 - ["C12WSUV_Twitter24TweetTableViewController", "attributedStringForTweet"]
 - ["C12WSUV_Twitter24TweetTableViewController", "deinit"]
 - ["C12WSUV_Twitter24TweetTableViewController", "didReceiveMemoryWarning"]
-- !private ["C12WSUV_Twitter24TweetTableViewController", "editButtonItem"]
 - ["C12WSUV_Twitter24TweetTableViewController", "init"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "kAddTweetNotification"]
 - ["C12WSUV_Twitter24TweetTableViewController", "kBaseURLString"]
-- !private ["C12WSUV_Twitter24TweetTableViewController", "navigationItem"]
 - ["C12WSUV_Twitter24TweetTableViewController", "numberOfSections"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "refreshControl"]
 - ["C12WSUV_Twitter24TweetTableViewController", "refreshTweets"]
@@ -1322,7 +1216,6 @@ depends-member:
 - ["C12WSUV_Twitter24TweetTableViewController", "viewDidLoad"]
 - !private ["PSo29UIAccessibilityIdentification", "attributedText"]
 - !private ["PSo29UIAccessibilityIdentification", "beginRefreshing"]
-- !private ["PSo29UIAccessibilityIdentification", "deleteRows"]
 - !private ["PSo29UIAccessibilityIdentification", "dequeueReusableCell"]
 - !private ["PSo29UIAccessibilityIdentification", "endRefreshing"]
 - !private ["PSo29UIAccessibilityIdentification", "isRefreshing"]
@@ -1331,7 +1224,6 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "textLabel"]
 - !private ["PSo12UIAppearance", "attributedText"]
 - !private ["PSo12UIAppearance", "beginRefreshing"]
-- !private ["PSo12UIAppearance", "deleteRows"]
 - !private ["PSo12UIAppearance", "dequeueReusableCell"]
 - !private ["PSo12UIAppearance", "endRefreshing"]
 - !private ["PSo12UIAppearance", "isRefreshing"]
@@ -1344,7 +1236,6 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "NSAttributedString"]
 - ["PSo21UIAppearanceContainer", "NSFontAttributeName"]
 - ["PSo21UIAppearanceContainer", "NSForegroundColorAttributeName"]
-- !private ["PSo21UIAppearanceContainer", "NSLog"]
 - !private ["PSo21UIAppearanceContainer", "NSMutableAttributedString"]
 - !private ["PSo21UIAppearanceContainer", "NSParagraphStyle"]
 - !private ["PSo21UIAppearanceContainer", "NSParagraphStyleAttributeName"]
@@ -1360,16 +1251,13 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "attributedStringForTweet"]
 - !private ["PSo21UIAppearanceContainer", "attributedText"]
 - !private ["PSo21UIAppearanceContainer", "beginRefreshing"]
-- !private ["PSo21UIAppearanceContainer", "deleteRows"]
 - !private ["PSo21UIAppearanceContainer", "dequeueReusableCell"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
-- !private ["PSo21UIAppearanceContainer", "editButtonItem"]
 - !private ["PSo21UIAppearanceContainer", "endRefreshing"]
 - !private ["PSo21UIAppearanceContainer", "init"]
 - !private ["PSo21UIAppearanceContainer", "isRefreshing"]
 - !private ["PSo21UIAppearanceContainer", "kAddTweetNotification"]
 - ["PSo21UIAppearanceContainer", "kBaseURLString"]
-- !private ["PSo21UIAppearanceContainer", "navigationItem"]
 - !private ["PSo21UIAppearanceContainer", "numberOfLines"]
 - ["PSo21UIAppearanceContainer", "numberOfSections"]
 - !private ["PSo21UIAppearanceContainer", "refreshControl"]
@@ -1390,7 +1278,6 @@ depends-member:
 - !private ["CSo13UIApplication", "shared"]
 - !private ["PSo21UIApplicationDelegate", "lastTweetDate"]
 - !private ["PSo21UIApplicationDelegate", "tweets"]
-- ["CSo15UIBarButtonItem", "deinit"]
 - !private ["CSo7UIColor", "black"]
 - ["CSo7UIColor", "deinit"]
 - ["CSo7UIColor", "purple"]
@@ -1400,7 +1287,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "NSAttributedString"]
 - ["PSo18UIContentContainer", "NSFontAttributeName"]
 - ["PSo18UIContentContainer", "NSForegroundColorAttributeName"]
-- !private ["PSo18UIContentContainer", "NSLog"]
 - !private ["PSo18UIContentContainer", "NSMutableAttributedString"]
 - !private ["PSo18UIContentContainer", "NSParagraphStyle"]
 - !private ["PSo18UIContentContainer", "NSParagraphStyleAttributeName"]
@@ -1415,11 +1301,9 @@ depends-member:
 - !private ["PSo18UIContentContainer", "UITableViewAutomaticDimension"]
 - ["PSo18UIContentContainer", "attributedStringForTweet"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
-- !private ["PSo18UIContentContainer", "editButtonItem"]
 - !private ["PSo18UIContentContainer", "init"]
 - !private ["PSo18UIContentContainer", "kAddTweetNotification"]
 - ["PSo18UIContentContainer", "kBaseURLString"]
-- !private ["PSo18UIContentContainer", "navigationItem"]
 - ["PSo18UIContentContainer", "numberOfSections"]
 - !private ["PSo18UIContentContainer", "refreshControl"]
 - ["PSo18UIContentContainer", "refreshTweets"]
@@ -1439,7 +1323,6 @@ depends-member:
 - !private ["CSo9UIControl", "isRefreshing"]
 - !private ["PSo17UICoordinateSpace", "attributedText"]
 - !private ["PSo17UICoordinateSpace", "beginRefreshing"]
-- !private ["PSo17UICoordinateSpace", "deleteRows"]
 - !private ["PSo17UICoordinateSpace", "dequeueReusableCell"]
 - !private ["PSo17UICoordinateSpace", "endRefreshing"]
 - !private ["PSo17UICoordinateSpace", "isRefreshing"]
@@ -1448,7 +1331,6 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "textLabel"]
 - !private ["PSo13UIDynamicItem", "attributedText"]
 - !private ["PSo13UIDynamicItem", "beginRefreshing"]
-- !private ["PSo13UIDynamicItem", "deleteRows"]
 - !private ["PSo13UIDynamicItem", "dequeueReusableCell"]
 - !private ["PSo13UIDynamicItem", "endRefreshing"]
 - !private ["PSo13UIDynamicItem", "isRefreshing"]
@@ -1461,7 +1343,6 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "NSAttributedString"]
 - ["PSo18UIFocusEnvironment", "NSFontAttributeName"]
 - ["PSo18UIFocusEnvironment", "NSForegroundColorAttributeName"]
-- !private ["PSo18UIFocusEnvironment", "NSLog"]
 - !private ["PSo18UIFocusEnvironment", "NSMutableAttributedString"]
 - !private ["PSo18UIFocusEnvironment", "NSParagraphStyle"]
 - !private ["PSo18UIFocusEnvironment", "NSParagraphStyleAttributeName"]
@@ -1477,16 +1358,13 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "attributedStringForTweet"]
 - !private ["PSo18UIFocusEnvironment", "attributedText"]
 - !private ["PSo18UIFocusEnvironment", "beginRefreshing"]
-- !private ["PSo18UIFocusEnvironment", "deleteRows"]
 - !private ["PSo18UIFocusEnvironment", "dequeueReusableCell"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
-- !private ["PSo18UIFocusEnvironment", "editButtonItem"]
 - !private ["PSo18UIFocusEnvironment", "endRefreshing"]
 - !private ["PSo18UIFocusEnvironment", "init"]
 - !private ["PSo18UIFocusEnvironment", "isRefreshing"]
 - !private ["PSo18UIFocusEnvironment", "kAddTweetNotification"]
 - ["PSo18UIFocusEnvironment", "kBaseURLString"]
-- !private ["PSo18UIFocusEnvironment", "navigationItem"]
 - !private ["PSo18UIFocusEnvironment", "numberOfLines"]
 - ["PSo18UIFocusEnvironment", "numberOfSections"]
 - !private ["PSo18UIFocusEnvironment", "refreshControl"]
@@ -1504,7 +1382,6 @@ depends-member:
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["PSo11UIFocusItem", "attributedText"]
 - !private ["PSo11UIFocusItem", "beginRefreshing"]
-- !private ["PSo11UIFocusItem", "deleteRows"]
 - !private ["PSo11UIFocusItem", "dequeueReusableCell"]
 - !private ["PSo11UIFocusItem", "endRefreshing"]
 - !private ["PSo11UIFocusItem", "isRefreshing"]
@@ -1520,8 +1397,6 @@ depends-member:
 - !private ["CSo7UILabel", "attributedText"]
 - ["CSo7UILabel", "deinit"]
 - !private ["CSo7UILabel", "numberOfLines"]
-- ["CSo16UINavigationItem", "deinit"]
-- !private ["CSo16UINavigationItem", "rightBarButtonItem"]
 - !private ["CSo16UIRefreshControl", "beginRefreshing"]
 - !private ["CSo16UIRefreshControl", "endRefreshing"]
 - !private ["CSo16UIRefreshControl", "isRefreshing"]
@@ -1539,7 +1414,6 @@ depends-member:
 - !private ["CSo11UIResponder", "NSDate"]
 - ["CSo11UIResponder", "NSFontAttributeName"]
 - ["CSo11UIResponder", "NSForegroundColorAttributeName"]
-- !private ["CSo11UIResponder", "NSLog"]
 - !private ["CSo11UIResponder", "NSMutableAttributedString"]
 - !private ["CSo11UIResponder", "NSMutableParagraphStyle"]
 - !private ["CSo11UIResponder", "NSParagraphStyle"]
@@ -1557,23 +1431,19 @@ depends-member:
 - ["CSo11UIResponder", "UITableView"]
 - !private ["CSo11UIResponder", "UITableViewAutomaticDimension"]
 - ["CSo11UIResponder", "UITableViewCell"]
-- ["CSo11UIResponder", "UITableViewCellEditingStyle"]
 - !private ["CSo11UIResponder", "Void"]
 - ["CSo11UIResponder", "attributedStringForTweet"]
 - !private ["CSo11UIResponder", "attributedText"]
 - !private ["CSo11UIResponder", "beginRefreshing"]
 - !private ["CSo11UIResponder", "delegate"]
-- !private ["CSo11UIResponder", "deleteRows"]
 - !private ["CSo11UIResponder", "dequeueReusableCell"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
-- !private ["CSo11UIResponder", "editButtonItem"]
 - !private ["CSo11UIResponder", "endRefreshing"]
 - ["CSo11UIResponder", "init"]
 - !private ["CSo11UIResponder", "isRefreshing"]
 - !private ["CSo11UIResponder", "kAddTweetNotification"]
 - ["CSo11UIResponder", "kBaseURLString"]
 - !private ["CSo11UIResponder", "lastTweetDate"]
-- !private ["CSo11UIResponder", "navigationItem"]
 - !private ["CSo11UIResponder", "numberOfLines"]
 - ["CSo11UIResponder", "numberOfSections"]
 - !private ["CSo11UIResponder", "refreshControl"]
@@ -1596,7 +1466,6 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "NSAttributedString"]
 - ["PSo30UIResponderStandardEditActions", "NSFontAttributeName"]
 - ["PSo30UIResponderStandardEditActions", "NSForegroundColorAttributeName"]
-- !private ["PSo30UIResponderStandardEditActions", "NSLog"]
 - !private ["PSo30UIResponderStandardEditActions", "NSMutableAttributedString"]
 - !private ["PSo30UIResponderStandardEditActions", "NSParagraphStyle"]
 - !private ["PSo30UIResponderStandardEditActions", "NSParagraphStyleAttributeName"]
@@ -1613,17 +1482,14 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "attributedText"]
 - !private ["PSo30UIResponderStandardEditActions", "beginRefreshing"]
 - !private ["PSo30UIResponderStandardEditActions", "delegate"]
-- !private ["PSo30UIResponderStandardEditActions", "deleteRows"]
 - !private ["PSo30UIResponderStandardEditActions", "dequeueReusableCell"]
 - ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
-- !private ["PSo30UIResponderStandardEditActions", "editButtonItem"]
 - !private ["PSo30UIResponderStandardEditActions", "endRefreshing"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
 - !private ["PSo30UIResponderStandardEditActions", "isRefreshing"]
 - !private ["PSo30UIResponderStandardEditActions", "kAddTweetNotification"]
 - ["PSo30UIResponderStandardEditActions", "kBaseURLString"]
 - !private ["PSo30UIResponderStandardEditActions", "lastTweetDate"]
-- !private ["PSo30UIResponderStandardEditActions", "navigationItem"]
 - !private ["PSo30UIResponderStandardEditActions", "numberOfLines"]
 - ["PSo30UIResponderStandardEditActions", "numberOfSections"]
 - !private ["PSo30UIResponderStandardEditActions", "refreshControl"]
@@ -1641,7 +1507,6 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "tweets"]
 - ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", ""]
-- !private ["CSo12UIScrollView", "deleteRows"]
 - !private ["CSo12UIScrollView", "dequeueReusableCell"]
 - !private ["CSo12UIScrollView", "reloadData"]
 - !private ["PSo20UIScrollViewDelegate", "Alamofire"]
@@ -1650,7 +1515,6 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "NSAttributedString"]
 - ["PSo20UIScrollViewDelegate", "NSFontAttributeName"]
 - ["PSo20UIScrollViewDelegate", "NSForegroundColorAttributeName"]
-- !private ["PSo20UIScrollViewDelegate", "NSLog"]
 - !private ["PSo20UIScrollViewDelegate", "NSMutableAttributedString"]
 - !private ["PSo20UIScrollViewDelegate", "NSParagraphStyle"]
 - !private ["PSo20UIScrollViewDelegate", "NSParagraphStyleAttributeName"]
@@ -1665,11 +1529,9 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "UITableViewAutomaticDimension"]
 - ["PSo20UIScrollViewDelegate", "attributedStringForTweet"]
 - ["PSo20UIScrollViewDelegate", "didReceiveMemoryWarning"]
-- !private ["PSo20UIScrollViewDelegate", "editButtonItem"]
 - !private ["PSo20UIScrollViewDelegate", "init"]
 - !private ["PSo20UIScrollViewDelegate", "kAddTweetNotification"]
 - ["PSo20UIScrollViewDelegate", "kBaseURLString"]
-- !private ["PSo20UIScrollViewDelegate", "navigationItem"]
 - ["PSo20UIScrollViewDelegate", "numberOfSections"]
 - !private ["PSo20UIScrollViewDelegate", "refreshControl"]
 - ["PSo20UIScrollViewDelegate", "refreshTweets"]
@@ -1688,7 +1550,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "NSAttributedString"]
 - ["PSo16UIStateRestoring", "NSFontAttributeName"]
 - ["PSo16UIStateRestoring", "NSForegroundColorAttributeName"]
-- !private ["PSo16UIStateRestoring", "NSLog"]
 - !private ["PSo16UIStateRestoring", "NSMutableAttributedString"]
 - !private ["PSo16UIStateRestoring", "NSParagraphStyle"]
 - !private ["PSo16UIStateRestoring", "NSParagraphStyleAttributeName"]
@@ -1703,11 +1564,9 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "UITableViewAutomaticDimension"]
 - ["PSo16UIStateRestoring", "attributedStringForTweet"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
-- !private ["PSo16UIStateRestoring", "editButtonItem"]
 - !private ["PSo16UIStateRestoring", "init"]
 - !private ["PSo16UIStateRestoring", "kAddTweetNotification"]
 - ["PSo16UIStateRestoring", "kBaseURLString"]
-- !private ["PSo16UIStateRestoring", "navigationItem"]
 - ["PSo16UIStateRestoring", "numberOfSections"]
 - !private ["PSo16UIStateRestoring", "refreshControl"]
 - ["PSo16UIStateRestoring", "refreshTweets"]
@@ -1721,14 +1580,10 @@ depends-member:
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
 - ["CSo11UITableView", "deinit"]
-- !private ["CSo11UITableView", "deleteRows"]
 - !private ["CSo11UITableView", "dequeueReusableCell"]
 - !private ["CSo11UITableView", "reloadData"]
 - ["CSo15UITableViewCell", "deinit"]
 - !private ["CSo15UITableViewCell", "textLabel"]
-- !private ["OSC27UITableViewCellEditingStyle", "RawValue"]
-- ["OSC27UITableViewCellEditingStyle", "deinit"]
-- !private ["OSC27UITableViewCellEditingStyle", "delete"]
 - !private ["CSo21UITableViewController", "Alamofire"]
 - ["CSo21UITableViewController", "AnyObject"]
 - !private ["CSo21UITableViewController", "AppDelegate"]
@@ -1743,7 +1598,6 @@ depends-member:
 - !private ["CSo21UITableViewController", "NSDate"]
 - ["CSo21UITableViewController", "NSFontAttributeName"]
 - ["CSo21UITableViewController", "NSForegroundColorAttributeName"]
-- !private ["CSo21UITableViewController", "NSLog"]
 - !private ["CSo21UITableViewController", "NSMutableAttributedString"]
 - !private ["CSo21UITableViewController", "NSMutableParagraphStyle"]
 - !private ["CSo21UITableViewController", "NSParagraphStyle"]
@@ -1761,16 +1615,13 @@ depends-member:
 - ["CSo21UITableViewController", "UITableView"]
 - !private ["CSo21UITableViewController", "UITableViewAutomaticDimension"]
 - ["CSo21UITableViewController", "UITableViewCell"]
-- ["CSo21UITableViewController", "UITableViewCellEditingStyle"]
 - !private ["CSo21UITableViewController", "Void"]
 - ["CSo21UITableViewController", "attributedStringForTweet"]
 - ["CSo21UITableViewController", "deinit"]
 - ["CSo21UITableViewController", "didReceiveMemoryWarning"]
-- !private ["CSo21UITableViewController", "editButtonItem"]
 - ["CSo21UITableViewController", "init"]
 - !private ["CSo21UITableViewController", "kAddTweetNotification"]
 - ["CSo21UITableViewController", "kBaseURLString"]
-- !private ["CSo21UITableViewController", "navigationItem"]
 - ["CSo21UITableViewController", "numberOfSections"]
 - !private ["CSo21UITableViewController", "refreshControl"]
 - ["CSo21UITableViewController", "refreshTweets"]
@@ -1789,7 +1640,6 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "NSAttributedString"]
 - ["PSo21UITableViewDataSource", "NSFontAttributeName"]
 - ["PSo21UITableViewDataSource", "NSForegroundColorAttributeName"]
-- !private ["PSo21UITableViewDataSource", "NSLog"]
 - !private ["PSo21UITableViewDataSource", "NSMutableAttributedString"]
 - !private ["PSo21UITableViewDataSource", "NSParagraphStyle"]
 - !private ["PSo21UITableViewDataSource", "NSParagraphStyleAttributeName"]
@@ -1804,11 +1654,9 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "UITableViewAutomaticDimension"]
 - ["PSo21UITableViewDataSource", "attributedStringForTweet"]
 - ["PSo21UITableViewDataSource", "didReceiveMemoryWarning"]
-- !private ["PSo21UITableViewDataSource", "editButtonItem"]
 - !private ["PSo21UITableViewDataSource", "init"]
 - !private ["PSo21UITableViewDataSource", "kAddTweetNotification"]
 - ["PSo21UITableViewDataSource", "kBaseURLString"]
-- !private ["PSo21UITableViewDataSource", "navigationItem"]
 - ["PSo21UITableViewDataSource", "numberOfSections"]
 - !private ["PSo21UITableViewDataSource", "refreshControl"]
 - ["PSo21UITableViewDataSource", "refreshTweets"]
@@ -1827,7 +1675,6 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "NSAttributedString"]
 - ["PSo19UITableViewDelegate", "NSFontAttributeName"]
 - ["PSo19UITableViewDelegate", "NSForegroundColorAttributeName"]
-- !private ["PSo19UITableViewDelegate", "NSLog"]
 - !private ["PSo19UITableViewDelegate", "NSMutableAttributedString"]
 - !private ["PSo19UITableViewDelegate", "NSParagraphStyle"]
 - !private ["PSo19UITableViewDelegate", "NSParagraphStyleAttributeName"]
@@ -1842,11 +1689,9 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "UITableViewAutomaticDimension"]
 - ["PSo19UITableViewDelegate", "attributedStringForTweet"]
 - ["PSo19UITableViewDelegate", "didReceiveMemoryWarning"]
-- !private ["PSo19UITableViewDelegate", "editButtonItem"]
 - !private ["PSo19UITableViewDelegate", "init"]
 - !private ["PSo19UITableViewDelegate", "kAddTweetNotification"]
 - ["PSo19UITableViewDelegate", "kBaseURLString"]
-- !private ["PSo19UITableViewDelegate", "navigationItem"]
 - ["PSo19UITableViewDelegate", "numberOfSections"]
 - !private ["PSo19UITableViewDelegate", "refreshControl"]
 - ["PSo19UITableViewDelegate", "refreshTweets"]
@@ -1859,8 +1704,6 @@ depends-member:
 - ["PSo19UITableViewDelegate", "tweetTitleAttributes"]
 - ["PSo19UITableViewDelegate", "viewDidLoad"]
 - ["PSo19UITableViewDelegate", ""]
-- ["OSC23UITableViewRowAnimation", "deinit"]
-- !private ["OSC23UITableViewRowAnimation", "fade"]
 - ["OSC16UITableViewStyle", "deinit"]
 - !private ["PSo18UITraitEnvironment", "Alamofire"]
 - !private ["PSo18UITraitEnvironment", "ComparisonResult"]
@@ -1868,7 +1711,6 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "NSAttributedString"]
 - ["PSo18UITraitEnvironment", "NSFontAttributeName"]
 - ["PSo18UITraitEnvironment", "NSForegroundColorAttributeName"]
-- !private ["PSo18UITraitEnvironment", "NSLog"]
 - !private ["PSo18UITraitEnvironment", "NSMutableAttributedString"]
 - !private ["PSo18UITraitEnvironment", "NSParagraphStyle"]
 - !private ["PSo18UITraitEnvironment", "NSParagraphStyleAttributeName"]
@@ -1884,16 +1726,13 @@ depends-member:
 - ["PSo18UITraitEnvironment", "attributedStringForTweet"]
 - !private ["PSo18UITraitEnvironment", "attributedText"]
 - !private ["PSo18UITraitEnvironment", "beginRefreshing"]
-- !private ["PSo18UITraitEnvironment", "deleteRows"]
 - !private ["PSo18UITraitEnvironment", "dequeueReusableCell"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
-- !private ["PSo18UITraitEnvironment", "editButtonItem"]
 - !private ["PSo18UITraitEnvironment", "endRefreshing"]
 - !private ["PSo18UITraitEnvironment", "init"]
 - !private ["PSo18UITraitEnvironment", "isRefreshing"]
 - !private ["PSo18UITraitEnvironment", "kAddTweetNotification"]
 - ["PSo18UITraitEnvironment", "kBaseURLString"]
-- !private ["PSo18UITraitEnvironment", "navigationItem"]
 - !private ["PSo18UITraitEnvironment", "numberOfLines"]
 - ["PSo18UITraitEnvironment", "numberOfSections"]
 - !private ["PSo18UITraitEnvironment", "refreshControl"]
@@ -1911,7 +1750,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "attributedText"]
 - !private ["CSo6UIView", "beginRefreshing"]
-- !private ["CSo6UIView", "deleteRows"]
 - !private ["CSo6UIView", "dequeueReusableCell"]
 - !private ["CSo6UIView", "endRefreshing"]
 - !private ["CSo6UIView", "isRefreshing"]
@@ -1932,7 +1770,6 @@ depends-member:
 - !private ["CSo16UIViewController", "NSDate"]
 - ["CSo16UIViewController", "NSFontAttributeName"]
 - ["CSo16UIViewController", "NSForegroundColorAttributeName"]
-- !private ["CSo16UIViewController", "NSLog"]
 - !private ["CSo16UIViewController", "NSMutableAttributedString"]
 - !private ["CSo16UIViewController", "NSMutableParagraphStyle"]
 - !private ["CSo16UIViewController", "NSParagraphStyle"]
@@ -1950,15 +1787,12 @@ depends-member:
 - ["CSo16UIViewController", "UITableView"]
 - !private ["CSo16UIViewController", "UITableViewAutomaticDimension"]
 - ["CSo16UIViewController", "UITableViewCell"]
-- ["CSo16UIViewController", "UITableViewCellEditingStyle"]
 - !private ["CSo16UIViewController", "Void"]
 - ["CSo16UIViewController", "attributedStringForTweet"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
-- !private ["CSo16UIViewController", "editButtonItem"]
 - ["CSo16UIViewController", "init"]
 - !private ["CSo16UIViewController", "kAddTweetNotification"]
 - ["CSo16UIViewController", "kBaseURLString"]
-- !private ["CSo16UIViewController", "navigationItem"]
 - ["CSo16UIViewController", "numberOfSections"]
 - !private ["CSo16UIViewController", "refreshControl"]
 - ["CSo16UIViewController", "refreshTweets"]
@@ -1970,15 +1804,8 @@ depends-member:
 - ["CSo16UIViewController", "tweetDateFormatter.storage"]
 - ["CSo16UIViewController", "tweetTitleAttributes"]
 - ["CSo16UIViewController", "viewDidLoad"]
-- !private ["Su", "deinit"]
-- !private ["Vs6UInt16", "deinit"]
-- !private ["Vs6UInt32", "deinit"]
-- !private ["Vs6UInt64", "deinit"]
-- !private ["Vs5UInt8", "deinit"]
 - ["P9Alamofire14URLConvertible", "init"]
 - !private ["CSo11URLResponse", "statusCode"]
-- !private ["Sc", "deinit"]
-- !private ["Ps14_ArrayProtocol", "Element"]
 - !private ["Ps14_ArrayProtocol", "Index"]
 - !private ["Ps14_ArrayProtocol", "IndexDistance"]
 - !private ["Ps14_ArrayProtocol", "Iterator"]
@@ -1986,19 +1813,16 @@ depends-member:
 - !private ["Ps14_ArrayProtocol", "_Element"]
 - !private ["Ps14_ArrayProtocol", "append"]
 - !private ["Ps14_ArrayProtocol", "count"]
-- !private ["Ps14_ArrayProtocol", "remove"]
 - !private ["Ps14_ArrayProtocol", "sorted"]
 - !private ["Ps14_ArrayProtocol", "subscript"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "attributedText"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "beginRefreshing"]
-- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "deleteRows"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "dequeueReusableCell"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "endRefreshing"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isRefreshing"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "numberOfLines"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "reloadData"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "textLabel"]
-- !private ["Ps24_DestructorSafeContainer", "Element"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "IndexDistance"]
 - !private ["Ps24_DestructorSafeContainer", "Iterator"]
@@ -2006,7 +1830,6 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "_Element"]
 - !private ["Ps24_DestructorSafeContainer", "append"]
 - !private ["Ps24_DestructorSafeContainer", "count"]
-- !private ["Ps24_DestructorSafeContainer", "remove"]
 - !private ["Ps24_DestructorSafeContainer", "sorted"]
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
@@ -2028,7 +1851,6 @@ depends-member:
 - !private ["Ps9_Hashable", "NSAttributedString"]
 - ["Ps9_Hashable", "NSFontAttributeName"]
 - ["Ps9_Hashable", "NSForegroundColorAttributeName"]
-- !private ["Ps9_Hashable", "NSLog"]
 - !private ["Ps9_Hashable", "NSMutableAttributedString"]
 - !private ["Ps9_Hashable", "NSParagraphStyle"]
 - !private ["Ps9_Hashable", "NSParagraphStyleAttributeName"]
@@ -2060,13 +1882,9 @@ depends-member:
 - !private ["Ps9_Hashable", "dateStyle"]
 - !private ["Ps9_Hashable", "default"]
 - !private ["Ps9_Hashable", "delegate"]
-- !private ["Ps9_Hashable", "delete"]
-- !private ["Ps9_Hashable", "deleteRows"]
 - !private ["Ps9_Hashable", "dequeueReusableCell"]
 - ["Ps9_Hashable", "didReceiveMemoryWarning"]
-- !private ["Ps9_Hashable", "editButtonItem"]
 - !private ["Ps9_Hashable", "endRefreshing"]
-- !private ["Ps9_Hashable", "fade"]
 - !private ["Ps9_Hashable", "get"]
 - ["Ps9_Hashable", "headline"]
 - ["Ps9_Hashable", "init"]
@@ -2077,7 +1895,6 @@ depends-member:
 - !private ["Ps9_Hashable", "left"]
 - !private ["Ps9_Hashable", "lineBreakMode"]
 - !private ["Ps9_Hashable", "mutableCopy"]
-- !private ["Ps9_Hashable", "navigationItem"]
 - !private ["Ps9_Hashable", "numberOfLines"]
 - ["Ps9_Hashable", "numberOfSections"]
 - !private ["Ps9_Hashable", "orderedDescending"]
@@ -2086,7 +1903,6 @@ depends-member:
 - !private ["Ps9_Hashable", "refreshControl"]
 - ["Ps9_Hashable", "refreshTweets"]
 - !private ["Ps9_Hashable", "reloadData"]
-- !private ["Ps9_Hashable", "rightBarButtonItem"]
 - !private ["Ps9_Hashable", "row"]
 - !private ["Ps9_Hashable", "shared"]
 - !private ["Ps9_Hashable", "short"]
@@ -2116,7 +1932,6 @@ depends-member:
 - !private ["Ps18_IntegerArithmetic", "IntegerLiteralType"]
 - !private ["Ps18_IntegerArithmetic", "Stride"]
 - !private ["Ps18_IntegerArithmetic", "_DisabledRangeIndex"]
-- !private ["Ps21_ObjectiveCBridgeable", "Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "IndexDistance"]
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
@@ -2133,7 +1948,6 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "count"]
 - ["Ps21_ObjectiveCBridgeable", "headline"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
-- !private ["Ps21_ObjectiveCBridgeable", "remove"]
 - !private ["Ps21_ObjectiveCBridgeable", "row"]
 - !private ["Ps21_ObjectiveCBridgeable", "sorted"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
@@ -2149,7 +1963,7 @@ depends-member:
 depends-nominal:
 - "Ps9AnyObject"
 - "C12WSUV_Twitter11AppDelegate"
-- "Sa"
+- !private "Sa"
 - !private "Ps23BidirectionalCollection"
 - !private "Ps22BidirectionalIndexable"
 - !private "Vs18BidirectionalSlice"
@@ -2158,7 +1972,6 @@ depends-nominal:
 - !private "PSo15CALayerDelegate"
 - "V12CoreGraphics7CGFloat"
 - "Ps7CVarArg"
-- !private "Vs9Character"
 - !private "Vs11ClosedRange"
 - "Ps10Collection"
 - "Ps10Comparable"
@@ -2176,7 +1989,6 @@ depends-nominal:
 - !private "Vs27DefaultBidirectionalIndices"
 - !private "Vs26DefaultRandomAccessIndices"
 - "Vs10Dictionary"
-- !private "Sd"
 - "Ps9Equatable"
 - !private "Ps5Error"
 - !private "Ps25ExpressibleByArrayLiteral"
@@ -2187,7 +1999,6 @@ depends-nominal:
 - "Ps32ExpressibleByStringInterpolation"
 - "Ps26ExpressibleByStringLiteral"
 - "Ps33ExpressibleByUnicodeScalarLiteral"
-- !private "Sf"
 - !private "CSo9Formatter"
 - "O9Alamofire10HTTPMethod"
 - !private "CSo15HTTPURLResponse"
@@ -2198,10 +2009,6 @@ depends-nominal:
 - "Ps13IndexableBase"
 - !private "Vs16IndexingIterator"
 - "Si"
-- !private "Vs5Int16"
-- !private "Vs5Int32"
-- !private "Vs5Int64"
-- !private "Vs4Int8"
 - !private "Ps7Integer"
 - !private "Ps17IntegerArithmetic"
 - !private "Ps16IteratorProtocol"
@@ -2256,7 +2063,6 @@ depends-nominal:
 - "PSo21UIAppearanceContainer"
 - "CSo13UIApplication"
 - !private "PSo21UIApplicationDelegate"
-- "CSo15UIBarButtonItem"
 - "CSo7UIColor"
 - "PSo18UIContentContainer"
 - !private "PSo30UIContentSizeCategoryAdjusting"
@@ -2269,7 +2075,6 @@ depends-nominal:
 - "VSC15UIFontTextStyle"
 - !private "PSo27UIGestureRecognizerDelegate"
 - "CSo7UILabel"
-- "CSo16UINavigationItem"
 - !private "CSo16UIRefreshControl"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
@@ -2278,23 +2083,15 @@ depends-nominal:
 - "PSo16UIStateRestoring"
 - "CSo11UITableView"
 - "CSo15UITableViewCell"
-- "OSC27UITableViewCellEditingStyle"
 - "CSo21UITableViewController"
 - "PSo21UITableViewDataSource"
 - "PSo19UITableViewDelegate"
-- "OSC23UITableViewRowAnimation"
 - "OSC16UITableViewStyle"
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
-- !private "Su"
-- !private "Vs6UInt16"
-- !private "Vs6UInt32"
-- !private "Vs6UInt64"
-- !private "Vs5UInt8"
 - "P9Alamofire14URLConvertible"
 - !private "CSo11URLResponse"
-- !private "Sc"
 - !private "Ps14_ArrayProtocol"
 - !private "Ps37_DefaultCustomPlaygroundQuickLookable"
 - !private "Ps24_DestructorSafeContainer"
@@ -2318,6 +2115,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/home-local/t.bounds/WSUV_Twitter/WSUV_Twitter/WSUV_Twitter-Bridging-Header.h"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
@@ -2331,4 +2129,4 @@ depends-external:
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire.h"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "1958fc70557cf50d9b9b25d9569e7f2a"
+interface-hash: "bd8a217a0dea65616dff877e801db2f2"

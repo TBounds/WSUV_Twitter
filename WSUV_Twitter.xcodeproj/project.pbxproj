@@ -16,6 +16,8 @@
 		F859147F1E89BD3400176C95 /* AddTweetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859147E1E89BD3400176C95 /* AddTweetTableViewController.swift */; };
 		F8B2652D1E8C2CD400A4594B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B265201E8C2CC600A4594B /* Alamofire.framework */; };
 		F8B2652E1E8C2CD400A4594B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F8B265201E8C2CC600A4594B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8B265341E8C332600A4594B /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B265331E8C332600A4594B /* SSKeychain.m */; };
+		F8B265371E8C334A00A4594B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B265361E8C334A00A4594B /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,10 @@
 		F859147C1E89BA1800176C95 /* TweetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewController.swift; sourceTree = "<group>"; };
 		F859147E1E89BD3400176C95 /* AddTweetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTweetTableViewController.swift; sourceTree = "<group>"; };
 		F8B265141E8C2CC600A4594B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		F8B265311E8C332500A4594B /* WSUV_Twitter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WSUV_Twitter-Bridging-Header.h"; sourceTree = "<group>"; };
+		F8B265321E8C332600A4594B /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = sskeychain/SSKeychain.h; sourceTree = SOURCE_ROOT; };
+		F8B265331E8C332600A4594B /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = sskeychain/SSKeychain.m; sourceTree = SOURCE_ROOT; };
+		F8B265361E8C334A00A4594B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8B265371E8C334A00A4594B /* Security.framework in Frameworks */,
 				F8B2652D1E8C2CD400A4594B /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +129,7 @@
 				F8B265141E8C2CC600A4594B /* Alamofire.xcodeproj */,
 				F8387E331E81AAD600A6A5F8 /* WSUV_Twitter */,
 				F8387E321E81AAD600A6A5F8 /* Products */,
+				F8B265351E8C334A00A4594B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +144,8 @@
 		F8387E331E81AAD600A6A5F8 /* WSUV_Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				F8B265321E8C332600A4594B /* SSKeychain.h */,
+				F8B265331E8C332600A4594B /* SSKeychain.m */,
 				F8387E341E81AAD600A6A5F8 /* AppDelegate.swift */,
 				F8387E361E81AAD600A6A5F8 /* ViewController.swift */,
 				F8387E381E81AAD600A6A5F8 /* Main.storyboard */,
@@ -144,6 +154,7 @@
 				F8387E3B1E81AAD600A6A5F8 /* Assets.xcassets */,
 				F8387E3D1E81AAD600A6A5F8 /* LaunchScreen.storyboard */,
 				F8387E401E81AAD600A6A5F8 /* Info.plist */,
+				F8B265311E8C332500A4594B /* WSUV_Twitter-Bridging-Header.h */,
 			);
 			path = WSUV_Twitter;
 			sourceTree = "<group>";
@@ -160,6 +171,14 @@
 				F8B2652C1E8C2CC600A4594B /* Alamofire.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F8B265351E8C334A00A4594B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8B265361E8C334A00A4594B /* Security.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +215,7 @@
 				TargetAttributes = {
 					F8387E301E81AAD600A6A5F8 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -298,6 +318,7 @@
 				F8387E371E81AAD600A6A5F8 /* ViewController.swift in Sources */,
 				F8387E351E81AAD600A6A5F8 /* AppDelegate.swift in Sources */,
 				F859147F1E89BD3400176C95 /* AddTweetTableViewController.swift in Sources */,
+				F8B265341E8C332600A4594B /* SSKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,10 +450,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WSUV_Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.vancouver.wsu.edu.WSUV-Twitter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WSUV_Twitter/WSUV_Twitter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -442,10 +466,12 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WSUV_Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.vancouver.wsu.edu.WSUV-Twitter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WSUV_Twitter/WSUV_Twitter-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

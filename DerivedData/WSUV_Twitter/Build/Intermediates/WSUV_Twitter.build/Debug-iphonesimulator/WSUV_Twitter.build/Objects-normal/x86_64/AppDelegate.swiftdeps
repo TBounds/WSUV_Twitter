@@ -11,40 +11,38 @@ provides-member:
 - ["V12WSUV_Twitter5Tweet", ""]
 - ["C12WSUV_Twitter11AppDelegate", ""]
 provides-dynamic-lookup:
-- "application"
-- "lastTweetDate"
-- "applicationDidBecomeActive"
-- "applicationWillEnterForeground"
-- "applicationDidEnterBackground"
+- "applicationWillTerminate"
 - "window"
 - "applicationWillResignActive"
-- "applicationWillTerminate"
+- "applicationWillEnterForeground"
+- "applicationDidEnterBackground"
+- "application"
+- "applicationDidBecomeActive"
+- "lastTweetDate"
 depends-top-level:
-- "CastingPrecedence"
-- !private "*"
-- "NSString"
-- "Notification"
-- "=="
-- "UIApplication"
-- "NSDate"
-- "AssignmentPrecedence"
-- "UIWindow"
 - "AppDelegate"
-- "kAddTweetNotification"
-- "Hashable"
-- "String"
 - !private "BooleanLiteralType"
-- "Date"
 - "UIResponder"
+- !private "*"
+- "String"
+- "UIApplication"
 - "StringLiteralType"
 - "Int"
-- "Bool"
-- "UIApplicationLaunchOptionsKey"
 - "UIApplicationDelegate"
+- "UIApplicationLaunchOptionsKey"
+- "Hashable"
+- "=="
+- "AssignmentPrecedence"
+- "kAddTweetNotification"
 - "Tweet"
+- "Bool"
+- "UIWindow"
+- "Notification"
+- "NSDate"
+- "NSString"
+- "Date"
 depends-member:
 - !private ["Ps9AnyObject", "Date"]
-- !private ["Ps9AnyObject", "Tweet"]
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
 - ["Ps9AnyObject", "applicationDidEnterBackground"]
@@ -64,7 +62,6 @@ depends-member:
 - ["Ps9AnyObject", ""]
 - ["C12WSUV_Twitter11AppDelegate", "Bool"]
 - ["C12WSUV_Twitter11AppDelegate", "Date"]
-- !private ["C12WSUV_Twitter11AppDelegate", "NSDate"]
 - ["C12WSUV_Twitter11AppDelegate", "Tweet"]
 - ["C12WSUV_Twitter11AppDelegate", "UIApplication"]
 - ["C12WSUV_Twitter11AppDelegate", "UIApplicationLaunchOptionsKey"]
@@ -86,22 +83,9 @@ depends-member:
 - ["C12WSUV_Twitter11AppDelegate", "lastTweetDate"]
 - ["C12WSUV_Twitter11AppDelegate", "tweets"]
 - ["C12WSUV_Twitter11AppDelegate", "window"]
-- !private ["Sa", "Iterator"]
-- !private ["Sa", "_Element"]
-- !private ["Sa", "append"]
 - ["Sa", "deinit"]
-- !private ["Ps23BidirectionalCollection", "Iterator"]
-- !private ["Ps23BidirectionalCollection", "_Element"]
-- !private ["Ps23BidirectionalCollection", "append"]
-- !private ["Ps22BidirectionalIndexable", "Iterator"]
-- !private ["Ps22BidirectionalIndexable", "_Element"]
-- !private ["Ps22BidirectionalIndexable", "append"]
 - ["Sb", "deinit"]
 - !private ["Ps7CVarArg", "Date"]
-- !private ["Ps7CVarArg", "Iterator"]
-- !private ["Ps7CVarArg", "Tweet"]
-- !private ["Ps7CVarArg", "_Element"]
-- !private ["Ps7CVarArg", "append"]
 - ["Ps7CVarArg", "application"]
 - ["Ps7CVarArg", "applicationDidBecomeActive"]
 - ["Ps7CVarArg", "applicationDidEnterBackground"]
@@ -119,16 +103,9 @@ depends-member:
 - ["Ps7CVarArg", "tweets"]
 - ["Ps7CVarArg", "window"]
 - ["Ps7CVarArg", ""]
-- !private ["Ps10Collection", "Iterator"]
-- !private ["Ps10Collection", "_Element"]
-- !private ["Ps10Collection", "append"]
 - ["Ps10Comparable", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "Date"]
-- !private ["Ps28CustomDebugStringConvertible", "Iterator"]
 - ["Ps28CustomDebugStringConvertible", "Name"]
-- !private ["Ps28CustomDebugStringConvertible", "Tweet"]
-- !private ["Ps28CustomDebugStringConvertible", "_Element"]
-- !private ["Ps28CustomDebugStringConvertible", "append"]
 - ["Ps28CustomDebugStringConvertible", "application"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidBecomeActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidEnterBackground"]
@@ -147,17 +124,10 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "window"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - ["Ps29CustomPlaygroundQuickLookable", "init"]
-- !private ["Ps17CustomReflectable", "Iterator"]
 - ["Ps17CustomReflectable", "Name"]
-- !private ["Ps17CustomReflectable", "_Element"]
-- !private ["Ps17CustomReflectable", "append"]
 - ["Ps17CustomReflectable", "init"]
 - !private ["Ps23CustomStringConvertible", "Date"]
-- !private ["Ps23CustomStringConvertible", "Iterator"]
 - ["Ps23CustomStringConvertible", "Name"]
-- !private ["Ps23CustomStringConvertible", "Tweet"]
-- !private ["Ps23CustomStringConvertible", "_Element"]
-- !private ["Ps23CustomStringConvertible", "append"]
 - ["Ps23CustomStringConvertible", "application"]
 - ["Ps23CustomStringConvertible", "applicationDidBecomeActive"]
 - ["Ps23CustomStringConvertible", "applicationDidEnterBackground"]
@@ -180,7 +150,6 @@ depends-member:
 - ["Sd", "deinit"]
 - !private ["Ps9Equatable", "Date"]
 - ["Ps9Equatable", "Name"]
-- !private ["Ps9Equatable", "Tweet"]
 - ["Ps9Equatable", "_toAnyHashable"]
 - ["Ps9Equatable", "application"]
 - ["Ps9Equatable", "applicationDidBecomeActive"]
@@ -205,16 +174,12 @@ depends-member:
 - !private ["Ps9Equatable", "username"]
 - ["Ps9Equatable", "window"]
 - ["Ps9Equatable", ""]
-- !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
-- !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
-- !private ["Ps25ExpressibleByArrayLiteral", "append"]
 - ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
 - ["Ps32ExpressibleByStringInterpolation", "init"]
 - ["Ps26ExpressibleByStringLiteral", "init"]
 - ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
 - !private ["Ps8Hashable", "Date"]
 - ["Ps8Hashable", "Name"]
-- !private ["Ps8Hashable", "Tweet"]
 - ["Ps8Hashable", "_toAnyHashable"]
 - ["Ps8Hashable", "application"]
 - ["Ps8Hashable", "applicationDidBecomeActive"]
@@ -239,30 +204,15 @@ depends-member:
 - !private ["Ps8Hashable", "username"]
 - ["Ps8Hashable", "window"]
 - ["Ps8Hashable", ""]
-- !private ["Ps9Indexable", "Iterator"]
-- !private ["Ps9Indexable", "_Element"]
-- !private ["Ps9Indexable", "append"]
-- !private ["Ps13IndexableBase", "Iterator"]
-- !private ["Ps13IndexableBase", "_Element"]
-- !private ["Ps13IndexableBase", "append"]
-- !private ["Vs16IndexingIterator", "Element"]
 - ["Si", "deinit"]
-- !private ["Ps16IteratorProtocol", "Element"]
 - ["Ps25LosslessStringConvertible", "init"]
 - ["Ps10MirrorPath", "init"]
-- !private ["Ps17MutableCollection", "Iterator"]
-- !private ["Ps17MutableCollection", "_Element"]
-- !private ["Ps17MutableCollection", "append"]
-- !private ["Ps16MutableIndexable", "Iterator"]
-- !private ["Ps16MutableIndexable", "_Element"]
-- !private ["Ps16MutableIndexable", "append"]
 - ["PSo8NSCoding", "init"]
 - ["PSo9NSCopying", "init"]
 - ["CSo6NSDate", "deinit"]
 - ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "Bool"]
 - ["CSo8NSObject", "Date"]
-- !private ["CSo8NSObject", "NSDate"]
 - ["CSo8NSObject", "Tweet"]
 - ["CSo8NSObject", "UIApplication"]
 - ["CSo8NSObject", "UIApplicationLaunchOptionsKey"]
@@ -284,7 +234,6 @@ depends-member:
 - ["CSo8NSObject", "tweets"]
 - ["CSo8NSObject", "window"]
 - !private ["PSo16NSObjectProtocol", "Date"]
-- !private ["PSo16NSObjectProtocol", "Tweet"]
 - ["PSo16NSObjectProtocol", "application"]
 - ["PSo16NSObjectProtocol", "applicationDidBecomeActive"]
 - ["PSo16NSObjectProtocol", "applicationDidEnterBackground"]
@@ -309,26 +258,9 @@ depends-member:
 - ["VCSo14NSNotification4Name", "init"]
 - ["V10Foundation12Notification", "Name"]
 - ["Sq", "deinit"]
-- !private ["Ps22RandomAccessCollection", "Iterator"]
-- !private ["Ps22RandomAccessCollection", "_Element"]
-- !private ["Ps22RandomAccessCollection", "append"]
-- !private ["Ps21RandomAccessIndexable", "Iterator"]
-- !private ["Ps21RandomAccessIndexable", "_Element"]
-- !private ["Ps21RandomAccessIndexable", "append"]
-- !private ["Ps26RangeReplaceableCollection", "Iterator"]
-- !private ["Ps26RangeReplaceableCollection", "_Element"]
-- !private ["Ps26RangeReplaceableCollection", "append"]
-- !private ["Ps25RangeReplaceableIndexable", "Iterator"]
-- !private ["Ps25RangeReplaceableIndexable", "_Element"]
-- !private ["Ps25RangeReplaceableIndexable", "append"]
 - ["Ps16RawRepresentable", "init"]
 - ["P10Foundation20ReferenceConvertible", "Name"]
 - !private ["P10Foundation20ReferenceConvertible", "init"]
-- !private ["Ps8Sequence", "Element"]
-- !private ["Ps8Sequence", "Iterator"]
-- !private ["Ps8Sequence", "_Element"]
-- !private ["Ps8Sequence", "append"]
-- !private ["Vs12StaticString", "init"]
 - ["SS", "deinit"]
 - ["SS", "init"]
 - ["Ps16TextOutputStream", "init"]
@@ -348,7 +280,6 @@ depends-member:
 - ["V12WSUV_Twitter5Tweet", "tweet_id"]
 - ["V12WSUV_Twitter5Tweet", "username"]
 - !private ["PSo21UIApplicationDelegate", "Date"]
-- !private ["PSo21UIApplicationDelegate", "Tweet"]
 - ["PSo21UIApplicationDelegate", "application"]
 - ["PSo21UIApplicationDelegate", "applicationDidBecomeActive"]
 - ["PSo21UIApplicationDelegate", "applicationDidEnterBackground"]
@@ -361,12 +292,10 @@ depends-member:
 - ["PSo21UIApplicationDelegate", "applicationWillEnterForeground"]
 - ["PSo21UIApplicationDelegate", "applicationWillResignActive"]
 - ["PSo21UIApplicationDelegate", "applicationWillTerminate"]
-- !private ["PSo21UIApplicationDelegate", "tweets"]
 - ["PSo21UIApplicationDelegate", "window"]
 - ["PSo21UIApplicationDelegate", ""]
 - ["CSo11UIResponder", "Bool"]
 - ["CSo11UIResponder", "Date"]
-- !private ["CSo11UIResponder", "NSDate"]
 - ["CSo11UIResponder", "Tweet"]
 - ["CSo11UIResponder", "UIApplication"]
 - ["CSo11UIResponder", "UIApplicationLaunchOptionsKey"]
@@ -390,7 +319,6 @@ depends-member:
 - ["CSo11UIResponder", "window"]
 - ["CSo11UIResponder", ""]
 - !private ["PSo30UIResponderStandardEditActions", "Date"]
-- !private ["PSo30UIResponderStandardEditActions", "Tweet"]
 - ["PSo30UIResponderStandardEditActions", "application"]
 - ["PSo30UIResponderStandardEditActions", "applicationDidBecomeActive"]
 - ["PSo30UIResponderStandardEditActions", "applicationDidEnterBackground"]
@@ -409,12 +337,6 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "window"]
 - ["PSo30UIResponderStandardEditActions", ""]
 - ["P9Alamofire14URLConvertible", "init"]
-- !private ["Ps14_ArrayProtocol", "Iterator"]
-- !private ["Ps14_ArrayProtocol", "_Element"]
-- !private ["Ps14_ArrayProtocol", "append"]
-- !private ["Ps24_DestructorSafeContainer", "Iterator"]
-- !private ["Ps24_DestructorSafeContainer", "_Element"]
-- !private ["Ps24_DestructorSafeContainer", "append"]
 - ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
 - ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
@@ -422,7 +344,6 @@ depends-member:
 - ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "Date"]
 - ["Ps9_Hashable", "Name"]
-- !private ["Ps9_Hashable", "Tweet"]
 - ["Ps9_Hashable", "_toAnyHashable"]
 - ["Ps9_Hashable", "application"]
 - ["Ps9_Hashable", "applicationDidBecomeActive"]
@@ -447,21 +368,15 @@ depends-member:
 - !private ["Ps9_Hashable", "username"]
 - ["Ps9_Hashable", "window"]
 - ["Ps9_Hashable", ""]
-- !private ["Ps21_ObjectiveCBridgeable", "Iterator"]
 - ["Ps21_ObjectiveCBridgeable", "Name"]
-- !private ["Ps21_ObjectiveCBridgeable", "_Element"]
-- !private ["Ps21_ObjectiveCBridgeable", "append"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
 - ["Ps20_SwiftNewtypeWrapper", "init"]
 depends-nominal:
 - "Ps9AnyObject"
 - "C12WSUV_Twitter11AppDelegate"
 - "Sa"
-- !private "Ps23BidirectionalCollection"
-- !private "Ps22BidirectionalIndexable"
 - "Sb"
 - "Ps7CVarArg"
-- !private "Ps10Collection"
 - "Ps10Comparable"
 - "Ps28CustomDebugStringConvertible"
 - "Ps29CustomPlaygroundQuickLookable"
@@ -470,21 +385,14 @@ depends-nominal:
 - "V10Foundation4Date"
 - "Sd"
 - "Ps9Equatable"
-- !private "Ps25ExpressibleByArrayLiteral"
 - "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
 - "Ps32ExpressibleByStringInterpolation"
 - "Ps26ExpressibleByStringLiteral"
 - "Ps33ExpressibleByUnicodeScalarLiteral"
 - "Ps8Hashable"
-- !private "Ps9Indexable"
-- !private "Ps13IndexableBase"
-- !private "Vs16IndexingIterator"
 - "Si"
-- !private "Ps16IteratorProtocol"
 - "Ps25LosslessStringConvertible"
 - "Ps10MirrorPath"
-- !private "Ps17MutableCollection"
-- !private "Ps16MutableIndexable"
 - "PSo8NSCoding"
 - "PSo9NSCopying"
 - "CSo6NSDate"
@@ -496,14 +404,8 @@ depends-nominal:
 - "VCSo14NSNotification4Name"
 - "V10Foundation12Notification"
 - "Sq"
-- !private "Ps22RandomAccessCollection"
-- !private "Ps21RandomAccessIndexable"
-- !private "Ps26RangeReplaceableCollection"
-- !private "Ps25RangeReplaceableIndexable"
 - "Ps16RawRepresentable"
 - "P10Foundation20ReferenceConvertible"
-- !private "Ps8Sequence"
-- !private "Vs12StaticString"
 - "SS"
 - "Ps16TextOutputStream"
 - "Ps20TextOutputStreamable"
@@ -512,8 +414,6 @@ depends-nominal:
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
 - "P9Alamofire14URLConvertible"
-- !private "Ps14_ArrayProtocol"
-- !private "Ps24_DestructorSafeContainer"
 - "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
 - "Ps34_ExpressibleByBuiltinStringLiteral"
 - "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
@@ -525,6 +425,7 @@ depends-nominal:
 depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/home-local/t.bounds/WSUV_Twitter/WSUV_Twitter/WSUV_Twitter-Bridging-Header.h"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"

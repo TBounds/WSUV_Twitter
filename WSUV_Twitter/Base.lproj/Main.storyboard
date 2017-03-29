@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Recent Tweets-->
         <scene sceneID="Aee-iJ-Ntx">
             <objects>
                 <tableViewController id="dhV-sV-xPc" customClass="TweetTableViewController" customModule="WSUV_Twitter" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,7 +41,7 @@
                             <outlet property="delegate" destination="dhV-sV-xPc" id="5ob-Gt-YQd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="X2P-wg-JG4">
+                    <navigationItem key="navigationItem" title="Recent Tweets" id="X2P-wg-JG4">
                         <barButtonItem key="leftBarButtonItem" title="👤" id="NuR-BX-dSh"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="If9-mP-c1C">
                             <connections>
@@ -51,7 +51,16 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="MUe-5h-LWn">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <attributedString key="attributedTitle">
+                            <fragment content="Fetching Tweets.. .">
+                                <attributes>
+                                    <font key="NSFont" size="11" name=".SFNSText"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
                         <connections>
                             <action selector="refreshTweets:" destination="dhV-sV-xPc" eventType="valueChanged" id="2Wr-fN-f7H"/>
                         </connections>
@@ -61,7 +70,7 @@
             </objects>
             <point key="canvasLocation" x="124" y="115"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Add Your Tweet-->
         <scene sceneID="TZu-uO-ipc">
             <objects>
                 <tableViewController id="kOe-kd-YEq" customClass="AddTweetTableViewController" customModule="WSUV_Twitter" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,8 +106,12 @@
                             <outlet property="delegate" destination="kOe-kd-YEq" id="qxf-e7-SFa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="RUZ-51-9Dn">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NBj-Hg-KPG"/>
+                    <navigationItem key="navigationItem" title="Add Your Tweet" id="RUZ-51-9Dn">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NBj-Hg-KPG">
+                            <connections>
+                                <action selector="cancel:" destination="kOe-kd-YEq" id="0ai-qD-ATV"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="3oL-SD-S0i"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
