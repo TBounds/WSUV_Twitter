@@ -143,6 +143,7 @@ SWIFT_CLASS("_TtC12WSUV_Twitter27AddTweetTableViewController")
 SWIFT_CLASS("_TtC12WSUV_Twitter11AppDelegate")
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 @property (nonatomic, strong) UIWindow * _Nullable window;
+- (NSDate * _Nonnull)lastTweetDate;
 - (BOOL)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> * _Nullable)launchOptions;
 - (void)applicationWillResignActive:(UIApplication * _Nonnull)application;
 - (void)applicationDidEnterBackground:(UIApplication * _Nonnull)application;
@@ -159,6 +160,7 @@ SWIFT_CLASS("_TtC12WSUV_Twitter11AppDelegate")
 
 SWIFT_CLASS("_TtC12WSUV_Twitter24TweetTableViewController")
 @interface TweetTableViewController : UITableViewController
+@property (nonatomic, readonly, copy) NSString * _Nonnull kBaseURLString;
 @property (nonatomic, strong) NSDateFormatter * _Nonnull tweetDateFormatter;
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSObject *> * _Nonnull tweetTitleAttributes;
 @property (nonatomic, copy) NSDictionary<NSString *, id> * _Nonnull tweetBodyAttributes;

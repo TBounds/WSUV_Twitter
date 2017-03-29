@@ -7,10 +7,9 @@
 //
 
 import UIKit
-
+import Alamofire
 
 class TweetTableViewController: UITableViewController {
-    
     
     let kBaseURLString = "https://ezekiel.encs.vancouver.wsu.edu/~cs458/cgi-bin"
     
@@ -161,7 +160,18 @@ class TweetTableViewController: UITableViewController {
                     let dict = JSON as! [String : AnyObject]
                     let tweets = dict["tweets"] as! [[String : AnyObject]]
                     // ... create a new Tweet object for each returned tweet dictionary
+                    NSLog("\(tweets)")
+                    var tweetList : [Tweet] = []
+                    for entries in tweets {
+                    
+                        tweetList.append(Tweet(entries["tweet_id"] as! Int, entries["username"] as! String, entries["isdeleted"] as! Bool, entries["tweet"] as! NSString, dateFormatter.date(from: entries["time_stamp"] as! String)! as NSDate))
+                    }
+                    
                     // ... add new (sorted) tweets to appDelegate.tweets...
+                    // Sorting NSDates: http://stackoverflow.com/questions/32205919/sort-array-of-custom-objects-by-date-swift
+                    appDelegate.tweets = tweetList.sorted(by: {$0.date.compare($1.date as Date) == ComparisonResult.orderedDescending})
+                    
+                    
                     self.tableView.reloadData() // force table-view to be updated
                     self.refreshControl?.endRefreshing()
                 case .failure(let error):
@@ -171,6 +181,8 @@ class TweetTableViewController: UITableViewController {
                         case 500:
                             message = "Server error (my bad)"
                             // ...
+                        default:
+                            break
                         }
                     } else { // probably network or server timeout
                         message = error.localizedDescription

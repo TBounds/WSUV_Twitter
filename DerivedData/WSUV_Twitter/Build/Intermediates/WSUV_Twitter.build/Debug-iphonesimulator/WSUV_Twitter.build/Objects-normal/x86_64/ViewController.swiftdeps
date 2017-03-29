@@ -6,11 +6,11 @@ provides-nominal:
 provides-member:
 - ["C12WSUV_Twitter14ViewController", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
 - "viewDidLoad"
+- "didReceiveMemoryWarning"
 depends-top-level:
-- "ViewController"
 - "UIViewController"
+- "ViewController"
 depends-member:
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - !private ["Ps9AnyObject", "init"]
@@ -128,4 +128,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64.swiftmodule"
+- "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire.h"
+- "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Modules/module.modulemap"
 interface-hash: "2273e0b6560749631899e82af2412a52"

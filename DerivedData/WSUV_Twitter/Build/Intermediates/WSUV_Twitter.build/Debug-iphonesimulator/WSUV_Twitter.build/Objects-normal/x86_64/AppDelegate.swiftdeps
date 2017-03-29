@@ -11,36 +11,37 @@ provides-member:
 - ["V12WSUV_Twitter5Tweet", ""]
 - ["C12WSUV_Twitter11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationDidBecomeActive"
-- "applicationWillResignActive"
-- "lastTweetDate"
-- "window"
-- "applicationWillTerminate"
-- "application"
 - "applicationDidEnterBackground"
+- "application"
 - "applicationWillEnterForeground"
+- "applicationWillTerminate"
+- "applicationDidBecomeActive"
+- "window"
+- "lastTweetDate"
+- "applicationWillResignActive"
 depends-top-level:
-- "UIApplicationDelegate"
-- "Int"
-- "AppDelegate"
-- "Tweet"
-- "UIWindow"
 - "Hashable"
+- "NSString"
+- "AppDelegate"
+- !private "*"
+- "UIWindow"
+- "CastingPrecedence"
+- "Bool"
 - "=="
 - "AssignmentPrecedence"
-- "CastingPrecedence"
-- "UIApplication"
-- "UIResponder"
-- "UIApplicationLaunchOptionsKey"
-- "NSDate"
+- "Int"
 - "String"
-- "Bool"
-- "Date"
-- "Notification"
+- "UIApplication"
 - "StringLiteralType"
-- "NSString"
-- !private "BooleanLiteralType"
+- "UIApplicationLaunchOptionsKey"
 - "kAddTweetNotification"
+- "Date"
+- "NSDate"
+- "Tweet"
+- "Notification"
+- !private "BooleanLiteralType"
+- "UIApplicationDelegate"
+- "UIResponder"
 depends-member:
 - !private ["Ps9AnyObject", "Date"]
 - !private ["Ps9AnyObject", "Tweet"]
@@ -176,6 +177,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", ""]
 - ["V10Foundation4Date", "deinit"]
 - !private ["V10Foundation4Date", "init"]
+- ["Sd", "deinit"]
 - !private ["Ps9Equatable", "Date"]
 - ["Ps9Equatable", "Name"]
 - !private ["Ps9Equatable", "Tweet"]
@@ -406,6 +408,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "tweets"]
 - ["PSo30UIResponderStandardEditActions", "window"]
 - ["PSo30UIResponderStandardEditActions", ""]
+- ["P9Alamofire14URLConvertible", "init"]
 - !private ["Ps14_ArrayProtocol", "Iterator"]
 - !private ["Ps14_ArrayProtocol", "_Element"]
 - !private ["Ps14_ArrayProtocol", "append"]
@@ -465,6 +468,7 @@ depends-nominal:
 - "Ps17CustomReflectable"
 - "Ps23CustomStringConvertible"
 - "V10Foundation4Date"
+- "Sd"
 - "Ps9Equatable"
 - !private "Ps25ExpressibleByArrayLiteral"
 - "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
@@ -507,6 +511,7 @@ depends-nominal:
 - "PSo21UIApplicationDelegate"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
+- "P9Alamofire14URLConvertible"
 - !private "Ps14_ArrayProtocol"
 - !private "Ps24_DestructorSafeContainer"
 - "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
@@ -529,4 +534,8 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64.swiftmodule"
+- "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire.h"
+- "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Modules/module.modulemap"
 interface-hash: "9dc5b3f39bc016a5ec6b24a7e6236adb"
