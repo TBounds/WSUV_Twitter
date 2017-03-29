@@ -44,7 +44,7 @@
                     <navigationItem key="navigationItem" title="Recent Tweets" id="X2P-wg-JG4">
                         <barButtonItem key="leftBarButtonItem" title="👤" id="NuR-BX-dSh">
                             <connections>
-                                <action selector="login:" destination="dhV-sV-xPc" id="AkQ-0j-oSa"/>
+                                <action selector="manageAccount:" destination="dhV-sV-xPc" id="vIp-xQ-h8d"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="If9-mP-c1C">

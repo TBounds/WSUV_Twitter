@@ -6,17 +6,16 @@ provides-nominal:
 provides-member:
 - ["C12WSUV_Twitter24TweetTableViewController", ""]
 provides-dynamic-lookup:
-- "refreshTweets"
-- "appDelegate"
-- "registerUser"
 - "tweetTitleAttributes"
 - "viewDidLoad"
+- "manageAccount"
+- "kBaseURLString"
+- "loginUser"
 - "tweetDateFormatter"
+- "registerUser"
+- "logout"
 - "tweetBodyAttributes"
 - "numberOfSections"
-- "kBaseURLString"
-- "login"
-- "logout"
 - "didReceiveMemoryWarning"
 - "tableView"
 - "tableView"
@@ -24,60 +23,61 @@ provides-dynamic-lookup:
 - "tableView"
 - "tableView"
 - "tableView"
-- "loginUser"
+- "appDelegate"
+- "refreshTweets"
 depends-top-level:
-- "AssignmentPrecedence"
-- !private "NSParagraphStyleAttributeName"
-- !private "UIKit"
-- "StringLiteralType"
-- !private "Alamofire"
-- !private "Notification"
-- !private "NSParagraphStyle"
-- !private "UIAlertAction"
-- !private "ComparisonResult"
-- "TweetTableViewController"
-- "BooleanLiteralType"
-- "NSFontAttributeName"
-- !private "kAddTweetNotification"
-- !private "TimeZone"
-- !private "&&"
-- !private "NSDate"
-- "UIFont"
-- !private "NSMutableParagraphStyle"
-- "Bool"
-- !private "UITableViewAutomaticDimension"
-- "UITableViewController"
-- !private "!="
-- "CGFloat"
-- !private "kWazzuTwitterSessionToken"
-- !private "SSKeychain"
-- "UITableViewCell"
-- !private "UIAlertController"
-- !private "NSString"
-- !private "NotificationCenter"
-- "AnyObject"
-- "UITableView"
-- !private "Date"
-- "Dictionary"
-- !private "+"
 - "UIColor"
+- !private "=="
 - "Tweet"
-- !private "kWazzuTwitterPassword"
+- "NSForegroundColorAttributeName"
+- "StringLiteralType"
 - "Int"
-- "UIApplication"
+- !private "kWazzuTwitterPassword"
+- "NSAttributedString"
+- "BooleanLiteralType"
+- !private "NSMutableAttributedString"
+- "Bool"
+- !private "NotificationCenter"
+- "UITableViewCell"
+- "CGFloat"
+- "TweetTableViewController"
+- !private "kWazzuTwitterSessionToken"
+- !private "Alamofire"
+- !private "UIAlertAction"
 - !private "UITextField"
+- !private "UITableViewAutomaticDimension"
+- !private "+"
+- "UITableView"
+- !private "NSDate"
+- !private "Date"
+- !private "UIKit"
+- !private "!="
+- !private "NSParagraphStyleAttributeName"
+- !private "TimeZone"
+- !private "Notification"
+- !private "SSKeychain"
+- !private "NSParagraphStyle"
+- !private "NSString"
+- !private "Void"
+- !private "NSMutableParagraphStyle"
+- !private "kAddTweetNotification"
+- "UITableViewController"
+- "UIFont"
+- !private "ComparisonResult"
+- "NSFontAttributeName"
 - "AppDelegate"
 - "DateFormatter"
+- !private "UIAlertController"
+- "AnyObject"
 - "UIFontTextStyle"
-- "NSAttributedString"
-- !private "NSMutableAttributedString"
-- "IndexPath"
 - !private "!"
-- !private "Void"
+- "UIApplication"
 - "CastingPrecedence"
+- !private "&&"
 - "String"
-- "NSForegroundColorAttributeName"
-- !private "=="
+- "Dictionary"
+- "IndexPath"
+- "AssignmentPrecedence"
 - !private "~="
 depends-member:
 - !private ["Ps9AnyObject", "Alamofire"]
@@ -131,13 +131,14 @@ depends-member:
 - !private ["Ps9AnyObject", "kWazzuTwitterSessionToken"]
 - !private ["Ps9AnyObject", "lastTweetDate"]
 - !private ["Ps9AnyObject", "lineBreakMode"]
-- ["Ps9AnyObject", "login"]
 - ["Ps9AnyObject", "loginUser"]
 - ["Ps9AnyObject", "logout"]
+- ["Ps9AnyObject", "manageAccount"]
 - !private ["Ps9AnyObject", "message"]
 - !private ["Ps9AnyObject", "mutableCopy"]
 - !private ["Ps9AnyObject", "numberOfLines"]
 - ["Ps9AnyObject", "numberOfSections"]
+- !private ["Ps9AnyObject", "password"]
 - !private ["Ps9AnyObject", "placeholder"]
 - ["Ps9AnyObject", "preferredFont"]
 - !private ["Ps9AnyObject", "present"]
@@ -290,13 +291,14 @@ depends-member:
 - !private ["Ps7CVarArg", "kWazzuTwitterSessionToken"]
 - !private ["Ps7CVarArg", "lastTweetDate"]
 - !private ["Ps7CVarArg", "lineBreakMode"]
-- ["Ps7CVarArg", "login"]
 - ["Ps7CVarArg", "loginUser"]
 - ["Ps7CVarArg", "logout"]
+- ["Ps7CVarArg", "manageAccount"]
 - !private ["Ps7CVarArg", "message"]
 - !private ["Ps7CVarArg", "mutableCopy"]
 - !private ["Ps7CVarArg", "numberOfLines"]
 - ["Ps7CVarArg", "numberOfSections"]
+- !private ["Ps7CVarArg", "password"]
 - !private ["Ps7CVarArg", "placeholder"]
 - ["Ps7CVarArg", "preferredFont"]
 - !private ["Ps7CVarArg", "present"]
@@ -416,13 +418,14 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "kWazzuTwitterSessionToken"]
 - !private ["Ps28CustomDebugStringConvertible", "lastTweetDate"]
 - !private ["Ps28CustomDebugStringConvertible", "lineBreakMode"]
-- ["Ps28CustomDebugStringConvertible", "login"]
 - ["Ps28CustomDebugStringConvertible", "loginUser"]
 - ["Ps28CustomDebugStringConvertible", "logout"]
+- ["Ps28CustomDebugStringConvertible", "manageAccount"]
 - !private ["Ps28CustomDebugStringConvertible", "message"]
 - !private ["Ps28CustomDebugStringConvertible", "mutableCopy"]
 - !private ["Ps28CustomDebugStringConvertible", "numberOfLines"]
 - ["Ps28CustomDebugStringConvertible", "numberOfSections"]
+- !private ["Ps28CustomDebugStringConvertible", "password"]
 - !private ["Ps28CustomDebugStringConvertible", "placeholder"]
 - ["Ps28CustomDebugStringConvertible", "preferredFont"]
 - !private ["Ps28CustomDebugStringConvertible", "present"]
@@ -547,13 +550,14 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "kWazzuTwitterSessionToken"]
 - !private ["Ps23CustomStringConvertible", "lastTweetDate"]
 - !private ["Ps23CustomStringConvertible", "lineBreakMode"]
-- ["Ps23CustomStringConvertible", "login"]
 - ["Ps23CustomStringConvertible", "loginUser"]
 - ["Ps23CustomStringConvertible", "logout"]
+- ["Ps23CustomStringConvertible", "manageAccount"]
 - !private ["Ps23CustomStringConvertible", "message"]
 - !private ["Ps23CustomStringConvertible", "mutableCopy"]
 - !private ["Ps23CustomStringConvertible", "numberOfLines"]
 - ["Ps23CustomStringConvertible", "numberOfSections"]
+- !private ["Ps23CustomStringConvertible", "password"]
 - !private ["Ps23CustomStringConvertible", "placeholder"]
 - ["Ps23CustomStringConvertible", "preferredFont"]
 - !private ["Ps23CustomStringConvertible", "present"]
@@ -685,14 +689,15 @@ depends-member:
 - !private ["Ps9Equatable", "lastTweetDate"]
 - !private ["Ps9Equatable", "left"]
 - !private ["Ps9Equatable", "lineBreakMode"]
-- ["Ps9Equatable", "login"]
 - ["Ps9Equatable", "loginUser"]
 - ["Ps9Equatable", "logout"]
+- ["Ps9Equatable", "manageAccount"]
 - !private ["Ps9Equatable", "message"]
 - !private ["Ps9Equatable", "mutableCopy"]
 - !private ["Ps9Equatable", "numberOfLines"]
 - ["Ps9Equatable", "numberOfSections"]
 - !private ["Ps9Equatable", "orderedDescending"]
+- !private ["Ps9Equatable", "password"]
 - !private ["Ps9Equatable", "placeholder"]
 - !private ["Ps9Equatable", "post"]
 - ["Ps9Equatable", "preferredFont"]
@@ -829,14 +834,15 @@ depends-member:
 - !private ["Ps8Hashable", "lastTweetDate"]
 - !private ["Ps8Hashable", "left"]
 - !private ["Ps8Hashable", "lineBreakMode"]
-- ["Ps8Hashable", "login"]
 - ["Ps8Hashable", "loginUser"]
 - ["Ps8Hashable", "logout"]
+- ["Ps8Hashable", "manageAccount"]
 - !private ["Ps8Hashable", "message"]
 - !private ["Ps8Hashable", "mutableCopy"]
 - !private ["Ps8Hashable", "numberOfLines"]
 - ["Ps8Hashable", "numberOfSections"]
 - !private ["Ps8Hashable", "orderedDescending"]
+- !private ["Ps8Hashable", "password"]
 - !private ["Ps8Hashable", "placeholder"]
 - !private ["Ps8Hashable", "post"]
 - ["Ps8Hashable", "preferredFont"]
@@ -992,9 +998,9 @@ depends-member:
 - !private ["PSo8NSCoding", "kWazzuTwitterPassword"]
 - !private ["PSo8NSCoding", "kWazzuTwitterSessionToken"]
 - !private ["PSo8NSCoding", "lineBreakMode"]
-- ["PSo8NSCoding", "login"]
 - ["PSo8NSCoding", "loginUser"]
 - ["PSo8NSCoding", "logout"]
+- ["PSo8NSCoding", "manageAccount"]
 - !private ["PSo8NSCoding", "message"]
 - !private ["PSo8NSCoding", "mutableCopy"]
 - !private ["PSo8NSCoding", "numberOfLines"]
@@ -1074,9 +1080,9 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "kBaseURLString"]
 - !private ["PSo26NSExtensionRequestHandling", "kWazzuTwitterPassword"]
 - !private ["PSo26NSExtensionRequestHandling", "kWazzuTwitterSessionToken"]
-- ["PSo26NSExtensionRequestHandling", "login"]
 - ["PSo26NSExtensionRequestHandling", "loginUser"]
 - ["PSo26NSExtensionRequestHandling", "logout"]
+- ["PSo26NSExtensionRequestHandling", "manageAccount"]
 - !private ["PSo26NSExtensionRequestHandling", "message"]
 - ["PSo26NSExtensionRequestHandling", "numberOfSections"]
 - !private ["PSo26NSExtensionRequestHandling", "present"]
@@ -1174,13 +1180,14 @@ depends-member:
 - !private ["CSo8NSObject", "kWazzuTwitterSessionToken"]
 - !private ["CSo8NSObject", "lastTweetDate"]
 - !private ["CSo8NSObject", "lineBreakMode"]
-- ["CSo8NSObject", "login"]
 - ["CSo8NSObject", "loginUser"]
 - ["CSo8NSObject", "logout"]
+- ["CSo8NSObject", "manageAccount"]
 - !private ["CSo8NSObject", "message"]
 - !private ["CSo8NSObject", "mutableCopy"]
 - !private ["CSo8NSObject", "numberOfLines"]
 - ["CSo8NSObject", "numberOfSections"]
+- !private ["CSo8NSObject", "password"]
 - !private ["CSo8NSObject", "placeholder"]
 - ["CSo8NSObject", "preferredFont"]
 - !private ["CSo8NSObject", "present"]
@@ -1261,13 +1268,14 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "kWazzuTwitterSessionToken"]
 - !private ["PSo16NSObjectProtocol", "lastTweetDate"]
 - !private ["PSo16NSObjectProtocol", "lineBreakMode"]
-- ["PSo16NSObjectProtocol", "login"]
 - ["PSo16NSObjectProtocol", "loginUser"]
 - ["PSo16NSObjectProtocol", "logout"]
+- ["PSo16NSObjectProtocol", "manageAccount"]
 - !private ["PSo16NSObjectProtocol", "message"]
 - !private ["PSo16NSObjectProtocol", "mutableCopy"]
 - !private ["PSo16NSObjectProtocol", "numberOfLines"]
 - ["PSo16NSObjectProtocol", "numberOfSections"]
+- !private ["PSo16NSObjectProtocol", "password"]
 - !private ["PSo16NSObjectProtocol", "placeholder"]
 - ["PSo16NSObjectProtocol", "preferredFont"]
 - !private ["PSo16NSObjectProtocol", "present"]
@@ -1390,6 +1398,7 @@ depends-member:
 - !private ["O9Alamofire6Result", "deinit"]
 - !private ["O9Alamofire6Result", "failure"]
 - !private ["O9Alamofire6Result", "success"]
+- !private ["CSo10SSKeychain", "password"]
 - !private ["CSo10SSKeychain", "setPassword"]
 - !private ["Ps8Sequence", "Element"]
 - !private ["Ps8Sequence", "Index"]
@@ -1476,9 +1485,9 @@ depends-member:
 - ["C12WSUV_Twitter24TweetTableViewController", "kBaseURLString"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "kWazzuTwitterPassword"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "kWazzuTwitterSessionToken"]
-- ["C12WSUV_Twitter24TweetTableViewController", "login"]
 - ["C12WSUV_Twitter24TweetTableViewController", "loginUser"]
 - ["C12WSUV_Twitter24TweetTableViewController", "logout"]
+- ["C12WSUV_Twitter24TweetTableViewController", "manageAccount"]
 - ["C12WSUV_Twitter24TweetTableViewController", "numberOfSections"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "present"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "refreshControl"]
@@ -1567,9 +1576,9 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "kBaseURLString"]
 - !private ["PSo21UIAppearanceContainer", "kWazzuTwitterPassword"]
 - !private ["PSo21UIAppearanceContainer", "kWazzuTwitterSessionToken"]
-- ["PSo21UIAppearanceContainer", "login"]
 - ["PSo21UIAppearanceContainer", "loginUser"]
 - ["PSo21UIAppearanceContainer", "logout"]
+- ["PSo21UIAppearanceContainer", "manageAccount"]
 - !private ["PSo21UIAppearanceContainer", "message"]
 - !private ["PSo21UIAppearanceContainer", "numberOfLines"]
 - ["PSo21UIAppearanceContainer", "numberOfSections"]
@@ -1634,9 +1643,9 @@ depends-member:
 - ["PSo18UIContentContainer", "kBaseURLString"]
 - !private ["PSo18UIContentContainer", "kWazzuTwitterPassword"]
 - !private ["PSo18UIContentContainer", "kWazzuTwitterSessionToken"]
-- ["PSo18UIContentContainer", "login"]
 - ["PSo18UIContentContainer", "loginUser"]
 - ["PSo18UIContentContainer", "logout"]
+- ["PSo18UIContentContainer", "manageAccount"]
 - !private ["PSo18UIContentContainer", "message"]
 - ["PSo18UIContentContainer", "numberOfSections"]
 - !private ["PSo18UIContentContainer", "present"]
@@ -1725,9 +1734,9 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "kBaseURLString"]
 - !private ["PSo18UIFocusEnvironment", "kWazzuTwitterPassword"]
 - !private ["PSo18UIFocusEnvironment", "kWazzuTwitterSessionToken"]
-- ["PSo18UIFocusEnvironment", "login"]
 - ["PSo18UIFocusEnvironment", "loginUser"]
 - ["PSo18UIFocusEnvironment", "logout"]
+- ["PSo18UIFocusEnvironment", "manageAccount"]
 - !private ["PSo18UIFocusEnvironment", "message"]
 - !private ["PSo18UIFocusEnvironment", "numberOfLines"]
 - ["PSo18UIFocusEnvironment", "numberOfSections"]
@@ -1832,9 +1841,9 @@ depends-member:
 - !private ["CSo11UIResponder", "kWazzuTwitterPassword"]
 - !private ["CSo11UIResponder", "kWazzuTwitterSessionToken"]
 - !private ["CSo11UIResponder", "lastTweetDate"]
-- ["CSo11UIResponder", "login"]
 - ["CSo11UIResponder", "loginUser"]
 - ["CSo11UIResponder", "logout"]
+- ["CSo11UIResponder", "manageAccount"]
 - !private ["CSo11UIResponder", "message"]
 - !private ["CSo11UIResponder", "numberOfLines"]
 - ["CSo11UIResponder", "numberOfSections"]
@@ -1900,9 +1909,9 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "kWazzuTwitterPassword"]
 - !private ["PSo30UIResponderStandardEditActions", "kWazzuTwitterSessionToken"]
 - !private ["PSo30UIResponderStandardEditActions", "lastTweetDate"]
-- ["PSo30UIResponderStandardEditActions", "login"]
 - ["PSo30UIResponderStandardEditActions", "loginUser"]
 - ["PSo30UIResponderStandardEditActions", "logout"]
+- ["PSo30UIResponderStandardEditActions", "manageAccount"]
 - !private ["PSo30UIResponderStandardEditActions", "message"]
 - !private ["PSo30UIResponderStandardEditActions", "numberOfLines"]
 - ["PSo30UIResponderStandardEditActions", "numberOfSections"]
@@ -1960,9 +1969,9 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "kBaseURLString"]
 - !private ["PSo20UIScrollViewDelegate", "kWazzuTwitterPassword"]
 - !private ["PSo20UIScrollViewDelegate", "kWazzuTwitterSessionToken"]
-- ["PSo20UIScrollViewDelegate", "login"]
 - ["PSo20UIScrollViewDelegate", "loginUser"]
 - ["PSo20UIScrollViewDelegate", "logout"]
+- ["PSo20UIScrollViewDelegate", "manageAccount"]
 - ["PSo20UIScrollViewDelegate", "numberOfSections"]
 - !private ["PSo20UIScrollViewDelegate", "present"]
 - !private ["PSo20UIScrollViewDelegate", "refreshControl"]
@@ -2010,9 +2019,9 @@ depends-member:
 - ["PSo16UIStateRestoring", "kBaseURLString"]
 - !private ["PSo16UIStateRestoring", "kWazzuTwitterPassword"]
 - !private ["PSo16UIStateRestoring", "kWazzuTwitterSessionToken"]
-- ["PSo16UIStateRestoring", "login"]
 - ["PSo16UIStateRestoring", "loginUser"]
 - ["PSo16UIStateRestoring", "logout"]
+- ["PSo16UIStateRestoring", "manageAccount"]
 - !private ["PSo16UIStateRestoring", "message"]
 - ["PSo16UIStateRestoring", "numberOfSections"]
 - !private ["PSo16UIStateRestoring", "present"]
@@ -2081,9 +2090,9 @@ depends-member:
 - ["CSo21UITableViewController", "kBaseURLString"]
 - !private ["CSo21UITableViewController", "kWazzuTwitterPassword"]
 - !private ["CSo21UITableViewController", "kWazzuTwitterSessionToken"]
-- ["CSo21UITableViewController", "login"]
 - ["CSo21UITableViewController", "loginUser"]
 - ["CSo21UITableViewController", "logout"]
+- ["CSo21UITableViewController", "manageAccount"]
 - ["CSo21UITableViewController", "numberOfSections"]
 - !private ["CSo21UITableViewController", "present"]
 - !private ["CSo21UITableViewController", "refreshControl"]
@@ -2129,9 +2138,9 @@ depends-member:
 - ["PSo21UITableViewDataSource", "kBaseURLString"]
 - !private ["PSo21UITableViewDataSource", "kWazzuTwitterPassword"]
 - !private ["PSo21UITableViewDataSource", "kWazzuTwitterSessionToken"]
-- ["PSo21UITableViewDataSource", "login"]
 - ["PSo21UITableViewDataSource", "loginUser"]
 - ["PSo21UITableViewDataSource", "logout"]
+- ["PSo21UITableViewDataSource", "manageAccount"]
 - ["PSo21UITableViewDataSource", "numberOfSections"]
 - !private ["PSo21UITableViewDataSource", "present"]
 - !private ["PSo21UITableViewDataSource", "refreshControl"]
@@ -2177,9 +2186,9 @@ depends-member:
 - ["PSo19UITableViewDelegate", "kBaseURLString"]
 - !private ["PSo19UITableViewDelegate", "kWazzuTwitterPassword"]
 - !private ["PSo19UITableViewDelegate", "kWazzuTwitterSessionToken"]
-- ["PSo19UITableViewDelegate", "login"]
 - ["PSo19UITableViewDelegate", "loginUser"]
 - ["PSo19UITableViewDelegate", "logout"]
+- ["PSo19UITableViewDelegate", "manageAccount"]
 - ["PSo19UITableViewDelegate", "numberOfSections"]
 - !private ["PSo19UITableViewDelegate", "present"]
 - !private ["PSo19UITableViewDelegate", "refreshControl"]
@@ -2244,9 +2253,9 @@ depends-member:
 - ["PSo18UITraitEnvironment", "kBaseURLString"]
 - !private ["PSo18UITraitEnvironment", "kWazzuTwitterPassword"]
 - !private ["PSo18UITraitEnvironment", "kWazzuTwitterSessionToken"]
-- ["PSo18UITraitEnvironment", "login"]
 - ["PSo18UITraitEnvironment", "loginUser"]
 - ["PSo18UITraitEnvironment", "logout"]
+- ["PSo18UITraitEnvironment", "manageAccount"]
 - !private ["PSo18UITraitEnvironment", "message"]
 - !private ["PSo18UITraitEnvironment", "numberOfLines"]
 - ["PSo18UITraitEnvironment", "numberOfSections"]
@@ -2327,9 +2336,9 @@ depends-member:
 - ["CSo16UIViewController", "kBaseURLString"]
 - !private ["CSo16UIViewController", "kWazzuTwitterPassword"]
 - !private ["CSo16UIViewController", "kWazzuTwitterSessionToken"]
-- ["CSo16UIViewController", "login"]
 - ["CSo16UIViewController", "loginUser"]
 - ["CSo16UIViewController", "logout"]
+- ["CSo16UIViewController", "manageAccount"]
 - !private ["CSo16UIViewController", "message"]
 - ["CSo16UIViewController", "numberOfSections"]
 - !private ["CSo16UIViewController", "present"]
@@ -2459,14 +2468,15 @@ depends-member:
 - !private ["Ps9_Hashable", "lastTweetDate"]
 - !private ["Ps9_Hashable", "left"]
 - !private ["Ps9_Hashable", "lineBreakMode"]
-- ["Ps9_Hashable", "login"]
 - ["Ps9_Hashable", "loginUser"]
 - ["Ps9_Hashable", "logout"]
+- ["Ps9_Hashable", "manageAccount"]
 - !private ["Ps9_Hashable", "message"]
 - !private ["Ps9_Hashable", "mutableCopy"]
 - !private ["Ps9_Hashable", "numberOfLines"]
 - ["Ps9_Hashable", "numberOfSections"]
 - !private ["Ps9_Hashable", "orderedDescending"]
+- !private ["Ps9_Hashable", "password"]
 - !private ["Ps9_Hashable", "placeholder"]
 - !private ["Ps9_Hashable", "post"]
 - ["Ps9_Hashable", "preferredFont"]
@@ -2732,4 +2742,4 @@ depends-external:
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire.h"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "d0b7f4fbbf581ca308df5208f135b137"
+interface-hash: "b1c1c3fd7533db03d4daa8bc1cd63b0a"

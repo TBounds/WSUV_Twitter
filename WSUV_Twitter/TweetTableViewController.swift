@@ -12,11 +12,11 @@ import Alamofire
 class TweetTableViewController: UITableViewController {
     
     let kBaseURLString = "https://ezekiel.encs.vancouver.wsu.edu/~cs458/cgi-bin"
-    
+
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    @IBAction func manageAccount(_ sender: Any) {
     
-    @IBAction func login(_ sender: Any) {
         let manageAccountController = UIAlertController (
             title: "Manage Account",
             message: nil,
@@ -128,7 +128,9 @@ class TweetTableViewController: UITableViewController {
             manageAccountController.addAction(UIAlertAction(
                 title: "Logout",
                 style: .default,
-                handler: nil
+                handler: { (UIAlertController) -> Void in
+                    self.logout(username: self.appDelegate.username, password: SSKeychain.password(forService: kWazzuTwitterPassword, account: self.appDelegate.username))
+            }
             ))
         }
         
@@ -142,6 +144,7 @@ class TweetTableViewController: UITableViewController {
         self.present(manageAccountController, animated: true, completion: nil)
     }
     
+    //----- LOGIN FUNCTION -----//
     func loginUser(username: String, password: String) {
         
         let urlString = kBaseURLString + "/login.cgi"
@@ -206,6 +209,7 @@ class TweetTableViewController: UITableViewController {
         
     }
     
+    //----- LOGOUT FUNCTION -----//
     func logout(username: String, password: String) {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -215,7 +219,7 @@ class TweetTableViewController: UITableViewController {
         let parameters = [
             "username" : username,  // username and password
             "password" : password,  // obtained from user
-            "action" : "login"
+            "action" : "logout"
         ]
         
         Alamofire.request(urlString, method: .post, parameters: parameters)
@@ -225,19 +229,21 @@ class TweetTableViewController: UITableViewController {
                     
                     let dict = JSON as! [String : AnyObject]
                     
-                    // save username
-                    appDelegate.username = username
+                    // remove username
+                    appDelegate.username = ""
                     
                     // save session_token in keychain
                     SSKeychain.setPassword(dict["session_token"] as! String, forService: kWazzuTwitterSessionToken, account: username)
                     
-                    // enable "add tweet" button
-                    appDelegate.canTweet = true
+                    // disable "add tweet" button
+                    appDelegate.canTweet = false
                     
                     // change title of controller to show username, etc...
-                    self.title = username
+                    self.title = "Recent Tweets"
                     
                 case .failure(let error):
+                    
+                    // Check what kind of error is received.
                     var errMessage = "Unknown Error"
                     switch(response.response!.statusCode) {
                     case 500:
@@ -260,6 +266,7 @@ class TweetTableViewController: UITableViewController {
                         break
                     }
                     
+                    // Present error to user.
                     let loginErrorAlertContoller = UIAlertController(title: "Login Error", message: nil, preferredStyle: .alert)
                     
                     loginErrorAlertContoller.message = errMessage
