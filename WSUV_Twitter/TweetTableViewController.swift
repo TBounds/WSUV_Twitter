@@ -19,7 +19,7 @@ class TweetTableViewController: UITableViewController {
             let usernameTextField = alertController.textFields![0]
             let passwordTextField = alertController.textFields![1]
             // ... check for empty textfields
-            // self.loginUser(usernameTextField.text!, password: passwordTextField.text!)
+            self.loginUser(username: usernameTextField.text!, password: passwordTextField.text!)
         }))
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         alertController.addTextField { (textField : UITextField) -> Void in
@@ -30,6 +30,11 @@ class TweetTableViewController: UITableViewController {
             textField.placeholder = "Password"
         }
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func loginUser(username: String, password: String) {
+        NSLog("\(username)  \(password)")
+        SSKeychain.setPassword(password, forService: kWazzuTwitterPassword, account: username)
     }
     
     lazy var tweetDateFormatter : DateFormatter = {
