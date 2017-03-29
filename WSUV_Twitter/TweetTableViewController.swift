@@ -13,28 +13,184 @@ class TweetTableViewController: UITableViewController {
     
     let kBaseURLString = "https://ezekiel.encs.vancouver.wsu.edu/~cs458/cgi-bin"
     
+    
+    
     @IBAction func login(_ sender: Any) {
-        let alertController = UIAlertController(title: "Login", message: "Please Log in", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Login", style: .default, handler: { _ in
-            let usernameTextField = alertController.textFields![0]
-            let passwordTextField = alertController.textFields![1]
-            // ... check for empty textfields
-            self.loginUser(username: usernameTextField.text!, password: passwordTextField.text!)
-        }))
-        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-        alertController.addTextField { (textField : UITextField) -> Void in
-            textField.placeholder = "Username"
+        let manageAccountController = UIAlertController (
+            title: "Manage Account",
+            message: nil,
+            preferredStyle: .actionSheet
+        )
+        
+        manageAccountController.addAction(UIAlertAction(
+            title: "Cancel",
+            style: .cancel,
+            handler: nil
+        ))
+        
+        //---------------------------- REGISTER ------------------------------//
+        manageAccountController.addAction(UIAlertAction(
+            title: "Register",
+            style: .default,
+            handler: { (UIAlertAction) -> Void in
+                
+                let alertController = UIAlertController(title: "Register", message: "Register a WSUV Twitter Account", preferredStyle: .alert)
+                
+                alertController.addAction(UIKit.UIAlertAction(title: "Register", style: .default, handler: { _ in
+                    let usernameTextField = alertController.textFields![0]
+                    let passwordTextField = alertController.textFields![1]
+                    let rePasswordtextField = alertController.textFields![2]
+                    
+                    // XXX check for empty textfields, unique username, and passwords match
+                    if passwordTextField.text == rePasswordtextField.text {
+                        self.registerUser(username: usernameTextField.text!, password: passwordTextField.text!)
+                    }
+                    else {
+                        // XXX ERROR WITH REGISTRATION
+                        let registerErrorAlertContoller = UIAlertController(title: "Registration Error", message: nil, preferredStyle: .alert)
+                        
+                        registerErrorAlertContoller.message = "Passwords do not match."
+                        
+                        registerErrorAlertContoller.addAction(UIKit.UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+                        
+                        self.present(registerErrorAlertContoller, animated: true, completion: nil)
+                    }
+                    
+                    
+                    
+                }))
+                
+                alertController.addAction(UIKit.UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                alertController.addTextField { (textField : UITextField) -> Void in
+                    textField.placeholder = "Username"
+                }
+                
+                alertController.addTextField { (textField : UITextField) -> Void in
+                    textField.isSecureTextEntry = true
+                    textField.placeholder = "Password"
+                }
+                
+                alertController.addTextField { (textField : UITextField) -> Void in
+                    textField.isSecureTextEntry = true
+                    textField.placeholder = "Re-enter Password"
+                }
+                
+                self.present(alertController, animated: true, completion: nil)
+                
         }
-        alertController.addTextField { (textField : UITextField) -> Void in
-            textField.isSecureTextEntry = true
-            textField.placeholder = "Password"
-        }
-        self.present(alertController, animated: true, completion: nil)
+        ))
+        
+        
+        //---------------------------- LOGIN ------------------------------//
+        manageAccountController.addAction(UIAlertAction(
+            title: "Login",
+            style: .default,
+            handler: { (UIAlertAction) -> Void in
+                
+                let alertController = UIAlertController(title: "Login", message: "Please Log in", preferredStyle: .alert)
+                
+                alertController.addAction(UIKit.UIAlertAction(title: "Login", style: .default, handler: { _ in
+                    let usernameTextField = alertController.textFields![0]
+                    let passwordTextField = alertController.textFields![1]
+                    
+                    // XXX check for empty textfields
+                    if usernameTextField.text != "" && passwordTextField.text != "" {
+                        self.loginUser(username: usernameTextField.text!, password: passwordTextField.text!)
+                    }
+                    //----- ERROR LOGGING IN -----//
+                    else{
+                        let loginErrorAlertContoller = UIAlertController(title: "Login Error", message: nil, preferredStyle: .alert)
+                        
+                        loginErrorAlertContoller.message = "Make sure the username and password fields are filled in."
+                        
+                        loginErrorAlertContoller.addAction(UIKit.UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+                        
+                        self.present(loginErrorAlertContoller, animated: true, completion: nil)
+                    }
+                    
+                }))
+                
+                alertController.addAction(UIKit.UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                alertController.addTextField { (textField : UITextField) -> Void in
+                    textField.placeholder = "Username"
+                }
+                
+                alertController.addTextField { (textField : UITextField) -> Void in
+                    textField.isSecureTextEntry = true
+                    textField.placeholder = "Password"
+                }
+                
+                self.present(alertController, animated: true, completion: nil)
+
+            }
+        ))
+        
+        manageAccountController.addAction(UIAlertAction(
+            title: "Logout",
+            style: .default,
+            handler: nil
+        ))
+        
+        manageAccountController.addAction(UIAlertAction(
+            title: "Reset Passwords",
+            style: .default,
+            handler: nil
+        ))
+        
+        
+        
+        self.present(manageAccountController, animated: true, completion: nil)
     }
     
     func loginUser(username: String, password: String) {
         NSLog("\(username)  \(password)")
         SSKeychain.setPassword(password, forService: kWazzuTwitterPassword, account: username)
+    }
+    
+    func registerUser (username: String, password: String) {
+        
+        let urlString = kBaseURLString + "/register.cgi"
+        
+        let parameters = [
+            "username" : username,  // username and password
+            "password" : password,  // obtained from user
+        ]
+        
+        Alamofire.request(urlString, method: .post, parameters: parameters)
+            .responseJSON(completionHandler: {response in
+                switch(response.result) {
+                case .success(let JSON):
+                    // save username
+                    // save password and session_token in keychain
+                    // enable "add tweet" button
+                // change title of controller to show username, etc...
+                    NSLog("Success")
+                case .failure(let error):
+                    var errMessage = "Unknown Error"
+                    switch(response.response!.statusCode) {
+                    case 500:
+                        errMessage = "Internal server error."
+                        break
+                    case 400:
+                        errMessage = "Make sure to provide both a username and a password."
+                        break
+                    case 409:
+                        errMessage = "Username already exists."
+                        break
+                    default:
+                        break
+                    }
+                    
+                    let registerErrorAlertContoller = UIAlertController(title: "Registration Error", message: nil, preferredStyle: .alert)
+                    
+                    registerErrorAlertContoller.message = errMessage
+                    
+                    registerErrorAlertContoller.addAction(UIKit.UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+                    
+                    self.present(registerErrorAlertContoller, animated: true, completion: nil)
+                    
+                } } )
+        
     }
     
     lazy var tweetDateFormatter : DateFormatter = {

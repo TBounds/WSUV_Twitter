@@ -164,6 +164,7 @@ SWIFT_CLASS("_TtC12WSUV_Twitter24TweetTableViewController")
 @property (nonatomic, readonly, copy) NSString * _Nonnull kBaseURLString;
 - (IBAction)login:(id _Nonnull)sender;
 - (void)loginUserWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password;
+- (void)registerUserWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password;
 @property (nonatomic, strong) NSDateFormatter * _Nonnull tweetDateFormatter;
 @property (nonatomic, readonly, copy) NSDictionary<NSString *, NSObject *> * _Nonnull tweetTitleAttributes;
 @property (nonatomic, copy) NSDictionary<NSString *, id> * _Nonnull tweetBodyAttributes;
