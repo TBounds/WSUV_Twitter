@@ -6,65 +6,69 @@ provides-nominal:
 provides-member:
 - ["C12WSUV_Twitter24TweetTableViewController", ""]
 provides-dynamic-lookup:
-- "tweetTitleAttributes"
-- "kBaseURLString"
-- "tweetBodyAttributes"
 - "refreshTweets"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "didReceiveMemoryWarning"
-- "numberOfSections"
+- "tweetBodyAttributes"
+- "kBaseURLString"
 - "viewDidLoad"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tweetTitleAttributes"
+- "didReceiveMemoryWarning"
 - "tweetDateFormatter"
+- "numberOfSections"
+- "login"
 depends-top-level:
-- !private "NSMutableAttributedString"
-- !private "NotificationCenter"
-- !private "NSMutableParagraphStyle"
-- "NSFontAttributeName"
-- "Dictionary"
-- "Tweet"
-- "Int"
-- !private "!"
-- "UIFont"
-- "NSAttributedString"
-- "Bool"
-- "CastingPrecedence"
-- !private "Date"
-- "AssignmentPrecedence"
-- !private "Void"
-- "UITableViewController"
-- !private "+"
-- !private "UITableViewAutomaticDimension"
-- "String"
-- "UIFontTextStyle"
-- "UITableViewCell"
-- "UITableView"
-- !private "NSString"
-- !private "=="
-- "TweetTableViewController"
-- !private "NSDate"
-- "IndexPath"
-- !private "ComparisonResult"
-- !private "TimeZone"
-- !private "BooleanLiteralType"
-- !private "~="
-- !private "Alamofire"
-- "DateFormatter"
-- !private "UIApplication"
-- "CGFloat"
-- !private "Notification"
-- "NSForegroundColorAttributeName"
-- !private "NSParagraphStyle"
-- "UIColor"
-- !private "kAddTweetNotification"
+- !private "UIAlertAction"
 - !private "NSParagraphStyleAttributeName"
-- !private "AppDelegate"
+- !private "Alamofire"
+- "Dictionary"
+- "UITableViewCell"
+- "BooleanLiteralType"
+- !private "UITextField"
+- !private "!"
+- !private "UITableViewAutomaticDimension"
+- "Tweet"
 - "StringLiteralType"
 - "AnyObject"
+- "UIFont"
+- "String"
+- !private "Void"
+- "UIFontTextStyle"
+- "DateFormatter"
+- "CastingPrecedence"
+- "UITableView"
+- !private "Notification"
+- "IndexPath"
+- "UITableViewController"
+- !private "UIApplication"
+- "AssignmentPrecedence"
+- !private "NSString"
+- "NSFontAttributeName"
+- !private "kAddTweetNotification"
+- !private "+"
+- !private "TimeZone"
+- !private "=="
+- !private "~="
+- !private "NSDate"
+- !private "NSMutableParagraphStyle"
+- !private "NSParagraphStyle"
+- "UIColor"
+- "Int"
+- !private "AppDelegate"
+- "Bool"
+- !private "NSMutableAttributedString"
+- "TweetTableViewController"
+- !private "UIAlertController"
+- "NSAttributedString"
+- !private "Date"
+- !private "NotificationCenter"
+- "NSForegroundColorAttributeName"
+- !private "ComparisonResult"
+- "CGFloat"
 depends-member:
 - !private ["Ps9AnyObject", "Alamofire"]
 - !private ["Ps9AnyObject", "ComparisonResult"]
@@ -79,12 +83,16 @@ depends-member:
 - !private ["Ps9AnyObject", "String"]
 - !private ["Ps9AnyObject", "TimeZone"]
 - !private ["Ps9AnyObject", "Tweet"]
+- !private ["Ps9AnyObject", "UIAlertAction"]
+- !private ["Ps9AnyObject", "UIAlertController"]
 - !private ["Ps9AnyObject", "UIApplication"]
 - ["Ps9AnyObject", "UIColor"]
 - ["Ps9AnyObject", "UIFont"]
 - ["Ps9AnyObject", "UIFontTextStyle"]
 - !private ["Ps9AnyObject", "UITableViewAutomaticDimension"]
+- !private ["Ps9AnyObject", "addAction"]
 - !private ["Ps9AnyObject", "addObserver"]
+- !private ["Ps9AnyObject", "addTextField"]
 - !private ["Ps9AnyObject", "alignment"]
 - !private ["Ps9AnyObject", "append"]
 - ["Ps9AnyObject", "attributedStringForTweet"]
@@ -102,14 +110,18 @@ depends-member:
 - !private ["Ps9AnyObject", "endRefreshing"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "isRefreshing"]
+- !private ["Ps9AnyObject", "isSecureTextEntry"]
 - !private ["Ps9AnyObject", "kAddTweetNotification"]
 - ["Ps9AnyObject", "kBaseURLString"]
 - !private ["Ps9AnyObject", "lastTweetDate"]
 - !private ["Ps9AnyObject", "lineBreakMode"]
+- ["Ps9AnyObject", "login"]
 - !private ["Ps9AnyObject", "mutableCopy"]
 - !private ["Ps9AnyObject", "numberOfLines"]
 - ["Ps9AnyObject", "numberOfSections"]
+- !private ["Ps9AnyObject", "placeholder"]
 - ["Ps9AnyObject", "preferredFont"]
+- !private ["Ps9AnyObject", "present"]
 - ["Ps9AnyObject", "purple"]
 - !private ["Ps9AnyObject", "refreshControl"]
 - ["Ps9AnyObject", "refreshTweets"]
@@ -119,6 +131,7 @@ depends-member:
 - !private ["Ps9AnyObject", "statusCode"]
 - !private ["Ps9AnyObject", "string"]
 - ["Ps9AnyObject", "tableView"]
+- !private ["Ps9AnyObject", "textFields"]
 - !private ["Ps9AnyObject", "textLabel"]
 - !private ["Ps9AnyObject", "timeStyle"]
 - !private ["Ps9AnyObject", "timeZone"]
@@ -182,7 +195,9 @@ depends-member:
 - !private ["PSo15CALayerDelegate", "dequeueReusableCell"]
 - !private ["PSo15CALayerDelegate", "endRefreshing"]
 - !private ["PSo15CALayerDelegate", "isRefreshing"]
+- !private ["PSo15CALayerDelegate", "isSecureTextEntry"]
 - !private ["PSo15CALayerDelegate", "numberOfLines"]
+- !private ["PSo15CALayerDelegate", "placeholder"]
 - !private ["PSo15CALayerDelegate", "reloadData"]
 - !private ["PSo15CALayerDelegate", "textLabel"]
 - ["V12CoreGraphics7CGFloat", "deinit"]
@@ -206,6 +221,8 @@ depends-member:
 - !private ["Ps7CVarArg", "SubSequence"]
 - !private ["Ps7CVarArg", "TimeZone"]
 - !private ["Ps7CVarArg", "Tweet"]
+- !private ["Ps7CVarArg", "UIAlertAction"]
+- !private ["Ps7CVarArg", "UIAlertController"]
 - !private ["Ps7CVarArg", "UIApplication"]
 - ["Ps7CVarArg", "UIColor"]
 - ["Ps7CVarArg", "UIFont"]
@@ -214,7 +231,9 @@ depends-member:
 - ["Ps7CVarArg", "Value"]
 - !private ["Ps7CVarArg", "_DisabledRangeIndex"]
 - !private ["Ps7CVarArg", "_Element"]
+- !private ["Ps7CVarArg", "addAction"]
 - !private ["Ps7CVarArg", "addObserver"]
+- !private ["Ps7CVarArg", "addTextField"]
 - !private ["Ps7CVarArg", "alignment"]
 - !private ["Ps7CVarArg", "append"]
 - ["Ps7CVarArg", "attributedStringForTweet"]
@@ -233,14 +252,18 @@ depends-member:
 - !private ["Ps7CVarArg", "endRefreshing"]
 - ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "isRefreshing"]
+- !private ["Ps7CVarArg", "isSecureTextEntry"]
 - !private ["Ps7CVarArg", "kAddTweetNotification"]
 - ["Ps7CVarArg", "kBaseURLString"]
 - !private ["Ps7CVarArg", "lastTweetDate"]
 - !private ["Ps7CVarArg", "lineBreakMode"]
+- ["Ps7CVarArg", "login"]
 - !private ["Ps7CVarArg", "mutableCopy"]
 - !private ["Ps7CVarArg", "numberOfLines"]
 - ["Ps7CVarArg", "numberOfSections"]
+- !private ["Ps7CVarArg", "placeholder"]
 - ["Ps7CVarArg", "preferredFont"]
+- !private ["Ps7CVarArg", "present"]
 - ["Ps7CVarArg", "purple"]
 - !private ["Ps7CVarArg", "refreshControl"]
 - ["Ps7CVarArg", "refreshTweets"]
@@ -251,6 +274,7 @@ depends-member:
 - !private ["Ps7CVarArg", "string"]
 - !private ["Ps7CVarArg", "subscript"]
 - ["Ps7CVarArg", "tableView"]
+- !private ["Ps7CVarArg", "textFields"]
 - !private ["Ps7CVarArg", "textLabel"]
 - !private ["Ps7CVarArg", "timeStyle"]
 - !private ["Ps7CVarArg", "timeZone"]
@@ -307,6 +331,8 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "TimeZone"]
 - !private ["Ps28CustomDebugStringConvertible", "Tweet"]
+- !private ["Ps28CustomDebugStringConvertible", "UIAlertAction"]
+- !private ["Ps28CustomDebugStringConvertible", "UIAlertController"]
 - !private ["Ps28CustomDebugStringConvertible", "UIApplication"]
 - ["Ps28CustomDebugStringConvertible", "UIColor"]
 - ["Ps28CustomDebugStringConvertible", "UIFont"]
@@ -314,7 +340,9 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "UITableViewAutomaticDimension"]
 - ["Ps28CustomDebugStringConvertible", "Value"]
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
+- !private ["Ps28CustomDebugStringConvertible", "addAction"]
 - !private ["Ps28CustomDebugStringConvertible", "addObserver"]
+- !private ["Ps28CustomDebugStringConvertible", "addTextField"]
 - !private ["Ps28CustomDebugStringConvertible", "alignment"]
 - !private ["Ps28CustomDebugStringConvertible", "append"]
 - ["Ps28CustomDebugStringConvertible", "attributedStringForTweet"]
@@ -334,14 +362,18 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "failure"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "isRefreshing"]
+- !private ["Ps28CustomDebugStringConvertible", "isSecureTextEntry"]
 - !private ["Ps28CustomDebugStringConvertible", "kAddTweetNotification"]
 - ["Ps28CustomDebugStringConvertible", "kBaseURLString"]
 - !private ["Ps28CustomDebugStringConvertible", "lastTweetDate"]
 - !private ["Ps28CustomDebugStringConvertible", "lineBreakMode"]
+- ["Ps28CustomDebugStringConvertible", "login"]
 - !private ["Ps28CustomDebugStringConvertible", "mutableCopy"]
 - !private ["Ps28CustomDebugStringConvertible", "numberOfLines"]
 - ["Ps28CustomDebugStringConvertible", "numberOfSections"]
+- !private ["Ps28CustomDebugStringConvertible", "placeholder"]
 - ["Ps28CustomDebugStringConvertible", "preferredFont"]
+- !private ["Ps28CustomDebugStringConvertible", "present"]
 - ["Ps28CustomDebugStringConvertible", "purple"]
 - !private ["Ps28CustomDebugStringConvertible", "refreshControl"]
 - ["Ps28CustomDebugStringConvertible", "refreshTweets"]
@@ -357,6 +389,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - !private ["Ps28CustomDebugStringConvertible", "success"]
 - ["Ps28CustomDebugStringConvertible", "tableView"]
+- !private ["Ps28CustomDebugStringConvertible", "textFields"]
 - !private ["Ps28CustomDebugStringConvertible", "textLabel"]
 - !private ["Ps28CustomDebugStringConvertible", "timeStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "timeZone"]
@@ -412,6 +445,8 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "TimeZone"]
 - !private ["Ps23CustomStringConvertible", "Tweet"]
+- !private ["Ps23CustomStringConvertible", "UIAlertAction"]
+- !private ["Ps23CustomStringConvertible", "UIAlertController"]
 - !private ["Ps23CustomStringConvertible", "UIApplication"]
 - ["Ps23CustomStringConvertible", "UIColor"]
 - ["Ps23CustomStringConvertible", "UIFont"]
@@ -421,7 +456,9 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
 - !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "addAction"]
 - !private ["Ps23CustomStringConvertible", "addObserver"]
+- !private ["Ps23CustomStringConvertible", "addTextField"]
 - !private ["Ps23CustomStringConvertible", "alignment"]
 - !private ["Ps23CustomStringConvertible", "append"]
 - ["Ps23CustomStringConvertible", "attributedStringForTweet"]
@@ -441,14 +478,18 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "failure"]
 - ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "isRefreshing"]
+- !private ["Ps23CustomStringConvertible", "isSecureTextEntry"]
 - !private ["Ps23CustomStringConvertible", "kAddTweetNotification"]
 - ["Ps23CustomStringConvertible", "kBaseURLString"]
 - !private ["Ps23CustomStringConvertible", "lastTweetDate"]
 - !private ["Ps23CustomStringConvertible", "lineBreakMode"]
+- ["Ps23CustomStringConvertible", "login"]
 - !private ["Ps23CustomStringConvertible", "mutableCopy"]
 - !private ["Ps23CustomStringConvertible", "numberOfLines"]
 - ["Ps23CustomStringConvertible", "numberOfSections"]
+- !private ["Ps23CustomStringConvertible", "placeholder"]
 - ["Ps23CustomStringConvertible", "preferredFont"]
+- !private ["Ps23CustomStringConvertible", "present"]
 - ["Ps23CustomStringConvertible", "purple"]
 - !private ["Ps23CustomStringConvertible", "refreshControl"]
 - ["Ps23CustomStringConvertible", "refreshTweets"]
@@ -464,6 +505,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - !private ["Ps23CustomStringConvertible", "success"]
 - ["Ps23CustomStringConvertible", "tableView"]
+- !private ["Ps23CustomStringConvertible", "textFields"]
 - !private ["Ps23CustomStringConvertible", "textLabel"]
 - !private ["Ps23CustomStringConvertible", "timeStyle"]
 - !private ["Ps23CustomStringConvertible", "timeZone"]
@@ -522,6 +564,8 @@ depends-member:
 - !private ["Ps9Equatable", "String"]
 - !private ["Ps9Equatable", "TimeZone"]
 - !private ["Ps9Equatable", "Tweet"]
+- !private ["Ps9Equatable", "UIAlertAction"]
+- !private ["Ps9Equatable", "UIAlertController"]
 - !private ["Ps9Equatable", "UIApplication"]
 - ["Ps9Equatable", "UIColor"]
 - ["Ps9Equatable", "UIFont"]
@@ -529,7 +573,10 @@ depends-member:
 - !private ["Ps9Equatable", "UITableViewAutomaticDimension"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "addAction"]
 - !private ["Ps9Equatable", "addObserver"]
+- !private ["Ps9Equatable", "addTextField"]
+- !private ["Ps9Equatable", "alert"]
 - !private ["Ps9Equatable", "alignment"]
 - !private ["Ps9Equatable", "append"]
 - ["Ps9Equatable", "attributedStringForTweet"]
@@ -538,6 +585,7 @@ depends-member:
 - !private ["Ps9Equatable", "black"]
 - !private ["Ps9Equatable", "body"]
 - !private ["Ps9Equatable", "byWordWrapping"]
+- !private ["Ps9Equatable", "cancel"]
 - !private ["Ps9Equatable", "compare"]
 - !private ["Ps9Equatable", "date"]
 - !private ["Ps9Equatable", "dateFormat"]
@@ -551,16 +599,20 @@ depends-member:
 - ["Ps9Equatable", "headline"]
 - ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "isRefreshing"]
+- !private ["Ps9Equatable", "isSecureTextEntry"]
 - !private ["Ps9Equatable", "kAddTweetNotification"]
 - ["Ps9Equatable", "kBaseURLString"]
 - !private ["Ps9Equatable", "lastTweetDate"]
 - !private ["Ps9Equatable", "left"]
 - !private ["Ps9Equatable", "lineBreakMode"]
+- ["Ps9Equatable", "login"]
 - !private ["Ps9Equatable", "mutableCopy"]
 - !private ["Ps9Equatable", "numberOfLines"]
 - ["Ps9Equatable", "numberOfSections"]
 - !private ["Ps9Equatable", "orderedDescending"]
+- !private ["Ps9Equatable", "placeholder"]
 - ["Ps9Equatable", "preferredFont"]
+- !private ["Ps9Equatable", "present"]
 - ["Ps9Equatable", "purple"]
 - !private ["Ps9Equatable", "refreshControl"]
 - ["Ps9Equatable", "refreshTweets"]
@@ -571,6 +623,7 @@ depends-member:
 - !private ["Ps9Equatable", "statusCode"]
 - !private ["Ps9Equatable", "string"]
 - ["Ps9Equatable", "tableView"]
+- !private ["Ps9Equatable", "textFields"]
 - !private ["Ps9Equatable", "textLabel"]
 - !private ["Ps9Equatable", "timeStyle"]
 - !private ["Ps9Equatable", "timeZone"]
@@ -637,6 +690,8 @@ depends-member:
 - !private ["Ps8Hashable", "String"]
 - !private ["Ps8Hashable", "TimeZone"]
 - !private ["Ps8Hashable", "Tweet"]
+- !private ["Ps8Hashable", "UIAlertAction"]
+- !private ["Ps8Hashable", "UIAlertController"]
 - !private ["Ps8Hashable", "UIApplication"]
 - ["Ps8Hashable", "UIColor"]
 - ["Ps8Hashable", "UIFont"]
@@ -644,7 +699,10 @@ depends-member:
 - !private ["Ps8Hashable", "UITableViewAutomaticDimension"]
 - !private ["Ps8Hashable", "_DisabledRangeIndex"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "addAction"]
 - !private ["Ps8Hashable", "addObserver"]
+- !private ["Ps8Hashable", "addTextField"]
+- !private ["Ps8Hashable", "alert"]
 - !private ["Ps8Hashable", "alignment"]
 - !private ["Ps8Hashable", "append"]
 - ["Ps8Hashable", "attributedStringForTweet"]
@@ -653,6 +711,7 @@ depends-member:
 - !private ["Ps8Hashable", "black"]
 - !private ["Ps8Hashable", "body"]
 - !private ["Ps8Hashable", "byWordWrapping"]
+- !private ["Ps8Hashable", "cancel"]
 - !private ["Ps8Hashable", "compare"]
 - !private ["Ps8Hashable", "date"]
 - !private ["Ps8Hashable", "dateFormat"]
@@ -666,16 +725,20 @@ depends-member:
 - ["Ps8Hashable", "headline"]
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "isRefreshing"]
+- !private ["Ps8Hashable", "isSecureTextEntry"]
 - !private ["Ps8Hashable", "kAddTweetNotification"]
 - ["Ps8Hashable", "kBaseURLString"]
 - !private ["Ps8Hashable", "lastTweetDate"]
 - !private ["Ps8Hashable", "left"]
 - !private ["Ps8Hashable", "lineBreakMode"]
+- ["Ps8Hashable", "login"]
 - !private ["Ps8Hashable", "mutableCopy"]
 - !private ["Ps8Hashable", "numberOfLines"]
 - ["Ps8Hashable", "numberOfSections"]
 - !private ["Ps8Hashable", "orderedDescending"]
+- !private ["Ps8Hashable", "placeholder"]
 - ["Ps8Hashable", "preferredFont"]
+- !private ["Ps8Hashable", "present"]
 - ["Ps8Hashable", "purple"]
 - !private ["Ps8Hashable", "refreshControl"]
 - ["Ps8Hashable", "refreshTweets"]
@@ -686,6 +749,7 @@ depends-member:
 - !private ["Ps8Hashable", "statusCode"]
 - !private ["Ps8Hashable", "string"]
 - ["Ps8Hashable", "tableView"]
+- !private ["Ps8Hashable", "textFields"]
 - !private ["Ps8Hashable", "textLabel"]
 - !private ["Ps8Hashable", "timeStyle"]
 - !private ["Ps8Hashable", "timeZone"]
@@ -784,11 +848,15 @@ depends-member:
 - !private ["PSo8NSCoding", "String"]
 - !private ["PSo8NSCoding", "TimeZone"]
 - !private ["PSo8NSCoding", "Tweet"]
+- !private ["PSo8NSCoding", "UIAlertAction"]
+- !private ["PSo8NSCoding", "UIAlertController"]
 - !private ["PSo8NSCoding", "UIApplication"]
 - ["PSo8NSCoding", "UIColor"]
 - ["PSo8NSCoding", "UIFont"]
 - ["PSo8NSCoding", "UIFontTextStyle"]
 - !private ["PSo8NSCoding", "UITableViewAutomaticDimension"]
+- !private ["PSo8NSCoding", "addAction"]
+- !private ["PSo8NSCoding", "addTextField"]
 - !private ["PSo8NSCoding", "alignment"]
 - !private ["PSo8NSCoding", "append"]
 - ["PSo8NSCoding", "attributedStringForTweet"]
@@ -805,12 +873,16 @@ depends-member:
 - !private ["PSo8NSCoding", "endRefreshing"]
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "isRefreshing"]
+- !private ["PSo8NSCoding", "isSecureTextEntry"]
 - !private ["PSo8NSCoding", "kAddTweetNotification"]
 - ["PSo8NSCoding", "kBaseURLString"]
 - !private ["PSo8NSCoding", "lineBreakMode"]
+- ["PSo8NSCoding", "login"]
 - !private ["PSo8NSCoding", "mutableCopy"]
 - !private ["PSo8NSCoding", "numberOfLines"]
 - ["PSo8NSCoding", "numberOfSections"]
+- !private ["PSo8NSCoding", "placeholder"]
+- !private ["PSo8NSCoding", "present"]
 - ["PSo8NSCoding", "purple"]
 - !private ["PSo8NSCoding", "refreshControl"]
 - ["PSo8NSCoding", "refreshTweets"]
@@ -818,6 +890,7 @@ depends-member:
 - !private ["PSo8NSCoding", "statusCode"]
 - !private ["PSo8NSCoding", "string"]
 - ["PSo8NSCoding", "tableView"]
+- !private ["PSo8NSCoding", "textFields"]
 - !private ["PSo8NSCoding", "textLabel"]
 - !private ["PSo8NSCoding", "timeStyle"]
 - !private ["PSo8NSCoding", "timeZone"]
@@ -861,20 +934,27 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "String"]
 - !private ["PSo26NSExtensionRequestHandling", "TimeZone"]
 - !private ["PSo26NSExtensionRequestHandling", "Tweet"]
+- !private ["PSo26NSExtensionRequestHandling", "UIAlertAction"]
+- !private ["PSo26NSExtensionRequestHandling", "UIAlertController"]
 - !private ["PSo26NSExtensionRequestHandling", "UIApplication"]
 - ["PSo26NSExtensionRequestHandling", "UIColor"]
 - ["PSo26NSExtensionRequestHandling", "UIFont"]
 - ["PSo26NSExtensionRequestHandling", "UIFontTextStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "UITableViewAutomaticDimension"]
+- !private ["PSo26NSExtensionRequestHandling", "addAction"]
+- !private ["PSo26NSExtensionRequestHandling", "addTextField"]
 - ["PSo26NSExtensionRequestHandling", "attributedStringForTweet"]
 - ["PSo26NSExtensionRequestHandling", "didReceiveMemoryWarning"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "kAddTweetNotification"]
 - ["PSo26NSExtensionRequestHandling", "kBaseURLString"]
+- ["PSo26NSExtensionRequestHandling", "login"]
 - ["PSo26NSExtensionRequestHandling", "numberOfSections"]
+- !private ["PSo26NSExtensionRequestHandling", "present"]
 - !private ["PSo26NSExtensionRequestHandling", "refreshControl"]
 - ["PSo26NSExtensionRequestHandling", "refreshTweets"]
 - ["PSo26NSExtensionRequestHandling", "tableView"]
+- !private ["PSo26NSExtensionRequestHandling", "textFields"]
 - ["PSo26NSExtensionRequestHandling", "tweetAttributedStringMap"]
 - ["PSo26NSExtensionRequestHandling", "tweetBodyAttributes"]
 - ["PSo26NSExtensionRequestHandling", "tweetBodyAttributes.storage"]
@@ -921,6 +1001,8 @@ depends-member:
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "TimeZone"]
 - ["CSo8NSObject", "Tweet"]
+- !private ["CSo8NSObject", "UIAlertAction"]
+- !private ["CSo8NSObject", "UIAlertController"]
 - !private ["CSo8NSObject", "UIApplication"]
 - ["CSo8NSObject", "UIColor"]
 - ["CSo8NSObject", "UIFont"]
@@ -928,8 +1010,11 @@ depends-member:
 - ["CSo8NSObject", "UITableView"]
 - !private ["CSo8NSObject", "UITableViewAutomaticDimension"]
 - ["CSo8NSObject", "UITableViewCell"]
+- !private ["CSo8NSObject", "UITextField"]
 - !private ["CSo8NSObject", "Void"]
+- !private ["CSo8NSObject", "addAction"]
 - !private ["CSo8NSObject", "addObserver"]
+- !private ["CSo8NSObject", "addTextField"]
 - !private ["CSo8NSObject", "alignment"]
 - !private ["CSo8NSObject", "append"]
 - ["CSo8NSObject", "attributedStringForTweet"]
@@ -947,14 +1032,18 @@ depends-member:
 - !private ["CSo8NSObject", "endRefreshing"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "isRefreshing"]
+- !private ["CSo8NSObject", "isSecureTextEntry"]
 - !private ["CSo8NSObject", "kAddTweetNotification"]
 - ["CSo8NSObject", "kBaseURLString"]
 - !private ["CSo8NSObject", "lastTweetDate"]
 - !private ["CSo8NSObject", "lineBreakMode"]
+- ["CSo8NSObject", "login"]
 - !private ["CSo8NSObject", "mutableCopy"]
 - !private ["CSo8NSObject", "numberOfLines"]
 - ["CSo8NSObject", "numberOfSections"]
+- !private ["CSo8NSObject", "placeholder"]
 - ["CSo8NSObject", "preferredFont"]
+- !private ["CSo8NSObject", "present"]
 - ["CSo8NSObject", "purple"]
 - !private ["CSo8NSObject", "refreshControl"]
 - ["CSo8NSObject", "refreshTweets"]
@@ -963,6 +1052,7 @@ depends-member:
 - !private ["CSo8NSObject", "statusCode"]
 - !private ["CSo8NSObject", "string"]
 - ["CSo8NSObject", "tableView"]
+- !private ["CSo8NSObject", "textFields"]
 - !private ["CSo8NSObject", "textLabel"]
 - !private ["CSo8NSObject", "timeStyle"]
 - !private ["CSo8NSObject", "timeZone"]
@@ -987,12 +1077,16 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "String"]
 - !private ["PSo16NSObjectProtocol", "TimeZone"]
 - !private ["PSo16NSObjectProtocol", "Tweet"]
+- !private ["PSo16NSObjectProtocol", "UIAlertAction"]
+- !private ["PSo16NSObjectProtocol", "UIAlertController"]
 - !private ["PSo16NSObjectProtocol", "UIApplication"]
 - ["PSo16NSObjectProtocol", "UIColor"]
 - ["PSo16NSObjectProtocol", "UIFont"]
 - ["PSo16NSObjectProtocol", "UIFontTextStyle"]
 - !private ["PSo16NSObjectProtocol", "UITableViewAutomaticDimension"]
+- !private ["PSo16NSObjectProtocol", "addAction"]
 - !private ["PSo16NSObjectProtocol", "addObserver"]
+- !private ["PSo16NSObjectProtocol", "addTextField"]
 - !private ["PSo16NSObjectProtocol", "alignment"]
 - !private ["PSo16NSObjectProtocol", "append"]
 - ["PSo16NSObjectProtocol", "attributedStringForTweet"]
@@ -1011,14 +1105,18 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "endRefreshing"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "isRefreshing"]
+- !private ["PSo16NSObjectProtocol", "isSecureTextEntry"]
 - !private ["PSo16NSObjectProtocol", "kAddTweetNotification"]
 - ["PSo16NSObjectProtocol", "kBaseURLString"]
 - !private ["PSo16NSObjectProtocol", "lastTweetDate"]
 - !private ["PSo16NSObjectProtocol", "lineBreakMode"]
+- ["PSo16NSObjectProtocol", "login"]
 - !private ["PSo16NSObjectProtocol", "mutableCopy"]
 - !private ["PSo16NSObjectProtocol", "numberOfLines"]
 - ["PSo16NSObjectProtocol", "numberOfSections"]
+- !private ["PSo16NSObjectProtocol", "placeholder"]
 - ["PSo16NSObjectProtocol", "preferredFont"]
+- !private ["PSo16NSObjectProtocol", "present"]
 - ["PSo16NSObjectProtocol", "purple"]
 - !private ["PSo16NSObjectProtocol", "refreshControl"]
 - ["PSo16NSObjectProtocol", "refreshTweets"]
@@ -1027,6 +1125,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "statusCode"]
 - !private ["PSo16NSObjectProtocol", "string"]
 - ["PSo16NSObjectProtocol", "tableView"]
+- !private ["PSo16NSObjectProtocol", "textFields"]
 - !private ["PSo16NSObjectProtocol", "textLabel"]
 - !private ["PSo16NSObjectProtocol", "timeStyle"]
 - !private ["PSo16NSObjectProtocol", "timeZone"]
@@ -1111,8 +1210,11 @@ depends-member:
 - !private ["Ps25RangeReplaceableIndexable", "sorted"]
 - !private ["Ps25RangeReplaceableIndexable", "subscript"]
 - !private ["Ps16RawRepresentable", "RawValue"]
+- !private ["Ps16RawRepresentable", "alert"]
 - !private ["Ps16RawRepresentable", "body"]
 - !private ["Ps16RawRepresentable", "byWordWrapping"]
+- !private ["Ps16RawRepresentable", "cancel"]
+- !private ["Ps16RawRepresentable", "default"]
 - !private ["Ps16RawRepresentable", "get"]
 - ["Ps16RawRepresentable", "headline"]
 - !private ["Ps16RawRepresentable", "left"]
@@ -1189,6 +1291,8 @@ depends-member:
 - ["C12WSUV_Twitter24TweetTableViewController", "String"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "TimeZone"]
 - ["C12WSUV_Twitter24TweetTableViewController", "Tweet"]
+- !private ["C12WSUV_Twitter24TweetTableViewController", "UIAlertAction"]
+- !private ["C12WSUV_Twitter24TweetTableViewController", "UIAlertController"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "UIApplication"]
 - ["C12WSUV_Twitter24TweetTableViewController", "UIColor"]
 - ["C12WSUV_Twitter24TweetTableViewController", "UIFont"]
@@ -1196,6 +1300,7 @@ depends-member:
 - ["C12WSUV_Twitter24TweetTableViewController", "UITableView"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "UITableViewAutomaticDimension"]
 - ["C12WSUV_Twitter24TweetTableViewController", "UITableViewCell"]
+- !private ["C12WSUV_Twitter24TweetTableViewController", "UITextField"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "Void"]
 - ["C12WSUV_Twitter24TweetTableViewController", "attributedStringForTweet"]
 - ["C12WSUV_Twitter24TweetTableViewController", "deinit"]
@@ -1203,7 +1308,9 @@ depends-member:
 - ["C12WSUV_Twitter24TweetTableViewController", "init"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "kAddTweetNotification"]
 - ["C12WSUV_Twitter24TweetTableViewController", "kBaseURLString"]
+- ["C12WSUV_Twitter24TweetTableViewController", "login"]
 - ["C12WSUV_Twitter24TweetTableViewController", "numberOfSections"]
+- !private ["C12WSUV_Twitter24TweetTableViewController", "present"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "refreshControl"]
 - ["C12WSUV_Twitter24TweetTableViewController", "refreshTweets"]
 - ["C12WSUV_Twitter24TweetTableViewController", "tableView"]
@@ -1219,15 +1326,31 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "dequeueReusableCell"]
 - !private ["PSo29UIAccessibilityIdentification", "endRefreshing"]
 - !private ["PSo29UIAccessibilityIdentification", "isRefreshing"]
+- !private ["PSo29UIAccessibilityIdentification", "isSecureTextEntry"]
 - !private ["PSo29UIAccessibilityIdentification", "numberOfLines"]
+- !private ["PSo29UIAccessibilityIdentification", "placeholder"]
 - !private ["PSo29UIAccessibilityIdentification", "reloadData"]
 - !private ["PSo29UIAccessibilityIdentification", "textLabel"]
+- ["CSo13UIAlertAction", "deinit"]
+- !private ["CSo13UIAlertAction", "init"]
+- !private ["OSC18UIAlertActionStyle", "cancel"]
+- !private ["OSC18UIAlertActionStyle", "default"]
+- ["OSC18UIAlertActionStyle", "deinit"]
+- !private ["CSo17UIAlertController", "addAction"]
+- !private ["CSo17UIAlertController", "addTextField"]
+- ["CSo17UIAlertController", "deinit"]
+- !private ["CSo17UIAlertController", "init"]
+- !private ["CSo17UIAlertController", "textFields"]
+- !private ["OSC22UIAlertControllerStyle", "alert"]
+- ["OSC22UIAlertControllerStyle", "deinit"]
 - !private ["PSo12UIAppearance", "attributedText"]
 - !private ["PSo12UIAppearance", "beginRefreshing"]
 - !private ["PSo12UIAppearance", "dequeueReusableCell"]
 - !private ["PSo12UIAppearance", "endRefreshing"]
 - !private ["PSo12UIAppearance", "isRefreshing"]
+- !private ["PSo12UIAppearance", "isSecureTextEntry"]
 - !private ["PSo12UIAppearance", "numberOfLines"]
+- !private ["PSo12UIAppearance", "placeholder"]
 - !private ["PSo12UIAppearance", "reloadData"]
 - !private ["PSo12UIAppearance", "textLabel"]
 - !private ["PSo21UIAppearanceContainer", "Alamofire"]
@@ -1243,11 +1366,15 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "String"]
 - !private ["PSo21UIAppearanceContainer", "TimeZone"]
 - !private ["PSo21UIAppearanceContainer", "Tweet"]
+- !private ["PSo21UIAppearanceContainer", "UIAlertAction"]
+- !private ["PSo21UIAppearanceContainer", "UIAlertController"]
 - !private ["PSo21UIAppearanceContainer", "UIApplication"]
 - ["PSo21UIAppearanceContainer", "UIColor"]
 - ["PSo21UIAppearanceContainer", "UIFont"]
 - ["PSo21UIAppearanceContainer", "UIFontTextStyle"]
 - !private ["PSo21UIAppearanceContainer", "UITableViewAutomaticDimension"]
+- !private ["PSo21UIAppearanceContainer", "addAction"]
+- !private ["PSo21UIAppearanceContainer", "addTextField"]
 - ["PSo21UIAppearanceContainer", "attributedStringForTweet"]
 - !private ["PSo21UIAppearanceContainer", "attributedText"]
 - !private ["PSo21UIAppearanceContainer", "beginRefreshing"]
@@ -1256,14 +1383,19 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "endRefreshing"]
 - !private ["PSo21UIAppearanceContainer", "init"]
 - !private ["PSo21UIAppearanceContainer", "isRefreshing"]
+- !private ["PSo21UIAppearanceContainer", "isSecureTextEntry"]
 - !private ["PSo21UIAppearanceContainer", "kAddTweetNotification"]
 - ["PSo21UIAppearanceContainer", "kBaseURLString"]
+- ["PSo21UIAppearanceContainer", "login"]
 - !private ["PSo21UIAppearanceContainer", "numberOfLines"]
 - ["PSo21UIAppearanceContainer", "numberOfSections"]
+- !private ["PSo21UIAppearanceContainer", "placeholder"]
+- !private ["PSo21UIAppearanceContainer", "present"]
 - !private ["PSo21UIAppearanceContainer", "refreshControl"]
 - ["PSo21UIAppearanceContainer", "refreshTweets"]
 - !private ["PSo21UIAppearanceContainer", "reloadData"]
 - ["PSo21UIAppearanceContainer", "tableView"]
+- !private ["PSo21UIAppearanceContainer", "textFields"]
 - !private ["PSo21UIAppearanceContainer", "textLabel"]
 - ["PSo21UIAppearanceContainer", "tweetAttributedStringMap"]
 - ["PSo21UIAppearanceContainer", "tweetBodyAttributes"]
@@ -1294,20 +1426,27 @@ depends-member:
 - !private ["PSo18UIContentContainer", "String"]
 - !private ["PSo18UIContentContainer", "TimeZone"]
 - !private ["PSo18UIContentContainer", "Tweet"]
+- !private ["PSo18UIContentContainer", "UIAlertAction"]
+- !private ["PSo18UIContentContainer", "UIAlertController"]
 - !private ["PSo18UIContentContainer", "UIApplication"]
 - ["PSo18UIContentContainer", "UIColor"]
 - ["PSo18UIContentContainer", "UIFont"]
 - ["PSo18UIContentContainer", "UIFontTextStyle"]
 - !private ["PSo18UIContentContainer", "UITableViewAutomaticDimension"]
+- !private ["PSo18UIContentContainer", "addAction"]
+- !private ["PSo18UIContentContainer", "addTextField"]
 - ["PSo18UIContentContainer", "attributedStringForTweet"]
 - ["PSo18UIContentContainer", "didReceiveMemoryWarning"]
 - !private ["PSo18UIContentContainer", "init"]
 - !private ["PSo18UIContentContainer", "kAddTweetNotification"]
 - ["PSo18UIContentContainer", "kBaseURLString"]
+- ["PSo18UIContentContainer", "login"]
 - ["PSo18UIContentContainer", "numberOfSections"]
+- !private ["PSo18UIContentContainer", "present"]
 - !private ["PSo18UIContentContainer", "refreshControl"]
 - ["PSo18UIContentContainer", "refreshTweets"]
 - ["PSo18UIContentContainer", "tableView"]
+- !private ["PSo18UIContentContainer", "textFields"]
 - ["PSo18UIContentContainer", "tweetAttributedStringMap"]
 - ["PSo18UIContentContainer", "tweetBodyAttributes"]
 - ["PSo18UIContentContainer", "tweetBodyAttributes.storage"]
@@ -1317,16 +1456,22 @@ depends-member:
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
 - !private ["PSo30UIContentSizeCategoryAdjusting", "attributedText"]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "isSecureTextEntry"]
 - !private ["PSo30UIContentSizeCategoryAdjusting", "numberOfLines"]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "placeholder"]
 - !private ["CSo9UIControl", "beginRefreshing"]
 - !private ["CSo9UIControl", "endRefreshing"]
 - !private ["CSo9UIControl", "isRefreshing"]
+- !private ["CSo9UIControl", "isSecureTextEntry"]
+- !private ["CSo9UIControl", "placeholder"]
 - !private ["PSo17UICoordinateSpace", "attributedText"]
 - !private ["PSo17UICoordinateSpace", "beginRefreshing"]
 - !private ["PSo17UICoordinateSpace", "dequeueReusableCell"]
 - !private ["PSo17UICoordinateSpace", "endRefreshing"]
 - !private ["PSo17UICoordinateSpace", "isRefreshing"]
+- !private ["PSo17UICoordinateSpace", "isSecureTextEntry"]
 - !private ["PSo17UICoordinateSpace", "numberOfLines"]
+- !private ["PSo17UICoordinateSpace", "placeholder"]
 - !private ["PSo17UICoordinateSpace", "reloadData"]
 - !private ["PSo17UICoordinateSpace", "textLabel"]
 - !private ["PSo13UIDynamicItem", "attributedText"]
@@ -1334,7 +1479,9 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "dequeueReusableCell"]
 - !private ["PSo13UIDynamicItem", "endRefreshing"]
 - !private ["PSo13UIDynamicItem", "isRefreshing"]
+- !private ["PSo13UIDynamicItem", "isSecureTextEntry"]
 - !private ["PSo13UIDynamicItem", "numberOfLines"]
+- !private ["PSo13UIDynamicItem", "placeholder"]
 - !private ["PSo13UIDynamicItem", "reloadData"]
 - !private ["PSo13UIDynamicItem", "textLabel"]
 - !private ["PSo18UIFocusEnvironment", "Alamofire"]
@@ -1350,11 +1497,15 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "String"]
 - !private ["PSo18UIFocusEnvironment", "TimeZone"]
 - !private ["PSo18UIFocusEnvironment", "Tweet"]
+- !private ["PSo18UIFocusEnvironment", "UIAlertAction"]
+- !private ["PSo18UIFocusEnvironment", "UIAlertController"]
 - !private ["PSo18UIFocusEnvironment", "UIApplication"]
 - ["PSo18UIFocusEnvironment", "UIColor"]
 - ["PSo18UIFocusEnvironment", "UIFont"]
 - ["PSo18UIFocusEnvironment", "UIFontTextStyle"]
 - !private ["PSo18UIFocusEnvironment", "UITableViewAutomaticDimension"]
+- !private ["PSo18UIFocusEnvironment", "addAction"]
+- !private ["PSo18UIFocusEnvironment", "addTextField"]
 - ["PSo18UIFocusEnvironment", "attributedStringForTweet"]
 - !private ["PSo18UIFocusEnvironment", "attributedText"]
 - !private ["PSo18UIFocusEnvironment", "beginRefreshing"]
@@ -1363,14 +1514,19 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "endRefreshing"]
 - !private ["PSo18UIFocusEnvironment", "init"]
 - !private ["PSo18UIFocusEnvironment", "isRefreshing"]
+- !private ["PSo18UIFocusEnvironment", "isSecureTextEntry"]
 - !private ["PSo18UIFocusEnvironment", "kAddTweetNotification"]
 - ["PSo18UIFocusEnvironment", "kBaseURLString"]
+- ["PSo18UIFocusEnvironment", "login"]
 - !private ["PSo18UIFocusEnvironment", "numberOfLines"]
 - ["PSo18UIFocusEnvironment", "numberOfSections"]
+- !private ["PSo18UIFocusEnvironment", "placeholder"]
+- !private ["PSo18UIFocusEnvironment", "present"]
 - !private ["PSo18UIFocusEnvironment", "refreshControl"]
 - ["PSo18UIFocusEnvironment", "refreshTweets"]
 - !private ["PSo18UIFocusEnvironment", "reloadData"]
 - ["PSo18UIFocusEnvironment", "tableView"]
+- !private ["PSo18UIFocusEnvironment", "textFields"]
 - !private ["PSo18UIFocusEnvironment", "textLabel"]
 - ["PSo18UIFocusEnvironment", "tweetAttributedStringMap"]
 - ["PSo18UIFocusEnvironment", "tweetBodyAttributes"]
@@ -1385,7 +1541,9 @@ depends-member:
 - !private ["PSo11UIFocusItem", "dequeueReusableCell"]
 - !private ["PSo11UIFocusItem", "endRefreshing"]
 - !private ["PSo11UIFocusItem", "isRefreshing"]
+- !private ["PSo11UIFocusItem", "isSecureTextEntry"]
 - !private ["PSo11UIFocusItem", "numberOfLines"]
+- !private ["PSo11UIFocusItem", "placeholder"]
 - !private ["PSo11UIFocusItem", "reloadData"]
 - !private ["PSo11UIFocusItem", "textLabel"]
 - ["CSo6UIFont", "deinit"]
@@ -1394,6 +1552,8 @@ depends-member:
 - ["VSC15UIFontTextStyle", "deinit"]
 - ["VSC15UIFontTextStyle", "headline"]
 - !private ["PSo27UIGestureRecognizerDelegate", "textLabel"]
+- !private ["PSo10UIKeyInput", "isSecureTextEntry"]
+- !private ["PSo10UIKeyInput", "placeholder"]
 - !private ["CSo7UILabel", "attributedText"]
 - ["CSo7UILabel", "deinit"]
 - !private ["CSo7UILabel", "numberOfLines"]
@@ -1424,6 +1584,8 @@ depends-member:
 - ["CSo11UIResponder", "String"]
 - !private ["CSo11UIResponder", "TimeZone"]
 - ["CSo11UIResponder", "Tweet"]
+- !private ["CSo11UIResponder", "UIAlertAction"]
+- !private ["CSo11UIResponder", "UIAlertController"]
 - !private ["CSo11UIResponder", "UIApplication"]
 - ["CSo11UIResponder", "UIColor"]
 - ["CSo11UIResponder", "UIFont"]
@@ -1431,7 +1593,10 @@ depends-member:
 - ["CSo11UIResponder", "UITableView"]
 - !private ["CSo11UIResponder", "UITableViewAutomaticDimension"]
 - ["CSo11UIResponder", "UITableViewCell"]
+- !private ["CSo11UIResponder", "UITextField"]
 - !private ["CSo11UIResponder", "Void"]
+- !private ["CSo11UIResponder", "addAction"]
+- !private ["CSo11UIResponder", "addTextField"]
 - ["CSo11UIResponder", "attributedStringForTweet"]
 - !private ["CSo11UIResponder", "attributedText"]
 - !private ["CSo11UIResponder", "beginRefreshing"]
@@ -1441,16 +1606,21 @@ depends-member:
 - !private ["CSo11UIResponder", "endRefreshing"]
 - ["CSo11UIResponder", "init"]
 - !private ["CSo11UIResponder", "isRefreshing"]
+- !private ["CSo11UIResponder", "isSecureTextEntry"]
 - !private ["CSo11UIResponder", "kAddTweetNotification"]
 - ["CSo11UIResponder", "kBaseURLString"]
 - !private ["CSo11UIResponder", "lastTweetDate"]
+- ["CSo11UIResponder", "login"]
 - !private ["CSo11UIResponder", "numberOfLines"]
 - ["CSo11UIResponder", "numberOfSections"]
+- !private ["CSo11UIResponder", "placeholder"]
+- !private ["CSo11UIResponder", "present"]
 - !private ["CSo11UIResponder", "refreshControl"]
 - ["CSo11UIResponder", "refreshTweets"]
 - !private ["CSo11UIResponder", "reloadData"]
 - !private ["CSo11UIResponder", "shared"]
 - ["CSo11UIResponder", "tableView"]
+- !private ["CSo11UIResponder", "textFields"]
 - !private ["CSo11UIResponder", "textLabel"]
 - ["CSo11UIResponder", "tweetAttributedStringMap"]
 - ["CSo11UIResponder", "tweetBodyAttributes"]
@@ -1473,11 +1643,15 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "String"]
 - !private ["PSo30UIResponderStandardEditActions", "TimeZone"]
 - !private ["PSo30UIResponderStandardEditActions", "Tweet"]
+- !private ["PSo30UIResponderStandardEditActions", "UIAlertAction"]
+- !private ["PSo30UIResponderStandardEditActions", "UIAlertController"]
 - !private ["PSo30UIResponderStandardEditActions", "UIApplication"]
 - ["PSo30UIResponderStandardEditActions", "UIColor"]
 - ["PSo30UIResponderStandardEditActions", "UIFont"]
 - ["PSo30UIResponderStandardEditActions", "UIFontTextStyle"]
 - !private ["PSo30UIResponderStandardEditActions", "UITableViewAutomaticDimension"]
+- !private ["PSo30UIResponderStandardEditActions", "addAction"]
+- !private ["PSo30UIResponderStandardEditActions", "addTextField"]
 - ["PSo30UIResponderStandardEditActions", "attributedStringForTweet"]
 - !private ["PSo30UIResponderStandardEditActions", "attributedText"]
 - !private ["PSo30UIResponderStandardEditActions", "beginRefreshing"]
@@ -1487,16 +1661,21 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "endRefreshing"]
 - !private ["PSo30UIResponderStandardEditActions", "init"]
 - !private ["PSo30UIResponderStandardEditActions", "isRefreshing"]
+- !private ["PSo30UIResponderStandardEditActions", "isSecureTextEntry"]
 - !private ["PSo30UIResponderStandardEditActions", "kAddTweetNotification"]
 - ["PSo30UIResponderStandardEditActions", "kBaseURLString"]
 - !private ["PSo30UIResponderStandardEditActions", "lastTweetDate"]
+- ["PSo30UIResponderStandardEditActions", "login"]
 - !private ["PSo30UIResponderStandardEditActions", "numberOfLines"]
 - ["PSo30UIResponderStandardEditActions", "numberOfSections"]
+- !private ["PSo30UIResponderStandardEditActions", "placeholder"]
+- !private ["PSo30UIResponderStandardEditActions", "present"]
 - !private ["PSo30UIResponderStandardEditActions", "refreshControl"]
 - ["PSo30UIResponderStandardEditActions", "refreshTweets"]
 - !private ["PSo30UIResponderStandardEditActions", "reloadData"]
 - !private ["PSo30UIResponderStandardEditActions", "shared"]
 - ["PSo30UIResponderStandardEditActions", "tableView"]
+- !private ["PSo30UIResponderStandardEditActions", "textFields"]
 - !private ["PSo30UIResponderStandardEditActions", "textLabel"]
 - ["PSo30UIResponderStandardEditActions", "tweetAttributedStringMap"]
 - ["PSo30UIResponderStandardEditActions", "tweetBodyAttributes"]
@@ -1522,6 +1701,8 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "String"]
 - !private ["PSo20UIScrollViewDelegate", "TimeZone"]
 - !private ["PSo20UIScrollViewDelegate", "Tweet"]
+- !private ["PSo20UIScrollViewDelegate", "UIAlertAction"]
+- !private ["PSo20UIScrollViewDelegate", "UIAlertController"]
 - !private ["PSo20UIScrollViewDelegate", "UIApplication"]
 - ["PSo20UIScrollViewDelegate", "UIColor"]
 - ["PSo20UIScrollViewDelegate", "UIFont"]
@@ -1532,7 +1713,9 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "init"]
 - !private ["PSo20UIScrollViewDelegate", "kAddTweetNotification"]
 - ["PSo20UIScrollViewDelegate", "kBaseURLString"]
+- ["PSo20UIScrollViewDelegate", "login"]
 - ["PSo20UIScrollViewDelegate", "numberOfSections"]
+- !private ["PSo20UIScrollViewDelegate", "present"]
 - !private ["PSo20UIScrollViewDelegate", "refreshControl"]
 - ["PSo20UIScrollViewDelegate", "refreshTweets"]
 - ["PSo20UIScrollViewDelegate", "tableView"]
@@ -1557,20 +1740,27 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "String"]
 - !private ["PSo16UIStateRestoring", "TimeZone"]
 - !private ["PSo16UIStateRestoring", "Tweet"]
+- !private ["PSo16UIStateRestoring", "UIAlertAction"]
+- !private ["PSo16UIStateRestoring", "UIAlertController"]
 - !private ["PSo16UIStateRestoring", "UIApplication"]
 - ["PSo16UIStateRestoring", "UIColor"]
 - ["PSo16UIStateRestoring", "UIFont"]
 - ["PSo16UIStateRestoring", "UIFontTextStyle"]
 - !private ["PSo16UIStateRestoring", "UITableViewAutomaticDimension"]
+- !private ["PSo16UIStateRestoring", "addAction"]
+- !private ["PSo16UIStateRestoring", "addTextField"]
 - ["PSo16UIStateRestoring", "attributedStringForTweet"]
 - ["PSo16UIStateRestoring", "didReceiveMemoryWarning"]
 - !private ["PSo16UIStateRestoring", "init"]
 - !private ["PSo16UIStateRestoring", "kAddTweetNotification"]
 - ["PSo16UIStateRestoring", "kBaseURLString"]
+- ["PSo16UIStateRestoring", "login"]
 - ["PSo16UIStateRestoring", "numberOfSections"]
+- !private ["PSo16UIStateRestoring", "present"]
 - !private ["PSo16UIStateRestoring", "refreshControl"]
 - ["PSo16UIStateRestoring", "refreshTweets"]
 - ["PSo16UIStateRestoring", "tableView"]
+- !private ["PSo16UIStateRestoring", "textFields"]
 - ["PSo16UIStateRestoring", "tweetAttributedStringMap"]
 - ["PSo16UIStateRestoring", "tweetBodyAttributes"]
 - ["PSo16UIStateRestoring", "tweetBodyAttributes.storage"]
@@ -1608,6 +1798,8 @@ depends-member:
 - ["CSo21UITableViewController", "String"]
 - !private ["CSo21UITableViewController", "TimeZone"]
 - ["CSo21UITableViewController", "Tweet"]
+- !private ["CSo21UITableViewController", "UIAlertAction"]
+- !private ["CSo21UITableViewController", "UIAlertController"]
 - !private ["CSo21UITableViewController", "UIApplication"]
 - ["CSo21UITableViewController", "UIColor"]
 - ["CSo21UITableViewController", "UIFont"]
@@ -1615,6 +1807,7 @@ depends-member:
 - ["CSo21UITableViewController", "UITableView"]
 - !private ["CSo21UITableViewController", "UITableViewAutomaticDimension"]
 - ["CSo21UITableViewController", "UITableViewCell"]
+- !private ["CSo21UITableViewController", "UITextField"]
 - !private ["CSo21UITableViewController", "Void"]
 - ["CSo21UITableViewController", "attributedStringForTweet"]
 - ["CSo21UITableViewController", "deinit"]
@@ -1622,7 +1815,9 @@ depends-member:
 - ["CSo21UITableViewController", "init"]
 - !private ["CSo21UITableViewController", "kAddTweetNotification"]
 - ["CSo21UITableViewController", "kBaseURLString"]
+- ["CSo21UITableViewController", "login"]
 - ["CSo21UITableViewController", "numberOfSections"]
+- !private ["CSo21UITableViewController", "present"]
 - !private ["CSo21UITableViewController", "refreshControl"]
 - ["CSo21UITableViewController", "refreshTweets"]
 - ["CSo21UITableViewController", "tableView"]
@@ -1647,6 +1842,8 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "String"]
 - !private ["PSo21UITableViewDataSource", "TimeZone"]
 - !private ["PSo21UITableViewDataSource", "Tweet"]
+- !private ["PSo21UITableViewDataSource", "UIAlertAction"]
+- !private ["PSo21UITableViewDataSource", "UIAlertController"]
 - !private ["PSo21UITableViewDataSource", "UIApplication"]
 - ["PSo21UITableViewDataSource", "UIColor"]
 - ["PSo21UITableViewDataSource", "UIFont"]
@@ -1657,7 +1854,9 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "init"]
 - !private ["PSo21UITableViewDataSource", "kAddTweetNotification"]
 - ["PSo21UITableViewDataSource", "kBaseURLString"]
+- ["PSo21UITableViewDataSource", "login"]
 - ["PSo21UITableViewDataSource", "numberOfSections"]
+- !private ["PSo21UITableViewDataSource", "present"]
 - !private ["PSo21UITableViewDataSource", "refreshControl"]
 - ["PSo21UITableViewDataSource", "refreshTweets"]
 - ["PSo21UITableViewDataSource", "tableView"]
@@ -1682,6 +1881,8 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "String"]
 - !private ["PSo19UITableViewDelegate", "TimeZone"]
 - !private ["PSo19UITableViewDelegate", "Tweet"]
+- !private ["PSo19UITableViewDelegate", "UIAlertAction"]
+- !private ["PSo19UITableViewDelegate", "UIAlertController"]
 - !private ["PSo19UITableViewDelegate", "UIApplication"]
 - ["PSo19UITableViewDelegate", "UIColor"]
 - ["PSo19UITableViewDelegate", "UIFont"]
@@ -1692,7 +1893,9 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "init"]
 - !private ["PSo19UITableViewDelegate", "kAddTweetNotification"]
 - ["PSo19UITableViewDelegate", "kBaseURLString"]
+- ["PSo19UITableViewDelegate", "login"]
 - ["PSo19UITableViewDelegate", "numberOfSections"]
+- !private ["PSo19UITableViewDelegate", "present"]
 - !private ["PSo19UITableViewDelegate", "refreshControl"]
 - ["PSo19UITableViewDelegate", "refreshTweets"]
 - ["PSo19UITableViewDelegate", "tableView"]
@@ -1705,6 +1908,13 @@ depends-member:
 - ["PSo19UITableViewDelegate", "viewDidLoad"]
 - ["PSo19UITableViewDelegate", ""]
 - ["OSC16UITableViewStyle", "deinit"]
+- !private ["CSo11UITextField", "deinit"]
+- !private ["CSo11UITextField", "isSecureTextEntry"]
+- !private ["CSo11UITextField", "placeholder"]
+- !private ["PSo11UITextInput", "isSecureTextEntry"]
+- !private ["PSo11UITextInput", "placeholder"]
+- !private ["PSo17UITextInputTraits", "isSecureTextEntry"]
+- !private ["PSo17UITextInputTraits", "placeholder"]
 - !private ["PSo18UITraitEnvironment", "Alamofire"]
 - !private ["PSo18UITraitEnvironment", "ComparisonResult"]
 - !private ["PSo18UITraitEnvironment", "DateFormatter"]
@@ -1718,11 +1928,15 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "String"]
 - !private ["PSo18UITraitEnvironment", "TimeZone"]
 - !private ["PSo18UITraitEnvironment", "Tweet"]
+- !private ["PSo18UITraitEnvironment", "UIAlertAction"]
+- !private ["PSo18UITraitEnvironment", "UIAlertController"]
 - !private ["PSo18UITraitEnvironment", "UIApplication"]
 - ["PSo18UITraitEnvironment", "UIColor"]
 - ["PSo18UITraitEnvironment", "UIFont"]
 - ["PSo18UITraitEnvironment", "UIFontTextStyle"]
 - !private ["PSo18UITraitEnvironment", "UITableViewAutomaticDimension"]
+- !private ["PSo18UITraitEnvironment", "addAction"]
+- !private ["PSo18UITraitEnvironment", "addTextField"]
 - ["PSo18UITraitEnvironment", "attributedStringForTweet"]
 - !private ["PSo18UITraitEnvironment", "attributedText"]
 - !private ["PSo18UITraitEnvironment", "beginRefreshing"]
@@ -1731,14 +1945,19 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "endRefreshing"]
 - !private ["PSo18UITraitEnvironment", "init"]
 - !private ["PSo18UITraitEnvironment", "isRefreshing"]
+- !private ["PSo18UITraitEnvironment", "isSecureTextEntry"]
 - !private ["PSo18UITraitEnvironment", "kAddTweetNotification"]
 - ["PSo18UITraitEnvironment", "kBaseURLString"]
+- ["PSo18UITraitEnvironment", "login"]
 - !private ["PSo18UITraitEnvironment", "numberOfLines"]
 - ["PSo18UITraitEnvironment", "numberOfSections"]
+- !private ["PSo18UITraitEnvironment", "placeholder"]
+- !private ["PSo18UITraitEnvironment", "present"]
 - !private ["PSo18UITraitEnvironment", "refreshControl"]
 - ["PSo18UITraitEnvironment", "refreshTweets"]
 - !private ["PSo18UITraitEnvironment", "reloadData"]
 - ["PSo18UITraitEnvironment", "tableView"]
+- !private ["PSo18UITraitEnvironment", "textFields"]
 - !private ["PSo18UITraitEnvironment", "textLabel"]
 - ["PSo18UITraitEnvironment", "tweetAttributedStringMap"]
 - ["PSo18UITraitEnvironment", "tweetBodyAttributes"]
@@ -1753,7 +1972,9 @@ depends-member:
 - !private ["CSo6UIView", "dequeueReusableCell"]
 - !private ["CSo6UIView", "endRefreshing"]
 - !private ["CSo6UIView", "isRefreshing"]
+- !private ["CSo6UIView", "isSecureTextEntry"]
 - !private ["CSo6UIView", "numberOfLines"]
+- !private ["CSo6UIView", "placeholder"]
 - !private ["CSo6UIView", "reloadData"]
 - !private ["CSo6UIView", "textLabel"]
 - !private ["CSo16UIViewController", "Alamofire"]
@@ -1780,6 +2001,8 @@ depends-member:
 - ["CSo16UIViewController", "String"]
 - !private ["CSo16UIViewController", "TimeZone"]
 - ["CSo16UIViewController", "Tweet"]
+- !private ["CSo16UIViewController", "UIAlertAction"]
+- !private ["CSo16UIViewController", "UIAlertController"]
 - !private ["CSo16UIViewController", "UIApplication"]
 - ["CSo16UIViewController", "UIColor"]
 - ["CSo16UIViewController", "UIFont"]
@@ -1787,16 +2010,22 @@ depends-member:
 - ["CSo16UIViewController", "UITableView"]
 - !private ["CSo16UIViewController", "UITableViewAutomaticDimension"]
 - ["CSo16UIViewController", "UITableViewCell"]
+- !private ["CSo16UIViewController", "UITextField"]
 - !private ["CSo16UIViewController", "Void"]
+- !private ["CSo16UIViewController", "addAction"]
+- !private ["CSo16UIViewController", "addTextField"]
 - ["CSo16UIViewController", "attributedStringForTweet"]
 - ["CSo16UIViewController", "didReceiveMemoryWarning"]
 - ["CSo16UIViewController", "init"]
 - !private ["CSo16UIViewController", "kAddTweetNotification"]
 - ["CSo16UIViewController", "kBaseURLString"]
+- ["CSo16UIViewController", "login"]
 - ["CSo16UIViewController", "numberOfSections"]
+- !private ["CSo16UIViewController", "present"]
 - !private ["CSo16UIViewController", "refreshControl"]
 - ["CSo16UIViewController", "refreshTweets"]
 - ["CSo16UIViewController", "tableView"]
+- !private ["CSo16UIViewController", "textFields"]
 - ["CSo16UIViewController", "tweetAttributedStringMap"]
 - ["CSo16UIViewController", "tweetBodyAttributes"]
 - ["CSo16UIViewController", "tweetBodyAttributes.storage"]
@@ -1820,7 +2049,9 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "dequeueReusableCell"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "endRefreshing"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isRefreshing"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isSecureTextEntry"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "numberOfLines"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "placeholder"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "reloadData"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "textLabel"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
@@ -1860,6 +2091,8 @@ depends-member:
 - !private ["Ps9_Hashable", "String"]
 - !private ["Ps9_Hashable", "TimeZone"]
 - !private ["Ps9_Hashable", "Tweet"]
+- !private ["Ps9_Hashable", "UIAlertAction"]
+- !private ["Ps9_Hashable", "UIAlertController"]
 - !private ["Ps9_Hashable", "UIApplication"]
 - ["Ps9_Hashable", "UIColor"]
 - ["Ps9_Hashable", "UIFont"]
@@ -1867,7 +2100,10 @@ depends-member:
 - !private ["Ps9_Hashable", "UITableViewAutomaticDimension"]
 - !private ["Ps9_Hashable", "_DisabledRangeIndex"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "addAction"]
 - !private ["Ps9_Hashable", "addObserver"]
+- !private ["Ps9_Hashable", "addTextField"]
+- !private ["Ps9_Hashable", "alert"]
 - !private ["Ps9_Hashable", "alignment"]
 - !private ["Ps9_Hashable", "append"]
 - ["Ps9_Hashable", "attributedStringForTweet"]
@@ -1876,6 +2112,7 @@ depends-member:
 - !private ["Ps9_Hashable", "black"]
 - !private ["Ps9_Hashable", "body"]
 - !private ["Ps9_Hashable", "byWordWrapping"]
+- !private ["Ps9_Hashable", "cancel"]
 - !private ["Ps9_Hashable", "compare"]
 - !private ["Ps9_Hashable", "date"]
 - !private ["Ps9_Hashable", "dateFormat"]
@@ -1889,16 +2126,20 @@ depends-member:
 - ["Ps9_Hashable", "headline"]
 - ["Ps9_Hashable", "init"]
 - !private ["Ps9_Hashable", "isRefreshing"]
+- !private ["Ps9_Hashable", "isSecureTextEntry"]
 - !private ["Ps9_Hashable", "kAddTweetNotification"]
 - ["Ps9_Hashable", "kBaseURLString"]
 - !private ["Ps9_Hashable", "lastTweetDate"]
 - !private ["Ps9_Hashable", "left"]
 - !private ["Ps9_Hashable", "lineBreakMode"]
+- ["Ps9_Hashable", "login"]
 - !private ["Ps9_Hashable", "mutableCopy"]
 - !private ["Ps9_Hashable", "numberOfLines"]
 - ["Ps9_Hashable", "numberOfSections"]
 - !private ["Ps9_Hashable", "orderedDescending"]
+- !private ["Ps9_Hashable", "placeholder"]
 - ["Ps9_Hashable", "preferredFont"]
+- !private ["Ps9_Hashable", "present"]
 - ["Ps9_Hashable", "purple"]
 - !private ["Ps9_Hashable", "refreshControl"]
 - ["Ps9_Hashable", "refreshTweets"]
@@ -1909,6 +2150,7 @@ depends-member:
 - !private ["Ps9_Hashable", "statusCode"]
 - !private ["Ps9_Hashable", "string"]
 - ["Ps9_Hashable", "tableView"]
+- !private ["Ps9_Hashable", "textFields"]
 - !private ["Ps9_Hashable", "textLabel"]
 - !private ["Ps9_Hashable", "timeStyle"]
 - !private ["Ps9_Hashable", "timeZone"]
@@ -2059,6 +2301,10 @@ depends-nominal:
 - "V12WSUV_Twitter5Tweet"
 - "C12WSUV_Twitter24TweetTableViewController"
 - !private "PSo29UIAccessibilityIdentification"
+- "CSo13UIAlertAction"
+- "OSC18UIAlertActionStyle"
+- "CSo17UIAlertController"
+- "OSC22UIAlertControllerStyle"
 - !private "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
 - "CSo13UIApplication"
@@ -2074,6 +2320,7 @@ depends-nominal:
 - "CSo6UIFont"
 - "VSC15UIFontTextStyle"
 - !private "PSo27UIGestureRecognizerDelegate"
+- !private "PSo10UIKeyInput"
 - "CSo7UILabel"
 - !private "CSo16UIRefreshControl"
 - "CSo11UIResponder"
@@ -2087,6 +2334,9 @@ depends-nominal:
 - "PSo21UITableViewDataSource"
 - "PSo19UITableViewDelegate"
 - "OSC16UITableViewStyle"
+- !private "CSo11UITextField"
+- !private "PSo11UITextInput"
+- !private "PSo17UITextInputTraits"
 - "PSo18UITraitEnvironment"
 - !private "CSo6UIView"
 - "CSo16UIViewController"
@@ -2116,17 +2366,18 @@ depends-dynamic-lookup:
 depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/home-local/t.bounds/WSUV_Twitter/WSUV_Twitter/WSUV_Twitter-Bridging-Header.h"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/home-local/t.bounds/WSUV_Twitter/sskeychain/SSKeychain.h"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64.swiftmodule"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire.h"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "bd8a217a0dea65616dff877e801db2f2"
+interface-hash: "743043c362dde952b4b48a96ce903b0a"

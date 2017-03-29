@@ -144,16 +144,16 @@
 		F8387E331E81AAD600A6A5F8 /* WSUV_Twitter */ = {
 			isa = PBXGroup;
 			children = (
-				F8B265321E8C332600A4594B /* SSKeychain.h */,
-				F8B265331E8C332600A4594B /* SSKeychain.m */,
 				F8387E341E81AAD600A6A5F8 /* AppDelegate.swift */,
 				F8387E361E81AAD600A6A5F8 /* ViewController.swift */,
-				F8387E381E81AAD600A6A5F8 /* Main.storyboard */,
 				F859147E1E89BD3400176C95 /* AddTweetTableViewController.swift */,
 				F859147C1E89BA1800176C95 /* TweetTableViewController.swift */,
+				F8387E381E81AAD600A6A5F8 /* Main.storyboard */,
 				F8387E3B1E81AAD600A6A5F8 /* Assets.xcassets */,
 				F8387E3D1E81AAD600A6A5F8 /* LaunchScreen.storyboard */,
 				F8387E401E81AAD600A6A5F8 /* Info.plist */,
+				F8B265321E8C332600A4594B /* SSKeychain.h */,
+				F8B265331E8C332600A4594B /* SSKeychain.m */,
 				F8B265311E8C332500A4594B /* WSUV_Twitter-Bridging-Header.h */,
 			);
 			path = WSUV_Twitter;

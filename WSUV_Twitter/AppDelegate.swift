@@ -35,6 +35,7 @@ func == (lhs: Tweet, rhs: Tweet) -> Bool {
 }
 
 let kAddTweetNotification = Notification.Name("AddTweetNotification")
+let kWazzuTwitterPassword = "WazzuTwitterPassword"  // KeyChain service
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
