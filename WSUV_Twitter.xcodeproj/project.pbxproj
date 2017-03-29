@@ -16,8 +16,10 @@
 		F859147F1E89BD3400176C95 /* AddTweetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F859147E1E89BD3400176C95 /* AddTweetTableViewController.swift */; };
 		F8B2652D1E8C2CD400A4594B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B265201E8C2CC600A4594B /* Alamofire.framework */; };
 		F8B2652E1E8C2CD400A4594B /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F8B265201E8C2CC600A4594B /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F8B265341E8C332600A4594B /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B265331E8C332600A4594B /* SSKeychain.m */; };
-		F8B265371E8C334A00A4594B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B265361E8C334A00A4594B /* Security.framework */; };
+		F8B2653D1E8C37B100A4594B /* Example in Resources */ = {isa = PBXBuildFile; fileRef = F8B265381E8C37B100A4594B /* Example */; };
+		F8B2653E1E8C37B100A4594B /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B2653A1E8C37B100A4594B /* SSKeychain.m */; };
+		F8B2653F1E8C37B100A4594B /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B2653C1E8C37B100A4594B /* SSKeychainQuery.m */; };
+		F8B265411E8C384900A4594B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B265401E8C384900A4594B /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,10 +106,13 @@
 		F859147C1E89BA1800176C95 /* TweetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTableViewController.swift; sourceTree = "<group>"; };
 		F859147E1E89BD3400176C95 /* AddTweetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTweetTableViewController.swift; sourceTree = "<group>"; };
 		F8B265141E8C2CC600A4594B /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		F8B265311E8C332500A4594B /* WSUV_Twitter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WSUV_Twitter-Bridging-Header.h"; sourceTree = "<group>"; };
-		F8B265321E8C332600A4594B /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SSKeychain.h; path = sskeychain/SSKeychain.h; sourceTree = SOURCE_ROOT; };
-		F8B265331E8C332600A4594B /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SSKeychain.m; path = sskeychain/SSKeychain.m; sourceTree = SOURCE_ROOT; };
-		F8B265361E8C334A00A4594B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F8B265381E8C37B100A4594B /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Example; sourceTree = "<group>"; };
+		F8B265391E8C37B100A4594B /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		F8B2653A1E8C37B100A4594B /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		F8B2653B1E8C37B100A4594B /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
+		F8B2653C1E8C37B100A4594B /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychainQuery.m; sourceTree = "<group>"; };
+		F8B265401E8C384900A4594B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F8B265421E8C387B00A4594B /* WSUV_Twitter-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WSUV_Twitter-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8B265371E8C334A00A4594B /* Security.framework in Frameworks */,
+				F8B265411E8C384900A4594B /* Security.framework in Frameworks */,
 				F8B2652D1E8C2CD400A4594B /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,9 +157,12 @@
 				F8387E3B1E81AAD600A6A5F8 /* Assets.xcassets */,
 				F8387E3D1E81AAD600A6A5F8 /* LaunchScreen.storyboard */,
 				F8387E401E81AAD600A6A5F8 /* Info.plist */,
-				F8B265321E8C332600A4594B /* SSKeychain.h */,
-				F8B265331E8C332600A4594B /* SSKeychain.m */,
-				F8B265311E8C332500A4594B /* WSUV_Twitter-Bridging-Header.h */,
+				F8B265381E8C37B100A4594B /* Example */,
+				F8B265391E8C37B100A4594B /* SSKeychain.h */,
+				F8B2653A1E8C37B100A4594B /* SSKeychain.m */,
+				F8B2653B1E8C37B100A4594B /* SSKeychainQuery.h */,
+				F8B2653C1E8C37B100A4594B /* SSKeychainQuery.m */,
+				F8B265421E8C387B00A4594B /* WSUV_Twitter-Bridging-Header.h */,
 			);
 			path = WSUV_Twitter;
 			sourceTree = "<group>";
@@ -176,7 +184,7 @@
 		F8B265351E8C334A00A4594B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F8B265361E8C334A00A4594B /* Security.framework */,
+				F8B265401E8C384900A4594B /* Security.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -304,6 +312,7 @@
 				F8387E3F1E81AAD600A6A5F8 /* LaunchScreen.storyboard in Resources */,
 				F8387E3C1E81AAD600A6A5F8 /* Assets.xcassets in Resources */,
 				F8387E3A1E81AAD600A6A5F8 /* Main.storyboard in Resources */,
+				F8B2653D1E8C37B100A4594B /* Example in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +327,8 @@
 				F8387E371E81AAD600A6A5F8 /* ViewController.swift in Sources */,
 				F8387E351E81AAD600A6A5F8 /* AppDelegate.swift in Sources */,
 				F859147F1E89BD3400176C95 /* AddTweetTableViewController.swift in Sources */,
-				F8B265341E8C332600A4594B /* SSKeychain.m in Sources */,
+				F8B2653F1E8C37B100A4594B /* SSKeychainQuery.m in Sources */,
+				F8B2653E1E8C37B100A4594B /* SSKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
