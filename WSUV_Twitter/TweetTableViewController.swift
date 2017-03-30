@@ -17,6 +17,7 @@ class TweetTableViewController: UITableViewController {
     
     @IBOutlet weak var addTweetButton: UIBarButtonItem!
     @IBOutlet weak var tweetTableView: UINavigationItem!
+    @IBOutlet weak var manageAccountButton: UIBarButtonItem!
     
     @IBAction func manageAccount(_ sender: Any) {
     
@@ -145,13 +146,18 @@ class TweetTableViewController: UITableViewController {
             ))
         }
         
-//        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
+        
+        
+        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
+            
+            manageAccountController.popoverPresentationController?.barButtonItem = manageAccountButton
+            
 //            let popoverPresenter = manageAccountController.popoverPresentationController
 //            let menuButtonTag = 12
 //            let menuButton = tweetTableView.viewWithTag(menuButtonTag)
 //            popoverPresenter?.sourceView = menuButton
 //            popoverPresenter?.sourceRect = (menuButton?.bounds)!
-//        }
+        }
         
         self.present(manageAccountController, animated: true, completion: nil)
         
@@ -600,7 +606,6 @@ class TweetTableViewController: UITableViewController {
                     }
                     // ... display alert with message ..
                     
-                    // XXX
                     let fetchErrorAlertContoller = UIAlertController(title: "Fetch Error", message: nil, preferredStyle: .alert)
                     
                     fetchErrorAlertContoller.message = message
