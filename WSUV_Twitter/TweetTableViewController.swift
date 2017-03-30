@@ -16,6 +16,7 @@ class TweetTableViewController: UITableViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var addTweetButton: UIBarButtonItem!
+    @IBOutlet weak var tweetTableView: UINavigationItem!
     
     @IBAction func manageAccount(_ sender: Any) {
     
@@ -144,6 +145,14 @@ class TweetTableViewController: UITableViewController {
             ))
         }
         
+//        if UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad {
+//            let popoverPresenter = manageAccountController.popoverPresentationController
+//            let menuButtonTag = 12
+//            let menuButton = tweetTableView.viewWithTag(menuButtonTag)
+//            popoverPresenter?.sourceView = menuButton
+//            popoverPresenter?.sourceRect = (menuButton?.bounds)!
+//        }
+        
         self.present(manageAccountController, animated: true, completion: nil)
         
     }
@@ -181,6 +190,8 @@ class TweetTableViewController: UITableViewController {
                     self.title = username
                     
                 case .failure(let error):
+                    NSLog("\(error)")
+                    
                     var errMessage = "Unknown Error"
                     switch(response.response!.statusCode) {
                     case 500:
@@ -248,6 +259,7 @@ class TweetTableViewController: UITableViewController {
                     self.title = "Recent Tweets"
                     
                 case .failure(let error):
+                    NSLog("\(error)")
                     
                     // Check what kind of error is received.
                     var errMessage = "Unknown Error"
@@ -316,6 +328,7 @@ class TweetTableViewController: UITableViewController {
                     self.title = username
                     
                 case .failure(let error):
+                    NSLog("\(error)")
                     var errMessage = "Unknown Error"
                     switch(response.response!.statusCode) {
                     case 500:
@@ -478,9 +491,11 @@ class TweetTableViewController: UITableViewController {
                     .responseJSON {response in
                         switch(response.result) {
                         case .success(let JSON):
+                            NSLog("\(JSON)")
                             appDelegate.tweets.remove(at: indexPath.row)
                             tableView.deleteRows(at: [indexPath], with: .fade)
                         case .failure(let error):
+                            NSLog("\(error)")
                             var errMessage = "Unknown Error"
                             switch(response.response!.statusCode) {
                             case 500:
@@ -568,12 +583,15 @@ class TweetTableViewController: UITableViewController {
                     self.tableView.reloadData() // force table-view to be updated
                     self.refreshControl?.endRefreshing()
                 case .failure(let error):
-                    let message : String
+                    var message : String = "Unknown error"
                     if let httpStatusCode = response.response?.statusCode {
                         switch(httpStatusCode) {
                         case 500:
                             message = "Server error (my bad)"
-                            // ...
+                            break
+                        case 503:
+                            message = "Unable to connect to internal database."
+                            break
                         default:
                             break
                         }
@@ -581,6 +599,16 @@ class TweetTableViewController: UITableViewController {
                         message = error.localizedDescription
                     }
                     // ... display alert with message ..
+                    
+                    // XXX
+                    let fetchErrorAlertContoller = UIAlertController(title: "Fetch Error", message: nil, preferredStyle: .alert)
+                    
+                    fetchErrorAlertContoller.message = message
+                    
+                    fetchErrorAlertContoller.addAction(UIKit.UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+                    
+                    self.present(fetchErrorAlertContoller, animated: true, completion: nil)
+                    
                     self.refreshControl?.endRefreshing()
                 }
         }

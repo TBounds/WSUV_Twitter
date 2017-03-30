@@ -6,18 +6,12 @@ provides-nominal:
 provides-member:
 - ["C12WSUV_Twitter24TweetTableViewController", ""]
 provides-dynamic-lookup:
-- "kBaseURLString"
-- "addTweetButton"
-- "logout"
 - "viewDidLoad"
-- "tweetTitleAttributes"
 - "numberOfSections"
-- "refreshTweets"
-- "manageAccount"
-- "tweetDateFormatter"
-- "registerUser"
-- "appDelegate"
+- "tweetTitleAttributes"
+- "tweetTableView"
 - "didReceiveMemoryWarning"
+- "appDelegate"
 - "tableView"
 - "tableView"
 - "tableView"
@@ -25,65 +19,74 @@ provides-dynamic-lookup:
 - "tableView"
 - "tableView"
 - "tableView"
+- "registerUser"
+- "tweetDateFormatter"
 - "loginUser"
 - "tweetBodyAttributes"
+- "kBaseURLString"
+- "addTweetButton"
+- "refreshTweets"
+- "manageAccount"
+- "logout"
 depends-top-level:
-- "UIColor"
-- !private "UITableViewAutomaticDimension"
-- !private "=="
-- "StringLiteralType"
-- "Array"
-- "Tweet"
-- "UITableViewController"
-- "UITableViewCell"
-- "String"
-- "BooleanLiteralType"
-- !private "!="
-- !private "NSDate"
-- !private "&&"
-- !private "NSString"
-- "NSForegroundColorAttributeName"
-- !private "kWazzuTwitterPassword"
-- !private "Alamofire"
-- !private "Date"
-- !private "UITextField"
-- "CGFloat"
-- "UITableViewCellEditingStyle"
-- !private "UIKit"
-- "Dictionary"
-- !private "NSMutableAttributedString"
-- "AnyObject"
-- "IndexPath"
-- "TweetTableViewController"
-- "NSAttributedString"
-- !private "Notification"
-- !private "NSParagraphStyle"
-- !private "NSParagraphStyleAttributeName"
-- "UIBarButtonItem"
-- !private "UIAlertAction"
-- !private "!"
-- !private "+"
 - !private "kWazzuTwitterSessionToken"
-- !private "TimeZone"
-- "UIApplication"
-- !private "SSKeychain"
-- "DateFormatter"
-- "UIFont"
-- !private "UIAlertController"
-- !private "Void"
-- "NSFontAttributeName"
-- "UITableView"
-- !private "NotificationCenter"
-- "AppDelegate"
+- "UITableViewCell"
 - !private "ComparisonResult"
-- !private "NSMutableParagraphStyle"
-- "CastingPrecedence"
-- "Int"
-- !private "kAddTweetNotification"
-- "UIFontTextStyle"
+- "UIColor"
+- !private "TimeZone"
+- "TweetTableViewController"
+- "UINavigationItem"
 - "Bool"
-- "AssignmentPrecedence"
+- "NSForegroundColorAttributeName"
+- !private "UITableViewAutomaticDimension"
+- "CGFloat"
+- !private "Alamofire"
+- !private "kWazzuTwitterPassword"
+- !private "NSMutableAttributedString"
+- !private "UIKit"
+- "Tweet"
+- "Dictionary"
+- "UIFont"
+- !private "NSDate"
+- "String"
+- "UITableView"
+- "UIBarButtonItem"
+- !private "SSKeychain"
+- !private "!"
+- "DateFormatter"
+- "UIFontTextStyle"
+- "Int"
+- "AnyObject"
+- "BooleanLiteralType"
+- !private "NSString"
+- !private "NSMutableParagraphStyle"
+- "StringLiteralType"
+- "AppDelegate"
+- !private "Notification"
+- !private "&&"
+- !private "UIAlertController"
+- "CastingPrecedence"
+- "Array"
+- !private "=="
 - !private "~="
+- "AssignmentPrecedence"
+- "UIApplication"
+- !private "kAddTweetNotification"
+- !private "NSParagraphStyle"
+- "UITableViewCellEditingStyle"
+- "IndexPath"
+- "NSFontAttributeName"
+- !private "Void"
+- !private "!="
+- !private "NotificationCenter"
+- !private "NSParagraphStyleAttributeName"
+- !private "NSLog"
+- !private "Date"
+- !private "+"
+- "NSAttributedString"
+- !private "UIAlertAction"
+- "UITableViewController"
+- !private "UITextField"
 depends-member:
 - !private ["Ps9AnyObject", "Alamofire"]
 - !private ["Ps9AnyObject", "ComparisonResult"]
@@ -91,6 +94,7 @@ depends-member:
 - !private ["Ps9AnyObject", "NSAttributedString"]
 - ["Ps9AnyObject", "NSFontAttributeName"]
 - ["Ps9AnyObject", "NSForegroundColorAttributeName"]
+- !private ["Ps9AnyObject", "NSLog"]
 - !private ["Ps9AnyObject", "NSMutableAttributedString"]
 - !private ["Ps9AnyObject", "NSParagraphStyle"]
 - !private ["Ps9AnyObject", "NSParagraphStyleAttributeName"]
@@ -172,6 +176,7 @@ depends-member:
 - ["Ps9AnyObject", "tweetBodyAttributes.storage"]
 - ["Ps9AnyObject", "tweetDateFormatter"]
 - ["Ps9AnyObject", "tweetDateFormatter.storage"]
+- ["Ps9AnyObject", "tweetTableView"]
 - ["Ps9AnyObject", "tweetTitleAttributes"]
 - !private ["Ps9AnyObject", "tweets"]
 - !private ["Ps9AnyObject", "username"]
@@ -255,6 +260,7 @@ depends-member:
 - !private ["Ps7CVarArg", "NSAttributedString"]
 - ["Ps7CVarArg", "NSFontAttributeName"]
 - ["Ps7CVarArg", "NSForegroundColorAttributeName"]
+- !private ["Ps7CVarArg", "NSLog"]
 - !private ["Ps7CVarArg", "NSMutableAttributedString"]
 - !private ["Ps7CVarArg", "NSParagraphStyle"]
 - !private ["Ps7CVarArg", "NSParagraphStyleAttributeName"]
@@ -344,6 +350,7 @@ depends-member:
 - ["Ps7CVarArg", "tweetBodyAttributes.storage"]
 - ["Ps7CVarArg", "tweetDateFormatter"]
 - ["Ps7CVarArg", "tweetDateFormatter.storage"]
+- ["Ps7CVarArg", "tweetTableView"]
 - ["Ps7CVarArg", "tweetTitleAttributes"]
 - !private ["Ps7CVarArg", "tweets"]
 - !private ["Ps7CVarArg", "username"]
@@ -389,6 +396,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "NSAttributedString"]
 - ["Ps28CustomDebugStringConvertible", "NSFontAttributeName"]
 - ["Ps28CustomDebugStringConvertible", "NSForegroundColorAttributeName"]
+- !private ["Ps28CustomDebugStringConvertible", "NSLog"]
 - !private ["Ps28CustomDebugStringConvertible", "NSMutableAttributedString"]
 - !private ["Ps28CustomDebugStringConvertible", "NSParagraphStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "NSParagraphStyleAttributeName"]
@@ -483,6 +491,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "tweetBodyAttributes.storage"]
 - ["Ps28CustomDebugStringConvertible", "tweetDateFormatter"]
 - ["Ps28CustomDebugStringConvertible", "tweetDateFormatter.storage"]
+- ["Ps28CustomDebugStringConvertible", "tweetTableView"]
 - ["Ps28CustomDebugStringConvertible", "tweetTitleAttributes"]
 - !private ["Ps28CustomDebugStringConvertible", "tweets"]
 - !private ["Ps28CustomDebugStringConvertible", "username"]
@@ -526,6 +535,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "NSAttributedString"]
 - ["Ps23CustomStringConvertible", "NSFontAttributeName"]
 - ["Ps23CustomStringConvertible", "NSForegroundColorAttributeName"]
+- !private ["Ps23CustomStringConvertible", "NSLog"]
 - !private ["Ps23CustomStringConvertible", "NSMutableAttributedString"]
 - !private ["Ps23CustomStringConvertible", "NSParagraphStyle"]
 - !private ["Ps23CustomStringConvertible", "NSParagraphStyleAttributeName"]
@@ -622,6 +632,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "tweetBodyAttributes.storage"]
 - ["Ps23CustomStringConvertible", "tweetDateFormatter"]
 - ["Ps23CustomStringConvertible", "tweetDateFormatter.storage"]
+- ["Ps23CustomStringConvertible", "tweetTableView"]
 - ["Ps23CustomStringConvertible", "tweetTitleAttributes"]
 - !private ["Ps23CustomStringConvertible", "tweets"]
 - !private ["Ps23CustomStringConvertible", "username"]
@@ -665,6 +676,7 @@ depends-member:
 - !private ["Ps9Equatable", "NSAttributedString"]
 - ["Ps9Equatable", "NSFontAttributeName"]
 - ["Ps9Equatable", "NSForegroundColorAttributeName"]
+- !private ["Ps9Equatable", "NSLog"]
 - !private ["Ps9Equatable", "NSMutableAttributedString"]
 - !private ["Ps9Equatable", "NSParagraphStyle"]
 - !private ["Ps9Equatable", "NSParagraphStyleAttributeName"]
@@ -763,6 +775,7 @@ depends-member:
 - ["Ps9Equatable", "tweetBodyAttributes.storage"]
 - ["Ps9Equatable", "tweetDateFormatter"]
 - ["Ps9Equatable", "tweetDateFormatter.storage"]
+- ["Ps9Equatable", "tweetTableView"]
 - ["Ps9Equatable", "tweetTitleAttributes"]
 - !private ["Ps9Equatable", "tweet_id"]
 - !private ["Ps9Equatable", "tweets"]
@@ -817,6 +830,7 @@ depends-member:
 - !private ["Ps8Hashable", "NSAttributedString"]
 - ["Ps8Hashable", "NSFontAttributeName"]
 - ["Ps8Hashable", "NSForegroundColorAttributeName"]
+- !private ["Ps8Hashable", "NSLog"]
 - !private ["Ps8Hashable", "NSMutableAttributedString"]
 - !private ["Ps8Hashable", "NSParagraphStyle"]
 - !private ["Ps8Hashable", "NSParagraphStyleAttributeName"]
@@ -915,6 +929,7 @@ depends-member:
 - ["Ps8Hashable", "tweetBodyAttributes.storage"]
 - ["Ps8Hashable", "tweetDateFormatter"]
 - ["Ps8Hashable", "tweetDateFormatter.storage"]
+- ["Ps8Hashable", "tweetTableView"]
 - ["Ps8Hashable", "tweetTitleAttributes"]
 - !private ["Ps8Hashable", "tweet_id"]
 - !private ["Ps8Hashable", "tweets"]
@@ -1010,6 +1025,7 @@ depends-member:
 - !private ["PSo8NSCoding", "NSAttributedString"]
 - ["PSo8NSCoding", "NSFontAttributeName"]
 - ["PSo8NSCoding", "NSForegroundColorAttributeName"]
+- !private ["PSo8NSCoding", "NSLog"]
 - !private ["PSo8NSCoding", "NSMutableAttributedString"]
 - !private ["PSo8NSCoding", "NSParagraphStyle"]
 - !private ["PSo8NSCoding", "NSParagraphStyleAttributeName"]
@@ -1082,6 +1098,7 @@ depends-member:
 - ["PSo8NSCoding", "tweetBodyAttributes.storage"]
 - ["PSo8NSCoding", "tweetDateFormatter"]
 - ["PSo8NSCoding", "tweetDateFormatter.storage"]
+- ["PSo8NSCoding", "tweetTableView"]
 - ["PSo8NSCoding", "tweetTitleAttributes"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
@@ -1110,6 +1127,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "NSAttributedString"]
 - ["PSo26NSExtensionRequestHandling", "NSFontAttributeName"]
 - ["PSo26NSExtensionRequestHandling", "NSForegroundColorAttributeName"]
+- !private ["PSo26NSExtensionRequestHandling", "NSLog"]
 - !private ["PSo26NSExtensionRequestHandling", "NSMutableAttributedString"]
 - !private ["PSo26NSExtensionRequestHandling", "NSParagraphStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "NSParagraphStyleAttributeName"]
@@ -1154,6 +1172,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "tweetBodyAttributes.storage"]
 - ["PSo26NSExtensionRequestHandling", "tweetDateFormatter"]
 - ["PSo26NSExtensionRequestHandling", "tweetDateFormatter.storage"]
+- ["PSo26NSExtensionRequestHandling", "tweetTableView"]
 - ["PSo26NSExtensionRequestHandling", "tweetTitleAttributes"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
@@ -1185,6 +1204,7 @@ depends-member:
 - !private ["CSo8NSObject", "NSDate"]
 - ["CSo8NSObject", "NSFontAttributeName"]
 - ["CSo8NSObject", "NSForegroundColorAttributeName"]
+- !private ["CSo8NSObject", "NSLog"]
 - !private ["CSo8NSObject", "NSMutableAttributedString"]
 - !private ["CSo8NSObject", "NSMutableParagraphStyle"]
 - !private ["CSo8NSObject", "NSParagraphStyle"]
@@ -1204,6 +1224,7 @@ depends-member:
 - ["CSo8NSObject", "UIFont"]
 - ["CSo8NSObject", "UIFontTextStyle"]
 - !private ["CSo8NSObject", "UIKit"]
+- ["CSo8NSObject", "UINavigationItem"]
 - ["CSo8NSObject", "UITableView"]
 - !private ["CSo8NSObject", "UITableViewAutomaticDimension"]
 - ["CSo8NSObject", "UITableViewCell"]
@@ -1274,6 +1295,7 @@ depends-member:
 - ["CSo8NSObject", "tweetBodyAttributes.storage"]
 - ["CSo8NSObject", "tweetDateFormatter"]
 - ["CSo8NSObject", "tweetDateFormatter.storage"]
+- ["CSo8NSObject", "tweetTableView"]
 - ["CSo8NSObject", "tweetTitleAttributes"]
 - !private ["CSo8NSObject", "tweets"]
 - !private ["CSo8NSObject", "username"]
@@ -1284,6 +1306,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "NSAttributedString"]
 - ["PSo16NSObjectProtocol", "NSFontAttributeName"]
 - ["PSo16NSObjectProtocol", "NSForegroundColorAttributeName"]
+- !private ["PSo16NSObjectProtocol", "NSLog"]
 - !private ["PSo16NSObjectProtocol", "NSMutableAttributedString"]
 - !private ["PSo16NSObjectProtocol", "NSParagraphStyle"]
 - !private ["PSo16NSObjectProtocol", "NSParagraphStyleAttributeName"]
@@ -1365,6 +1388,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "tweetBodyAttributes.storage"]
 - ["PSo16NSObjectProtocol", "tweetDateFormatter"]
 - ["PSo16NSObjectProtocol", "tweetDateFormatter.storage"]
+- ["PSo16NSObjectProtocol", "tweetTableView"]
 - ["PSo16NSObjectProtocol", "tweetTitleAttributes"]
 - !private ["PSo16NSObjectProtocol", "tweets"]
 - !private ["PSo16NSObjectProtocol", "username"]
@@ -1531,6 +1555,7 @@ depends-member:
 - !private ["C12WSUV_Twitter24TweetTableViewController", "NSDate"]
 - ["C12WSUV_Twitter24TweetTableViewController", "NSFontAttributeName"]
 - ["C12WSUV_Twitter24TweetTableViewController", "NSForegroundColorAttributeName"]
+- !private ["C12WSUV_Twitter24TweetTableViewController", "NSLog"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "NSMutableAttributedString"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "NSMutableParagraphStyle"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "NSParagraphStyle"]
@@ -1550,6 +1575,7 @@ depends-member:
 - ["C12WSUV_Twitter24TweetTableViewController", "UIFont"]
 - ["C12WSUV_Twitter24TweetTableViewController", "UIFontTextStyle"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "UIKit"]
+- ["C12WSUV_Twitter24TweetTableViewController", "UINavigationItem"]
 - ["C12WSUV_Twitter24TweetTableViewController", "UITableView"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "UITableViewAutomaticDimension"]
 - ["C12WSUV_Twitter24TweetTableViewController", "UITableViewCell"]
@@ -1581,6 +1607,7 @@ depends-member:
 - !private ["C12WSUV_Twitter24TweetTableViewController", "tweetBodyAttributes.storage"]
 - ["C12WSUV_Twitter24TweetTableViewController", "tweetDateFormatter"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "tweetDateFormatter.storage"]
+- ["C12WSUV_Twitter24TweetTableViewController", "tweetTableView"]
 - ["C12WSUV_Twitter24TweetTableViewController", "tweetTitleAttributes"]
 - ["C12WSUV_Twitter24TweetTableViewController", "viewDidLoad"]
 - !private ["PSo29UIAccessibilityIdentification", "attributedText"]
@@ -1629,6 +1656,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "NSAttributedString"]
 - ["PSo21UIAppearanceContainer", "NSFontAttributeName"]
 - ["PSo21UIAppearanceContainer", "NSForegroundColorAttributeName"]
+- !private ["PSo21UIAppearanceContainer", "NSLog"]
 - !private ["PSo21UIAppearanceContainer", "NSMutableAttributedString"]
 - !private ["PSo21UIAppearanceContainer", "NSParagraphStyle"]
 - !private ["PSo21UIAppearanceContainer", "NSParagraphStyleAttributeName"]
@@ -1685,6 +1713,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "tweetBodyAttributes.storage"]
 - ["PSo21UIAppearanceContainer", "tweetDateFormatter"]
 - ["PSo21UIAppearanceContainer", "tweetDateFormatter.storage"]
+- ["PSo21UIAppearanceContainer", "tweetTableView"]
 - ["PSo21UIAppearanceContainer", "tweetTitleAttributes"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
@@ -1705,6 +1734,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "NSAttributedString"]
 - ["PSo18UIContentContainer", "NSFontAttributeName"]
 - ["PSo18UIContentContainer", "NSForegroundColorAttributeName"]
+- !private ["PSo18UIContentContainer", "NSLog"]
 - !private ["PSo18UIContentContainer", "NSMutableAttributedString"]
 - !private ["PSo18UIContentContainer", "NSParagraphStyle"]
 - !private ["PSo18UIContentContainer", "NSParagraphStyleAttributeName"]
@@ -1749,6 +1779,7 @@ depends-member:
 - ["PSo18UIContentContainer", "tweetBodyAttributes.storage"]
 - ["PSo18UIContentContainer", "tweetDateFormatter"]
 - ["PSo18UIContentContainer", "tweetDateFormatter.storage"]
+- ["PSo18UIContentContainer", "tweetTableView"]
 - ["PSo18UIContentContainer", "tweetTitleAttributes"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
@@ -1793,6 +1824,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "NSAttributedString"]
 - ["PSo18UIFocusEnvironment", "NSFontAttributeName"]
 - ["PSo18UIFocusEnvironment", "NSForegroundColorAttributeName"]
+- !private ["PSo18UIFocusEnvironment", "NSLog"]
 - !private ["PSo18UIFocusEnvironment", "NSMutableAttributedString"]
 - !private ["PSo18UIFocusEnvironment", "NSParagraphStyle"]
 - !private ["PSo18UIFocusEnvironment", "NSParagraphStyleAttributeName"]
@@ -1849,6 +1881,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "tweetBodyAttributes.storage"]
 - ["PSo18UIFocusEnvironment", "tweetDateFormatter"]
 - ["PSo18UIFocusEnvironment", "tweetDateFormatter.storage"]
+- ["PSo18UIFocusEnvironment", "tweetTableView"]
 - ["PSo18UIFocusEnvironment", "tweetTitleAttributes"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
@@ -1893,6 +1926,7 @@ depends-member:
 - !private ["CSo11UIResponder", "NSDate"]
 - ["CSo11UIResponder", "NSFontAttributeName"]
 - ["CSo11UIResponder", "NSForegroundColorAttributeName"]
+- !private ["CSo11UIResponder", "NSLog"]
 - !private ["CSo11UIResponder", "NSMutableAttributedString"]
 - !private ["CSo11UIResponder", "NSMutableParagraphStyle"]
 - !private ["CSo11UIResponder", "NSParagraphStyle"]
@@ -1912,6 +1946,7 @@ depends-member:
 - ["CSo11UIResponder", "UIFont"]
 - ["CSo11UIResponder", "UIFontTextStyle"]
 - !private ["CSo11UIResponder", "UIKit"]
+- ["CSo11UIResponder", "UINavigationItem"]
 - ["CSo11UIResponder", "UITableView"]
 - !private ["CSo11UIResponder", "UITableViewAutomaticDimension"]
 - ["CSo11UIResponder", "UITableViewCell"]
@@ -1961,6 +1996,7 @@ depends-member:
 - ["CSo11UIResponder", "tweetBodyAttributes.storage"]
 - ["CSo11UIResponder", "tweetDateFormatter"]
 - ["CSo11UIResponder", "tweetDateFormatter.storage"]
+- ["CSo11UIResponder", "tweetTableView"]
 - ["CSo11UIResponder", "tweetTitleAttributes"]
 - !private ["CSo11UIResponder", "tweets"]
 - !private ["CSo11UIResponder", "username"]
@@ -1971,6 +2007,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "NSAttributedString"]
 - ["PSo30UIResponderStandardEditActions", "NSFontAttributeName"]
 - ["PSo30UIResponderStandardEditActions", "NSForegroundColorAttributeName"]
+- !private ["PSo30UIResponderStandardEditActions", "NSLog"]
 - !private ["PSo30UIResponderStandardEditActions", "NSMutableAttributedString"]
 - !private ["PSo30UIResponderStandardEditActions", "NSParagraphStyle"]
 - !private ["PSo30UIResponderStandardEditActions", "NSParagraphStyleAttributeName"]
@@ -2030,6 +2067,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "tweetBodyAttributes.storage"]
 - ["PSo30UIResponderStandardEditActions", "tweetDateFormatter"]
 - ["PSo30UIResponderStandardEditActions", "tweetDateFormatter.storage"]
+- ["PSo30UIResponderStandardEditActions", "tweetTableView"]
 - ["PSo30UIResponderStandardEditActions", "tweetTitleAttributes"]
 - !private ["PSo30UIResponderStandardEditActions", "tweets"]
 - !private ["PSo30UIResponderStandardEditActions", "username"]
@@ -2044,6 +2082,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "NSAttributedString"]
 - ["PSo20UIScrollViewDelegate", "NSFontAttributeName"]
 - ["PSo20UIScrollViewDelegate", "NSForegroundColorAttributeName"]
+- !private ["PSo20UIScrollViewDelegate", "NSLog"]
 - !private ["PSo20UIScrollViewDelegate", "NSMutableAttributedString"]
 - !private ["PSo20UIScrollViewDelegate", "NSParagraphStyle"]
 - !private ["PSo20UIScrollViewDelegate", "NSParagraphStyleAttributeName"]
@@ -2084,6 +2123,7 @@ depends-member:
 - ["PSo20UIScrollViewDelegate", "tweetBodyAttributes.storage"]
 - ["PSo20UIScrollViewDelegate", "tweetDateFormatter"]
 - ["PSo20UIScrollViewDelegate", "tweetDateFormatter.storage"]
+- ["PSo20UIScrollViewDelegate", "tweetTableView"]
 - ["PSo20UIScrollViewDelegate", "tweetTitleAttributes"]
 - ["PSo20UIScrollViewDelegate", "viewDidLoad"]
 - ["PSo20UIScrollViewDelegate", ""]
@@ -2093,6 +2133,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "NSAttributedString"]
 - ["PSo16UIStateRestoring", "NSFontAttributeName"]
 - ["PSo16UIStateRestoring", "NSForegroundColorAttributeName"]
+- !private ["PSo16UIStateRestoring", "NSLog"]
 - !private ["PSo16UIStateRestoring", "NSMutableAttributedString"]
 - !private ["PSo16UIStateRestoring", "NSParagraphStyle"]
 - !private ["PSo16UIStateRestoring", "NSParagraphStyleAttributeName"]
@@ -2137,6 +2178,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "tweetBodyAttributes.storage"]
 - ["PSo16UIStateRestoring", "tweetDateFormatter"]
 - ["PSo16UIStateRestoring", "tweetDateFormatter.storage"]
+- ["PSo16UIStateRestoring", "tweetTableView"]
 - ["PSo16UIStateRestoring", "tweetTitleAttributes"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
@@ -2163,6 +2205,7 @@ depends-member:
 - !private ["CSo21UITableViewController", "NSDate"]
 - ["CSo21UITableViewController", "NSFontAttributeName"]
 - ["CSo21UITableViewController", "NSForegroundColorAttributeName"]
+- !private ["CSo21UITableViewController", "NSLog"]
 - !private ["CSo21UITableViewController", "NSMutableAttributedString"]
 - !private ["CSo21UITableViewController", "NSMutableParagraphStyle"]
 - !private ["CSo21UITableViewController", "NSParagraphStyle"]
@@ -2182,6 +2225,7 @@ depends-member:
 - ["CSo21UITableViewController", "UIFont"]
 - ["CSo21UITableViewController", "UIFontTextStyle"]
 - !private ["CSo21UITableViewController", "UIKit"]
+- ["CSo21UITableViewController", "UINavigationItem"]
 - ["CSo21UITableViewController", "UITableView"]
 - !private ["CSo21UITableViewController", "UITableViewAutomaticDimension"]
 - ["CSo21UITableViewController", "UITableViewCell"]
@@ -2213,6 +2257,7 @@ depends-member:
 - ["CSo21UITableViewController", "tweetBodyAttributes.storage"]
 - ["CSo21UITableViewController", "tweetDateFormatter"]
 - ["CSo21UITableViewController", "tweetDateFormatter.storage"]
+- ["CSo21UITableViewController", "tweetTableView"]
 - ["CSo21UITableViewController", "tweetTitleAttributes"]
 - ["CSo21UITableViewController", "viewDidLoad"]
 - ["CSo21UITableViewController", ""]
@@ -2222,6 +2267,7 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "NSAttributedString"]
 - ["PSo21UITableViewDataSource", "NSFontAttributeName"]
 - ["PSo21UITableViewDataSource", "NSForegroundColorAttributeName"]
+- !private ["PSo21UITableViewDataSource", "NSLog"]
 - !private ["PSo21UITableViewDataSource", "NSMutableAttributedString"]
 - !private ["PSo21UITableViewDataSource", "NSParagraphStyle"]
 - !private ["PSo21UITableViewDataSource", "NSParagraphStyleAttributeName"]
@@ -2262,6 +2308,7 @@ depends-member:
 - ["PSo21UITableViewDataSource", "tweetBodyAttributes.storage"]
 - ["PSo21UITableViewDataSource", "tweetDateFormatter"]
 - ["PSo21UITableViewDataSource", "tweetDateFormatter.storage"]
+- ["PSo21UITableViewDataSource", "tweetTableView"]
 - ["PSo21UITableViewDataSource", "tweetTitleAttributes"]
 - ["PSo21UITableViewDataSource", "viewDidLoad"]
 - ["PSo21UITableViewDataSource", ""]
@@ -2271,6 +2318,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "NSAttributedString"]
 - ["PSo19UITableViewDelegate", "NSFontAttributeName"]
 - ["PSo19UITableViewDelegate", "NSForegroundColorAttributeName"]
+- !private ["PSo19UITableViewDelegate", "NSLog"]
 - !private ["PSo19UITableViewDelegate", "NSMutableAttributedString"]
 - !private ["PSo19UITableViewDelegate", "NSParagraphStyle"]
 - !private ["PSo19UITableViewDelegate", "NSParagraphStyleAttributeName"]
@@ -2311,6 +2359,7 @@ depends-member:
 - ["PSo19UITableViewDelegate", "tweetBodyAttributes.storage"]
 - ["PSo19UITableViewDelegate", "tweetDateFormatter"]
 - ["PSo19UITableViewDelegate", "tweetDateFormatter.storage"]
+- ["PSo19UITableViewDelegate", "tweetTableView"]
 - ["PSo19UITableViewDelegate", "tweetTitleAttributes"]
 - ["PSo19UITableViewDelegate", "viewDidLoad"]
 - ["PSo19UITableViewDelegate", ""]
@@ -2333,6 +2382,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "NSAttributedString"]
 - ["PSo18UITraitEnvironment", "NSFontAttributeName"]
 - ["PSo18UITraitEnvironment", "NSForegroundColorAttributeName"]
+- !private ["PSo18UITraitEnvironment", "NSLog"]
 - !private ["PSo18UITraitEnvironment", "NSMutableAttributedString"]
 - !private ["PSo18UITraitEnvironment", "NSParagraphStyle"]
 - !private ["PSo18UITraitEnvironment", "NSParagraphStyleAttributeName"]
@@ -2389,6 +2439,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "tweetBodyAttributes.storage"]
 - ["PSo18UITraitEnvironment", "tweetDateFormatter"]
 - ["PSo18UITraitEnvironment", "tweetDateFormatter.storage"]
+- ["PSo18UITraitEnvironment", "tweetTableView"]
 - ["PSo18UITraitEnvironment", "tweetTitleAttributes"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
@@ -2418,6 +2469,7 @@ depends-member:
 - !private ["CSo16UIViewController", "NSDate"]
 - ["CSo16UIViewController", "NSFontAttributeName"]
 - ["CSo16UIViewController", "NSForegroundColorAttributeName"]
+- !private ["CSo16UIViewController", "NSLog"]
 - !private ["CSo16UIViewController", "NSMutableAttributedString"]
 - !private ["CSo16UIViewController", "NSMutableParagraphStyle"]
 - !private ["CSo16UIViewController", "NSParagraphStyle"]
@@ -2437,6 +2489,7 @@ depends-member:
 - ["CSo16UIViewController", "UIFont"]
 - ["CSo16UIViewController", "UIFontTextStyle"]
 - !private ["CSo16UIViewController", "UIKit"]
+- ["CSo16UIViewController", "UINavigationItem"]
 - ["CSo16UIViewController", "UITableView"]
 - !private ["CSo16UIViewController", "UITableViewAutomaticDimension"]
 - ["CSo16UIViewController", "UITableViewCell"]
@@ -2471,6 +2524,7 @@ depends-member:
 - ["CSo16UIViewController", "tweetBodyAttributes.storage"]
 - ["CSo16UIViewController", "tweetDateFormatter"]
 - ["CSo16UIViewController", "tweetDateFormatter.storage"]
+- ["CSo16UIViewController", "tweetTableView"]
 - ["CSo16UIViewController", "tweetTitleAttributes"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - !private ["Su", "deinit"]
@@ -2534,6 +2588,7 @@ depends-member:
 - !private ["Ps9_Hashable", "NSAttributedString"]
 - ["Ps9_Hashable", "NSFontAttributeName"]
 - ["Ps9_Hashable", "NSForegroundColorAttributeName"]
+- !private ["Ps9_Hashable", "NSLog"]
 - !private ["Ps9_Hashable", "NSMutableAttributedString"]
 - !private ["Ps9_Hashable", "NSParagraphStyle"]
 - !private ["Ps9_Hashable", "NSParagraphStyleAttributeName"]
@@ -2632,6 +2687,7 @@ depends-member:
 - ["Ps9_Hashable", "tweetBodyAttributes.storage"]
 - ["Ps9_Hashable", "tweetDateFormatter"]
 - ["Ps9_Hashable", "tweetDateFormatter.storage"]
+- ["Ps9_Hashable", "tweetTableView"]
 - ["Ps9_Hashable", "tweetTitleAttributes"]
 - !private ["Ps9_Hashable", "tweet_id"]
 - !private ["Ps9_Hashable", "tweets"]
@@ -2876,4 +2932,4 @@ depends-external:
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire.h"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "b9a85de43cdfdee039fb8d4290ad3685"
+interface-hash: "bbd45d1b1488f356b7713c102377c7c7"

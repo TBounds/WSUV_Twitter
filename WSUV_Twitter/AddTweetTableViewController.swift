@@ -82,13 +82,14 @@ class AddTweetTableViewController: UITableViewController, UITextViewDelegate {
             .responseJSON(completionHandler: {response in
                 switch(response.result) {
                 case .success(let JSON):
-                    NSLog("Success")
+                    NSLog("\(JSON)")
                     
                     self.dismiss(animated: true, completion: {
                         NotificationCenter.default.post(name: kAddTweetNotification, object: nil)
                     })
                     
                 case .failure(let error):
+                    NSLog("\(error)")
                     var errMessage = "Unknown Error"
                     switch(response.response!.statusCode) {
                     case 500:

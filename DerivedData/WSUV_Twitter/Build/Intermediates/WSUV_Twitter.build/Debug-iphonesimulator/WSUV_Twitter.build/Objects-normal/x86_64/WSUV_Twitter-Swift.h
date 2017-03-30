@@ -168,12 +168,14 @@ SWIFT_CLASS("_TtC12WSUV_Twitter11AppDelegate")
 @class UITableView;
 @class UITableViewCell;
 @class UIBarButtonItem;
+@class UINavigationItem;
 
 SWIFT_CLASS("_TtC12WSUV_Twitter24TweetTableViewController")
 @interface TweetTableViewController : UITableViewController
 @property (nonatomic, readonly, copy) NSString * _Nonnull kBaseURLString;
 @property (nonatomic, readonly, strong) AppDelegate * _Nonnull appDelegate;
 @property (nonatomic, weak) IBOutlet UIBarButtonItem * _Null_unspecified addTweetButton;
+@property (nonatomic, weak) IBOutlet UINavigationItem * _Null_unspecified tweetTableView;
 - (IBAction)manageAccount:(id _Nonnull)sender;
 - (void)loginUserWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password;
 - (void)logoutWithUsername:(NSString * _Nonnull)username password:(NSString * _Nonnull)password;

@@ -72,6 +72,7 @@
                     </refreshControl>
                     <connections>
                         <outlet property="addTweetButton" destination="If9-mP-c1C" id="tvv-DD-U6k"/>
+                        <outlet property="tweetTableView" destination="X2P-wg-JG4" id="trM-f5-EnJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MLS-tE-62k" userLabel="First Responder" sceneMemberID="firstResponder"/>
