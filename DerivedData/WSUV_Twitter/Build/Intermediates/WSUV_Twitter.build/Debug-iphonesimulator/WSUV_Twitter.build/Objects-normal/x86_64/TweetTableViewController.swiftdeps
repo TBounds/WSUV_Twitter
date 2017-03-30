@@ -6,82 +6,82 @@ provides-nominal:
 provides-member:
 - ["C12WSUV_Twitter24TweetTableViewController", ""]
 provides-dynamic-lookup:
-- "resetPassword"
-- "logout"
-- "tweetDateFormatter"
 - "didReceiveMemoryWarning"
-- "manageAccount"
-- "registerUser"
-- "loginUser"
-- "appDelegate"
-- "tweetBodyAttributes"
-- "viewDidLoad"
 - "numberOfSections"
+- "registerUser"
+- "manageAccount"
+- "tweetBodyAttributes"
+- "appDelegate"
+- "tweetDateFormatter"
 - "tweetTitleAttributes"
 - "refreshTweets"
+- "loginUser"
+- "logout"
 - "tableView"
 - "tableView"
 - "tableView"
 - "tableView"
 - "tableView"
 - "tableView"
-- "kBaseURLString"
+- "viewDidLoad"
 - "addTweetButton"
+- "kBaseURLString"
 depends-top-level:
-- !private "~="
-- "AppDelegate"
-- !private "ComparisonResult"
-- !private "=="
-- !private "TimeZone"
-- "StringLiteralType"
-- !private "Date"
-- !private "SSKeychain"
-- !private "NotificationCenter"
-- "UIApplication"
-- "BooleanLiteralType"
 - !private "UIAlertController"
-- !private "Notification"
-- !private "UIAlertAction"
-- !private "kAddTweetNotification"
-- "Dictionary"
-- !private "kWazzuTwitterPassword"
-- "CGFloat"
-- !private "UITextField"
-- "Tweet"
-- "IndexPath"
-- !private "&&"
-- !private "kWazzuTwitterSessionToken"
-- "NSForegroundColorAttributeName"
-- "UITableViewController"
-- "UIColor"
-- !private "!="
-- !private "!"
+- "Bool"
+- !private "NSMutableAttributedString"
 - "DateFormatter"
 - !private "UITableViewAutomaticDimension"
+- "StringLiteralType"
+- "AppDelegate"
 - "UIFontTextStyle"
-- !private "NSMutableAttributedString"
-- "TweetTableViewController"
 - "NSAttributedString"
-- "UITableViewCell"
-- !private "Alamofire"
-- "NSFontAttributeName"
+- !private "NSString"
+- "BooleanLiteralType"
+- "AssignmentPrecedence"
+- !private "Void"
 - "UIFont"
 - !private "NSMutableParagraphStyle"
-- "String"
-- !private "UIKit"
 - !private "+"
-- "UIBarButtonItem"
-- "UITableView"
-- !private "NSParagraphStyleAttributeName"
-- !private "NSString"
-- "AnyObject"
-- "CastingPrecedence"
-- !private "Void"
-- !private "NSDate"
-- !private "NSParagraphStyle"
+- "NSFontAttributeName"
+- "UIApplication"
+- "Tweet"
 - "Int"
-- "AssignmentPrecedence"
-- "Bool"
+- "CGFloat"
+- !private "NSParagraphStyle"
+- !private "kWazzuTwitterPassword"
+- "UIBarButtonItem"
+- !private "UIAlertAction"
+- "AnyObject"
+- "UITableView"
+- !private "Date"
+- "UITableViewCell"
+- !private "kWazzuTwitterSessionToken"
+- "Dictionary"
+- !private "&&"
+- "TweetTableViewController"
+- !private "NSLog"
+- !private "!="
+- !private "TimeZone"
+- !private "kAddTweetNotification"
+- !private "UIKit"
+- !private "NSParagraphStyleAttributeName"
+- "String"
+- !private "ComparisonResult"
+- !private "Alamofire"
+- !private "NotificationCenter"
+- !private "!"
+- "UIColor"
+- "NSForegroundColorAttributeName"
+- "UITableViewController"
+- !private "Notification"
+- !private "UITextField"
+- "IndexPath"
+- "CastingPrecedence"
+- !private "SSKeychain"
+- !private "NSDate"
+- !private "=="
+- !private "~="
 depends-member:
 - !private ["Ps9AnyObject", "Alamofire"]
 - !private ["Ps9AnyObject", "ComparisonResult"]
@@ -89,6 +89,7 @@ depends-member:
 - !private ["Ps9AnyObject", "NSAttributedString"]
 - ["Ps9AnyObject", "NSFontAttributeName"]
 - ["Ps9AnyObject", "NSForegroundColorAttributeName"]
+- !private ["Ps9AnyObject", "NSLog"]
 - !private ["Ps9AnyObject", "NSMutableAttributedString"]
 - !private ["Ps9AnyObject", "NSParagraphStyle"]
 - !private ["Ps9AnyObject", "NSParagraphStyleAttributeName"]
@@ -151,7 +152,6 @@ depends-member:
 - ["Ps9AnyObject", "refreshTweets"]
 - ["Ps9AnyObject", "registerUser"]
 - !private ["Ps9AnyObject", "reloadData"]
-- ["Ps9AnyObject", "resetPassword"]
 - !private ["Ps9AnyObject", "responseJSON"]
 - !private ["Ps9AnyObject", "setPassword"]
 - ["Ps9AnyObject", "shared"]
@@ -244,6 +244,7 @@ depends-member:
 - !private ["Ps7CVarArg", "NSAttributedString"]
 - ["Ps7CVarArg", "NSFontAttributeName"]
 - ["Ps7CVarArg", "NSForegroundColorAttributeName"]
+- !private ["Ps7CVarArg", "NSLog"]
 - !private ["Ps7CVarArg", "NSMutableAttributedString"]
 - !private ["Ps7CVarArg", "NSParagraphStyle"]
 - !private ["Ps7CVarArg", "NSParagraphStyleAttributeName"]
@@ -312,7 +313,6 @@ depends-member:
 - ["Ps7CVarArg", "refreshTweets"]
 - ["Ps7CVarArg", "registerUser"]
 - !private ["Ps7CVarArg", "reloadData"]
-- ["Ps7CVarArg", "resetPassword"]
 - !private ["Ps7CVarArg", "setPassword"]
 - ["Ps7CVarArg", "shared"]
 - !private ["Ps7CVarArg", "sorted"]
@@ -373,6 +373,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "NSAttributedString"]
 - ["Ps28CustomDebugStringConvertible", "NSFontAttributeName"]
 - ["Ps28CustomDebugStringConvertible", "NSForegroundColorAttributeName"]
+- !private ["Ps28CustomDebugStringConvertible", "NSLog"]
 - !private ["Ps28CustomDebugStringConvertible", "NSMutableAttributedString"]
 - !private ["Ps28CustomDebugStringConvertible", "NSParagraphStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "NSParagraphStyleAttributeName"]
@@ -441,7 +442,6 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "refreshTweets"]
 - ["Ps28CustomDebugStringConvertible", "registerUser"]
 - !private ["Ps28CustomDebugStringConvertible", "reloadData"]
-- ["Ps28CustomDebugStringConvertible", "resetPassword"]
 - !private ["Ps28CustomDebugStringConvertible", "response"]
 - !private ["Ps28CustomDebugStringConvertible", "responseJSON"]
 - !private ["Ps28CustomDebugStringConvertible", "result"]
@@ -505,6 +505,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "NSAttributedString"]
 - ["Ps23CustomStringConvertible", "NSFontAttributeName"]
 - ["Ps23CustomStringConvertible", "NSForegroundColorAttributeName"]
+- !private ["Ps23CustomStringConvertible", "NSLog"]
 - !private ["Ps23CustomStringConvertible", "NSMutableAttributedString"]
 - !private ["Ps23CustomStringConvertible", "NSParagraphStyle"]
 - !private ["Ps23CustomStringConvertible", "NSParagraphStyleAttributeName"]
@@ -575,7 +576,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "refreshTweets"]
 - ["Ps23CustomStringConvertible", "registerUser"]
 - !private ["Ps23CustomStringConvertible", "reloadData"]
-- ["Ps23CustomStringConvertible", "resetPassword"]
 - !private ["Ps23CustomStringConvertible", "response"]
 - !private ["Ps23CustomStringConvertible", "responseJSON"]
 - !private ["Ps23CustomStringConvertible", "result"]
@@ -642,6 +642,7 @@ depends-member:
 - !private ["Ps9Equatable", "NSAttributedString"]
 - ["Ps9Equatable", "NSFontAttributeName"]
 - ["Ps9Equatable", "NSForegroundColorAttributeName"]
+- !private ["Ps9Equatable", "NSLog"]
 - !private ["Ps9Equatable", "NSMutableAttributedString"]
 - !private ["Ps9Equatable", "NSParagraphStyle"]
 - !private ["Ps9Equatable", "NSParagraphStyleAttributeName"]
@@ -718,7 +719,6 @@ depends-member:
 - ["Ps9Equatable", "refreshTweets"]
 - ["Ps9Equatable", "registerUser"]
 - !private ["Ps9Equatable", "reloadData"]
-- ["Ps9Equatable", "resetPassword"]
 - !private ["Ps9Equatable", "row"]
 - !private ["Ps9Equatable", "setPassword"]
 - ["Ps9Equatable", "shared"]
@@ -789,6 +789,7 @@ depends-member:
 - !private ["Ps8Hashable", "NSAttributedString"]
 - ["Ps8Hashable", "NSFontAttributeName"]
 - ["Ps8Hashable", "NSForegroundColorAttributeName"]
+- !private ["Ps8Hashable", "NSLog"]
 - !private ["Ps8Hashable", "NSMutableAttributedString"]
 - !private ["Ps8Hashable", "NSParagraphStyle"]
 - !private ["Ps8Hashable", "NSParagraphStyleAttributeName"]
@@ -865,7 +866,6 @@ depends-member:
 - ["Ps8Hashable", "refreshTweets"]
 - ["Ps8Hashable", "registerUser"]
 - !private ["Ps8Hashable", "reloadData"]
-- ["Ps8Hashable", "resetPassword"]
 - !private ["Ps8Hashable", "row"]
 - !private ["Ps8Hashable", "setPassword"]
 - ["Ps8Hashable", "shared"]
@@ -971,6 +971,7 @@ depends-member:
 - !private ["PSo8NSCoding", "NSAttributedString"]
 - ["PSo8NSCoding", "NSFontAttributeName"]
 - ["PSo8NSCoding", "NSForegroundColorAttributeName"]
+- !private ["PSo8NSCoding", "NSLog"]
 - !private ["PSo8NSCoding", "NSMutableAttributedString"]
 - !private ["PSo8NSCoding", "NSParagraphStyle"]
 - !private ["PSo8NSCoding", "NSParagraphStyleAttributeName"]
@@ -1028,7 +1029,6 @@ depends-member:
 - ["PSo8NSCoding", "refreshTweets"]
 - ["PSo8NSCoding", "registerUser"]
 - !private ["PSo8NSCoding", "reloadData"]
-- ["PSo8NSCoding", "resetPassword"]
 - !private ["PSo8NSCoding", "statusCode"]
 - !private ["PSo8NSCoding", "string"]
 - ["PSo8NSCoding", "tableView"]
@@ -1071,6 +1071,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "NSAttributedString"]
 - ["PSo26NSExtensionRequestHandling", "NSFontAttributeName"]
 - ["PSo26NSExtensionRequestHandling", "NSForegroundColorAttributeName"]
+- !private ["PSo26NSExtensionRequestHandling", "NSLog"]
 - !private ["PSo26NSExtensionRequestHandling", "NSMutableAttributedString"]
 - !private ["PSo26NSExtensionRequestHandling", "NSParagraphStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "NSParagraphStyleAttributeName"]
@@ -1107,7 +1108,6 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "refreshControl"]
 - ["PSo26NSExtensionRequestHandling", "refreshTweets"]
 - ["PSo26NSExtensionRequestHandling", "registerUser"]
-- ["PSo26NSExtensionRequestHandling", "resetPassword"]
 - ["PSo26NSExtensionRequestHandling", "tableView"]
 - !private ["PSo26NSExtensionRequestHandling", "textFields"]
 - !private ["PSo26NSExtensionRequestHandling", "title"]
@@ -1147,6 +1147,7 @@ depends-member:
 - !private ["CSo8NSObject", "NSDate"]
 - ["CSo8NSObject", "NSFontAttributeName"]
 - ["CSo8NSObject", "NSForegroundColorAttributeName"]
+- !private ["CSo8NSObject", "NSLog"]
 - !private ["CSo8NSObject", "NSMutableAttributedString"]
 - !private ["CSo8NSObject", "NSMutableParagraphStyle"]
 - !private ["CSo8NSObject", "NSParagraphStyle"]
@@ -1217,7 +1218,6 @@ depends-member:
 - ["CSo8NSObject", "refreshTweets"]
 - ["CSo8NSObject", "registerUser"]
 - !private ["CSo8NSObject", "reloadData"]
-- ["CSo8NSObject", "resetPassword"]
 - !private ["CSo8NSObject", "setPassword"]
 - ["CSo8NSObject", "shared"]
 - !private ["CSo8NSObject", "statusCode"]
@@ -1244,6 +1244,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "NSAttributedString"]
 - ["PSo16NSObjectProtocol", "NSFontAttributeName"]
 - ["PSo16NSObjectProtocol", "NSForegroundColorAttributeName"]
+- !private ["PSo16NSObjectProtocol", "NSLog"]
 - !private ["PSo16NSObjectProtocol", "NSMutableAttributedString"]
 - !private ["PSo16NSObjectProtocol", "NSParagraphStyle"]
 - !private ["PSo16NSObjectProtocol", "NSParagraphStyleAttributeName"]
@@ -1307,7 +1308,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "refreshTweets"]
 - ["PSo16NSObjectProtocol", "registerUser"]
 - !private ["PSo16NSObjectProtocol", "reloadData"]
-- ["PSo16NSObjectProtocol", "resetPassword"]
 - !private ["PSo16NSObjectProtocol", "setPassword"]
 - ["PSo16NSObjectProtocol", "shared"]
 - !private ["PSo16NSObjectProtocol", "statusCode"]
@@ -1477,6 +1477,7 @@ depends-member:
 - !private ["C12WSUV_Twitter24TweetTableViewController", "NSDate"]
 - ["C12WSUV_Twitter24TweetTableViewController", "NSFontAttributeName"]
 - ["C12WSUV_Twitter24TweetTableViewController", "NSForegroundColorAttributeName"]
+- !private ["C12WSUV_Twitter24TweetTableViewController", "NSLog"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "NSMutableAttributedString"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "NSMutableParagraphStyle"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "NSParagraphStyle"]
@@ -1519,7 +1520,6 @@ depends-member:
 - !private ["C12WSUV_Twitter24TweetTableViewController", "refreshControl"]
 - ["C12WSUV_Twitter24TweetTableViewController", "refreshTweets"]
 - ["C12WSUV_Twitter24TweetTableViewController", "registerUser"]
-- ["C12WSUV_Twitter24TweetTableViewController", "resetPassword"]
 - ["C12WSUV_Twitter24TweetTableViewController", "tableView"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "title"]
 - ["C12WSUV_Twitter24TweetTableViewController", "tweetAttributedStringMap"]
@@ -1573,6 +1573,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "NSAttributedString"]
 - ["PSo21UIAppearanceContainer", "NSFontAttributeName"]
 - ["PSo21UIAppearanceContainer", "NSForegroundColorAttributeName"]
+- !private ["PSo21UIAppearanceContainer", "NSLog"]
 - !private ["PSo21UIAppearanceContainer", "NSMutableAttributedString"]
 - !private ["PSo21UIAppearanceContainer", "NSParagraphStyle"]
 - !private ["PSo21UIAppearanceContainer", "NSParagraphStyleAttributeName"]
@@ -1618,7 +1619,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "refreshTweets"]
 - ["PSo21UIAppearanceContainer", "registerUser"]
 - !private ["PSo21UIAppearanceContainer", "reloadData"]
-- ["PSo21UIAppearanceContainer", "resetPassword"]
 - ["PSo21UIAppearanceContainer", "tableView"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - !private ["PSo21UIAppearanceContainer", "textFields"]
@@ -1649,6 +1649,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "NSAttributedString"]
 - ["PSo18UIContentContainer", "NSFontAttributeName"]
 - ["PSo18UIContentContainer", "NSForegroundColorAttributeName"]
+- !private ["PSo18UIContentContainer", "NSLog"]
 - !private ["PSo18UIContentContainer", "NSMutableAttributedString"]
 - !private ["PSo18UIContentContainer", "NSParagraphStyle"]
 - !private ["PSo18UIContentContainer", "NSParagraphStyleAttributeName"]
@@ -1685,7 +1686,6 @@ depends-member:
 - !private ["PSo18UIContentContainer", "refreshControl"]
 - ["PSo18UIContentContainer", "refreshTweets"]
 - ["PSo18UIContentContainer", "registerUser"]
-- ["PSo18UIContentContainer", "resetPassword"]
 - ["PSo18UIContentContainer", "tableView"]
 - !private ["PSo18UIContentContainer", "textFields"]
 - !private ["PSo18UIContentContainer", "title"]
@@ -1736,6 +1736,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "NSAttributedString"]
 - ["PSo18UIFocusEnvironment", "NSFontAttributeName"]
 - ["PSo18UIFocusEnvironment", "NSForegroundColorAttributeName"]
+- !private ["PSo18UIFocusEnvironment", "NSLog"]
 - !private ["PSo18UIFocusEnvironment", "NSMutableAttributedString"]
 - !private ["PSo18UIFocusEnvironment", "NSParagraphStyle"]
 - !private ["PSo18UIFocusEnvironment", "NSParagraphStyleAttributeName"]
@@ -1781,7 +1782,6 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "refreshTweets"]
 - ["PSo18UIFocusEnvironment", "registerUser"]
 - !private ["PSo18UIFocusEnvironment", "reloadData"]
-- ["PSo18UIFocusEnvironment", "resetPassword"]
 - ["PSo18UIFocusEnvironment", "tableView"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - !private ["PSo18UIFocusEnvironment", "textFields"]
@@ -1835,6 +1835,7 @@ depends-member:
 - !private ["CSo11UIResponder", "NSDate"]
 - ["CSo11UIResponder", "NSFontAttributeName"]
 - ["CSo11UIResponder", "NSForegroundColorAttributeName"]
+- !private ["CSo11UIResponder", "NSLog"]
 - !private ["CSo11UIResponder", "NSMutableAttributedString"]
 - !private ["CSo11UIResponder", "NSMutableParagraphStyle"]
 - !private ["CSo11UIResponder", "NSParagraphStyle"]
@@ -1890,7 +1891,6 @@ depends-member:
 - ["CSo11UIResponder", "refreshTweets"]
 - ["CSo11UIResponder", "registerUser"]
 - !private ["CSo11UIResponder", "reloadData"]
-- ["CSo11UIResponder", "resetPassword"]
 - ["CSo11UIResponder", "shared"]
 - ["CSo11UIResponder", "tableView"]
 - !private ["CSo11UIResponder", "text"]
@@ -1912,6 +1912,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "NSAttributedString"]
 - ["PSo30UIResponderStandardEditActions", "NSFontAttributeName"]
 - ["PSo30UIResponderStandardEditActions", "NSForegroundColorAttributeName"]
+- !private ["PSo30UIResponderStandardEditActions", "NSLog"]
 - !private ["PSo30UIResponderStandardEditActions", "NSMutableAttributedString"]
 - !private ["PSo30UIResponderStandardEditActions", "NSParagraphStyle"]
 - !private ["PSo30UIResponderStandardEditActions", "NSParagraphStyleAttributeName"]
@@ -1959,7 +1960,6 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "refreshTweets"]
 - ["PSo30UIResponderStandardEditActions", "registerUser"]
 - !private ["PSo30UIResponderStandardEditActions", "reloadData"]
-- ["PSo30UIResponderStandardEditActions", "resetPassword"]
 - ["PSo30UIResponderStandardEditActions", "shared"]
 - ["PSo30UIResponderStandardEditActions", "tableView"]
 - !private ["PSo30UIResponderStandardEditActions", "text"]
@@ -1984,6 +1984,7 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "NSAttributedString"]
 - ["PSo20UIScrollViewDelegate", "NSFontAttributeName"]
 - ["PSo20UIScrollViewDelegate", "NSForegroundColorAttributeName"]
+- !private ["PSo20UIScrollViewDelegate", "NSLog"]
 - !private ["PSo20UIScrollViewDelegate", "NSMutableAttributedString"]
 - !private ["PSo20UIScrollViewDelegate", "NSParagraphStyle"]
 - !private ["PSo20UIScrollViewDelegate", "NSParagraphStyleAttributeName"]
@@ -2017,7 +2018,6 @@ depends-member:
 - !private ["PSo20UIScrollViewDelegate", "refreshControl"]
 - ["PSo20UIScrollViewDelegate", "refreshTweets"]
 - ["PSo20UIScrollViewDelegate", "registerUser"]
-- ["PSo20UIScrollViewDelegate", "resetPassword"]
 - ["PSo20UIScrollViewDelegate", "tableView"]
 - !private ["PSo20UIScrollViewDelegate", "title"]
 - ["PSo20UIScrollViewDelegate", "tweetAttributedStringMap"]
@@ -2034,6 +2034,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "NSAttributedString"]
 - ["PSo16UIStateRestoring", "NSFontAttributeName"]
 - ["PSo16UIStateRestoring", "NSForegroundColorAttributeName"]
+- !private ["PSo16UIStateRestoring", "NSLog"]
 - !private ["PSo16UIStateRestoring", "NSMutableAttributedString"]
 - !private ["PSo16UIStateRestoring", "NSParagraphStyle"]
 - !private ["PSo16UIStateRestoring", "NSParagraphStyleAttributeName"]
@@ -2070,7 +2071,6 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "refreshControl"]
 - ["PSo16UIStateRestoring", "refreshTweets"]
 - ["PSo16UIStateRestoring", "registerUser"]
-- ["PSo16UIStateRestoring", "resetPassword"]
 - ["PSo16UIStateRestoring", "tableView"]
 - !private ["PSo16UIStateRestoring", "textFields"]
 - !private ["PSo16UIStateRestoring", "title"]
@@ -2101,6 +2101,7 @@ depends-member:
 - !private ["CSo21UITableViewController", "NSDate"]
 - ["CSo21UITableViewController", "NSFontAttributeName"]
 - ["CSo21UITableViewController", "NSForegroundColorAttributeName"]
+- !private ["CSo21UITableViewController", "NSLog"]
 - !private ["CSo21UITableViewController", "NSMutableAttributedString"]
 - !private ["CSo21UITableViewController", "NSMutableParagraphStyle"]
 - !private ["CSo21UITableViewController", "NSParagraphStyle"]
@@ -2143,7 +2144,6 @@ depends-member:
 - !private ["CSo21UITableViewController", "refreshControl"]
 - ["CSo21UITableViewController", "refreshTweets"]
 - ["CSo21UITableViewController", "registerUser"]
-- ["CSo21UITableViewController", "resetPassword"]
 - ["CSo21UITableViewController", "tableView"]
 - !private ["CSo21UITableViewController", "title"]
 - ["CSo21UITableViewController", "tweetAttributedStringMap"]
@@ -2160,6 +2160,7 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "NSAttributedString"]
 - ["PSo21UITableViewDataSource", "NSFontAttributeName"]
 - ["PSo21UITableViewDataSource", "NSForegroundColorAttributeName"]
+- !private ["PSo21UITableViewDataSource", "NSLog"]
 - !private ["PSo21UITableViewDataSource", "NSMutableAttributedString"]
 - !private ["PSo21UITableViewDataSource", "NSParagraphStyle"]
 - !private ["PSo21UITableViewDataSource", "NSParagraphStyleAttributeName"]
@@ -2193,7 +2194,6 @@ depends-member:
 - !private ["PSo21UITableViewDataSource", "refreshControl"]
 - ["PSo21UITableViewDataSource", "refreshTweets"]
 - ["PSo21UITableViewDataSource", "registerUser"]
-- ["PSo21UITableViewDataSource", "resetPassword"]
 - ["PSo21UITableViewDataSource", "tableView"]
 - !private ["PSo21UITableViewDataSource", "title"]
 - ["PSo21UITableViewDataSource", "tweetAttributedStringMap"]
@@ -2210,6 +2210,7 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "NSAttributedString"]
 - ["PSo19UITableViewDelegate", "NSFontAttributeName"]
 - ["PSo19UITableViewDelegate", "NSForegroundColorAttributeName"]
+- !private ["PSo19UITableViewDelegate", "NSLog"]
 - !private ["PSo19UITableViewDelegate", "NSMutableAttributedString"]
 - !private ["PSo19UITableViewDelegate", "NSParagraphStyle"]
 - !private ["PSo19UITableViewDelegate", "NSParagraphStyleAttributeName"]
@@ -2243,7 +2244,6 @@ depends-member:
 - !private ["PSo19UITableViewDelegate", "refreshControl"]
 - ["PSo19UITableViewDelegate", "refreshTweets"]
 - ["PSo19UITableViewDelegate", "registerUser"]
-- ["PSo19UITableViewDelegate", "resetPassword"]
 - ["PSo19UITableViewDelegate", "tableView"]
 - !private ["PSo19UITableViewDelegate", "title"]
 - ["PSo19UITableViewDelegate", "tweetAttributedStringMap"]
@@ -2271,6 +2271,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "NSAttributedString"]
 - ["PSo18UITraitEnvironment", "NSFontAttributeName"]
 - ["PSo18UITraitEnvironment", "NSForegroundColorAttributeName"]
+- !private ["PSo18UITraitEnvironment", "NSLog"]
 - !private ["PSo18UITraitEnvironment", "NSMutableAttributedString"]
 - !private ["PSo18UITraitEnvironment", "NSParagraphStyle"]
 - !private ["PSo18UITraitEnvironment", "NSParagraphStyleAttributeName"]
@@ -2316,7 +2317,6 @@ depends-member:
 - ["PSo18UITraitEnvironment", "refreshTweets"]
 - ["PSo18UITraitEnvironment", "registerUser"]
 - !private ["PSo18UITraitEnvironment", "reloadData"]
-- ["PSo18UITraitEnvironment", "resetPassword"]
 - ["PSo18UITraitEnvironment", "tableView"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - !private ["PSo18UITraitEnvironment", "textFields"]
@@ -2355,6 +2355,7 @@ depends-member:
 - !private ["CSo16UIViewController", "NSDate"]
 - ["CSo16UIViewController", "NSFontAttributeName"]
 - ["CSo16UIViewController", "NSForegroundColorAttributeName"]
+- !private ["CSo16UIViewController", "NSLog"]
 - !private ["CSo16UIViewController", "NSMutableAttributedString"]
 - !private ["CSo16UIViewController", "NSMutableParagraphStyle"]
 - !private ["CSo16UIViewController", "NSParagraphStyle"]
@@ -2399,7 +2400,6 @@ depends-member:
 - !private ["CSo16UIViewController", "refreshControl"]
 - ["CSo16UIViewController", "refreshTweets"]
 - ["CSo16UIViewController", "registerUser"]
-- ["CSo16UIViewController", "resetPassword"]
 - ["CSo16UIViewController", "tableView"]
 - !private ["CSo16UIViewController", "textFields"]
 - !private ["CSo16UIViewController", "title"]
@@ -2466,6 +2466,7 @@ depends-member:
 - !private ["Ps9_Hashable", "NSAttributedString"]
 - ["Ps9_Hashable", "NSFontAttributeName"]
 - ["Ps9_Hashable", "NSForegroundColorAttributeName"]
+- !private ["Ps9_Hashable", "NSLog"]
 - !private ["Ps9_Hashable", "NSMutableAttributedString"]
 - !private ["Ps9_Hashable", "NSParagraphStyle"]
 - !private ["Ps9_Hashable", "NSParagraphStyleAttributeName"]
@@ -2542,7 +2543,6 @@ depends-member:
 - ["Ps9_Hashable", "refreshTweets"]
 - ["Ps9_Hashable", "registerUser"]
 - !private ["Ps9_Hashable", "reloadData"]
-- ["Ps9_Hashable", "resetPassword"]
 - !private ["Ps9_Hashable", "row"]
 - !private ["Ps9_Hashable", "setPassword"]
 - ["Ps9_Hashable", "shared"]
@@ -2801,4 +2801,4 @@ depends-external:
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire.h"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "b7fdfe744860d393ca04e64946469e0b"
+interface-hash: "6b0fd39e78646c88372a0410d95a7b60"

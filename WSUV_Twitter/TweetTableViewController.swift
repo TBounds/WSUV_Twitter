@@ -136,51 +136,12 @@ class TweetTableViewController: UITableViewController {
                 title: "Logout",
                 style: .default,
                 handler: { (UIAlertController) -> Void in
-                    self.logout(username: self.appDelegate.username, password: SSKeychain.password(forService: kWazzuTwitterPassword, account: self.appDelegate.username))
+                    let user = self.appDelegate.username
+                    let pass = SSKeychain.password(forService: kWazzuTwitterPassword, account: self.appDelegate.username)
+                    
+                    self.logout(username: user, password: pass!)
             }
             ))
-        }
-        
-        //---------------------------- RESET PASSWORD ------------------------------//
-        if appDelegate.username != "" {
-            manageAccountController.addAction(UIAlertAction(
-                title: "Reset Password",
-                style: .default,
-                handler: { (UIAlertAction) -> Void in
-                    
-                    let alertController = UIAlertController(title: "Reset Password", message: nil, preferredStyle: .alert)
-                    
-                    alertController.addAction(UIKit.UIAlertAction(title: "Reset Password", style: .default, handler: { _ in
-                        let usernameTextField = alertController.textFields![0]
-                        let passwordTextField = alertController.textFields![1]
-                        let newPasswordtextField = alertController.textFields![2]
-                        
-                        
-                        self.resetPassword(username: usernameTextField.text!, password: passwordTextField.text!, newPassword: newPasswordtextField.text!)
-                        
-                        
-                    }))
-                    
-                    alertController.addAction(UIKit.UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-                    alertController.addTextField { (textField : UITextField) -> Void in
-                        textField.placeholder = "Username"
-                    }
-                    
-                    alertController.addTextField { (textField : UITextField) -> Void in
-                        textField.isSecureTextEntry = true
-                        textField.placeholder = "Password"
-                    }
-                    
-                    alertController.addTextField { (textField : UITextField) -> Void in
-                        textField.isSecureTextEntry = true
-                        textField.placeholder = "New Password"
-                    }
-                    
-                    self.present(alertController, animated: true, completion: nil)
-                    
-            }
-            ))
-            
         }
         
         self.present(manageAccountController, animated: true, completion: nil)
@@ -208,8 +169,10 @@ class TweetTableViewController: UITableViewController {
                     // save username
                     self.appDelegate.username = username
                     
-                    // save session_token in keychain
+                    // save session_token and password in keychain
+                    SSKeychain.setPassword(password, forService: kWazzuTwitterPassword, account: username)
                     SSKeychain.setPassword(dict["session_token"] as! String, forService: kWazzuTwitterSessionToken, account: username)
+                    
                     
                     // enable "add tweet" button
                     self.addTweetButton.isEnabled = true
@@ -319,10 +282,6 @@ class TweetTableViewController: UITableViewController {
                     self.present(loginErrorAlertContoller, animated: true, completion: nil)
                     
                 } } )
-        
-    }
-   
-    func resetPassword(username: String, password: String, newPassword: String) {
         
     }
     
