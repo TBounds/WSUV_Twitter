@@ -11,9 +11,9 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "Void"
+- "TimeInterval"
 - "DispatchQueue"
 - !private "+"
-- "TimeInterval"
 depends-member:
 - !private ["Ps9AnyObject", "DispatchQueue"]
 - ["Ps9AnyObject", "after"]
