@@ -6,12 +6,14 @@
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "C16576B571172538D95183F9515DC5DB064EAF7F" : 9223372036854775807,
     "07758A8BCD4CEF9D20AD9865321251453B41802E" : 9223372036854775807,
+    "4BDCFB1917FD59E66874DD33F1475F1637D88CD7" : 9223372036854775807,
     "67620B5EFA902936DF04070AF595B76AB0333747" : 9223372036854775807
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E89F1848-6726-4FC0-8086-08A5A3BF655A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "C16576B571172538D95183F9515DC5DB064EAF7F" : "WSUV_Twitter\/sskeychain\/",
     "07758A8BCD4CEF9D20AD9865321251453B41802E" : "WSUV_Twitter\/",
+    "4BDCFB1917FD59E66874DD33F1475F1637D88CD7" : "WSUV_Twitter\/AlamofireNetworkActivityIndicator\/",
     "67620B5EFA902936DF04070AF595B76AB0333747" : "WSUV_Twitter\/Alamofire\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "WSUV_Twitter",
@@ -22,6 +24,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.encs.vancouver.wsu.edu:t.bounds\/WSUV_Twitter.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "07758A8BCD4CEF9D20AD9865321251453B41802E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/AlamofireNetworkActivityIndicator.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4BDCFB1917FD59E66874DD33F1475F1637D88CD7"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",

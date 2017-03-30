@@ -18,6 +18,10 @@
 		F8B2653E1E8C37B100A4594B /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B2653A1E8C37B100A4594B /* SSKeychain.m */; };
 		F8B2653F1E8C37B100A4594B /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = F8B2653C1E8C37B100A4594B /* SSKeychainQuery.m */; };
 		F8B265411E8C384900A4594B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B265401E8C384900A4594B /* Security.framework */; };
+		F8F5DA5A1E8DBA0F00B0BC24 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F5DA421E8DB53900B0BC24 /* Alamofire.framework */; };
+		F8F5DA5B1E8DBA0F00B0BC24 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F8F5DA421E8DB53900B0BC24 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F8F5DA731E8DBA8D00B0BC24 /* AlamofireNetworkActivityIndicator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F5DA701E8DBA8500B0BC24 /* AlamofireNetworkActivityIndicator.framework */; };
+		F8F5DA741E8DBA8D00B0BC24 /* AlamofireNetworkActivityIndicator.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F8F5DA701E8DBA8500B0BC24 /* AlamofireNetworkActivityIndicator.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,34 @@
 			remoteGlobalIDString = E4202FE01B667AA100C997FB;
 			remoteInfo = "Alamofire watchOS";
 		};
+		F8F5DA5C1E8DBA0F00B0BC24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8F5DA361E8DB53800B0BC24 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		F8F5DA6F1E8DBA8500B0BC24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8F5DA691E8DBA8500B0BC24 /* AlamofireNetworkActivityIndicator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CB928391C66E1A600CE5F08;
+			remoteInfo = AlamofireNetworkActivityIndicator;
+		};
+		F8F5DA711E8DBA8500B0BC24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8F5DA691E8DBA8500B0BC24 /* AlamofireNetworkActivityIndicator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CB928431C66E1A700CE5F08;
+			remoteInfo = AlamofireNetworkActivityIndicatorTests;
+		};
+		F8F5DA751E8DBA8D00B0BC24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8F5DA691E8DBA8500B0BC24 /* AlamofireNetworkActivityIndicator.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CB928381C66E1A600CE5F08;
+			remoteInfo = AlamofireNetworkActivityIndicator;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,6 +111,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F8F5DA5B1E8DBA0F00B0BC24 /* Alamofire.framework in Embed Frameworks */,
+				F8F5DA741E8DBA8D00B0BC24 /* AlamofireNetworkActivityIndicator.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +137,7 @@
 		F8B265401E8C384900A4594B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F8B265421E8C387B00A4594B /* WSUV_Twitter-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WSUV_Twitter-Bridging-Header.h"; sourceTree = "<group>"; };
 		F8F5DA361E8DB53800B0BC24 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		F8F5DA691E8DBA8500B0BC24 /* AlamofireNetworkActivityIndicator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AlamofireNetworkActivityIndicator.xcodeproj; path = AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B265411E8C384900A4594B /* Security.framework in Frameworks */,
+				F8F5DA5A1E8DBA0F00B0BC24 /* Alamofire.framework in Frameworks */,
+				F8F5DA731E8DBA8D00B0BC24 /* AlamofireNetworkActivityIndicator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +157,7 @@
 		F8387E281E81AAD600A6A5F8 = {
 			isa = PBXGroup;
 			children = (
+				F8F5DA691E8DBA8500B0BC24 /* AlamofireNetworkActivityIndicator.xcodeproj */,
 				F8F5DA361E8DB53800B0BC24 /* Alamofire.xcodeproj */,
 				F8387E331E81AAD600A6A5F8 /* WSUV_Twitter */,
 				F8387E321E81AAD600A6A5F8 /* Products */,
@@ -178,6 +216,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F8F5DA6A1E8DBA8500B0BC24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8F5DA701E8DBA8500B0BC24 /* AlamofireNetworkActivityIndicator.framework */,
+				F8F5DA721E8DBA8500B0BC24 /* AlamofireNetworkActivityIndicatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,6 +240,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				F8F5DA5D1E8DBA0F00B0BC24 /* PBXTargetDependency */,
+				F8F5DA761E8DBA8D00B0BC24 /* PBXTargetDependency */,
 			);
 			name = WSUV_Twitter;
 			productName = WSUV_Twitter;
@@ -211,6 +260,7 @@
 				TargetAttributes = {
 					F8387E301E81AAD600A6A5F8 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 266548894Y;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -231,6 +281,10 @@
 				{
 					ProductGroup = F8F5DA371E8DB53800B0BC24 /* Products */;
 					ProjectRef = F8F5DA361E8DB53800B0BC24 /* Alamofire.xcodeproj */;
+				},
+				{
+					ProductGroup = F8F5DA6A1E8DBA8500B0BC24 /* Products */;
+					ProjectRef = F8F5DA691E8DBA8500B0BC24 /* AlamofireNetworkActivityIndicator.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -290,6 +344,20 @@
 			remoteRef = F8F5DA4D1E8DB53900B0BC24 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F8F5DA701E8DBA8500B0BC24 /* AlamofireNetworkActivityIndicator.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AlamofireNetworkActivityIndicator.framework;
+			remoteRef = F8F5DA6F1E8DBA8500B0BC24 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8F5DA721E8DBA8500B0BC24 /* AlamofireNetworkActivityIndicatorTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireNetworkActivityIndicatorTests.xctest;
+			remoteRef = F8F5DA711E8DBA8500B0BC24 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -321,6 +389,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F8F5DA5D1E8DBA0F00B0BC24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Alamofire iOS";
+			targetProxy = F8F5DA5C1E8DBA0F00B0BC24 /* PBXContainerItemProxy */;
+		};
+		F8F5DA761E8DBA8D00B0BC24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AlamofireNetworkActivityIndicator;
+			targetProxy = F8F5DA751E8DBA8D00B0BC24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F8387E381E81AAD600A6A5F8 /* Main.storyboard */ = {
@@ -441,6 +522,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 266548894Y;
 				INFOPLIST_FILE = WSUV_Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.vancouver.wsu.edu.WSUV-Twitter";
@@ -457,6 +539,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 266548894Y;
 				INFOPLIST_FILE = WSUV_Twitter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.vancouver.wsu.edu.WSUV-Twitter";

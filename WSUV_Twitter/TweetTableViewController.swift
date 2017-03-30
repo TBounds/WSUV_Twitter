@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireNetworkActivityIndicator
 
 class TweetTableViewController: UITableViewController {
     
@@ -417,6 +418,8 @@ class TweetTableViewController: UITableViewController {
                     self.refreshTweets(self)
                 }
             }
+        
+        NetworkActivityIndicatorManager.shared.isEnabled = true
         
         NotificationCenter.default.post(name: kAddTweetNotification, object: nil)
     }
