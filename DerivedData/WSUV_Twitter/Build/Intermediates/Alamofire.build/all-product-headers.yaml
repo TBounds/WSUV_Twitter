@@ -14,7 +14,7 @@
         {
           'type': 'file',
           'name': "Alamofire.h",
-          'external-contents': "/home-local/t.bounds/WSUV_Twitter/Alamofire/Source/Alamofire.h"
+          'external-contents': "/home-local/t.bounds/WSUV_Twitter/Alamofire-master/Source/Alamofire.h"
         }
       ]
     },

@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		QyoQ6w2ApsOotTZgroH8Sxo5stU=
+		p1lBz/0dP0ITgHHZUdZKJKf7W+4=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		GmxxNIuIrD/2T7vVxcWfXB1eoIY=
+		3b7lFWv+ErwtB7JfFpndu+OIV6Q=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		9T2D55LQDDhqEHCBBkm9XaKJ2+A=
+		C9chbdcnijX7k56Ap8jwqtpF1ss=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-f6v-5U-oIS.nib</key>
 		<data>
-		leR8MOZXHZH0dQdAIjW5Kg4XHmU=
+		GiTR+5mgHHLMut61CMk3TXuCAG0=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-kjr-JV-3bd.nib</key>
 		<data>
-		hYVw9+TMojUJ5M2y8E3GmpeyxgQ=
+		RV1njmuSEAZ4WfyFs9mck9uKrCI=
 		</data>
 		<key>Base.lproj/Main.storyboardc/dhV-sV-xPc-view-ebt-WP-3ON.nib</key>
 		<data>
-		YDsr6TYlHLOP32qUWPisScV+Y4k=
+		gjnrcR7bbJxIuufBU6S6MfdTvI0=
 		</data>
 		<key>Base.lproj/Main.storyboardc/kOe-kd-YEq-view-9XU-cL-LfC.nib</key>
 		<data>
-		HuWvTImRfaIQonCInaInyp07WuI=
+		IBBOGtx6/hIHVaI2IEZhR7vncoA=
 		</data>
 		<key>Example/Mac/Base.lproj/MainMenu.xib</key>
 		<dict>
@@ -81,18 +81,6 @@
 		<data>
 		L6WG0kpyBwFyM+HR4sy2Numm4kU=
 		</data>
-		<key>Frameworks/Alamofire.framework/Alamofire</key>
-		<data>
-		nKCNleici9DEFzSFbZiRufh8F9k=
-		</data>
-		<key>Frameworks/Alamofire.framework/Info.plist</key>
-		<data>
-		gHFdCSUKcftvK/QAYhXgbFP5ZpY=
-		</data>
-		<key>Frameworks/Alamofire.framework/_CodeSignature/CodeResources</key>
-		<data>
-		uUKAzNpOCVFYd5aO9RCwPHtZWBo=
-		</data>
 		<key>Frameworks/libswiftCore.dylib</key>
 		<data>
 		blagc+UjPVBTHaTHbrlBKbVn20I=
@@ -135,7 +123,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		soB53SZ3P1GBnquoOnnq8dHgkCE=
+		24VCeXL5WqnM2tUEJZ8eSpULiDA=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -152,11 +140,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QyoQ6w2ApsOotTZgroH8Sxo5stU=
+			p1lBz/0dP0ITgHHZUdZKJKf7W+4=
 			</data>
 			<key>hash2</key>
 			<data>
-			HojaHX6qCGB1rQHyiVdP7GAFoFDFXHbtMoKRWSPzukA=
+			A56Ue6rpEgK+1lWbVHKDNNIeBezSpEErLDSObz+Gq5k=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -174,66 +162,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			GmxxNIuIrD/2T7vVxcWfXB1eoIY=
+			3b7lFWv+ErwtB7JfFpndu+OIV6Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			rQzVYRjn+PonDcU91EXcV7rybMyRpG+U5sGT/yynYg4=
+			0lVvNNu7rjFryE59+m0Y00IwAM+bByBLnQIfsRceTIE=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			9T2D55LQDDhqEHCBBkm9XaKJ2+A=
+			C9chbdcnijX7k56Ap8jwqtpF1ss=
 			</data>
 			<key>hash2</key>
 			<data>
-			noTCERuoq6EL26FSNETRrGuADYG1zrSqU5mg1fckAX8=
+			AqWZhbGR63ankN+G5RoSbADEfbx/f2gSGwTYEB0vFkQ=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-f6v-5U-oIS.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			leR8MOZXHZH0dQdAIjW5Kg4XHmU=
+			GiTR+5mgHHLMut61CMk3TXuCAG0=
 			</data>
 			<key>hash2</key>
 			<data>
-			5GhpJNr430STk0P6VxL4GMQZm0R6N9Umz14MA1TDuVk=
+			3z71yeQ8FfuyPRGztePJPsxzWkATRwcRLhcNkXOgE1c=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-kjr-JV-3bd.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hYVw9+TMojUJ5M2y8E3GmpeyxgQ=
+			RV1njmuSEAZ4WfyFs9mck9uKrCI=
 			</data>
 			<key>hash2</key>
 			<data>
-			k/9RugRfYrw8OQKb9p6XEoxXA+piDh+WTFXOJSNz9gw=
+			rvZDqM4lj1M7NWzGgYVgJl3alw7jpUDybPhdTZh4sZs=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/dhV-sV-xPc-view-ebt-WP-3ON.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YDsr6TYlHLOP32qUWPisScV+Y4k=
+			gjnrcR7bbJxIuufBU6S6MfdTvI0=
 			</data>
 			<key>hash2</key>
 			<data>
-			byoEgnakYMqAxFAQ3RVccTpDEUkXy4us9PtgivVB/ME=
+			XYiiRdodR1R8ybLr2ciFxsmN+1nc8Y1So4r8F1vUZ/k=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/kOe-kd-YEq-view-9XU-cL-LfC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			HuWvTImRfaIQonCInaInyp07WuI=
+			IBBOGtx6/hIHVaI2IEZhR7vncoA=
 			</data>
 			<key>hash2</key>
 			<data>
-			GJulc44w8uCkvjoRSMthaPaCZhuM3Z3ND+CUk4VfAtY=
+			cZ46Qf7RuaZiHv4T74apOjsaEYh6038yvqaiba7Yszw=
 			</data>
 		</dict>
 		<key>Example/Mac/Base.lproj/MainMenu.xib</key>
@@ -346,39 +334,6 @@
 			<key>hash2</key>
 			<data>
 			t8wMLs++J93rFVZnH1eF6eX4PkFrWE9UcE8WYfrjTEs=
-			</data>
-		</dict>
-		<key>Frameworks/Alamofire.framework/Alamofire</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			nKCNleici9DEFzSFbZiRufh8F9k=
-			</data>
-			<key>hash2</key>
-			<data>
-			G6tWdywEJPotOXMQZK4Ep34oF7moUQt6/W4VLJFsJqs=
-			</data>
-		</dict>
-		<key>Frameworks/Alamofire.framework/Info.plist</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			gHFdCSUKcftvK/QAYhXgbFP5ZpY=
-			</data>
-			<key>hash2</key>
-			<data>
-			vAzBAFSCJKN1PTK0XnQROhSmsCFCMIBW1M8ryANhqqE=
-			</data>
-		</dict>
-		<key>Frameworks/Alamofire.framework/_CodeSignature/CodeResources</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			uUKAzNpOCVFYd5aO9RCwPHtZWBo=
-			</data>
-			<key>hash2</key>
-			<data>
-			s7zG1PNp8L9FL+b5ajUpXgeV/yN9j4k/yCrQrXu9Sc8=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftCore.dylib</key>
