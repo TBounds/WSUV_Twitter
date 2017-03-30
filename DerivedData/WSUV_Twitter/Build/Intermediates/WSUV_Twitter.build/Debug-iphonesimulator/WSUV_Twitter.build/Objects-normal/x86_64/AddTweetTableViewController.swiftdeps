@@ -6,18 +6,18 @@ provides-nominal:
 provides-member:
 - ["C12WSUV_Twitter27AddTweetTableViewController", ""]
 provides-dynamic-lookup:
-- "cancel"
-- "tweetTextField"
-- "viewDidLoad"
-- "didReceiveMemoryWarning"
 - "viewDidAppear"
+- "didReceiveMemoryWarning"
+- "viewDidLoad"
+- "tweetTextField"
+- "cancel"
 depends-top-level:
-- "UITextFieldDelegate"
-- "UITextView"
-- !private "BooleanLiteralType"
 - "Bool"
-- "UITableViewController"
 - "AddTweetTableViewController"
+- !private "BooleanLiteralType"
+- "UITableViewController"
+- "UITextView"
+- "UITextFieldDelegate"
 depends-member:
 - ["C12WSUV_Twitter27AddTweetTableViewController", "Bool"]
 - ["C12WSUV_Twitter27AddTweetTableViewController", "UITextView"]

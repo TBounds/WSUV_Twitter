@@ -6,7 +6,7 @@
 	<dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		fTIeCSOVsKdUoR6iENoYMLYwZI8=
+		QyoQ6w2ApsOotTZgroH8Sxo5stU=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -14,27 +14,27 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		ngveLqRVPUzcSFm+RHHAVq2zkbE=
+		GmxxNIuIrD/2T7vVxcWfXB1eoIY=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		C9chbdcnijX7k56Ap8jwqtpF1ss=
+		9T2D55LQDDhqEHCBBkm9XaKJ2+A=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-f6v-5U-oIS.nib</key>
 		<data>
-		pyqd5yV0tnEtREM/Nt6rK8eyG5Y=
+		f11v2BqkHUa3FjF5EOTa9ZyZ32A=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-kjr-JV-3bd.nib</key>
 		<data>
-		iZ3vs3zlMRY1BAl0bwkgtxsVnKM=
+		MPGOjSA4WBQSZpdg1H1Rb81WmCs=
 		</data>
 		<key>Base.lproj/Main.storyboardc/dhV-sV-xPc-view-ebt-WP-3ON.nib</key>
 		<data>
-		AzBAOfiAkwnV+kL5xogAK9dhcrg=
+		zKPAdp18+dr307wI5UDY59TPzFA=
 		</data>
 		<key>Base.lproj/Main.storyboardc/kOe-kd-YEq-view-9XU-cL-LfC.nib</key>
 		<data>
-		PE5L6/f992V4G3zBnkU9LSTIIK4=
+		Q2N97Ka6A6MUpWgvAqBe7SavNwo=
 		</data>
 		<key>Example/Mac/Base.lproj/MainMenu.xib</key>
 		<dict>
@@ -83,7 +83,7 @@
 		</data>
 		<key>Frameworks/Alamofire.framework/Alamofire</key>
 		<data>
-		XKoFxOhngi7lyFeGfRM9ZNfvfEU=
+		nKCNleici9DEFzSFbZiRufh8F9k=
 		</data>
 		<key>Frameworks/Alamofire.framework/Info.plist</key>
 		<data>
@@ -152,11 +152,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fTIeCSOVsKdUoR6iENoYMLYwZI8=
+			QyoQ6w2ApsOotTZgroH8Sxo5stU=
 			</data>
 			<key>hash2</key>
 			<data>
-			lrhpskczcpayIUMiC8bZ99vs5f3XnOVn7AHPaYSowEE=
+			HojaHX6qCGB1rQHyiVdP7GAFoFDFXHbtMoKRWSPzukA=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -174,66 +174,66 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ngveLqRVPUzcSFm+RHHAVq2zkbE=
+			GmxxNIuIrD/2T7vVxcWfXB1eoIY=
 			</data>
 			<key>hash2</key>
 			<data>
-			/WZL1a3WLBFJC1OAUldDCxN7wjSX3R35tvUbpKI+8UM=
+			rQzVYRjn+PonDcU91EXcV7rybMyRpG+U5sGT/yynYg4=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			C9chbdcnijX7k56Ap8jwqtpF1ss=
+			9T2D55LQDDhqEHCBBkm9XaKJ2+A=
 			</data>
 			<key>hash2</key>
 			<data>
-			AqWZhbGR63ankN+G5RoSbADEfbx/f2gSGwTYEB0vFkQ=
+			noTCERuoq6EL26FSNETRrGuADYG1zrSqU5mg1fckAX8=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-f6v-5U-oIS.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pyqd5yV0tnEtREM/Nt6rK8eyG5Y=
+			f11v2BqkHUa3FjF5EOTa9ZyZ32A=
 			</data>
 			<key>hash2</key>
 			<data>
-			oMobb0Z6JCy1XG1pA1ecKOak6BgjfMSSeSiV1YXwl1Q=
+			k5UOZw2ntrdVg8M4oPz1FDPKWZ5GKgkjcOrJHE8NdfI=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-kjr-JV-3bd.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			iZ3vs3zlMRY1BAl0bwkgtxsVnKM=
+			MPGOjSA4WBQSZpdg1H1Rb81WmCs=
 			</data>
 			<key>hash2</key>
 			<data>
-			C6E96a57rLA3J27BMCv3PTxs5gKs4c2jMQfCqEkJN24=
+			jUjuW8Wc5SZsarSGQ093FBvZqzkG56lO5VIR3jnRn6U=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/dhV-sV-xPc-view-ebt-WP-3ON.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			AzBAOfiAkwnV+kL5xogAK9dhcrg=
+			zKPAdp18+dr307wI5UDY59TPzFA=
 			</data>
 			<key>hash2</key>
 			<data>
-			bsQ0pdTF1uSANZG5rjaLcPanDlywZx8dWlD79RY+z/Y=
+			MaS+2bCjCp0tIPcTVDY04X3BpSlOgaaAlMi9Bpcn49w=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/kOe-kd-YEq-view-9XU-cL-LfC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			PE5L6/f992V4G3zBnkU9LSTIIK4=
+			Q2N97Ka6A6MUpWgvAqBe7SavNwo=
 			</data>
 			<key>hash2</key>
 			<data>
-			q1Cvyl9frVBSyvN1K0zrgM4vnYkDn4P9OJjI6nL6z8w=
+			kTBzWdYHiL0Dhgw7TwD2qJHsP+q+XcqaJu1w3EY02YU=
 			</data>
 		</dict>
 		<key>Example/Mac/Base.lproj/MainMenu.xib</key>
@@ -352,11 +352,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XKoFxOhngi7lyFeGfRM9ZNfvfEU=
+			nKCNleici9DEFzSFbZiRufh8F9k=
 			</data>
 			<key>hash2</key>
 			<data>
-			tnMtJcquU+Ej9AEY7o7bSamEOfY2azFuQLQVI6e4YD8=
+			G6tWdywEJPotOXMQZK4Ep34oF7moUQt6/W4VLJFsJqs=
 			</data>
 		</dict>
 		<key>Frameworks/Alamofire.framework/Info.plist</key>
