@@ -12,8 +12,6 @@ import AlamofireNetworkActivityIndicator
 
 class TweetTableViewController: UITableViewController {
     
-    let kBaseURLString = "https://ezekiel.encs.vancouver.wsu.edu/~cs458/cgi-bin"
-    
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var addTweetButton: UIBarButtonItem!

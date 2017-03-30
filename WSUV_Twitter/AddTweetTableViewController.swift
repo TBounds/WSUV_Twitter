@@ -11,7 +11,7 @@ import Alamofire
 
 class AddTweetTableViewController: UITableViewController, UITextViewDelegate {
 
-    let kBaseURLString = "https://ezekiel.encs.vancouver.wsu.edu/~cs458/cgi-bin"
+    
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     

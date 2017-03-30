@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F8387E351E81AAD600A6A5F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8387E341E81AAD600A6A5F8 /* AppDelegate.swift */; };
-		F8387E371E81AAD600A6A5F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8387E361E81AAD600A6A5F8 /* ViewController.swift */; };
 		F8387E3A1E81AAD600A6A5F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8387E381E81AAD600A6A5F8 /* Main.storyboard */; };
 		F8387E3C1E81AAD600A6A5F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8387E3B1E81AAD600A6A5F8 /* Assets.xcassets */; };
 		F8387E3F1E81AAD600A6A5F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8387E3D1E81AAD600A6A5F8 /* LaunchScreen.storyboard */; };
@@ -122,7 +121,6 @@
 /* Begin PBXFileReference section */
 		F8387E311E81AAD600A6A5F8 /* WSUV_Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WSUV_Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8387E341E81AAD600A6A5F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F8387E361E81AAD600A6A5F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F8387E391E81AAD600A6A5F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8387E3B1E81AAD600A6A5F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8387E3E1E81AAD600A6A5F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				F8387E341E81AAD600A6A5F8 /* AppDelegate.swift */,
-				F8387E361E81AAD600A6A5F8 /* ViewController.swift */,
 				F859147E1E89BD3400176C95 /* AddTweetTableViewController.swift */,
 				F859147C1E89BA1800176C95 /* TweetTableViewController.swift */,
 				F8387E381E81AAD600A6A5F8 /* Main.storyboard */,
@@ -380,7 +377,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F859147D1E89BA1800176C95 /* TweetTableViewController.swift in Sources */,
-				F8387E371E81AAD600A6A5F8 /* ViewController.swift in Sources */,
 				F8387E351E81AAD600A6A5F8 /* AppDelegate.swift in Sources */,
 				F859147F1E89BD3400176C95 /* AddTweetTableViewController.swift in Sources */,
 				F8B2653F1E8C37B100A4594B /* SSKeychainQuery.m in Sources */,
