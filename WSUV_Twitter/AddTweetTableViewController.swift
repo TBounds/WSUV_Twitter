@@ -9,13 +9,18 @@
 import UIKit
 import Alamofire
 
-class AddTweetTableViewController: UITableViewController, UITextFieldDelegate {
+class AddTweetTableViewController: UITableViewController, UITextViewDelegate {
 
     let kBaseURLString = "https://ezekiel.encs.vancouver.wsu.edu/~cs458/cgi-bin"
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    let charLimit = 140
   
     @IBOutlet weak var tweetTextField: UITextView!
+    @IBOutlet weak var charLimitLabel: UILabel!
+    
+    
     
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -23,6 +28,28 @@ class AddTweetTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tweetTextField.delegate = self
+        
+        charLimitLabel.text = "0/140"
+        
+    }
+    
+    
+    // http://stackoverflow.com/questions/32935528/setting-maximum-number-of-characters-of-uitextview-and-uitextfield
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        
+        let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
+        let numberOfChars = newText.characters.count // for Swift use count(newText)
+        
+        let length = String(numberOfChars)
+        
+        // Prevents char limit label bug from displaying 141.
+        if(numberOfChars <= charLimit) {
+            charLimitLabel.text = length + "/140"
+        }
+        
+        return numberOfChars <= charLimit;
     }
     
     override func viewDidAppear(_ animated: Bool) {

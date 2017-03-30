@@ -6,81 +6,81 @@ provides-nominal:
 provides-member:
 - ["C12WSUV_Twitter24TweetTableViewController", ""]
 provides-dynamic-lookup:
-- "didReceiveMemoryWarning"
-- "loginUser"
-- "addTweetButton"
-- "tweetTitleAttributes"
-- "viewDidLoad"
 - "logout"
-- "kBaseURLString"
-- "tweetDateFormatter"
-- "tweetBodyAttributes"
-- "registerUser"
+- "tweetTitleAttributes"
+- "didReceiveMemoryWarning"
 - "numberOfSections"
+- "tweetDateFormatter"
+- "registerUser"
 - "refreshTweets"
-- "manageAccount"
+- "kBaseURLString"
+- "addTweetButton"
 - "appDelegate"
+- "loginUser"
 - "tableView"
 - "tableView"
 - "tableView"
 - "tableView"
 - "tableView"
 - "tableView"
+- "manageAccount"
+- "tweetBodyAttributes"
+- "viewDidLoad"
 depends-top-level:
-- "NSForegroundColorAttributeName"
 - !private "=="
-- "Tweet"
-- !private "~="
-- "String"
-- "StringLiteralType"
-- "UIColor"
-- !private "UIAlertAction"
-- "Int"
-- "BooleanLiteralType"
-- "DateFormatter"
-- !private "NSMutableAttributedString"
-- "AnyObject"
-- "UITableViewController"
-- !private "UITextField"
-- !private "Date"
-- !private "UIAlertController"
-- !private "kWazzuTwitterSessionToken"
-- !private "!="
-- "AppDelegate"
-- "CGFloat"
-- "Bool"
-- "UITableViewCell"
-- !private "&&"
-- !private "UITableViewAutomaticDimension"
-- !private "ComparisonResult"
-- "UIApplication"
-- !private "Void"
-- !private "kWazzuTwitterPassword"
-- "UITableView"
-- !private "Notification"
-- "UIBarButtonItem"
-- !private "SSKeychain"
-- "Dictionary"
-- !private "+"
-- !private "kAddTweetNotification"
-- !private "NSParagraphStyle"
 - !private "TimeZone"
+- !private "ComparisonResult"
+- "StringLiteralType"
+- "UIBarButtonItem"
 - !private "NSMutableParagraphStyle"
-- !private "NotificationCenter"
 - "NSFontAttributeName"
 - !private "NSParagraphStyleAttributeName"
-- "UIFont"
-- "TweetTableViewController"
+- !private "SSKeychain"
+- "BooleanLiteralType"
+- !private "kWazzuTwitterSessionToken"
+- !private "NSParagraphStyle"
 - !private "!"
-- "UIFontTextStyle"
+- !private "+"
+- !private "Void"
+- "CGFloat"
 - !private "Alamofire"
-- "NSAttributedString"
-- !private "NSString"
-- "CastingPrecedence"
-- !private "NSDate"
-- "IndexPath"
-- "AssignmentPrecedence"
 - !private "UIKit"
+- !private "kWazzuTwitterPassword"
+- !private "NSMutableAttributedString"
+- !private "UIAlertController"
+- "IndexPath"
+- "NSAttributedString"
+- "TweetTableViewController"
+- !private "NSDate"
+- !private "UIAlertAction"
+- !private "UITableViewAutomaticDimension"
+- "Dictionary"
+- !private "NSString"
+- !private "&&"
+- "Tweet"
+- "NSForegroundColorAttributeName"
+- !private "Date"
+- "UITableViewController"
+- "AnyObject"
+- !private "!="
+- "UIColor"
+- "Int"
+- "UITableViewCell"
+- "AppDelegate"
+- "String"
+- !private "NotificationCenter"
+- "Bool"
+- "UIFont"
+- !private "Notification"
+- "UITableView"
+- "CastingPrecedence"
+- "UIFontTextStyle"
+- "UIApplication"
+- "DateFormatter"
+- !private "kAddTweetNotification"
+- !private "UITextField"
+- "AssignmentPrecedence"
+- !private "~="
 depends-member:
 - !private ["Ps9AnyObject", "Alamofire"]
 - !private ["Ps9AnyObject", "ComparisonResult"]
@@ -143,6 +143,7 @@ depends-member:
 - ["Ps9AnyObject", "numberOfSections"]
 - !private ["Ps9AnyObject", "password"]
 - !private ["Ps9AnyObject", "placeholder"]
+- !private ["Ps9AnyObject", "post"]
 - ["Ps9AnyObject", "preferredFont"]
 - !private ["Ps9AnyObject", "present"]
 - ["Ps9AnyObject", "purple"]
@@ -303,6 +304,7 @@ depends-member:
 - ["Ps7CVarArg", "numberOfSections"]
 - !private ["Ps7CVarArg", "password"]
 - !private ["Ps7CVarArg", "placeholder"]
+- !private ["Ps7CVarArg", "post"]
 - ["Ps7CVarArg", "preferredFont"]
 - !private ["Ps7CVarArg", "present"]
 - ["Ps7CVarArg", "purple"]
@@ -431,6 +433,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "numberOfSections"]
 - !private ["Ps28CustomDebugStringConvertible", "password"]
 - !private ["Ps28CustomDebugStringConvertible", "placeholder"]
+- !private ["Ps28CustomDebugStringConvertible", "post"]
 - ["Ps28CustomDebugStringConvertible", "preferredFont"]
 - !private ["Ps28CustomDebugStringConvertible", "present"]
 - ["Ps28CustomDebugStringConvertible", "purple"]
@@ -564,6 +567,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "numberOfSections"]
 - !private ["Ps23CustomStringConvertible", "password"]
 - !private ["Ps23CustomStringConvertible", "placeholder"]
+- !private ["Ps23CustomStringConvertible", "post"]
 - ["Ps23CustomStringConvertible", "preferredFont"]
 - !private ["Ps23CustomStringConvertible", "present"]
 - ["Ps23CustomStringConvertible", "purple"]
@@ -1201,6 +1205,7 @@ depends-member:
 - ["CSo8NSObject", "numberOfSections"]
 - !private ["CSo8NSObject", "password"]
 - !private ["CSo8NSObject", "placeholder"]
+- !private ["CSo8NSObject", "post"]
 - ["CSo8NSObject", "preferredFont"]
 - !private ["CSo8NSObject", "present"]
 - ["CSo8NSObject", "purple"]
@@ -1290,6 +1295,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "numberOfSections"]
 - !private ["PSo16NSObjectProtocol", "password"]
 - !private ["PSo16NSObjectProtocol", "placeholder"]
+- !private ["PSo16NSObjectProtocol", "post"]
 - ["PSo16NSObjectProtocol", "preferredFont"]
 - !private ["PSo16NSObjectProtocol", "present"]
 - ["PSo16NSObjectProtocol", "purple"]
@@ -1341,6 +1347,7 @@ depends-member:
 - !private ["CSo18NotificationCenter", "addObserver"]
 - !private ["CSo18NotificationCenter", "default"]
 - ["CSo18NotificationCenter", "deinit"]
+- !private ["CSo18NotificationCenter", "post"]
 - !private ["Sq", "RawValue"]
 - ["Sq", "deinit"]
 - !private ["Ps22RandomAccessCollection", "Index"]

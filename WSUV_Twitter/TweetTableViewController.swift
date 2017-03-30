@@ -397,6 +397,8 @@ class TweetTableViewController: UITableViewController {
                     self.refreshTweets(self)
                 }
             }
+        
+        NotificationCenter.default.post(name: kAddTweetNotification, object: nil)
     }
 
     override func didReceiveMemoryWarning() {

@@ -124,16 +124,20 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
 @class AppDelegate;
 @class UITextView;
+@class UILabel;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC12WSUV_Twitter27AddTweetTableViewController")
-@interface AddTweetTableViewController : UITableViewController <UITextFieldDelegate>
+@interface AddTweetTableViewController : UITableViewController <UITextViewDelegate>
 @property (nonatomic, readonly, copy) NSString * _Nonnull kBaseURLString;
 @property (nonatomic, readonly, strong) AppDelegate * _Nonnull appDelegate;
+@property (nonatomic, readonly) NSInteger charLimit;
 @property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified tweetTextField;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified charLimitLabel;
 - (IBAction)cancel:(id _Nonnull)sender;
 - (void)viewDidLoad;
+- (BOOL)textView:(UITextView * _Nonnull)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString * _Nonnull)text;
 - (void)viewDidAppear:(BOOL)animated;
 - (void)didReceiveMemoryWarning;
 - (IBAction)postTweet:(id _Nonnull)sender;

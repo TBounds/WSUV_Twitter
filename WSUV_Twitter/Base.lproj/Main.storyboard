@@ -102,12 +102,20 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyz-rV-dlW">
+                                                    <rect key="frame" x="321" y="206.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="LN2-EI-Hfw" firstAttribute="trailing" secondItem="870-bt-0tU" secondAttribute="trailingMargin" id="5VW-MJ-HwC"/>
                                                 <constraint firstItem="LN2-EI-Hfw" firstAttribute="top" secondItem="870-bt-0tU" secondAttribute="topMargin" id="DjR-56-1T7"/>
+                                                <constraint firstItem="Zyz-rV-dlW" firstAttribute="bottom" secondItem="870-bt-0tU" secondAttribute="bottomMargin" constant="-4" id="FHZ-PP-xHF"/>
                                                 <constraint firstItem="LN2-EI-Hfw" firstAttribute="bottom" secondItem="870-bt-0tU" secondAttribute="bottomMargin" id="Q4X-Gd-6wU"/>
                                                 <constraint firstItem="LN2-EI-Hfw" firstAttribute="leading" secondItem="870-bt-0tU" secondAttribute="leadingMargin" id="ZaJ-k6-5YV"/>
+                                                <constraint firstItem="Zyz-rV-dlW" firstAttribute="trailing" secondItem="870-bt-0tU" secondAttribute="trailingMargin" constant="-4" id="xPx-0Y-YBt"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -133,6 +141,7 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="charLimitLabel" destination="Zyz-rV-dlW" id="92P-oz-a4c"/>
                         <outlet property="tweetTextField" destination="LN2-EI-Hfw" id="Kvg-qe-VAq"/>
                     </connections>
                 </tableViewController>
