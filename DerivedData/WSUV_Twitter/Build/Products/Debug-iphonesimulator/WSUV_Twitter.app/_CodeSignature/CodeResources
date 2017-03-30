@@ -22,19 +22,19 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-f6v-5U-oIS.nib</key>
 		<data>
-		UGJCz7iWHtanRd8wX95FMqbkU5A=
+		Trm8ViuJtZ9wguJqd2yBRGK6aEc=
 		</data>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-kjr-JV-3bd.nib</key>
 		<data>
-		RIwg9Elf1m0XuwSWIA8gFdpD/DM=
+		F4GjEHVjkEcWyCr73O7yq8s9ZwQ=
 		</data>
 		<key>Base.lproj/Main.storyboardc/dhV-sV-xPc-view-ebt-WP-3ON.nib</key>
 		<data>
-		8lakNokj5EYsfvj0+Pzeacxkmrw=
+		JBcbNJL4eqMQMvvQrSo4bo3QOPM=
 		</data>
 		<key>Base.lproj/Main.storyboardc/kOe-kd-YEq-view-9XU-cL-LfC.nib</key>
 		<data>
-		cACxaMbpJbWyOoH5OH1y4k7RW4s=
+		RSHoZ67ecI3BG+n6Vun2/nho3EI=
 		</data>
 		<key>Example/Mac/Base.lproj/MainMenu.xib</key>
 		<dict>
@@ -135,7 +135,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		24VCeXL5WqnM2tUEJZ8eSpULiDA=
+		soB53SZ3P1GBnquoOnnq8dHgkCE=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -196,44 +196,44 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			UGJCz7iWHtanRd8wX95FMqbkU5A=
+			Trm8ViuJtZ9wguJqd2yBRGK6aEc=
 			</data>
 			<key>hash2</key>
 			<data>
-			M1lB/nKYOAqc3rHV2OuqTpntu4LicWYQvpfwCmqO3og=
+			d3cXSEgfpVuMFQGXty0ekrv+QkVfcnotIUU2yywQ2BA=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/UINavigationController-kjr-JV-3bd.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			RIwg9Elf1m0XuwSWIA8gFdpD/DM=
+			F4GjEHVjkEcWyCr73O7yq8s9ZwQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			oBelgs5q2fc2BNPepaCcYldo5foG/eU2D/3x5ST72CA=
+			HwUGRb41vBe8mI0LgYCklmzHUZvZe3G3xyFUkBMCF80=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/dhV-sV-xPc-view-ebt-WP-3ON.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			8lakNokj5EYsfvj0+Pzeacxkmrw=
+			JBcbNJL4eqMQMvvQrSo4bo3QOPM=
 			</data>
 			<key>hash2</key>
 			<data>
-			3qFCKXM1hbW5cZn1FBNAJu3psWvg0FOZid/SekeAboI=
+			grmieRdJJKWvYFlxH/jJqZ9+sGGuFUZP/oORjwPLFN4=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/kOe-kd-YEq-view-9XU-cL-LfC.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cACxaMbpJbWyOoH5OH1y4k7RW4s=
+			RSHoZ67ecI3BG+n6Vun2/nho3EI=
 			</data>
 			<key>hash2</key>
 			<data>
-			SZJRtDkuWJwYFEvmutWUrTX2vFk84wxOKUgPrBZ3eDg=
+			k+ffVfQf33D7yt0HM3SaVrgS2OCWj9ra42/eC58MsM4=
 			</data>
 		</dict>
 		<key>Example/Mac/Base.lproj/MainMenu.xib</key>

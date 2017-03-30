@@ -6,79 +6,82 @@ provides-nominal:
 provides-member:
 - ["C12WSUV_Twitter24TweetTableViewController", ""]
 provides-dynamic-lookup:
-- "logout"
-- "tweetTitleAttributes"
-- "didReceiveMemoryWarning"
-- "numberOfSections"
-- "tweetDateFormatter"
-- "registerUser"
-- "refreshTweets"
 - "kBaseURLString"
 - "addTweetButton"
-- "appDelegate"
-- "loginUser"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "tableView"
-- "manageAccount"
-- "tweetBodyAttributes"
+- "logout"
 - "viewDidLoad"
+- "tweetTitleAttributes"
+- "numberOfSections"
+- "refreshTweets"
+- "manageAccount"
+- "tweetDateFormatter"
+- "registerUser"
+- "appDelegate"
+- "didReceiveMemoryWarning"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "tableView"
+- "loginUser"
+- "tweetBodyAttributes"
 depends-top-level:
+- "UIColor"
+- !private "UITableViewAutomaticDimension"
 - !private "=="
-- !private "TimeZone"
-- !private "ComparisonResult"
 - "StringLiteralType"
-- "UIBarButtonItem"
-- !private "NSMutableParagraphStyle"
-- "NSFontAttributeName"
-- !private "NSParagraphStyleAttributeName"
-- !private "SSKeychain"
+- "Array"
+- "Tweet"
+- "UITableViewController"
+- "UITableViewCell"
+- "String"
 - "BooleanLiteralType"
-- !private "kWazzuTwitterSessionToken"
+- !private "!="
+- !private "NSDate"
+- !private "&&"
+- !private "NSString"
+- "NSForegroundColorAttributeName"
+- !private "kWazzuTwitterPassword"
+- !private "Alamofire"
+- !private "Date"
+- !private "UITextField"
+- "CGFloat"
+- "UITableViewCellEditingStyle"
+- !private "UIKit"
+- "Dictionary"
+- !private "NSMutableAttributedString"
+- "AnyObject"
+- "IndexPath"
+- "TweetTableViewController"
+- "NSAttributedString"
+- !private "Notification"
 - !private "NSParagraphStyle"
+- !private "NSParagraphStyleAttributeName"
+- "UIBarButtonItem"
+- !private "UIAlertAction"
 - !private "!"
 - !private "+"
-- !private "Void"
-- "CGFloat"
-- !private "Alamofire"
-- !private "UIKit"
-- !private "kWazzuTwitterPassword"
-- !private "NSMutableAttributedString"
-- !private "UIAlertController"
-- "IndexPath"
-- "NSAttributedString"
-- "TweetTableViewController"
-- !private "NSDate"
-- !private "UIAlertAction"
-- !private "UITableViewAutomaticDimension"
-- "Dictionary"
-- !private "NSString"
-- !private "&&"
-- "Tweet"
-- "NSForegroundColorAttributeName"
-- !private "Date"
-- "UITableViewController"
-- "AnyObject"
-- !private "!="
-- "UIColor"
-- "Int"
-- "UITableViewCell"
-- "AppDelegate"
-- "String"
-- !private "NotificationCenter"
-- "Bool"
-- "UIFont"
-- !private "Notification"
-- "UITableView"
-- "CastingPrecedence"
-- "UIFontTextStyle"
+- !private "kWazzuTwitterSessionToken"
+- !private "TimeZone"
 - "UIApplication"
+- !private "SSKeychain"
 - "DateFormatter"
+- "UIFont"
+- !private "UIAlertController"
+- !private "Void"
+- "NSFontAttributeName"
+- "UITableView"
+- !private "NotificationCenter"
+- "AppDelegate"
+- !private "ComparisonResult"
+- !private "NSMutableParagraphStyle"
+- "CastingPrecedence"
+- "Int"
 - !private "kAddTweetNotification"
-- !private "UITextField"
+- "UIFontTextStyle"
+- "Bool"
 - "AssignmentPrecedence"
 - !private "~="
 depends-member:
@@ -121,6 +124,7 @@ depends-member:
 - !private ["Ps9AnyObject", "dateStyle"]
 - !private ["Ps9AnyObject", "default"]
 - ["Ps9AnyObject", "delegate"]
+- !private ["Ps9AnyObject", "deleteRows"]
 - !private ["Ps9AnyObject", "dequeueReusableCell"]
 - ["Ps9AnyObject", "didReceiveMemoryWarning"]
 - !private ["Ps9AnyObject", "endRefreshing"]
@@ -177,6 +181,7 @@ depends-member:
 - !private ["C12WSUV_Twitter11AppDelegate", "lastTweetDate"]
 - !private ["C12WSUV_Twitter11AppDelegate", "tweets"]
 - !private ["C12WSUV_Twitter11AppDelegate", "username"]
+- !private ["Sa", "Element"]
 - !private ["Sa", "Index"]
 - !private ["Sa", "IndexDistance"]
 - !private ["Sa", "Iterator"]
@@ -185,8 +190,10 @@ depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "count"]
 - !private ["Sa", "deinit"]
+- !private ["Sa", "remove"]
 - !private ["Sa", "sorted"]
 - !private ["Sa", "subscript"]
+- !private ["Ps23BidirectionalCollection", "Element"]
 - !private ["Ps23BidirectionalCollection", "Index"]
 - !private ["Ps23BidirectionalCollection", "IndexDistance"]
 - !private ["Ps23BidirectionalCollection", "Indices"]
@@ -195,9 +202,11 @@ depends-member:
 - !private ["Ps23BidirectionalCollection", "_Element"]
 - !private ["Ps23BidirectionalCollection", "append"]
 - !private ["Ps23BidirectionalCollection", "count"]
+- !private ["Ps23BidirectionalCollection", "remove"]
 - !private ["Ps23BidirectionalCollection", "row"]
 - !private ["Ps23BidirectionalCollection", "sorted"]
 - !private ["Ps23BidirectionalCollection", "subscript"]
+- !private ["Ps22BidirectionalIndexable", "Element"]
 - !private ["Ps22BidirectionalIndexable", "Index"]
 - !private ["Ps22BidirectionalIndexable", "IndexDistance"]
 - !private ["Ps22BidirectionalIndexable", "Indices"]
@@ -206,6 +215,7 @@ depends-member:
 - !private ["Ps22BidirectionalIndexable", "_Element"]
 - !private ["Ps22BidirectionalIndexable", "append"]
 - !private ["Ps22BidirectionalIndexable", "count"]
+- !private ["Ps22BidirectionalIndexable", "remove"]
 - !private ["Ps22BidirectionalIndexable", "row"]
 - !private ["Ps22BidirectionalIndexable", "sorted"]
 - !private ["Ps22BidirectionalIndexable", "subscript"]
@@ -222,6 +232,7 @@ depends-member:
 - ["Sb", "deinit"]
 - !private ["PSo15CALayerDelegate", "attributedText"]
 - !private ["PSo15CALayerDelegate", "beginRefreshing"]
+- !private ["PSo15CALayerDelegate", "deleteRows"]
 - !private ["PSo15CALayerDelegate", "dequeueReusableCell"]
 - !private ["PSo15CALayerDelegate", "endRefreshing"]
 - !private ["PSo15CALayerDelegate", "isRefreshing"]
@@ -235,6 +246,7 @@ depends-member:
 - !private ["Ps7CVarArg", "Alamofire"]
 - !private ["Ps7CVarArg", "ComparisonResult"]
 - !private ["Ps7CVarArg", "DateFormatter"]
+- !private ["Ps7CVarArg", "Element"]
 - !private ["Ps7CVarArg", "Index"]
 - !private ["Ps7CVarArg", "IndexDistance"]
 - !private ["Ps7CVarArg", "IntegerLiteralType"]
@@ -282,6 +294,7 @@ depends-member:
 - !private ["Ps7CVarArg", "dateStyle"]
 - !private ["Ps7CVarArg", "default"]
 - ["Ps7CVarArg", "delegate"]
+- !private ["Ps7CVarArg", "deleteRows"]
 - !private ["Ps7CVarArg", "dequeueReusableCell"]
 - ["Ps7CVarArg", "didReceiveMemoryWarning"]
 - !private ["Ps7CVarArg", "endRefreshing"]
@@ -312,6 +325,7 @@ depends-member:
 - ["Ps7CVarArg", "refreshTweets"]
 - ["Ps7CVarArg", "registerUser"]
 - !private ["Ps7CVarArg", "reloadData"]
+- !private ["Ps7CVarArg", "remove"]
 - !private ["Ps7CVarArg", "setPassword"]
 - ["Ps7CVarArg", "shared"]
 - !private ["Ps7CVarArg", "sorted"]
@@ -337,6 +351,7 @@ depends-member:
 - ["Ps7CVarArg", ""]
 - !private ["Vs9Character", "deinit"]
 - !private ["Vs11ClosedRange", "deinit"]
+- !private ["Ps10Collection", "Element"]
 - !private ["Ps10Collection", "Index"]
 - !private ["Ps10Collection", "IndexDistance"]
 - !private ["Ps10Collection", "Indices"]
@@ -347,6 +362,7 @@ depends-member:
 - !private ["Ps10Collection", "_Element"]
 - !private ["Ps10Collection", "append"]
 - !private ["Ps10Collection", "count"]
+- !private ["Ps10Collection", "remove"]
 - !private ["Ps10Collection", "row"]
 - !private ["Ps10Collection", "sorted"]
 - !private ["Ps10Collection", "subscript"]
@@ -365,6 +381,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Alamofire"]
 - !private ["Ps28CustomDebugStringConvertible", "ComparisonResult"]
 - !private ["Ps28CustomDebugStringConvertible", "DateFormatter"]
+- !private ["Ps28CustomDebugStringConvertible", "Element"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
 - !private ["Ps28CustomDebugStringConvertible", "IndexDistance"]
 - !private ["Ps28CustomDebugStringConvertible", "Iterator"]
@@ -410,6 +427,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "dateStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "default"]
 - ["Ps28CustomDebugStringConvertible", "delegate"]
+- !private ["Ps28CustomDebugStringConvertible", "deleteRows"]
 - !private ["Ps28CustomDebugStringConvertible", "dequeueReusableCell"]
 - ["Ps28CustomDebugStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps28CustomDebugStringConvertible", "endRefreshing"]
@@ -441,6 +459,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "refreshTweets"]
 - ["Ps28CustomDebugStringConvertible", "registerUser"]
 - !private ["Ps28CustomDebugStringConvertible", "reloadData"]
+- !private ["Ps28CustomDebugStringConvertible", "remove"]
 - !private ["Ps28CustomDebugStringConvertible", "response"]
 - !private ["Ps28CustomDebugStringConvertible", "responseJSON"]
 - !private ["Ps28CustomDebugStringConvertible", "result"]
@@ -475,6 +494,7 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "compare"]
 - ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "Element"]
 - !private ["Ps17CustomReflectable", "Index"]
 - !private ["Ps17CustomReflectable", "IndexDistance"]
 - !private ["Ps17CustomReflectable", "IntegerLiteralType"]
@@ -490,12 +510,14 @@ depends-member:
 - !private ["Ps17CustomReflectable", "append"]
 - !private ["Ps17CustomReflectable", "count"]
 - ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "remove"]
 - !private ["Ps17CustomReflectable", "row"]
 - !private ["Ps17CustomReflectable", "sorted"]
 - !private ["Ps17CustomReflectable", "subscript"]
 - !private ["Ps23CustomStringConvertible", "Alamofire"]
 - !private ["Ps23CustomStringConvertible", "ComparisonResult"]
 - !private ["Ps23CustomStringConvertible", "DateFormatter"]
+- !private ["Ps23CustomStringConvertible", "Element"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IndexDistance"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
@@ -544,6 +566,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "dateStyle"]
 - !private ["Ps23CustomStringConvertible", "default"]
 - ["Ps23CustomStringConvertible", "delegate"]
+- !private ["Ps23CustomStringConvertible", "deleteRows"]
 - !private ["Ps23CustomStringConvertible", "dequeueReusableCell"]
 - ["Ps23CustomStringConvertible", "didReceiveMemoryWarning"]
 - !private ["Ps23CustomStringConvertible", "endRefreshing"]
@@ -575,6 +598,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "refreshTweets"]
 - ["Ps23CustomStringConvertible", "registerUser"]
 - !private ["Ps23CustomStringConvertible", "reloadData"]
+- !private ["Ps23CustomStringConvertible", "remove"]
 - !private ["Ps23CustomStringConvertible", "response"]
 - !private ["Ps23CustomStringConvertible", "responseJSON"]
 - !private ["Ps23CustomStringConvertible", "result"]
@@ -683,9 +707,12 @@ depends-member:
 - !private ["Ps9Equatable", "dateStyle"]
 - !private ["Ps9Equatable", "default"]
 - ["Ps9Equatable", "delegate"]
+- !private ["Ps9Equatable", "delete"]
+- !private ["Ps9Equatable", "deleteRows"]
 - !private ["Ps9Equatable", "dequeueReusableCell"]
 - ["Ps9Equatable", "didReceiveMemoryWarning"]
 - !private ["Ps9Equatable", "endRefreshing"]
+- !private ["Ps9Equatable", "fade"]
 - !private ["Ps9Equatable", "get"]
 - ["Ps9Equatable", "headline"]
 - ["Ps9Equatable", "init"]
@@ -737,12 +764,14 @@ depends-member:
 - ["Ps9Equatable", "tweetDateFormatter"]
 - ["Ps9Equatable", "tweetDateFormatter.storage"]
 - ["Ps9Equatable", "tweetTitleAttributes"]
+- !private ["Ps9Equatable", "tweet_id"]
 - !private ["Ps9Equatable", "tweets"]
 - !private ["Ps9Equatable", "username"]
 - ["Ps9Equatable", "viewDidLoad"]
 - ["Ps9Equatable", ""]
 - !private ["Ps5Error", "deinit"]
 - !private ["Ps5Error", "localizedDescription"]
+- !private ["Ps25ExpressibleByArrayLiteral", "Element"]
 - !private ["Ps25ExpressibleByArrayLiteral", "Index"]
 - !private ["Ps25ExpressibleByArrayLiteral", "IndexDistance"]
 - !private ["Ps25ExpressibleByArrayLiteral", "Iterator"]
@@ -750,6 +779,7 @@ depends-member:
 - !private ["Ps25ExpressibleByArrayLiteral", "_Element"]
 - !private ["Ps25ExpressibleByArrayLiteral", "append"]
 - !private ["Ps25ExpressibleByArrayLiteral", "count"]
+- !private ["Ps25ExpressibleByArrayLiteral", "remove"]
 - !private ["Ps25ExpressibleByArrayLiteral", "row"]
 - !private ["Ps25ExpressibleByArrayLiteral", "sorted"]
 - !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
@@ -829,9 +859,12 @@ depends-member:
 - !private ["Ps8Hashable", "dateStyle"]
 - !private ["Ps8Hashable", "default"]
 - ["Ps8Hashable", "delegate"]
+- !private ["Ps8Hashable", "delete"]
+- !private ["Ps8Hashable", "deleteRows"]
 - !private ["Ps8Hashable", "dequeueReusableCell"]
 - ["Ps8Hashable", "didReceiveMemoryWarning"]
 - !private ["Ps8Hashable", "endRefreshing"]
+- !private ["Ps8Hashable", "fade"]
 - !private ["Ps8Hashable", "get"]
 - ["Ps8Hashable", "headline"]
 - ["Ps8Hashable", "init"]
@@ -883,6 +916,7 @@ depends-member:
 - ["Ps8Hashable", "tweetDateFormatter"]
 - ["Ps8Hashable", "tweetDateFormatter.storage"]
 - ["Ps8Hashable", "tweetTitleAttributes"]
+- !private ["Ps8Hashable", "tweet_id"]
 - !private ["Ps8Hashable", "tweets"]
 - !private ["Ps8Hashable", "username"]
 - ["Ps8Hashable", "viewDidLoad"]
@@ -890,6 +924,7 @@ depends-member:
 - ["SQ", "deinit"]
 - ["V10Foundation9IndexPath", "deinit"]
 - !private ["V10Foundation9IndexPath", "row"]
+- !private ["Ps9Indexable", "Element"]
 - !private ["Ps9Indexable", "Index"]
 - !private ["Ps9Indexable", "IndexDistance"]
 - !private ["Ps9Indexable", "Indices"]
@@ -900,9 +935,11 @@ depends-member:
 - !private ["Ps9Indexable", "_Element"]
 - !private ["Ps9Indexable", "append"]
 - !private ["Ps9Indexable", "count"]
+- !private ["Ps9Indexable", "remove"]
 - !private ["Ps9Indexable", "row"]
 - !private ["Ps9Indexable", "sorted"]
 - !private ["Ps9Indexable", "subscript"]
+- !private ["Ps13IndexableBase", "Element"]
 - !private ["Ps13IndexableBase", "Index"]
 - !private ["Ps13IndexableBase", "IndexDistance"]
 - !private ["Ps13IndexableBase", "Indices"]
@@ -913,6 +950,7 @@ depends-member:
 - !private ["Ps13IndexableBase", "_Element"]
 - !private ["Ps13IndexableBase", "append"]
 - !private ["Ps13IndexableBase", "count"]
+- !private ["Ps13IndexableBase", "remove"]
 - !private ["Ps13IndexableBase", "row"]
 - !private ["Ps13IndexableBase", "sorted"]
 - !private ["Ps13IndexableBase", "subscript"]
@@ -938,6 +976,7 @@ depends-member:
 - !private ["Ps10MirrorPath", "Stride"]
 - !private ["Ps10MirrorPath", "_DisabledRangeIndex"]
 - ["Ps10MirrorPath", "init"]
+- !private ["Ps17MutableCollection", "Element"]
 - !private ["Ps17MutableCollection", "Index"]
 - !private ["Ps17MutableCollection", "IndexDistance"]
 - !private ["Ps17MutableCollection", "Iterator"]
@@ -945,9 +984,11 @@ depends-member:
 - !private ["Ps17MutableCollection", "_Element"]
 - !private ["Ps17MutableCollection", "append"]
 - !private ["Ps17MutableCollection", "count"]
+- !private ["Ps17MutableCollection", "remove"]
 - !private ["Ps17MutableCollection", "row"]
 - !private ["Ps17MutableCollection", "sorted"]
 - !private ["Ps17MutableCollection", "subscript"]
+- !private ["Ps16MutableIndexable", "Element"]
 - !private ["Ps16MutableIndexable", "Index"]
 - !private ["Ps16MutableIndexable", "IndexDistance"]
 - !private ["Ps16MutableIndexable", "Iterator"]
@@ -955,6 +996,7 @@ depends-member:
 - !private ["Ps16MutableIndexable", "_Element"]
 - !private ["Ps16MutableIndexable", "append"]
 - !private ["Ps16MutableIndexable", "count"]
+- !private ["Ps16MutableIndexable", "remove"]
 - !private ["Ps16MutableIndexable", "row"]
 - !private ["Ps16MutableIndexable", "sorted"]
 - !private ["Ps16MutableIndexable", "subscript"]
@@ -999,6 +1041,7 @@ depends-member:
 - !private ["PSo8NSCoding", "dateFormat"]
 - !private ["PSo8NSCoding", "dateStyle"]
 - !private ["PSo8NSCoding", "default"]
+- !private ["PSo8NSCoding", "deleteRows"]
 - !private ["PSo8NSCoding", "dequeueReusableCell"]
 - ["PSo8NSCoding", "didReceiveMemoryWarning"]
 - !private ["PSo8NSCoding", "endRefreshing"]
@@ -1164,6 +1207,7 @@ depends-member:
 - ["CSo8NSObject", "UITableView"]
 - !private ["CSo8NSObject", "UITableViewAutomaticDimension"]
 - ["CSo8NSObject", "UITableViewCell"]
+- ["CSo8NSObject", "UITableViewCellEditingStyle"]
 - !private ["CSo8NSObject", "UITextField"]
 - !private ["CSo8NSObject", "Void"]
 - !private ["CSo8NSObject", "addAction"]
@@ -1183,6 +1227,7 @@ depends-member:
 - !private ["CSo8NSObject", "dateStyle"]
 - !private ["CSo8NSObject", "default"]
 - ["CSo8NSObject", "delegate"]
+- !private ["CSo8NSObject", "deleteRows"]
 - !private ["CSo8NSObject", "dequeueReusableCell"]
 - ["CSo8NSObject", "didReceiveMemoryWarning"]
 - !private ["CSo8NSObject", "endRefreshing"]
@@ -1273,6 +1318,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "default"]
 - ["PSo16NSObjectProtocol", "deinit"]
 - ["PSo16NSObjectProtocol", "delegate"]
+- !private ["PSo16NSObjectProtocol", "deleteRows"]
 - !private ["PSo16NSObjectProtocol", "dequeueReusableCell"]
 - ["PSo16NSObjectProtocol", "didReceiveMemoryWarning"]
 - !private ["PSo16NSObjectProtocol", "endRefreshing"]
@@ -1350,6 +1396,7 @@ depends-member:
 - !private ["CSo18NotificationCenter", "post"]
 - !private ["Sq", "RawValue"]
 - ["Sq", "deinit"]
+- !private ["Ps22RandomAccessCollection", "Element"]
 - !private ["Ps22RandomAccessCollection", "Index"]
 - !private ["Ps22RandomAccessCollection", "IndexDistance"]
 - !private ["Ps22RandomAccessCollection", "Indices"]
@@ -1358,9 +1405,11 @@ depends-member:
 - !private ["Ps22RandomAccessCollection", "_Element"]
 - !private ["Ps22RandomAccessCollection", "append"]
 - !private ["Ps22RandomAccessCollection", "count"]
+- !private ["Ps22RandomAccessCollection", "remove"]
 - !private ["Ps22RandomAccessCollection", "row"]
 - !private ["Ps22RandomAccessCollection", "sorted"]
 - !private ["Ps22RandomAccessCollection", "subscript"]
+- !private ["Ps21RandomAccessIndexable", "Element"]
 - !private ["Ps21RandomAccessIndexable", "Index"]
 - !private ["Ps21RandomAccessIndexable", "IndexDistance"]
 - !private ["Ps21RandomAccessIndexable", "Indices"]
@@ -1369,6 +1418,7 @@ depends-member:
 - !private ["Ps21RandomAccessIndexable", "_Element"]
 - !private ["Ps21RandomAccessIndexable", "append"]
 - !private ["Ps21RandomAccessIndexable", "count"]
+- !private ["Ps21RandomAccessIndexable", "remove"]
 - !private ["Ps21RandomAccessIndexable", "row"]
 - !private ["Ps21RandomAccessIndexable", "sorted"]
 - !private ["Ps21RandomAccessIndexable", "subscript"]
@@ -1379,6 +1429,7 @@ depends-member:
 - !private ["Vs17RandomAccessSlice", "SubSequence"]
 - !private ["Vs17RandomAccessSlice", "_Element"]
 - !private ["Vs5Range", "deinit"]
+- !private ["Ps26RangeReplaceableCollection", "Element"]
 - !private ["Ps26RangeReplaceableCollection", "Index"]
 - !private ["Ps26RangeReplaceableCollection", "IndexDistance"]
 - !private ["Ps26RangeReplaceableCollection", "Iterator"]
@@ -1386,8 +1437,10 @@ depends-member:
 - !private ["Ps26RangeReplaceableCollection", "_Element"]
 - !private ["Ps26RangeReplaceableCollection", "append"]
 - !private ["Ps26RangeReplaceableCollection", "count"]
+- !private ["Ps26RangeReplaceableCollection", "remove"]
 - !private ["Ps26RangeReplaceableCollection", "sorted"]
 - !private ["Ps26RangeReplaceableCollection", "subscript"]
+- !private ["Ps25RangeReplaceableIndexable", "Element"]
 - !private ["Ps25RangeReplaceableIndexable", "Index"]
 - !private ["Ps25RangeReplaceableIndexable", "IndexDistance"]
 - !private ["Ps25RangeReplaceableIndexable", "Iterator"]
@@ -1395,6 +1448,7 @@ depends-member:
 - !private ["Ps25RangeReplaceableIndexable", "_Element"]
 - !private ["Ps25RangeReplaceableIndexable", "append"]
 - !private ["Ps25RangeReplaceableIndexable", "count"]
+- !private ["Ps25RangeReplaceableIndexable", "remove"]
 - !private ["Ps25RangeReplaceableIndexable", "sorted"]
 - !private ["Ps25RangeReplaceableIndexable", "subscript"]
 - !private ["Ps16RawRepresentable", "RawValue"]
@@ -1404,6 +1458,8 @@ depends-member:
 - !private ["Ps16RawRepresentable", "byWordWrapping"]
 - !private ["Ps16RawRepresentable", "cancel"]
 - !private ["Ps16RawRepresentable", "default"]
+- !private ["Ps16RawRepresentable", "delete"]
+- !private ["Ps16RawRepresentable", "fade"]
 - !private ["Ps16RawRepresentable", "get"]
 - ["Ps16RawRepresentable", "headline"]
 - !private ["Ps16RawRepresentable", "left"]
@@ -1431,6 +1487,7 @@ depends-member:
 - !private ["Ps8Sequence", "_Element"]
 - !private ["Ps8Sequence", "append"]
 - !private ["Ps8Sequence", "count"]
+- !private ["Ps8Sequence", "remove"]
 - !private ["Ps8Sequence", "row"]
 - !private ["Ps8Sequence", "sorted"]
 - !private ["Ps8Sequence", "subscript"]
@@ -1458,6 +1515,7 @@ depends-member:
 - ["V12WSUV_Twitter5Tweet", "deinit"]
 - !private ["V12WSUV_Twitter5Tweet", "init"]
 - !private ["V12WSUV_Twitter5Tweet", "tweet"]
+- !private ["V12WSUV_Twitter5Tweet", "tweet_id"]
 - !private ["V12WSUV_Twitter5Tweet", "username"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "Alamofire"]
 - ["C12WSUV_Twitter24TweetTableViewController", "AnyObject"]
@@ -1495,6 +1553,7 @@ depends-member:
 - ["C12WSUV_Twitter24TweetTableViewController", "UITableView"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "UITableViewAutomaticDimension"]
 - ["C12WSUV_Twitter24TweetTableViewController", "UITableViewCell"]
+- ["C12WSUV_Twitter24TweetTableViewController", "UITableViewCellEditingStyle"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "UITextField"]
 - !private ["C12WSUV_Twitter24TweetTableViewController", "Void"]
 - ["C12WSUV_Twitter24TweetTableViewController", "addTweetButton"]
@@ -1526,6 +1585,7 @@ depends-member:
 - ["C12WSUV_Twitter24TweetTableViewController", "viewDidLoad"]
 - !private ["PSo29UIAccessibilityIdentification", "attributedText"]
 - !private ["PSo29UIAccessibilityIdentification", "beginRefreshing"]
+- !private ["PSo29UIAccessibilityIdentification", "deleteRows"]
 - !private ["PSo29UIAccessibilityIdentification", "dequeueReusableCell"]
 - !private ["PSo29UIAccessibilityIdentification", "endRefreshing"]
 - !private ["PSo29UIAccessibilityIdentification", "isEnabled"]
@@ -1552,6 +1612,7 @@ depends-member:
 - ["OSC22UIAlertControllerStyle", "deinit"]
 - !private ["PSo12UIAppearance", "attributedText"]
 - !private ["PSo12UIAppearance", "beginRefreshing"]
+- !private ["PSo12UIAppearance", "deleteRows"]
 - !private ["PSo12UIAppearance", "dequeueReusableCell"]
 - !private ["PSo12UIAppearance", "endRefreshing"]
 - !private ["PSo12UIAppearance", "isEnabled"]
@@ -1591,6 +1652,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "attributedStringForTweet"]
 - !private ["PSo21UIAppearanceContainer", "attributedText"]
 - !private ["PSo21UIAppearanceContainer", "beginRefreshing"]
+- !private ["PSo21UIAppearanceContainer", "deleteRows"]
 - !private ["PSo21UIAppearanceContainer", "dequeueReusableCell"]
 - ["PSo21UIAppearanceContainer", "didReceiveMemoryWarning"]
 - !private ["PSo21UIAppearanceContainer", "endRefreshing"]
@@ -1703,6 +1765,7 @@ depends-member:
 - !private ["CSo9UIControl", "text"]
 - !private ["PSo17UICoordinateSpace", "attributedText"]
 - !private ["PSo17UICoordinateSpace", "beginRefreshing"]
+- !private ["PSo17UICoordinateSpace", "deleteRows"]
 - !private ["PSo17UICoordinateSpace", "dequeueReusableCell"]
 - !private ["PSo17UICoordinateSpace", "endRefreshing"]
 - !private ["PSo17UICoordinateSpace", "isRefreshing"]
@@ -1714,6 +1777,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "textLabel"]
 - !private ["PSo13UIDynamicItem", "attributedText"]
 - !private ["PSo13UIDynamicItem", "beginRefreshing"]
+- !private ["PSo13UIDynamicItem", "deleteRows"]
 - !private ["PSo13UIDynamicItem", "dequeueReusableCell"]
 - !private ["PSo13UIDynamicItem", "endRefreshing"]
 - !private ["PSo13UIDynamicItem", "isRefreshing"]
@@ -1752,6 +1816,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "attributedStringForTweet"]
 - !private ["PSo18UIFocusEnvironment", "attributedText"]
 - !private ["PSo18UIFocusEnvironment", "beginRefreshing"]
+- !private ["PSo18UIFocusEnvironment", "deleteRows"]
 - !private ["PSo18UIFocusEnvironment", "dequeueReusableCell"]
 - ["PSo18UIFocusEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UIFocusEnvironment", "endRefreshing"]
@@ -1789,6 +1854,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", ""]
 - !private ["PSo11UIFocusItem", "attributedText"]
 - !private ["PSo11UIFocusItem", "beginRefreshing"]
+- !private ["PSo11UIFocusItem", "deleteRows"]
 - !private ["PSo11UIFocusItem", "dequeueReusableCell"]
 - !private ["PSo11UIFocusItem", "endRefreshing"]
 - !private ["PSo11UIFocusItem", "isRefreshing"]
@@ -1849,6 +1915,7 @@ depends-member:
 - ["CSo11UIResponder", "UITableView"]
 - !private ["CSo11UIResponder", "UITableViewAutomaticDimension"]
 - ["CSo11UIResponder", "UITableViewCell"]
+- ["CSo11UIResponder", "UITableViewCellEditingStyle"]
 - !private ["CSo11UIResponder", "UITextField"]
 - !private ["CSo11UIResponder", "Void"]
 - !private ["CSo11UIResponder", "addAction"]
@@ -1859,6 +1926,7 @@ depends-member:
 - !private ["CSo11UIResponder", "attributedText"]
 - !private ["CSo11UIResponder", "beginRefreshing"]
 - ["CSo11UIResponder", "delegate"]
+- !private ["CSo11UIResponder", "deleteRows"]
 - !private ["CSo11UIResponder", "dequeueReusableCell"]
 - ["CSo11UIResponder", "didReceiveMemoryWarning"]
 - !private ["CSo11UIResponder", "endRefreshing"]
@@ -1927,6 +1995,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "attributedText"]
 - !private ["PSo30UIResponderStandardEditActions", "beginRefreshing"]
 - ["PSo30UIResponderStandardEditActions", "delegate"]
+- !private ["PSo30UIResponderStandardEditActions", "deleteRows"]
 - !private ["PSo30UIResponderStandardEditActions", "dequeueReusableCell"]
 - ["PSo30UIResponderStandardEditActions", "didReceiveMemoryWarning"]
 - !private ["PSo30UIResponderStandardEditActions", "endRefreshing"]
@@ -1966,6 +2035,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "username"]
 - ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", ""]
+- !private ["CSo12UIScrollView", "deleteRows"]
 - !private ["CSo12UIScrollView", "dequeueReusableCell"]
 - !private ["CSo12UIScrollView", "reloadData"]
 - !private ["PSo20UIScrollViewDelegate", "Alamofire"]
@@ -2071,10 +2141,14 @@ depends-member:
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
 - ["CSo11UITableView", "deinit"]
+- !private ["CSo11UITableView", "deleteRows"]
 - !private ["CSo11UITableView", "dequeueReusableCell"]
 - !private ["CSo11UITableView", "reloadData"]
 - ["CSo15UITableViewCell", "deinit"]
 - !private ["CSo15UITableViewCell", "textLabel"]
+- !private ["OSC27UITableViewCellEditingStyle", "RawValue"]
+- ["OSC27UITableViewCellEditingStyle", "deinit"]
+- !private ["OSC27UITableViewCellEditingStyle", "delete"]
 - !private ["CSo21UITableViewController", "Alamofire"]
 - ["CSo21UITableViewController", "AnyObject"]
 - ["CSo21UITableViewController", "AppDelegate"]
@@ -2111,6 +2185,7 @@ depends-member:
 - ["CSo21UITableViewController", "UITableView"]
 - !private ["CSo21UITableViewController", "UITableViewAutomaticDimension"]
 - ["CSo21UITableViewController", "UITableViewCell"]
+- ["CSo21UITableViewController", "UITableViewCellEditingStyle"]
 - !private ["CSo21UITableViewController", "UITextField"]
 - !private ["CSo21UITableViewController", "Void"]
 - ["CSo21UITableViewController", "addTweetButton"]
@@ -2239,6 +2314,8 @@ depends-member:
 - ["PSo19UITableViewDelegate", "tweetTitleAttributes"]
 - ["PSo19UITableViewDelegate", "viewDidLoad"]
 - ["PSo19UITableViewDelegate", ""]
+- !private ["OSC23UITableViewRowAnimation", "deinit"]
+- !private ["OSC23UITableViewRowAnimation", "fade"]
 - ["OSC16UITableViewStyle", "deinit"]
 - !private ["CSo11UITextField", "deinit"]
 - !private ["CSo11UITextField", "isSecureTextEntry"]
@@ -2279,6 +2356,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "attributedStringForTweet"]
 - !private ["PSo18UITraitEnvironment", "attributedText"]
 - !private ["PSo18UITraitEnvironment", "beginRefreshing"]
+- !private ["PSo18UITraitEnvironment", "deleteRows"]
 - !private ["PSo18UITraitEnvironment", "dequeueReusableCell"]
 - ["PSo18UITraitEnvironment", "didReceiveMemoryWarning"]
 - !private ["PSo18UITraitEnvironment", "endRefreshing"]
@@ -2316,6 +2394,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", ""]
 - !private ["CSo6UIView", "attributedText"]
 - !private ["CSo6UIView", "beginRefreshing"]
+- !private ["CSo6UIView", "deleteRows"]
 - !private ["CSo6UIView", "dequeueReusableCell"]
 - !private ["CSo6UIView", "endRefreshing"]
 - !private ["CSo6UIView", "isRefreshing"]
@@ -2361,6 +2440,7 @@ depends-member:
 - ["CSo16UIViewController", "UITableView"]
 - !private ["CSo16UIViewController", "UITableViewAutomaticDimension"]
 - ["CSo16UIViewController", "UITableViewCell"]
+- ["CSo16UIViewController", "UITableViewCellEditingStyle"]
 - !private ["CSo16UIViewController", "UITextField"]
 - !private ["CSo16UIViewController", "Void"]
 - !private ["CSo16UIViewController", "addAction"]
@@ -2401,6 +2481,7 @@ depends-member:
 - ["P9Alamofire14URLConvertible", "init"]
 - !private ["CSo11URLResponse", "statusCode"]
 - !private ["Sc", "deinit"]
+- !private ["Ps14_ArrayProtocol", "Element"]
 - !private ["Ps14_ArrayProtocol", "Index"]
 - !private ["Ps14_ArrayProtocol", "IndexDistance"]
 - !private ["Ps14_ArrayProtocol", "Iterator"]
@@ -2408,10 +2489,12 @@ depends-member:
 - !private ["Ps14_ArrayProtocol", "_Element"]
 - !private ["Ps14_ArrayProtocol", "append"]
 - !private ["Ps14_ArrayProtocol", "count"]
+- !private ["Ps14_ArrayProtocol", "remove"]
 - !private ["Ps14_ArrayProtocol", "sorted"]
 - !private ["Ps14_ArrayProtocol", "subscript"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "attributedText"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "beginRefreshing"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "deleteRows"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "dequeueReusableCell"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "endRefreshing"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isRefreshing"]
@@ -2421,6 +2504,7 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "reloadData"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "textLabel"]
+- !private ["Ps24_DestructorSafeContainer", "Element"]
 - !private ["Ps24_DestructorSafeContainer", "Index"]
 - !private ["Ps24_DestructorSafeContainer", "IndexDistance"]
 - !private ["Ps24_DestructorSafeContainer", "Iterator"]
@@ -2428,6 +2512,7 @@ depends-member:
 - !private ["Ps24_DestructorSafeContainer", "_Element"]
 - !private ["Ps24_DestructorSafeContainer", "append"]
 - !private ["Ps24_DestructorSafeContainer", "count"]
+- !private ["Ps24_DestructorSafeContainer", "remove"]
 - !private ["Ps24_DestructorSafeContainer", "sorted"]
 - !private ["Ps24_DestructorSafeContainer", "subscript"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
@@ -2491,9 +2576,12 @@ depends-member:
 - !private ["Ps9_Hashable", "dateStyle"]
 - !private ["Ps9_Hashable", "default"]
 - ["Ps9_Hashable", "delegate"]
+- !private ["Ps9_Hashable", "delete"]
+- !private ["Ps9_Hashable", "deleteRows"]
 - !private ["Ps9_Hashable", "dequeueReusableCell"]
 - ["Ps9_Hashable", "didReceiveMemoryWarning"]
 - !private ["Ps9_Hashable", "endRefreshing"]
+- !private ["Ps9_Hashable", "fade"]
 - !private ["Ps9_Hashable", "get"]
 - ["Ps9_Hashable", "headline"]
 - ["Ps9_Hashable", "init"]
@@ -2545,6 +2633,7 @@ depends-member:
 - ["Ps9_Hashable", "tweetDateFormatter"]
 - ["Ps9_Hashable", "tweetDateFormatter.storage"]
 - ["Ps9_Hashable", "tweetTitleAttributes"]
+- !private ["Ps9_Hashable", "tweet_id"]
 - !private ["Ps9_Hashable", "tweets"]
 - !private ["Ps9_Hashable", "username"]
 - ["Ps9_Hashable", "viewDidLoad"]
@@ -2558,6 +2647,7 @@ depends-member:
 - !private ["Ps18_IntegerArithmetic", "IntegerLiteralType"]
 - !private ["Ps18_IntegerArithmetic", "Stride"]
 - !private ["Ps18_IntegerArithmetic", "_DisabledRangeIndex"]
+- !private ["Ps21_ObjectiveCBridgeable", "Element"]
 - !private ["Ps21_ObjectiveCBridgeable", "Index"]
 - !private ["Ps21_ObjectiveCBridgeable", "IndexDistance"]
 - !private ["Ps21_ObjectiveCBridgeable", "IntegerLiteralType"]
@@ -2575,6 +2665,7 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "count"]
 - ["Ps21_ObjectiveCBridgeable", "headline"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "remove"]
 - !private ["Ps21_ObjectiveCBridgeable", "row"]
 - !private ["Ps21_ObjectiveCBridgeable", "sorted"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
@@ -2726,9 +2817,11 @@ depends-nominal:
 - "PSo16UIStateRestoring"
 - "CSo11UITableView"
 - "CSo15UITableViewCell"
+- "OSC27UITableViewCellEditingStyle"
 - "CSo21UITableViewController"
 - "PSo21UITableViewDataSource"
 - "PSo19UITableViewDelegate"
+- !private "OSC23UITableViewRowAnimation"
 - "OSC16UITableViewStyle"
 - !private "CSo11UITextField"
 - !private "PSo11UITextInput"
@@ -2783,4 +2876,4 @@ depends-external:
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Headers/Alamofire.h"
 - "/home-local/t.bounds/WSUV_Twitter/DerivedData/WSUV_Twitter/Build/Products/Debug-iphonesimulator/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "6b0fd39e78646c88372a0410d95a7b60"
+interface-hash: "b9a85de43cdfdee039fb8d4290ad3685"

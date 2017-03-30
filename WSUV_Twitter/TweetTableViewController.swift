@@ -285,6 +285,7 @@ class TweetTableViewController: UITableViewController {
         
     }
     
+    //----- REGISTER USER FUNC -----//
     func registerUser (username: String, password: String) {
         
         let urlString = kBaseURLString + "/register.cgi"
@@ -450,18 +451,79 @@ class TweetTableViewController: UITableViewController {
     }
     
     
-    // Override to support editing the table view.
-//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            // Delete the row from the data source
-//            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//            appDelegate.tweets.remove(at: indexPath.row)
-//            tableView.deleteRows(at: [indexPath], with: .fade)
-//        }
-//        //        else if editingStyle == .insert {
-//        //            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-//        //        }
-//    }
+    //----- DELETING TWEETS -----//
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if appDelegate.username != "" {
+            if editingStyle == .delete {
+                // Delete the row from the data source
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                
+                //appDelegate.tweets.remove(at: indexPath.row)
+                //tableView.deleteRows(at: [indexPath], with: .fade)
+                
+                let urlString = kBaseURLString + "/del-tweet.cgi"
+                
+                let username = self.appDelegate.username as String
+                let session_token = SSKeychain.password(forService: kWazzuTwitterSessionToken, account: username)
+                let tweet_id = appDelegate.tweets[indexPath.row].tweet_id
+                
+                let parameters = [
+                    "username" : username,  // username and password
+                    "session_token" : session_token!,  // obtained from user
+                    "tweet_id" : tweet_id,
+                    ] as [String : Any]
+                
+                Alamofire.request(urlString, method: .post, parameters: parameters)
+                    .responseJSON {response in
+                        switch(response.result) {
+                        case .success(let JSON):
+                            appDelegate.tweets.remove(at: indexPath.row)
+                            tableView.deleteRows(at: [indexPath], with: .fade)
+                        case .failure(let error):
+                            var errMessage = "Unknown Error"
+                            switch(response.response!.statusCode) {
+                            case 500:
+                                errMessage = "Internal server error."
+                                break
+                            case 400:
+                                errMessage = "Bad reqeust. All parameters not provided."
+                                break
+                            case 404:
+                                errMessage = "No such user or tweet."
+                                break
+                            case 401:
+                                errMessage = "Unauthorized."
+                                break
+                            case 403:
+                                errMessage = "This is not your tweet to delete."
+                                break
+                            default:
+                                errMessage = "Error code: \(response.response!.statusCode)"
+                                break
+                            }
+                            
+                            let deleteErrorAlertContoller = UIAlertController(title: "Delete Error", message: nil, preferredStyle: .alert)
+                            
+                            deleteErrorAlertContoller.message = errMessage
+                            
+                            deleteErrorAlertContoller.addAction(UIKit.UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+                            
+                            self.present(deleteErrorAlertContoller, animated: true, completion: nil)
+                        }
+                }
+            }
+        }
+        else {
+            let deleteErrorAlertContoller = UIAlertController(title: "Delete Error", message: nil, preferredStyle: .alert)
+            
+            deleteErrorAlertContoller.message = "You must be logged in to delete your tweets."
+            
+            deleteErrorAlertContoller.addAction(UIKit.UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+            
+            self.present(deleteErrorAlertContoller, animated: true, completion: nil)
+        }
+    }
     
     
     // Override to support conditional rearranging of the table view.
@@ -482,8 +544,7 @@ class TweetTableViewController: UITableViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let lastTweetDate = appDelegate.lastTweetDate()
         let dateStr = dateFormatter.string(from: lastTweetDate as Date)
-        
-        // format date string from latest stored tweet...
+
         Alamofire.request(kBaseURLString + "/get-tweets.cgi", method: .get, parameters: ["date" : dateStr])
             .responseJSON {response in
                 switch(response.result) {
@@ -493,8 +554,10 @@ class TweetTableViewController: UITableViewController {
                     // ... create a new Tweet object for each returned tweet dictionary
                     var tweetList : [Tweet] = []
                     for entries in tweets {
-                    
-                        tweetList.append(Tweet(entries["tweet_id"] as! Int, entries["username"] as! String, entries["isdeleted"] as! Bool, entries["tweet"] as! NSString, dateFormatter.date(from: entries["time_stamp"] as! String)! as NSDate))
+                        if !(entries["isdeleted"] as! Bool){
+                            tweetList.append(Tweet(entries["tweet_id"] as! Int, entries["username"] as! String, entries["isdeleted"] as! Bool, entries["tweet"] as! NSString, dateFormatter.date(from: entries["time_stamp"] as! String)! as NSDate))
+                        }
+                        
                     }
                     
                     // ... add new (sorted) tweets to appDelegate.tweets...
