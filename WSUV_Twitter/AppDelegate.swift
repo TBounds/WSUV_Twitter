@@ -45,6 +45,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var tweets : [Tweet] = []
     var username : String = ""
+    var fetchTweets : Bool = false
+    
+    func sandboxArchivePath() -> String {
+        let dir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString
+        return dir.appendingPathComponent("wsuvTweets.plist")
+    }
     
     func lastTweetDate() -> Date {
         // http://www.globalnerdy.com/2016/08/18/how-to-work-with-dates-and-times-in-swift-3-part-1-dates-calendars-and-datecomponents/
@@ -55,8 +61,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        // tweets.append(Tweet(1, "Tommy Boi", false, "This is just a test. Do not be alarmed.", Date() as NSDate))
-        // tweets.append(Tweet(2, "Pamala Handerson", false, "Someone love me...pls.", Date() as NSDate))
+        let archiveName = sandboxArchivePath()
+        
+        if FileManager.default.fileExists(atPath: archiveName) {
+            
+            let saveState = NSArray(contentsOfFile: archiveName)
+            
+            for i in 0 ..< saveState!.count {
+                tweets.append(Tweet((saveState?[i] as! NSDictionary).value(forKey: "tweet_id") as! Int,
+                                    (saveState?[i] as! NSDictionary).value(forKey: "username") as! String,
+                                    ((saveState?[i] as! NSDictionary).value(forKey: "isdeleted") as! Bool),
+                                    (saveState?[i] as! NSDictionary).value(forKey: "tweet") as! NSString,
+                                    (saveState?[i] as! NSDictionary).value(forKey: "date") as! NSDate))
+            }
+            
+        }
+        else {
+            
+            if !fetchTweets {
+                fetchTweets = true
+            }
+
+        }
         
         return true
     }
@@ -67,9 +93,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        let archiveName = sandboxArchivePath()
+        
+        let savedState : NSMutableArray = []
+        
+        // XXX Might want to restrict this to some set integer limit, ex. only save up to 100 tweets
+        for tweet in tweets {
+            let tweetDict : NSDictionary = [
+                "tweet_id" : tweet.tweet_id as Int,
+                "username" : tweet.username as String,
+                "isdeleted" : tweet.isdeleted as Bool,
+                "tweet" : tweet.tweet as String,
+                "date" : tweet.date as NSDate ]
+            
+            
+            savedState.add(tweetDict)
+            
+        }
+        
+        savedState.write(toFile: archiveName, atomically : true)
+        
     }
+        
+        
+    
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.

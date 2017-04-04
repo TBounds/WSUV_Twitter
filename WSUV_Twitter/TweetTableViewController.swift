@@ -415,11 +415,14 @@ class TweetTableViewController: UITableViewController {
                     self.refreshControl!.beginRefreshing()
                     self.refreshTweets(self)
                 }
-            }
+        }
         
         NetworkActivityIndicatorManager.shared.isEnabled = true
         
-        NotificationCenter.default.post(name: kAddTweetNotification, object: nil)
+        if appDelegate.fetchTweets {
+            NotificationCenter.default.post(name: kAddTweetNotification, object: nil)
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {

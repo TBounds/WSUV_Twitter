@@ -10,8 +10,6 @@ import UIKit
 import Alamofire
 
 class AddTweetTableViewController: UITableViewController, UITextViewDelegate {
-
-    
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
