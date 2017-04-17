@@ -23,5 +23,8 @@
 **Build/Run**:
 
 	1. git clone git@gitlab.encs.vancouver.wsu.edu:t.bounds/WSUV_Twitter.git
+	2. cd into WSUV_twitter
+	3. git submodule init
+	4. git submodule update
 	2. Open project in Xcode.
 	3. Hit the build/run button in Xcode.
