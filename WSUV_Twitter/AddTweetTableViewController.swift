@@ -65,7 +65,7 @@ class AddTweetTableViewController: UITableViewController, UITextViewDelegate {
         let urlString = kBaseURLString + "/add-tweet.cgi"
         
         let user = self.appDelegate.username
-        let sess_token = SSKeychain.password(forService: kWazzuTwitterSessionToken, account: self.appDelegate.username)!
+        let sess_token = SAMKeychain.password(forService: kWazzuTwitterSessionToken, account: self.appDelegate.username)!
         let tweet = tweetTextField.text as String
         
         NSLog("user: \(user), sess_token: \(sess_token), tweet = \(tweet)")

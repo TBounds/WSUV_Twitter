@@ -138,7 +138,7 @@ class TweetTableViewController: UITableViewController {
                 style: .default,
                 handler: { (UIAlertController) -> Void in
                     let user = self.appDelegate.username
-                    let pass = SSKeychain.password(forService: kWazzuTwitterPassword, account: self.appDelegate.username)
+                    let pass = SAMKeychain.password(forService: kWazzuTwitterPassword, account: self.appDelegate.username)
                     
                     self.logout(username: user, password: pass!)
             }
@@ -184,8 +184,8 @@ class TweetTableViewController: UITableViewController {
                     self.appDelegate.username = username
                     
                     // save session_token and password in keychain
-                    SSKeychain.setPassword(password, forService: kWazzuTwitterPassword, account: username)
-                    SSKeychain.setPassword(dict["session_token"] as! String, forService: kWazzuTwitterSessionToken, account: username)
+                    SAMKeychain.setPassword(password, forService: kWazzuTwitterPassword, account: username)
+                    SAMKeychain.setPassword(dict["session_token"] as! String, forService: kWazzuTwitterSessionToken, account: username)
                     
                     
                     // enable "add tweet" button
@@ -255,7 +255,7 @@ class TweetTableViewController: UITableViewController {
                     appDelegate.username = ""
                     
                     // save session_token in keychain
-                    SSKeychain.setPassword(dict["session_token"] as! String, forService: kWazzuTwitterSessionToken, account: username)
+                    SAMKeychain.setPassword(dict["session_token"] as! String, forService: kWazzuTwitterSessionToken, account: username)
                     
                     // disable "add tweet" button
                     self.addTweetButton.isEnabled = false
@@ -323,8 +323,8 @@ class TweetTableViewController: UITableViewController {
                     appDelegate.username = username
                     
                     // save password and session_token in keychain
-                    SSKeychain.setPassword(password, forService: kWazzuTwitterPassword, account: username)
-                    SSKeychain.setPassword(dict["session_token"] as! String, forService: kWazzuTwitterSessionToken, account: username)
+                    SAMKeychain.setPassword(password, forService: kWazzuTwitterPassword, account: username)
+                    SAMKeychain.setPassword(dict["session_token"] as! String, forService: kWazzuTwitterSessionToken, account: username)
                     
                     // enable "add tweet" button
                     self.addTweetButton.isEnabled = true
@@ -488,7 +488,7 @@ class TweetTableViewController: UITableViewController {
                 let urlString = kBaseURLString + "/del-tweet.cgi"
                 
                 let username = self.appDelegate.username as String
-                let session_token = SSKeychain.password(forService: kWazzuTwitterSessionToken, account: username)
+                let session_token = SAMKeychain.password(forService: kWazzuTwitterSessionToken, account: username)
                 let tweet_id = appDelegate.tweets[indexPath.row].tweet_id
                 
                 let parameters = [
