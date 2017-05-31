@@ -2,8 +2,6 @@
   
 *Email*:  tyler.bounds@wsu.edu
   
-*SID*:	11258134
-
 **WSUV Twitter Application**
   
 	WSUV Twitter is an iOS app which mimics some of the features of twitter 
